@@ -1,0 +1,82 @@
+/* UI Sprites */
+@import "ui/*.png";
+$ui-use-percentages: true;
+$ui-sprite-spacing: 10px;
+$ui-sprite-width: sprite_width($ui-sprites);
+$ui-sprite: $ui-sprites;
+
+$ui-width: $max-width - $house-width;
+$instructions-width: 227px;
+$instructions-height: 633px;
+
+/* The interface */
+.ui {
+	position: absolute;
+	top: 0;
+	left: 0;
+	@include set-dimensions($ui-width, $frame-height, $max-width);
+	font-family: $writing;
+	.wrapper {
+		color: #fff;
+		overflow: auto;		
+		position: absolute;
+		height: 91%;
+		line-height: 1.4em;
+	}
+	h1 {
+		color: #ebaa0e;
+		text-transform: uppercase;
+		font-size: 1.2em;
+	}
+	p, h1 {
+		text-align: center;
+	}
+}
+
+.instructions {
+	position: absolute;
+	@include ui-sprite(bg_instructions); 
+	@include set-position(42px, 60px, $ui-width, $frame-height);
+	@include set-dimensions(241px, 254px, $ui-width);
+	@include set-bg-width($ui-sprite-width, $ui-sprite, bg_instructions);
+	.wrapper {
+		@include set-position(46px, 61px, $instructions-width, $instructions-height);
+		@include set-width(154px, $instructions-width);
+	}
+}
+
+.dialog-intro, .to-do, .dialog-outro {
+	position: absolute;
+	@include ui-sprite(bg_list); 
+	@include set-position(56px, 317px, $ui-width, $frame-height);
+	@include set-dimensions(227px, $instructions-height, $ui-width);
+	@include set-bg-width($ui-sprite-width, $ui-sprite, bg_list);
+}
+
+.to-do {
+	.wrapper {
+		@include set-position(34px, 24px, $instructions-width, $instructions-height);
+		@include set-width(154px, $instructions-width);
+	}
+	li {
+		padding-left: percentage(22px/154px);
+		position: relative;
+		&:before {
+			content: " ";
+			@include ui-sprite(i_dash); 
+			@include set-dimensions(11px, 3px, $ui-width);
+			@include set-bg-width($ui-sprite-width, $ui-sprite, i_dash);
+			position: absolute;
+			top: .5em; left: 0;
+		}
+		// .currently-upstairs &.downstairs,
+		.currently-downstairs &.upstairs { display: none; }
+	}
+	del {
+		@include opacity(.6);
+	}
+}
+
+.dialog-intro, .dialog-outro {
+	display: none;
+}

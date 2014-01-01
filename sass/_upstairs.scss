@@ -1,0 +1,44 @@
+.floor_upstairs {
+	@extend %room;
+	top: 0; left: 0;
+	@include background-image(image-url("bg_upstairs.jpg"));
+}
+
+/* Upstairs Props */
+@include create-prop(basket,49px,643px);
+@include create-prop(bedback,924px,396px);
+@include create-prop(bedup,704px,303px);
+@include create-prop(armchair,514px,426px);
+@include create-prop(cradle,780px,504px);
+
+.clean.shoe1 {@extend %layer2;}
+.basket-prop {@extend %layer3;}
+.armchair-prop {@extend %layer3;}
+.cradle-prop {@extend %layer4;}
+.clean.books {@extend %layer3;}
+.messy .musicbox {@extend %layer4;}
+.messy .stool {@extend %layer4;}
+.messy .pot3 {@extend %layer4;}
+.clean.scoop {@extend %layer3;}
+.clean.telescope {@extend %layer3;}
+.clean.pot1 {@extend %layer3;}
+.clean.pot2 {@extend %layer5;}
+.clean.pot3 {@extend %layer4;}
+
+/* Upstairs Items */
+@include create-item(rug,302px,672px,701px,756px);
+@include create-item(stool,594px,584px,452px,839px);
+@include create-item(shoe1,390px,830px,663px,824px);
+@include create-item(shoe2,838px,416px,653px,814px);
+@include create-item(pillowup1,982px,592px,1161px,435px);
+@include create-item(books,568px,701px,963px,608px);
+@include create-item(telescope,607px,780px,551px,774px);
+@include create-item(toy,670px,422px,786px,351px);
+@include create-item(musicbox,560px,498px,595px,312px);
+@include create-item(broom,270px,751px,3px,399px);
+// @include create-item(pillowup2,469px,561px,1175px,397px);
+@include create-item(pot1,728px,526px,487px,551px);
+@include create-item(pot2,745px,766px,448px,618px);
+@include create-item(pot3,612px,427px,420px,591px);
+@include create-item(pot4,1px,599px,452px,537px);
+@include create-item(scoop,308px,633px,10px,633px);

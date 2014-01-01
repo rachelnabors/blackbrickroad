@@ -1,0 +1,18 @@
+/* Frame positioning */
+
+.frame {
+  margin: 0 auto;
+  width: 100%;
+  max-width: $max-width;
+  padding-top: percentage(1000px/$max-width);
+  position: absolute;
+  top: 0; right: 0;
+}
+
+/* House */
+.house {
+  @include set-width($house-width, $max-width);
+  padding-top: percentage(2000px/$max-width);
+  position: absolute;
+  top: 0; right: 0;
+}

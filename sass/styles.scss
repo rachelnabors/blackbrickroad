@@ -1,0 +1,33 @@
+@import "compass/support";
+@import "compass/css3/"; // css3 helpers
+@import "compass/utilities/sprites";
+
+// media queries w/ Breakpoint
+// @import "breakpoint";
+
+@media screen {
+	// Import reset to blow away all styles ever. Don't need them.
+	@import "compass/reset";
+
+	// Universally resusable stuff goes here.
+	@import "variables";
+	@import "mixins";
+	@import "extends";
+
+	// General styles for background + shared styles for universal elements. 
+	@import "foundation";
+
+	// Common Interaction Classes that get reused
+	@import "interactions";
+
+	// Game's Interface
+	@import "frame";
+	@import "ui";
+	@import "credits";
+
+	// the rooms
+	@import "items";
+	@import "upstairs";
+	@import "downstairs";
+
+}

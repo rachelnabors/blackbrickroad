@@ -1,0 +1,126 @@
+.floor_downstairs {
+	@extend %room;
+	@include background-image(image-url("bg_downstairs.jpg"));
+	top: 50%; left: 0;
+}
+
+/* Items */
+
+/* Special Case: The table cloth needs to reposition if .chair1 has been moved already.
+   So by default, I set it to set where .chair1 would move to.
+   When .chair1 is right in front of it, put it where it belongs */
+
+.messy .chair1 + .tablecloth {
+  @include set-position(392px,1552px, $parent-width, $parent-height*2);  
+}
+
+/* Positioning */
+.clean.firewood1,.clean.firewood2,.clean.firewood3,.clean.firewood4,.clean.firewood5,.clean.firewood6{@extend %layer1;}
+.stairs-prop {@extend %layer2;}
+.cloak.clean {@extend %layer3;}
+.messy .axe {@extend %layer3;}
+.messy .bucket {@extend %layer3;}
+.messy .firewood2 {@extend %layer3;}
+.messy .firewood6 {@extend %layer3;}
+.messy .shovel {@extend %layer3;}
+.messy .samovar {@extend %layer4;}
+.oilcan.clean { z-index: 5}
+.bottle1.clean { z-index: 5}
+.bottle2.clean {@extend %layer4}
+.bottle3.clean { z-index: 5}
+.messy .firewood4 { z-index: 5}
+.boot1.clean {@extend %layer2}
+.boot2.clean {@extend %layer3}
+.messy .sack1 {@extend %layer2}
+
+.clean.mug2 { @extend %layer4}
+
+.nightstand-prop {@extend %layer2}
+.messy .socks {@extend %layer2}
+.messy .pillow1 {@extend %layer3}
+.messy .tablecloth {z-index:5}
+.messy .chair1 { @extend %layer4 }
+.messy .pitcher { @extend %layer2 }
+.bucket.clean { @extend %layer3}
+.messy .pitcher { @extend %layer4 }
+.messy .mug1 { z-index: 5}
+
+.oven-prop { @extend %layer2 }
+.messy .ovenfork { @extend %layer2 }
+.table-prop {@extend %layer3 }
+.messy .bottle3 {@extend %layer3 }
+.clean.tablecloth {@extend %layer3}
+.clean.chair1 {@extend %layer4}
+.pot-prop {@extend %layer4}
+.spoons-prop {@extend %layer4}
+.clean.pitcher {@extend %layer4}
+.messy .washboard {@extend %layer4}
+.clean.mug1 {@extend %layer5}
+.clean.mug2 {@extend %layer5}
+.samovar.clean {@extend %layer5}
+.chair2-prop {@extend %layer5}
+.messy .bottle2 {@extend %layer6}
+
+.messy .pillow3 {@extend %layer4}
+.messy .boot2 {@extend %layer2}
+.clean.tools {@extend %layer3}
+
+.places .shovel { z-index: 3 !important}
+.places .ovenfork { z-index: 2 !important}
+
+.bed-prop {@extend %layer4 }
+.messy .blanket { @extend %layer5}
+.clean.blanket { @extend %layer5}
+.messy .oilcan { @extend %layer6}
+.places .blanket.droppable { z-index: 5 !important;}
+.clean.pillow3 { @extend %layer7}
+.clean.pillow1 { @extend %layer6}
+.messy .bottle1 { @extend %layer6}
+.messy .cloak { @extend %layer2}
+.messy .rifle { @extend %layer1}
+
+/* Downstairs Props */
+@include create-prop(pillow2,381px,1721px);
+@include create-prop(bed,272px,1667px);
+@include create-prop(spoons,642px,1607px);
+@include create-prop(pot,646px,1555px);
+@include create-prop(chair2,593px,1641px);
+@include create-prop(table,534px,1560px);
+@include create-prop(oven,723px,1143px);
+@include create-prop(laundry,91px,1589px);
+@include create-prop(nightstand,173px,1482px);
+@include create-prop(stairs,346px,992px);
+@include create-prop(sack2,659px,1446px);
+
+/* Downstairs Items */
+@include create-item(firewood1,166px,1704px,490px,1514px);
+@include create-item(axe,328px,1500px,660px,1370px);
+@include create-item(rifle,109px,1422px,104px,1288px);
+@include create-item(cloak,133px,1633px,308px,1307px);
+@include create-item(boot1,215px,1642px,442px,1559px);
+@include create-item(samovar,210px,1449px,573px,1494px);
+@include create-item(firewood6,153px,1683px,516px,1487px);
+@include create-item(sack1,490px,1520px,693px,1488px);
+@include create-item(pillow1,380px,1398px,301px,1670px);
+@include create-item(socks, 575px, 1186px, 686px, 1141px);
+@include create-item(tools,525px,1284px,170px,1660px);
+@include create-item(ovenfork,639px,1618px,968px,1332px);
+@include create-item(firewood3,1023px,1575px,522px,1503px);
+@include create-item(firewood2,325px,1598px,514px,1508px);
+@include create-item(firewood5,581px,1487px,519px,1493px);
+@include create-item(firewood4,231px,1523px,501px,1500px);
+@include create-item(shovel,573px,1305px,974px,1402px);
+@include create-item(pitcher,823px,1698px,695px,1618px);
+@include create-item(bottle3,739px,1634px,286px,1462px);
+@include create-item(washboard,530px,1569px,94px,1579px);
+@include create-item(mug2,659px,1518px,710px,1670px);
+@include create-item(mug1,188px,1513px,695px,1650px);
+@include create-item(bottle2,632px,1803px,258px,1446px);
+@include create-item(bucket,333px,1577px,837px,1652px);
+@include create-item(chair1,396px,1543px,522px,1607px);
+@include create-item(pillow3,240px,1600px,350px,1700px);
+@include create-item(tablecloth,518px,1618px,591px,1581px);
+@include create-item(blanket,250px,1659px,333px,1708px);
+@include create-item(oilcan,483px,1782px,174px,1488px);
+@include create-item(bottle1,307px,1678px,240px,1466px);
+@include create-item(boot2,475px,1623px,460px,1565px);

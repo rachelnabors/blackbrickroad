@@ -1,0 +1,71 @@
+// All the little mixins that will go into one BIG mixin. 
+// Hey, might need them!
+
+@mixin set-dimensions($width, $height, $parent-width) {
+	width: percentage($width/$parent-width);
+	padding-top: percentage($height/$parent-width);
+	height: 0;
+}
+
+@mixin set-width($width, $parent-width) {
+	width: percentage($width/$parent-width);
+}
+
+@mixin set-position($sX, $sY, $parent-width, $parent-height) {
+	left: percentage($sX/$parent-width);
+	top: percentage($sY/$parent-height);
+}
+
+@mixin set-bg-width($sprites-width, $sprite, $sprite-image) {
+	$spriteX: percentage($sprites-width / image-width(sprite-file($sprite, $sprite-image)));
+	@include background-size($spriteX auto);
+}
+
+@mixin create-prop($prop, $sX, $sY, $parent-width: $house-width, $parent-height: $frame-height*2) {
+	// Check for existence of ITEM-place sprite. Make .ITEM-place bg rules in that event.
+	.#{$prop}-prop {
+		$iWidth: image-width(sprite-file($props-sprite, #{$prop}));
+		$iHeight: image-height(sprite-file($props-sprite, #{$prop}));
+		@include props-sprite(#{$prop});
+	  @include set-dimensions($iWidth, $iHeight, $parent-width);
+	  @include set-position($sX, $sY, $parent-width, $parent-height);
+	  @include set-bg-width($props-sprite-width, $props-sprite, #{$prop});
+	  @extend %props;
+	}
+}
+
+// The BIG mixin that generates styles for both the droppable "dirty" item
+// and the "clean" place where it belongs
+@mixin create-item($item, $sX, $sY, $placeX, $placeY, $parent-width: $house-width, $parent-height: $frame-height*2) {
+
+	// Check for existence of ITEM-place sprite. Make .ITEM-place bg rules in that event.
+	.messy .#{$item} {
+		$thisItem: "items/#{$item}.png";
+		$iWidth: image-width($thisItem);
+		$iHeight: image-height($thisItem);
+	  @include set-dimensions($iWidth, $iHeight, $parent-width);
+	  @include set-position($sX, $sY, $parent-width, $parent-height);
+	  @extend %items;
+	}
+
+	.places .#{$item} {
+		// If there's a background image for this already...
+		@if index(sprite-names($places-sprite), #{$item}-place) {
+			@include places-sprite(#{$item}-place);
+		}
+		$iWidth: image-width(sprite-file($places-sprite, #{$item}-hover));
+		$iHeight: image-height(sprite-file($places-sprite, #{$item}-hover));
+	  @include set-dimensions($iWidth, $iHeight, $parent-width);
+	  @include set-position($placeX, $placeY, $parent-width, $parent-height);
+	  @include set-bg-width($places-sprite-width, $places-sprite, #{$item}-hover);
+	  @extend %places;
+	}
+
+	.#{$item}.droppable {
+	  @include places-sprite(#{$item}-hover);
+	}
+
+	.#{$item}.clean {
+	  @include places-sprite(#{$item}-clean);
+	}
+}

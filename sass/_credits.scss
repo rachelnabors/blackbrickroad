@@ -1,0 +1,29 @@
+/* Thank you for reading :) */
+.credits {
+  @extend %ir;
+  background: url("http://stash.rachelnabors.com/oz/sprite_frame.png");
+  margin: 0 auto;
+  position: relative;
+  width: 650px; height: 214px;
+}
+
+.xamag {
+  @extend %ir;
+  background: url("http://stash.rachelnabors.com/oz/sprite_frame.png?2");
+  position: absolute; left: 0; top: 0;
+  width: 217px; height: 155px;
+}
+
+.logo {
+  @extend %ir;
+  background: url("http://stash.rachelnabors.com/oz/sprite_frame.png?2") -244px 0;
+  position: absolute; left: 244px; top: 0;
+  width: 168px; height: 214px;
+}
+
+.rtg {
+  @extend %ir;
+  background: url("http://stash.rachelnabors.com/oz/sprite_frame.png?2") -412px 0;
+  position: absolute; left: 412px; top: 0;
+  width: 238px; height: 179px;
+}

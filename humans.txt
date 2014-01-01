@@ -1,0 +1,16 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Rachel Nabors -- Coder -- @rachelnabors
+    Daria/Xamag -- Designer 
+
+# THANKS
+
+    Fans!!!
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    jQuery, Modernizr

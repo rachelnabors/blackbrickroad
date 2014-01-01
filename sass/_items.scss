@@ -1,0 +1,42 @@
+$parent-width: $house-width;
+$parent-height: $frame-height;
+
+/* Props */
+@import "props/*.png";
+$props-use-percentages: true;
+$props-sprite-spacing: 10px;
+$props-sprite-width: sprite_width($props-sprites);
+$props-sprite: $props-sprites;
+
+/* Items */
+@import "places/*.png";
+$places-use-percentages: true;
+$places-sprite-spacing: 10px;
+$places-sprite-width: sprite_width($places-sprites);
+$places-sprite: $places-sprites;
+
+.messy, .places, .props {
+  position:absolute; top: 0; left: 0;
+  width: 100%; height: 100%;
+}
+
+.messy {
+  li { @extend %layer2; }
+  img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: auto;
+  }
+}
+
+.places {
+  li { @extend %layer1; }
+  img {
+    // hide the dropped images
+    display: none;
+  }
+}
+
+.places .droppable { // the destination needs to sit on top of all over divs 
+  z-index: 50 !important;
+}
