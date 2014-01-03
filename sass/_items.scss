@@ -1,19 +1,19 @@
 $parent-width: $house-width;
 $parent-height: $frame-height;
 
+
 /* Props */
-@import "props/*.png";
 $props-use-percentages: true;
-$props-spacing: 4px;
+$props-layout: smart;
+@import "props/*.png";
 $props-sprite-width: sprite_width($props-sprites);
-$props-sprite: $props-sprites;
 
 /* Items */
-@import "places/*.png";
 $places-use-percentages: true;
-$places-spacing: 4px;
+$places-spacing: 2px;
+@import "places/*.png";
 $places-sprite-width: sprite_width($places-sprites);
-$places-sprite: $places-sprites;
+
 
 .messy, .places, .props {
   position:absolute; top: 0; left: 0;
