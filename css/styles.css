@@ -163,10 +163,14 @@
     position: absolute;
     top: 0;
     right: 0;
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
 
   /* House */
-  /* line 13, ../sass/_frame.scss */
+  /* line 14, ../sass/_frame.scss */
   .house {
     width: 80.93333%;
     padding-top: 133.33333%;
@@ -657,7 +661,7 @@
     padding-top: 9.30807%;
     height: 0;
     left: 45.38715%;
-    top: 38.7%;
+    top: 39.2%;
     -webkit-background-size: 263.54167% auto;
     -moz-background-size: 263.54167% auto;
     -o-background-size: 263.54167% auto;

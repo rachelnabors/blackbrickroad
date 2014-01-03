@@ -7,6 +7,7 @@
   padding-top: percentage(1000px/$max-width);
   position: absolute;
   top: 0; right: 0;
+  @include user-select(none); 
 }
 
 /* House */
