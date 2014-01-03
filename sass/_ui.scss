@@ -2,6 +2,8 @@
 $ui-use-percentages: true;
 $ui-sprite-spacing: 2px;
 @import "ui/*.png";
+$ui-sprite: $ui-sprites;
+$ui-sprite-width: sprite_width($ui-sprites);
 
 $ui-width: $max-width - $house-width;
 $instructions-width: 227px;
