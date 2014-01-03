@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function(){
       draggable.addEventListener('dragstart', handleDragStart, false);
       draggable.addEventListener('dragend', handleDragEnd, false);
       // pop an image in it
-      image.src = "img/items/" + key.replace(/(<([^>]+)>)/ig,"") + ".png";
+      image.src = "img/items/" + key + ".png";
       draggable.appendChild(image);
 
       var droppable = document.createElement('li');
