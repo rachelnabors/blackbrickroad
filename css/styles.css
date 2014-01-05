@@ -207,14 +207,14 @@
     color: #fff;
     overflow: auto;
     position: absolute;
-    height: 91%;
     line-height: 1.4em;
   }
-  /* line 23, ../sass/_ui.scss */
+  /* line 22, ../sass/_ui.scss */
   #ui h1 {
     color: #ebaa0e;
     text-transform: uppercase;
-    font-size: 1.2em;
+    font-size: 1.1em;
+    padding-top: .25em;
   }
   /* line 28, ../sass/_ui.scss */
   #ui p, #ui h1 {
@@ -236,12 +236,13 @@
   }
   /* line 39, ../sass/_ui.scss */
   .instructions .wrapper {
-    left: 20.26432%;
-    top: 9.63665%;
-    width: 67.84141%;
+    left: 15.4185%;
+    top: 16.4297%;
+    width: 74.88987%;
+    height: 10em;
   }
 
-  /* line 45, ../sass/_ui.scss */
+  /* line 46, ../sass/_ui.scss */
   .dialog-intro, .to-do, .dialog-outro {
     position: relative;
     background-position: 0 98.83268%;
@@ -255,18 +256,19 @@
     float: right;
   }
 
-  /* line 54, ../sass/_ui.scss */
+  /* line 55, ../sass/_ui.scss */
   .to-do .wrapper {
     left: 14.97797%;
     top: 3.79147%;
     width: 67.84141%;
+    height: 29em;
   }
-  /* line 58, ../sass/_ui.scss */
+  /* line 60, ../sass/_ui.scss */
   .to-do li {
     padding-left: 14.28571%;
     position: relative;
   }
-  /* line 61, ../sass/_ui.scss */
+  /* line 63, ../sass/_ui.scss */
   .to-do li:before {
     content: " ";
     background-position: 0 100%;
@@ -281,17 +283,17 @@
     top: .5em;
     left: 0;
   }
-  /* line 70, ../sass/_ui.scss */
+  /* line 72, ../sass/_ui.scss */
   .currently-upstairs .to-do li.downstairs, .currently-downstairs .to-do li.upstairs {
     display: none;
   }
-  /* line 72, ../sass/_ui.scss */
+  /* line 74, ../sass/_ui.scss */
   .to-do del {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
     opacity: 0.6;
   }
 
-  /* line 77, ../sass/_ui.scss */
+  /* line 79, ../sass/_ui.scss */
   .dialog-intro, .dialog-outro {
     display: none;
   }

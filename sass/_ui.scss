@@ -17,13 +17,13 @@ $ui-sprite-width: sprite_width($ui-sprites);
 		color: #fff;
 		overflow: auto;		
 		position: absolute;
-		height: 91%;
 		line-height: 1.4em;
 	}
 	h1 {
 		color: #ebaa0e;
 		text-transform: uppercase;
-		font-size: 1.2em;
+		font-size: 1.1em;
+		padding-top: .25em;
 	}
 	p, h1 {
 		text-align: center;
@@ -37,8 +37,9 @@ $ui-sprite-width: sprite_width($ui-sprites);
 	@include set-bg-width($ui-sprite-width, $ui-sprite, bg_instructions);
 	float: right;
 	.wrapper {
-		@include set-position(46px, 61px, $instructions-width, $instructions-height);
-		@include set-width(154px, $instructions-width);
+		@include set-position(35px, 104px, $instructions-width, $instructions-height);
+		@include set-width(170px, $instructions-width);
+		height: 10em;
 	}
 }
 
@@ -54,6 +55,7 @@ $ui-sprite-width: sprite_width($ui-sprites);
 	.wrapper {
 		@include set-position(34px, 24px, $instructions-width, $instructions-height);
 		@include set-width(154px, $instructions-width);
+		height: 29em;
 	}
 	li {
 		padding-left: percentage(22px/154px);
