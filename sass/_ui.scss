@@ -51,11 +51,33 @@ $ui-sprite-width: sprite_width($ui-sprites);
 	float: right;
 }
 
+@include keyframes(fadeInDown) {
+  0% { opacity: 0 }
+  1% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
+@include keyframes(fadeInUp) {
+  0% { opacity: 0 }
+  1% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
 .to-do {
 	.wrapper {
 		@include set-position(34px, 24px, $instructions-width, $instructions-height);
 		@include set-width(154px, $instructions-width);
 		height: 29em;
+	}
+	ul {
+		[data-currentFloor="downstairs"] & {
+			opacity: 0;
+			@include animation(fadeInDown 2s $floor-easing forwards);
+		}
+		[data-currentFloor="upstairs"] & {
+			opacity: 0;
+			@include animation(fadeInUp 2s $floor-easing forwards);
+		}
 	}
 	li {
 		padding-left: percentage(22px/154px);

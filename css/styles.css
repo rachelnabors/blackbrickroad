@@ -455,19 +455,171 @@
     float: right;
   }
 
-  /* line 55, ../sass/_ui.scss */
+  @-moz-keyframes fadeInDown {
+    /* line 55, ../sass/_ui.scss */
+    0% {
+      opacity: 0;
+    }
+
+    /* line 56, ../sass/_ui.scss */
+    1% {
+      opacity: 0;
+    }
+
+    /* line 57, ../sass/_ui.scss */
+    100% {
+      opacity: 1;
+    }
+}
+
+  @-webkit-keyframes fadeInDown {
+    /* line 55, ../sass/_ui.scss */
+    0% {
+      opacity: 0;
+    }
+
+    /* line 56, ../sass/_ui.scss */
+    1% {
+      opacity: 0;
+    }
+
+    /* line 57, ../sass/_ui.scss */
+    100% {
+      opacity: 1;
+    }
+}
+
+  @-o-keyframes fadeInDown {
+    /* line 55, ../sass/_ui.scss */
+    0% {
+      opacity: 0;
+    }
+
+    /* line 56, ../sass/_ui.scss */
+    1% {
+      opacity: 0;
+    }
+
+    /* line 57, ../sass/_ui.scss */
+    100% {
+      opacity: 1;
+    }
+}
+
+  @keyframes fadeInDown {
+    /* line 55, ../sass/_ui.scss */
+    0% {
+      opacity: 0;
+    }
+
+    /* line 56, ../sass/_ui.scss */
+    1% {
+      opacity: 0;
+    }
+
+    /* line 57, ../sass/_ui.scss */
+    100% {
+      opacity: 1;
+    }
+}
+
+  @-moz-keyframes fadeInUp {
+    /* line 61, ../sass/_ui.scss */
+    0% {
+      opacity: 0;
+    }
+
+    /* line 62, ../sass/_ui.scss */
+    1% {
+      opacity: 0;
+    }
+
+    /* line 63, ../sass/_ui.scss */
+    100% {
+      opacity: 1;
+    }
+}
+
+  @-webkit-keyframes fadeInUp {
+    /* line 61, ../sass/_ui.scss */
+    0% {
+      opacity: 0;
+    }
+
+    /* line 62, ../sass/_ui.scss */
+    1% {
+      opacity: 0;
+    }
+
+    /* line 63, ../sass/_ui.scss */
+    100% {
+      opacity: 1;
+    }
+}
+
+  @-o-keyframes fadeInUp {
+    /* line 61, ../sass/_ui.scss */
+    0% {
+      opacity: 0;
+    }
+
+    /* line 62, ../sass/_ui.scss */
+    1% {
+      opacity: 0;
+    }
+
+    /* line 63, ../sass/_ui.scss */
+    100% {
+      opacity: 1;
+    }
+}
+
+  @keyframes fadeInUp {
+    /* line 61, ../sass/_ui.scss */
+    0% {
+      opacity: 0;
+    }
+
+    /* line 62, ../sass/_ui.scss */
+    1% {
+      opacity: 0;
+    }
+
+    /* line 63, ../sass/_ui.scss */
+    100% {
+      opacity: 1;
+    }
+}
+
+  /* line 67, ../sass/_ui.scss */
   .to-do .wrapper {
     left: 14.97797%;
     top: 3.79147%;
     width: 67.84141%;
     height: 29em;
   }
-  /* line 60, ../sass/_ui.scss */
+  /* line 73, ../sass/_ui.scss */
+  [data-currentFloor="downstairs"] .to-do ul {
+    opacity: 0;
+    -webkit-animation: fadeInDown 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+    -moz-animation: fadeInDown 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+    -o-animation: fadeInDown 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+    animation: fadeInDown 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  }
+  /* line 77, ../sass/_ui.scss */
+  [data-currentFloor="upstairs"] .to-do ul {
+    opacity: 0;
+    -webkit-animation: fadeInUp 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+    -moz-animation: fadeInUp 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+    -o-animation: fadeInUp 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+    animation: fadeInUp 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  }
+  /* line 82, ../sass/_ui.scss */
   .to-do li {
     padding-left: 14.28571%;
     position: relative;
   }
-  /* line 63, ../sass/_ui.scss */
+  /* line 85, ../sass/_ui.scss */
   .to-do li:before {
     content: " ";
     background-position: 0 87.04612%;
@@ -482,23 +634,23 @@
     top: .5em;
     left: 0;
   }
-  /* line 73, ../sass/_ui.scss */
+  /* line 95, ../sass/_ui.scss */
   [data-currentFloor="default"] .to-do li.downstairs, [data-currentFloor="upstairs"] .to-do li.downstairs, [data-currentFloor="downstairs"] .to-do li.upstairs {
     display: none;
   }
-  /* line 75, ../sass/_ui.scss */
+  /* line 97, ../sass/_ui.scss */
   .to-do del {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
     opacity: 0.6;
   }
 
-  /* line 80, ../sass/_ui.scss */
+  /* line 102, ../sass/_ui.scss */
   .dialog-intro, .dialog-outro {
     display: none;
   }
 
   /* Navigating between floors */
-  /* line 86, ../sass/_ui.scss */
+  /* line 108, ../sass/_ui.scss */
   .to_upstairs {
     background-position: 0 100%;
     width: 3.78913%;
@@ -512,7 +664,7 @@
     top: 55.2%;
   }
 
-  /* line 93, ../sass/_ui.scss */
+  /* line 115, ../sass/_ui.scss */
   .to_downstairs {
     background-position: 0 93.09623%;
     width: 3.78913%;
@@ -526,7 +678,7 @@
     top: 31.65%;
   }
 
-  /* line 100, ../sass/_ui.scss */
+  /* line 122, ../sass/_ui.scss */
   .warp {
     cursor: pointer;
     position: absolute;
