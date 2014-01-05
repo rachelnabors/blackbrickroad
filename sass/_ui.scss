@@ -1,6 +1,6 @@
 /* UI Sprites */
 $ui-use-percentages: true;
-$ui-sprite-spacing: 2px;
+$ui-sprite-layout: smart;
 @import "ui/*.png";
 $ui-sprite: $ui-sprites;
 $ui-sprite-width: sprite_width($ui-sprites);
@@ -68,8 +68,9 @@ $ui-sprite-width: sprite_width($ui-sprites);
 			position: absolute;
 			top: .5em; left: 0;
 		}
-		.currently-upstairs &.downstairs,
-		.currently-downstairs &.upstairs { display: none; }
+		[data-currentFloor="default"] &.downstairs,
+		[data-currentFloor="upstairs"] &.downstairs,
+		[data-currentFloor="downstairs"] &.upstairs { display: none; }
 	}
 	del {
 		@include opacity(.6);
@@ -78,4 +79,26 @@ $ui-sprite-width: sprite_width($ui-sprites);
 
 .dialog-intro, .dialog-outro {
 	display: none;
+}
+
+
+/* Navigating between floors */
+.to_upstairs {
+	@include ui-sprite(i_up);
+	@include set-dimensions(46px, 66px, $house-width);
+	@include set-bg-width($ui-sprite-width, $ui-sprite, i_up);
+	@include set-position(624px, 1104px, $house-width, $frame-height*2);
+}
+
+.to_downstairs {
+	@include ui-sprite(i_down);
+	@include set-dimensions(46px, 66px, $house-width);
+	@include set-bg-width($ui-sprite-width, $ui-sprite, i_up);
+	@include set-position(214px, 633px, $house-width, $frame-height*2);
+}
+
+.warp { 
+	cursor: pointer;
+	position: absolute;
+	z-index:10;
 }

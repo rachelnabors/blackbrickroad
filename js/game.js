@@ -206,4 +206,14 @@ document.addEventListener('DOMContentLoaded', function(){
     crossMeOut.appendChild(del);
   }
 
+  // Clicking on the stair's warp arrows to change the state of the room
+  // (which we will animate in CSS)
+  var warps = document.querySelectorAll('.warp');
+  [].forEach.call(warps, function(warp) {
+    warp.addEventListener("click", function(){
+      var destination = warp.getAttribute('data-setFloor');
+      document.body.setAttribute('data-currentFloor', destination);
+    });
+  });
+
 }, false);

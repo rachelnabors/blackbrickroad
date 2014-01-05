@@ -173,7 +173,7 @@
   }
 
   /* House */
-  /* line 14, ../sass/_frame.scss */
+  /* line 16, ../sass/_frame.scss */
   #house {
     position: absolute;
     top: 0;
@@ -183,12 +183,211 @@
     -ms-user-select: none;
     user-select: none;
     z-index: 1;
+    -webkit-transition: -webkit-transform 1.75s cubic-bezier(0.77, 0, 0.175, 1);
+    -moz-transition: -moz-transform 1.75s cubic-bezier(0.77, 0, 0.175, 1);
+    -o-transition: -o-transform 1.75s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: transform 1.75s cubic-bezier(0.77, 0, 0.175, 1);
+  }
+  /* line 21, ../sass/_frame.scss */
+  [data-currentFloor="downstairs"] #house {
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    -webkit-animation: goDown 2s cubic-bezier(0.77, 0, 0.175, 1);
+    -moz-animation: goDown 2s cubic-bezier(0.77, 0, 0.175, 1);
+    -o-animation: goDown 2s cubic-bezier(0.77, 0, 0.175, 1);
+    animation: goDown 2s cubic-bezier(0.77, 0, 0.175, 1);
+  }
+  /* line 25, ../sass/_frame.scss */
+  [data-currentFloor="upstairs"] #house {
+    -webkit-animation: goUp 2s cubic-bezier(0.77, 0, 0.175, 1);
+    -moz-animation: goUp 2s cubic-bezier(0.77, 0, 0.175, 1);
+    -o-animation: goUp 2s cubic-bezier(0.77, 0, 0.175, 1);
+    animation: goUp 2s cubic-bezier(0.77, 0, 0.175, 1);
   }
 
+  @-moz-keyframes goUp {
+    /* line 32, ../sass/_frame.scss */
+    0% {
+      opacity: 1;
+    }
+
+    /* line 33, ../sass/_frame.scss */
+    25% {
+      opacity: 0;
+    }
+
+    /* line 34, ../sass/_frame.scss */
+    75% {
+      opacity: 0;
+    }
+
+    /* line 35, ../sass/_frame.scss */
+    100% {
+      opacity: 1;
+    }
+}
+
+  @-webkit-keyframes goUp {
+    /* line 32, ../sass/_frame.scss */
+    0% {
+      opacity: 1;
+    }
+
+    /* line 33, ../sass/_frame.scss */
+    25% {
+      opacity: 0;
+    }
+
+    /* line 34, ../sass/_frame.scss */
+    75% {
+      opacity: 0;
+    }
+
+    /* line 35, ../sass/_frame.scss */
+    100% {
+      opacity: 1;
+    }
+}
+
+  @-o-keyframes goUp {
+    /* line 32, ../sass/_frame.scss */
+    0% {
+      opacity: 1;
+    }
+
+    /* line 33, ../sass/_frame.scss */
+    25% {
+      opacity: 0;
+    }
+
+    /* line 34, ../sass/_frame.scss */
+    75% {
+      opacity: 0;
+    }
+
+    /* line 35, ../sass/_frame.scss */
+    100% {
+      opacity: 1;
+    }
+}
+
+  @keyframes goUp {
+    /* line 32, ../sass/_frame.scss */
+    0% {
+      opacity: 1;
+    }
+
+    /* line 33, ../sass/_frame.scss */
+    25% {
+      opacity: 0;
+    }
+
+    /* line 34, ../sass/_frame.scss */
+    75% {
+      opacity: 0;
+    }
+
+    /* line 35, ../sass/_frame.scss */
+    100% {
+      opacity: 1;
+    }
+}
+
+  @-moz-keyframes goDown {
+    /* line 39, ../sass/_frame.scss */
+    0% {
+      opacity: 1;
+    }
+
+    /* line 40, ../sass/_frame.scss */
+    25% {
+      opacity: 0;
+    }
+
+    /* line 41, ../sass/_frame.scss */
+    75% {
+      opacity: 0;
+    }
+
+    /* line 42, ../sass/_frame.scss */
+    100% {
+      opacity: 1;
+    }
+}
+
+  @-webkit-keyframes goDown {
+    /* line 39, ../sass/_frame.scss */
+    0% {
+      opacity: 1;
+    }
+
+    /* line 40, ../sass/_frame.scss */
+    25% {
+      opacity: 0;
+    }
+
+    /* line 41, ../sass/_frame.scss */
+    75% {
+      opacity: 0;
+    }
+
+    /* line 42, ../sass/_frame.scss */
+    100% {
+      opacity: 1;
+    }
+}
+
+  @-o-keyframes goDown {
+    /* line 39, ../sass/_frame.scss */
+    0% {
+      opacity: 1;
+    }
+
+    /* line 40, ../sass/_frame.scss */
+    25% {
+      opacity: 0;
+    }
+
+    /* line 41, ../sass/_frame.scss */
+    75% {
+      opacity: 0;
+    }
+
+    /* line 42, ../sass/_frame.scss */
+    100% {
+      opacity: 1;
+    }
+}
+
+  @keyframes goDown {
+    /* line 39, ../sass/_frame.scss */
+    0% {
+      opacity: 1;
+    }
+
+    /* line 40, ../sass/_frame.scss */
+    25% {
+      opacity: 0;
+    }
+
+    /* line 41, ../sass/_frame.scss */
+    75% {
+      opacity: 0;
+    }
+
+    /* line 42, ../sass/_frame.scss */
+    100% {
+      opacity: 1;
+    }
+}
+
   /* UI Sprites */
-  /* line 63, ui/*.png */
-  .ui-sprite, .instructions, .dialog-intro, .to-do, .dialog-outro, .to-do li:before {
-    background-image: url('../img/ui-s29c4961c9a.png');
+  /* line 79, ui/*.png */
+  .ui-sprite, .instructions, .dialog-intro, .to-do, .dialog-outro, .to-do li:before, .to_upstairs, .to_downstairs {
+    background-image: url('../img/ui-sf897c8b731.png');
     background-repeat: no-repeat;
   }
 
@@ -245,7 +444,7 @@
   /* line 46, ../sass/_ui.scss */
   .dialog-intro, .to-do, .dialog-outro {
     position: relative;
-    background-position: 0 98.83268%;
+    background-position: 0 65.29563%;
     width: 79.37063%;
     padding-top: 221.32867%;
     height: 0;
@@ -271,7 +470,7 @@
   /* line 63, ../sass/_ui.scss */
   .to-do li:before {
     content: " ";
-    background-position: 0 100%;
+    background-position: 0 87.04612%;
     width: 3.84615%;
     padding-top: 1.04895%;
     height: 0;
@@ -283,19 +482,55 @@
     top: .5em;
     left: 0;
   }
-  /* line 72, ../sass/_ui.scss */
-  .currently-upstairs .to-do li.downstairs, .currently-downstairs .to-do li.upstairs {
+  /* line 73, ../sass/_ui.scss */
+  [data-currentFloor="default"] .to-do li.downstairs, [data-currentFloor="upstairs"] .to-do li.downstairs, [data-currentFloor="downstairs"] .to-do li.upstairs {
     display: none;
   }
-  /* line 74, ../sass/_ui.scss */
+  /* line 75, ../sass/_ui.scss */
   .to-do del {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
     opacity: 0.6;
   }
 
-  /* line 79, ../sass/_ui.scss */
+  /* line 80, ../sass/_ui.scss */
   .dialog-intro, .dialog-outro {
     display: none;
+  }
+
+  /* Navigating between floors */
+  /* line 86, ../sass/_ui.scss */
+  .to_upstairs {
+    background-position: 0 100%;
+    width: 3.78913%;
+    padding-top: 5.43657%;
+    height: 0;
+    -webkit-background-size: 523.91304% auto;
+    -moz-background-size: 523.91304% auto;
+    -o-background-size: 523.91304% auto;
+    background-size: 523.91304% auto;
+    left: 51.40033%;
+    top: 55.2%;
+  }
+
+  /* line 93, ../sass/_ui.scss */
+  .to_downstairs {
+    background-position: 0 93.09623%;
+    width: 3.78913%;
+    padding-top: 5.43657%;
+    height: 0;
+    -webkit-background-size: 523.91304% auto;
+    -moz-background-size: 523.91304% auto;
+    -o-background-size: 523.91304% auto;
+    background-size: 523.91304% auto;
+    left: 17.62768%;
+    top: 31.65%;
+  }
+
+  /* line 100, ../sass/_ui.scss */
+  .warp {
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
   }
 
   /* Thank you for reading :) */
