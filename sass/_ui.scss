@@ -5,17 +5,14 @@ $ui-sprite-spacing: 2px;
 $ui-sprite: $ui-sprites;
 $ui-sprite-width: sprite_width($ui-sprites);
 
-$ui-width: $max-width - $house-width;
-$instructions-width: 227px;
-$instructions-height: 633px;
-
 /* The interface */
-.ui {
-	position: absolute;
-	top: 0;
-	left: 0;
-	@include set-dimensions($ui-width, $frame-height, $max-width);
+#ui {
+	z-index: 2;
+	float: left;
+	width: $instructions-width-ems; 
+	height: $instructions-height-ems;
 	font-family: $writing;
+	position: relative;
 	.wrapper {
 		color: #fff;
 		overflow: auto;		
@@ -34,11 +31,11 @@ $instructions-height: 633px;
 }
 
 .instructions {
-	position: absolute;
 	@include ui-sprite(bg_instructions); 
-	@include set-position(42px, 60px, $ui-width, $frame-height);
 	@include set-dimensions(241px, 254px, $ui-width);
+	position: relative;
 	@include set-bg-width($ui-sprite-width, $ui-sprite, bg_instructions);
+	float: right;
 	.wrapper {
 		@include set-position(46px, 61px, $instructions-width, $instructions-height);
 		@include set-width(154px, $instructions-width);
@@ -46,11 +43,11 @@ $instructions-height: 633px;
 }
 
 .dialog-intro, .to-do, .dialog-outro {
-	position: absolute;
+	position: relative;
 	@include ui-sprite(bg_list); 
-	@include set-position(56px, 317px, $ui-width, $frame-height);
 	@include set-dimensions(227px, $instructions-height, $ui-width);
 	@include set-bg-width($ui-sprite-width, $ui-sprite, bg_list);
+	float: right;
 }
 
 .to-do {

@@ -1,5 +1,87 @@
 "use strict";
 
+// Resize End from https://github.com/porada/resizeend
+(function(window) {
+  var currentOrientation, debounce, dispatchResizeEndEvent, document, events, getCurrentOrientation, initialOrientation, resizeDebounceTimeout;
+  document = window.document;
+  if (!(window.addEventListener && document.createEvent)) {
+    return;
+  }
+  events = ['resize:end', 'resizeend'].map(function(name) {
+    var event;
+    event = document.createEvent('Event');
+    event.initEvent(name, false, false);
+    return event;
+  });
+  dispatchResizeEndEvent = function() {
+    return events.forEach(window.dispatchEvent.bind(window));
+  };
+  getCurrentOrientation = function() {
+    return Math.abs(+window.orientation || 0) % 180;
+  };
+  initialOrientation = getCurrentOrientation();
+  currentOrientation = null;
+  resizeDebounceTimeout = null;
+  debounce = function() {
+    currentOrientation = getCurrentOrientation();
+    if (currentOrientation !== initialOrientation) {
+      dispatchResizeEndEvent();
+      return initialOrientation = currentOrientation;
+    } else {
+      clearTimeout(resizeDebounceTimeout);
+      return resizeDebounceTimeout = setTimeout(dispatchResizeEndEvent, 100);
+    }
+  };
+  return window.addEventListener('resize', debounce, false);
+})(window);
+
+(function() {
+  function calcAspectRatio() {
+    var windowHeight = window.innerHeight;
+    var frame = document.getElementById("frame");
+    var house = document.getElementById("house");
+    var floors = house.querySelectorAll(".floor");
+    var sidebarWidth = document.getElementById("ui").clientWidth;
+    var frameWidth = frame.clientWidth - sidebarWidth;
+
+    var properWidth;
+    var properHeight;
+    var styleWidth;
+    var styleHeight;
+
+    // get new widths and heights 
+    if (frameWidth/windowHeight >= 1228/1000) {
+      // if window is wide
+      properWidth = (1228/1000) * windowHeight;
+      properHeight = windowHeight;
+    } else {
+      // if it is narrow
+      properWidth = frameWidth;
+      properHeight = properWidth/(1228/1000);
+    }
+    styleWidth = "width: " + properWidth + "px";
+    styleHeight = "height: " + properHeight + "px";
+    
+    // set the house's width
+    house.setAttribute("style", styleWidth);
+    
+    // set the height of its floors
+    [].forEach.call(floors, function(floor) {
+      floor.setAttribute("style", styleHeight);
+    });
+    
+    // limit the height of the frame to just show one floor
+    frame.setAttribute("style", styleHeight);
+  }
+
+  // load only fires after all the content is rendered.
+  // using window because document is unreliable: 
+  // http://stackoverflow.com/questions/16404380/why-doesnt-document-addeventlistenerload-function-work-in-a-greasemonkey-s
+  window.addEventListener('load', calcAspectRatio, false);
+
+  window.addEventListener('resize:end', calcAspectRatio, false);
+})();
+
 document.addEventListener('DOMContentLoaded', function(){
 
   var currentGroup, currentKey;

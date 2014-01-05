@@ -8,8 +8,8 @@
 %ir br { display: none; }
 
 %room {
-  @include set-dimensions($house-width, 1000px, $house-width);
-  position: absolute;
+  // @include set-dimensions($house-width, 1000px, $house-width);
+  // position: absolute;
   @include background-size(100% auto);
   z-index: -1;
 }

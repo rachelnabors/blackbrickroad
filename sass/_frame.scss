@@ -1,19 +1,19 @@
 /* Frame positioning */
 
-.frame {
-  margin: 0 auto;
+#frame {
   width: 100%;
   max-width: $max-width;
-  padding-top: percentage(1000px/$max-width);
-  position: absolute;
-  top: 0; right: 0;
-  @include user-select(none); 
+  overflow: hidden;
+  padding-left: $instructions-width-ems;
+  position: fixed;
+  top: 0; left: 0;
+  @include box-sizing(border-box);
 }
 
 /* House */
-.house {
-  @include set-width($house-width, $max-width);
-  padding-top: percentage(2000px/$max-width);
+#house {
   position: absolute;
-  top: 0; right: 0;
+  top: 0; left: $instructions-width-ems;
+  @include user-select(none);
+  z-index: 1;
 }

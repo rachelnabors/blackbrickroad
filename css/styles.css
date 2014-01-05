@@ -80,10 +80,6 @@
 
   /* line 10, ../sass/_extends.scss */
   .floor_upstairs, .floor_downstairs {
-    width: 100%;
-    padding-top: 82.37232%;
-    height: 0;
-    position: absolute;
     -webkit-background-size: 100% auto;
     -moz-background-size: 100% auto;
     -o-background-size: 100% auto;
@@ -155,28 +151,30 @@
 
   /* Frame positioning */
   /* line 3, ../sass/_frame.scss */
-  .frame {
-    margin: 0 auto;
+  #frame {
     width: 100%;
     max-width: 1500px;
-    padding-top: 66.66667%;
-    position: absolute;
+    overflow: hidden;
+    padding-left: 14.1875em;
+    position: fixed;
     top: 0;
-    right: 0;
-    -moz-user-select: -moz-none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+    left: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
   }
 
   /* House */
   /* line 14, ../sass/_frame.scss */
-  .house {
-    width: 80.93333%;
-    padding-top: 133.33333%;
+  #house {
     position: absolute;
     top: 0;
-    right: 0;
+    left: 14.1875em;
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    z-index: 1;
   }
 
   /* UI Sprites */
@@ -187,62 +185,58 @@
   }
 
   /* The interface */
-  /* line 13, ../sass/_ui.scss */
-  .ui {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 19.06667%;
-    padding-top: 66.66667%;
-    height: 0;
+  /* line 9, ../sass/_ui.scss */
+  #ui {
+    z-index: 2;
+    float: left;
+    width: 14.1875em;
+    height: 39.5625em;
     font-family: "Permanent Marker", cursive;
+    position: relative;
   }
-  /* line 19, ../sass/_ui.scss */
-  .ui .wrapper {
+  /* line 16, ../sass/_ui.scss */
+  #ui .wrapper {
     color: #fff;
     overflow: auto;
     position: absolute;
     height: 91%;
     line-height: 1.4em;
   }
-  /* line 26, ../sass/_ui.scss */
-  .ui h1 {
+  /* line 23, ../sass/_ui.scss */
+  #ui h1 {
     color: #ebaa0e;
     text-transform: uppercase;
     font-size: 1.2em;
   }
-  /* line 31, ../sass/_ui.scss */
-  .ui p, .ui h1 {
+  /* line 28, ../sass/_ui.scss */
+  #ui p, #ui h1 {
     text-align: center;
   }
 
-  /* line 36, ../sass/_ui.scss */
+  /* line 33, ../sass/_ui.scss */
   .instructions {
-    position: absolute;
     background-position: 0 0;
-    left: 14.68531%;
-    top: 6%;
     width: 84.26573%;
     padding-top: 88.81119%;
     height: 0;
+    position: relative;
     -webkit-background-size: 100% auto;
     -moz-background-size: 100% auto;
     -o-background-size: 100% auto;
     background-size: 100% auto;
+    float: right;
   }
-  /* line 42, ../sass/_ui.scss */
+  /* line 39, ../sass/_ui.scss */
   .instructions .wrapper {
     left: 20.26432%;
     top: 9.63665%;
     width: 67.84141%;
   }
 
-  /* line 48, ../sass/_ui.scss */
+  /* line 45, ../sass/_ui.scss */
   .dialog-intro, .to-do, .dialog-outro {
-    position: absolute;
+    position: relative;
     background-position: 0 98.83268%;
-    left: 19.58042%;
-    top: 31.7%;
     width: 79.37063%;
     padding-top: 221.32867%;
     height: 0;
@@ -250,20 +244,21 @@
     -moz-background-size: 106.1674% auto;
     -o-background-size: 106.1674% auto;
     background-size: 106.1674% auto;
+    float: right;
   }
 
-  /* line 57, ../sass/_ui.scss */
+  /* line 54, ../sass/_ui.scss */
   .to-do .wrapper {
     left: 14.97797%;
     top: 3.79147%;
     width: 67.84141%;
   }
-  /* line 61, ../sass/_ui.scss */
+  /* line 58, ../sass/_ui.scss */
   .to-do li {
     padding-left: 14.28571%;
     position: relative;
   }
-  /* line 64, ../sass/_ui.scss */
+  /* line 61, ../sass/_ui.scss */
   .to-do li:before {
     content: " ";
     background-position: 0 100%;
@@ -278,17 +273,17 @@
     top: .5em;
     left: 0;
   }
-  /* line 73, ../sass/_ui.scss */
+  /* line 70, ../sass/_ui.scss */
   .currently-downstairs .to-do li.upstairs {
     display: none;
   }
-  /* line 75, ../sass/_ui.scss */
+  /* line 72, ../sass/_ui.scss */
   .to-do del {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
     opacity: 0.6;
   }
 
-  /* line 80, ../sass/_ui.scss */
+  /* line 77, ../sass/_ui.scss */
   .dialog-intro, .dialog-outro {
     display: none;
   }
@@ -377,9 +372,8 @@
 
   /* line 1, ../sass/_upstairs.scss */
   .floor_upstairs {
-    top: 0;
-    left: 0;
     background-image: url('../img/bg_upstairs.jpg?1388547635');
+    background-repeat: no-repeat;
   }
 
   /* Upstairs Props */
@@ -937,8 +931,6 @@
   /* line 1, ../sass/_downstairs.scss */
   .floor_downstairs {
     background-image: url('../img/bg_downstairs.jpg?1387515510');
-    top: 50%;
-    left: 0;
   }
 
   /* Items */

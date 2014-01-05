@@ -2,4 +2,10 @@ $max-width: 1500px;
 $house-width: 1214px;
 $frame-height: 1000px;
 
+$ui-width: $max-width - $house-width;
+$instructions-width: 227px;
+$instructions-height: 633px;
+$instructions-width-ems: ($instructions-width/16px)*1em;
+$instructions-height-ems: ($instructions-height/16px)*1em;
+
 $writing: 'Permanent Marker', cursive;
