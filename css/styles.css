@@ -64,6 +64,14 @@
     display: block;
   }
 
+  @font-face {
+    font-family: 'mawns_handwriting_regular';
+    src: url("../fonts/mawns_handwriting-webfont.eot");
+    src: url("../fonts/mawns_handwriting-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/mawns_handwriting-webfont.woff") format("woff"), url("../fonts/mawns_handwriting-webfont.ttf") format("truetype"), url("../fonts/mawns_handwriting-webfont.svg#mawns_handwriting_regular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
   /* Image replacement */
   /* line 2, ../sass/_extends.scss */
   .credits, .xamag, .logo, .rtg {
@@ -191,7 +199,7 @@
     float: left;
     width: 14.1875em;
     height: 39.5625em;
-    font-family: "Permanent Marker", cursive;
+    font-family: "mawns_handwriting_regular", cursive;
     position: relative;
   }
   /* line 16, ../sass/_ui.scss */
@@ -274,7 +282,7 @@
     left: 0;
   }
   /* line 70, ../sass/_ui.scss */
-  .currently-downstairs .to-do li.upstairs {
+  .currently-upstairs .to-do li.downstairs, .currently-downstairs .to-do li.upstairs {
     display: none;
   }
   /* line 72, ../sass/_ui.scss */
@@ -930,7 +938,7 @@
 
   /* line 1, ../sass/_downstairs.scss */
   .floor_downstairs {
-    background-image: url('../img/bg_downstairs.jpg?1387515510');
+    background-image: url('../img/bg_downstairs.jpg?1388895419');
   }
 
   /* Items */

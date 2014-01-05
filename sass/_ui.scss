@@ -66,7 +66,7 @@ $ui-sprite-width: sprite_width($ui-sprites);
 			position: absolute;
 			top: .5em; left: 0;
 		}
-		// .currently-upstairs &.downstairs,
+		.currently-upstairs &.downstairs,
 		.currently-downstairs &.upstairs { display: none; }
 	}
 	del {
