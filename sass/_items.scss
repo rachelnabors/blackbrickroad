@@ -10,10 +10,9 @@ $props-sprite-width: sprite_width($props-sprites);
 
 /* Items */
 $places-use-percentages: true;
-$places-spacing: 2px;
+$places-spacing: 4px;
 @import "places/*.png";
 $places-sprite-width: sprite_width($places-sprites);
-
 
 .messy, .places, .props {
   position:absolute; top: 0; left: 0;

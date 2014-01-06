@@ -66,6 +66,10 @@
 	}
 
 	.#{$item}.droppable {
+	  @include places-sprite(#{$item}-droppable);
+	}
+
+	.#{$item}.hover	 {
 	  @include places-sprite(#{$item}-hover);
 	}
 

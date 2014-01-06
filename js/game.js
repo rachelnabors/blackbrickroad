@@ -131,6 +131,7 @@ document.addEventListener('DOMContentLoaded', function(){
       // listeners
       droppable.addEventListener('drop', handleDrop, false);
       droppable.addEventListener('dragover', handleDragHover, false);
+      droppable.addEventListener('dragleave', handleDragLeave, false);
 
       // attach them both to item
       item.draggable[key] = draggable;
@@ -158,6 +159,11 @@ document.addEventListener('DOMContentLoaded', function(){
     if (e.preventDefault) { e.preventDefault(); }
     // We want it to move the data
     e.dataTransfer.dropEffect = 'move';  
+    items[currentGroup].droppable[currentKey].classList.add('hover');
+  }
+
+  function handleDragLeave(e) {
+    items[currentGroup].droppable[currentKey].classList.remove('hover');
   }
 
   function handleDrop(e) {
