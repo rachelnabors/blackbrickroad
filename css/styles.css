@@ -127,12 +127,12 @@
   }
 
   /* line 41, ../sass/_extends.scss */
-  .places li, .clean.firewood1, .clean.firewood2, .clean.firewood3, .clean.firewood4, .clean.firewood5, .clean.firewood6, .messy .rifle {
+  .places li, .clean.firewood1, .clean.firewood2, .clean.firewood3, .clean.firewood4, .clean.firewood5, .clean.firewood6, .sack2-prop, .messy .rifle {
     z-index: 1;
   }
 
   /* line 42, ../sass/_extends.scss */
-  .messy li, .clean.shoe1, .stairs-prop, .boot1.clean, .messy .sack1, .nightstand-prop, .messy .socks, .messy .pitcher, .oven-prop, .messy .ovenfork, .messy .boot2, .messy .cloak {
+  .messy li, .clean.shoe1, .stairs-prop, .boot1.clean, .messy .sack1, .nightstand-prop, .messy .socks, .messy .pitcher, .oven-prop, .messy .boot2, .messy .cloak {
     z-index: 2;
   }
 
@@ -147,7 +147,7 @@
   }
 
   /* line 45, ../sass/_extends.scss */
-  .clean.pot2, .clean.mug1, .clean.mug2, .samovar.clean, .chair2-prop, .messy .blanket, .clean.blanket {
+  .clean.pot2, .messy .mug1, .messy .mug2, .clean.mug1, .clean.mug2, .samovar.clean, .chair2-prop, .messy .blanket, .clean.blanket {
     z-index: 5;
   }
 
@@ -157,7 +157,7 @@
   }
 
   /* line 47, ../sass/_extends.scss */
-  .clean.pillow3 {
+  .messy .ovenfork, .clean.pillow3 {
     z-index: 7;
   }
 
@@ -173,7 +173,15 @@
   }
 
   /* Frame positioning */
-  /* line 3, ../sass/_frame.scss */
+  /* line 2, ../sass/_frame.scss */
+  body {
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  /* line 6, ../sass/_frame.scss */
   #frame {
     width: 100%;
     max-width: 1214px;
@@ -186,7 +194,7 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
-  /* line 11, ../sass/_frame.scss */
+  /* line 14, ../sass/_frame.scss */
   [data-progress="cleaning-house"] #frame, [data-progress="dialog-outro"] #frame {
     -webkit-transition: opacity, 2s;
     -moz-transition: opacity, 2s;
@@ -195,22 +203,18 @@
   }
 
   /* House */
-  /* line 19, ../sass/_frame.scss */
+  /* line 22, ../sass/_frame.scss */
   #house {
     position: absolute;
     top: 0;
     left: 14.1875em;
-    -moz-user-select: -moz-none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
     z-index: 1;
     -webkit-transition: -webkit-transform 1.75s cubic-bezier(0.77, 0, 0.175, 1);
     -moz-transition: -moz-transform 1.75s cubic-bezier(0.77, 0, 0.175, 1);
     -o-transition: -o-transform 1.75s cubic-bezier(0.77, 0, 0.175, 1);
     transition: transform 1.75s cubic-bezier(0.77, 0, 0.175, 1);
   }
-  /* line 24, ../sass/_frame.scss */
+  /* line 26, ../sass/_frame.scss */
   [data-currentFloor="downstairs"] #house {
     -webkit-transform: translate(0, -50%);
     -moz-transform: translate(0, -50%);
@@ -222,7 +226,7 @@
     -o-animation: goDown 2s cubic-bezier(0.77, 0, 0.175, 1);
     animation: goDown 2s cubic-bezier(0.77, 0, 0.175, 1);
   }
-  /* line 28, ../sass/_frame.scss */
+  /* line 30, ../sass/_frame.scss */
   [data-currentFloor="upstairs"] #house {
     -webkit-animation: goUp 2s cubic-bezier(0.77, 0, 0.175, 1);
     -moz-animation: goUp 2s cubic-bezier(0.77, 0, 0.175, 1);
@@ -231,176 +235,176 @@
   }
 
   @-moz-keyframes goUp {
-    /* line 35, ../sass/_frame.scss */
+    /* line 37, ../sass/_frame.scss */
     0% {
       opacity: 1;
     }
 
-    /* line 36, ../sass/_frame.scss */
+    /* line 38, ../sass/_frame.scss */
     25% {
       opacity: 0;
     }
 
-    /* line 37, ../sass/_frame.scss */
+    /* line 39, ../sass/_frame.scss */
     75% {
       opacity: 0;
     }
 
-    /* line 38, ../sass/_frame.scss */
+    /* line 40, ../sass/_frame.scss */
     100% {
       opacity: 1;
     }
 }
 
   @-webkit-keyframes goUp {
-    /* line 35, ../sass/_frame.scss */
+    /* line 37, ../sass/_frame.scss */
     0% {
       opacity: 1;
     }
 
-    /* line 36, ../sass/_frame.scss */
+    /* line 38, ../sass/_frame.scss */
     25% {
       opacity: 0;
     }
 
-    /* line 37, ../sass/_frame.scss */
+    /* line 39, ../sass/_frame.scss */
     75% {
       opacity: 0;
     }
 
-    /* line 38, ../sass/_frame.scss */
+    /* line 40, ../sass/_frame.scss */
     100% {
       opacity: 1;
     }
 }
 
   @-o-keyframes goUp {
-    /* line 35, ../sass/_frame.scss */
+    /* line 37, ../sass/_frame.scss */
     0% {
       opacity: 1;
     }
 
-    /* line 36, ../sass/_frame.scss */
+    /* line 38, ../sass/_frame.scss */
     25% {
       opacity: 0;
     }
 
-    /* line 37, ../sass/_frame.scss */
+    /* line 39, ../sass/_frame.scss */
     75% {
       opacity: 0;
     }
 
-    /* line 38, ../sass/_frame.scss */
+    /* line 40, ../sass/_frame.scss */
     100% {
       opacity: 1;
     }
 }
 
   @keyframes goUp {
-    /* line 35, ../sass/_frame.scss */
+    /* line 37, ../sass/_frame.scss */
     0% {
       opacity: 1;
     }
 
-    /* line 36, ../sass/_frame.scss */
+    /* line 38, ../sass/_frame.scss */
     25% {
       opacity: 0;
     }
 
-    /* line 37, ../sass/_frame.scss */
+    /* line 39, ../sass/_frame.scss */
     75% {
       opacity: 0;
     }
 
-    /* line 38, ../sass/_frame.scss */
+    /* line 40, ../sass/_frame.scss */
     100% {
       opacity: 1;
     }
 }
 
   @-moz-keyframes goDown {
-    /* line 42, ../sass/_frame.scss */
+    /* line 44, ../sass/_frame.scss */
     0% {
       opacity: 1;
     }
 
-    /* line 43, ../sass/_frame.scss */
+    /* line 45, ../sass/_frame.scss */
     25% {
       opacity: 0;
     }
 
-    /* line 44, ../sass/_frame.scss */
+    /* line 46, ../sass/_frame.scss */
     75% {
       opacity: 0;
     }
 
-    /* line 45, ../sass/_frame.scss */
+    /* line 47, ../sass/_frame.scss */
     100% {
       opacity: 1;
     }
 }
 
   @-webkit-keyframes goDown {
-    /* line 42, ../sass/_frame.scss */
+    /* line 44, ../sass/_frame.scss */
     0% {
       opacity: 1;
     }
 
-    /* line 43, ../sass/_frame.scss */
+    /* line 45, ../sass/_frame.scss */
     25% {
       opacity: 0;
     }
 
-    /* line 44, ../sass/_frame.scss */
+    /* line 46, ../sass/_frame.scss */
     75% {
       opacity: 0;
     }
 
-    /* line 45, ../sass/_frame.scss */
+    /* line 47, ../sass/_frame.scss */
     100% {
       opacity: 1;
     }
 }
 
   @-o-keyframes goDown {
-    /* line 42, ../sass/_frame.scss */
+    /* line 44, ../sass/_frame.scss */
     0% {
       opacity: 1;
     }
 
-    /* line 43, ../sass/_frame.scss */
+    /* line 45, ../sass/_frame.scss */
     25% {
       opacity: 0;
     }
 
-    /* line 44, ../sass/_frame.scss */
+    /* line 46, ../sass/_frame.scss */
     75% {
       opacity: 0;
     }
 
-    /* line 45, ../sass/_frame.scss */
+    /* line 47, ../sass/_frame.scss */
     100% {
       opacity: 1;
     }
 }
 
   @keyframes goDown {
-    /* line 42, ../sass/_frame.scss */
+    /* line 44, ../sass/_frame.scss */
     0% {
       opacity: 1;
     }
 
-    /* line 43, ../sass/_frame.scss */
+    /* line 45, ../sass/_frame.scss */
     25% {
       opacity: 0;
     }
 
-    /* line 44, ../sass/_frame.scss */
+    /* line 46, ../sass/_frame.scss */
     75% {
       opacity: 0;
     }
 
-    /* line 45, ../sass/_frame.scss */
+    /* line 47, ../sass/_frame.scss */
     100% {
       opacity: 1;
     }
@@ -1613,7 +1617,7 @@
 
   /* line 1, ../sass/_downstairs.scss */
   .floor_downstairs {
-    background-image: url('../img/bg_downstairs.jpg?1388895419');
+    background-image: url('../img/bg_downstairs.jpg?1389039208');
   }
 
   /* Items */
@@ -1621,7 +1625,7 @@
      So by default, I set it to set where .chair1 would move to.
      When .chair1 is right in front of it, put it where it belongs */
   /* line 13, ../sass/_downstairs.scss */
-  .messy .chair1 + .tablecloth {
+  .messy .chair1 ~ .tablecloth {
     left: 32.28995%;
     top: 77.6%;
   }
@@ -1647,27 +1651,27 @@
     z-index: 5;
   }
 
-  /* line 41, ../sass/_downstairs.scss */
+  /* line 39, ../sass/_downstairs.scss */
+  .clean.axe {
+    z-index: 0;
+  }
+
+  /* line 44, ../sass/_downstairs.scss */
   .messy .tablecloth {
     z-index: 5;
   }
 
-  /* line 46, ../sass/_downstairs.scss */
-  .messy .mug1 {
-    z-index: 5;
-  }
-
-  /* line 68, ../sass/_downstairs.scss */
+  /* line 72, ../sass/_downstairs.scss */
   .places .shovel {
     z-index: 3 !important;
   }
 
-  /* line 69, ../sass/_downstairs.scss */
+  /* line 73, ../sass/_downstairs.scss */
   .places .ovenfork {
-    z-index: 2 !important;
+    z-index: 7 !important;
   }
 
-  /* line 75, ../sass/_downstairs.scss */
+  /* line 79, ../sass/_downstairs.scss */
   .places .blanket.droppable {
     z-index: 5 !important;
   }
@@ -2183,10 +2187,10 @@
 
   /* line 46, ../sass/_mixins.scss */
   .messy .ovenfork {
-    width: 26.771%;
+    width: 14.25041%;
     padding-top: 4.77759%;
     height: 0;
-    left: 52.63591%;
+    left: 65.23888%;
     top: 80.9%;
   }
 

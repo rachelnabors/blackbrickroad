@@ -10,7 +10,7 @@
    So by default, I set it to set where .chair1 would move to.
    When .chair1 is right in front of it, put it where it belongs */
 
-.messy .chair1 + .tablecloth {
+.messy .chair1 ~ .tablecloth {
   @include set-position(392px,1552px, $parent-width, $parent-height*2);  
 }
 
@@ -35,6 +35,9 @@
 
 .clean.mug2 { @extend %layer4}
 
+.sack2-prop {@extend %layer1}
+.clean.axe {z-index: 0}
+
 .nightstand-prop {@extend %layer2}
 .messy .socks {@extend %layer2}
 .messy .pillow1 {@extend %layer3}
@@ -43,10 +46,11 @@
 .messy .pitcher { @extend %layer2 }
 .bucket.clean { @extend %layer3}
 .messy .pitcher { @extend %layer4 }
-.messy .mug1 { z-index: 5}
+.messy .mug1 {@extend %layer5}
+.messy .mug2 {@extend %layer5}
 
 .oven-prop { @extend %layer2 }
-.messy .ovenfork { @extend %layer2 }
+.messy .ovenfork { @extend %layer7 }
 .table-prop {@extend %layer3 }
 .messy .bottle3 {@extend %layer3 }
 .clean.tablecloth {@extend %layer3}
@@ -66,7 +70,7 @@
 .clean.tools {@extend %layer3}
 
 .places .shovel { z-index: 3 !important}
-.places .ovenfork { z-index: 2 !important}
+.places .ovenfork { z-index: 7 !important}
 
 .bed-prop {@extend %layer4 }
 .messy .blanket { @extend %layer5}
@@ -104,7 +108,7 @@
 @include create-item(pillow1,380px,1398px,301px,1670px);
 @include create-item(socks, 575px, 1186px, 686px, 1141px);
 @include create-item(tools,525px,1284px,170px,1660px);
-@include create-item(ovenfork,639px,1618px,968px,1332px);
+@include create-item(ovenfork,792px,1618px,968px,1332px);
 @include create-item(firewood3,1023px,1575px,522px,1503px);
 @include create-item(firewood2,325px,1598px,514px,1508px);
 @include create-item(firewood5,581px,1487px,519px,1493px);

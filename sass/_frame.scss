@@ -1,4 +1,7 @@
 /* Frame positioning */
+body {
+  @include user-select(none);
+}
 
 #frame {
   width: 100%;
@@ -19,7 +22,6 @@ $floor-easing: cubic-bezier(0.77, 0, 0.175, 1);
 #house {
   position: absolute;
   top: 0; left: $instructions-width-ems;
-  @include user-select(none);
   z-index: 1;
   [data-currentFloor="downstairs"] & {
     @include translate(0, -50%);
