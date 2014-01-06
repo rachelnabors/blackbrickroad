@@ -2,9 +2,9 @@
 
 #frame {
   width: 100%;
-  max-width: $max-width;
+  max-width: $house-width;
   overflow: hidden;
-  padding-left: $instructions-width-ems;
+  padding-left: $instructions-width-ems + 4em;
   position: fixed;
   top: 0; left: 0;
   @include box-sizing(border-box);

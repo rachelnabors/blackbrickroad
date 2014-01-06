@@ -11,7 +11,7 @@
 
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
-    <body data-currentFloor="default">
+    <body data-currentFloor="default" data-progress="dialog-intro">
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
@@ -25,7 +25,11 @@
                     <p>To put the house in order, simply <strong>drag and drop</strong> the objects to their rightful places!</p>
                 </div>
             </div>
-            <div class="dialog-intro">
+            <div id="dialog-intro" data-dialog="talk1">
+                <nav>
+                    <div class="previous"></div>
+                    <div class="next"></div>
+                </nav>
             </div>
             <div class="to-do">
                 <div class="wrapper">

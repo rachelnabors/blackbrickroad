@@ -30,12 +30,24 @@ $ui-sprite-width: sprite_width($ui-sprites);
 	}
 }
 
+/* States */
+[data-progress="dialog-intro"] {
+	.instructions {opacity: 0}
+	.to-do { display: none}
+}
+
+[data-progress="cleaning-house"] {
+	.instructions {opacity: 1}
+	.to-do { display: block}
+	#dialog-intro {display:none}
+}
+
 .instructions {
 	@include ui-sprite(bg_instructions); 
-	@include set-dimensions(241px, 254px, $ui-width);
+	@include set-dimensions(225px, 232px, $ui-width);
 	position: relative;
 	@include set-bg-width($ui-sprite-width, $ui-sprite, bg_instructions);
-	float: right;
+	@include offsetLeft(42px, $instructions-width);
 	.wrapper {
 		@include set-position(35px, 104px, $instructions-width, $instructions-height);
 		@include set-width(170px, $instructions-width);
@@ -64,6 +76,7 @@ $ui-sprite-width: sprite_width($ui-sprites);
 }
 
 .to-do {
+	@include offsetLeft(59px, $instructions-width);
 	.wrapper {
 		@include set-position(34px, 24px, $instructions-width, $instructions-height);
 		@include set-width(154px, $instructions-width);
@@ -99,7 +112,7 @@ $ui-sprite-width: sprite_width($ui-sprites);
 	}
 }
 
-.dialog-intro, .dialog-outro {
+.dialog-outro {
 	display: none;
 }
 
@@ -124,3 +137,24 @@ $ui-sprite-width: sprite_width($ui-sprites);
 	position: absolute;
 	z-index:10;
 }
+
+/* Conversation between Dolly and Scare Crow */
+/* Dialog Sprites */
+$dialog-use-percentages: true;
+$dialog-sprite-spacing: 2px;
+@import "dialog/*.png";
+$dialog-sprite: $dialog-sprites;
+$dialog-sprite-width: sprite_width($dialog-sprites);
+
+#dialog-intro {
+	position: relative;
+}
+
+@include create-dialog(talk1, 228px, 43px);
+@include create-dialog(talk2, 227px, 43px);
+@include create-dialog(talk3, 232px, 43px);
+@include create-dialog(talk4, 230px, 43px);
+@include create-dialog(talk5, 289px, 40px);
+@include create-dialog(talk6, 286px, 43px);
+@include create-dialog(talk7, 297px, 43px);
+@include create-dialog(talk8, 315px, 20px);

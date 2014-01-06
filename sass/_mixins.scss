@@ -16,6 +16,10 @@
 	top: percentage($sY/$parent-height);
 }
 
+@mixin offsetLeft($offset, $parent-width) {
+	left: percentage($offset/$parent-width);
+}
+
 @mixin set-bg-width($sprites-width, $sprite, $sprite-image) {
 	$spriteX: percentage($sprites-width / image-width(sprite-file($sprite, $sprite-image)));
 	@include background-size($spriteX auto);
@@ -67,5 +71,14 @@
 
 	.#{$item}.clean {
 	  @include places-sprite(#{$item}-clean);
+	}
+}
+
+@mixin create-dialog($name, $width, $offset) {
+	[data-dialog="#{$name}"] {
+		@include dialog-sprite(#{$name}); 
+		@include set-dimensions(image-width(sprite-file($dialog-sprites, #{$name})), $instructions-height, $ui-width);
+		@include set-bg-width($dialog-sprite-width, $dialog-sprite, #{$name});
+		@include offsetLeft($offset, $instructions-width);
 	}
 }
