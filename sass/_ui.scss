@@ -10,7 +10,6 @@ $ui-sprite-width: sprite_width($ui-sprites);
 	z-index: 2;
 	float: left;
 	width: $instructions-width-ems; 
-	height: $instructions-height-ems;
 	font-family: $writing;
 	position: relative;
 	.wrapper {
@@ -32,19 +31,46 @@ $ui-sprite-width: sprite_width($ui-sprites);
 
 /* States */
 [data-progress="dialog-intro"] {
+	#frame { 
+		opacity: .5;
+		pointer-events: none;
+	}
 	.instructions {opacity: 0}
 	.to-do { display: none}
+	#dialog-outro {display:none}
+	.warp { opacity: 0;}
 }
 
 [data-progress="cleaning-house"] {
 	.instructions {opacity: 1}
 	.to-do { display: block}
 	#dialog-intro {display:none}
+	#dialog-outro {display:none}
 }
 
+[data-progress="dialog-outro"] {
+	#frame { 
+		opacity: .5;
+		pointer-events: none;
+	}
+	.instructions {opacity: 0}
+	.to-do { display: none}
+	#dialog-intro {display:none}
+	#dialog-outro {display:block}
+	.warp { opacity: 0;}
+}
+
+[data-progress="fun-with-photos"] {
+	.instructions {opacity: 0}
+	.to-do { display: none}
+	#dialog-intro {display:none}
+	#dialog-outro {display:none}
+	.warp { display: none;}
+}
 .instructions {
 	@include ui-sprite(bg_instructions); 
 	@include set-dimensions(225px, 232px, $ui-width);
+	margin-bottom: 1em;
 	position: relative;
 	@include set-bg-width($ui-sprite-width, $ui-sprite, bg_instructions);
 	@include offsetLeft(42px, $instructions-width);
@@ -76,7 +102,7 @@ $ui-sprite-width: sprite_width($ui-sprites);
 }
 
 .to-do {
-	@include offsetLeft(59px, $instructions-width);
+	//@include offsetLeft(59px, $instructions-width);
 	.wrapper {
 		@include set-position(34px, 24px, $instructions-width, $instructions-height);
 		@include set-width(154px, $instructions-width);
@@ -136,6 +162,7 @@ $ui-sprite-width: sprite_width($ui-sprites);
 	cursor: pointer;
 	position: absolute;
 	z-index:10;
+	@include transition(opacity 2s);
 }
 
 /* Conversation between Dolly and Scare Crow */
@@ -146,15 +173,56 @@ $dialog-sprite-spacing: 2px;
 $dialog-sprite: $dialog-sprites;
 $dialog-sprite-width: sprite_width($dialog-sprites);
 
-#dialog-intro {
+#dialog-intro, #dialog-outro {
 	position: relative;
+	margin-bottom:2em;
 }
 
-@include create-dialog(talk1, 228px, 43px);
-@include create-dialog(talk2, 227px, 43px);
-@include create-dialog(talk3, 232px, 43px);
-@include create-dialog(talk4, 230px, 43px);
-@include create-dialog(talk5, 289px, 40px);
-@include create-dialog(talk6, 286px, 43px);
-@include create-dialog(talk7, 297px, 43px);
-@include create-dialog(talk8, 315px, 20px);
+.dialog-nav {
+	color :#fff;
+	text-align: center;
+	padding: .5em 0 2em;
+	@extend %clearfix;
+	.prev, .next { 
+		cursor: pointer; 
+		width: 48%;
+		@include box-sizing(border-box);
+	}
+	.prev {
+		float: left;
+		padding-left:1em;
+		&:before {
+			content: '';
+			display: inline-block;
+			margin-right: .25em;
+			@include ui-sprite(i_prev);
+			@include set-bg-width($ui-sprite-width, $ui-sprite, i_prev);
+			width: 1em; height: .945em;
+		}
+	}
+	.next {
+		float: right;
+		padding-right:3em;
+		&:after {
+			content: '';
+			display: inline-block;
+			margin-left: .25em;
+			@include ui-sprite(i_next);
+			@include set-bg-width($ui-sprite-width, $ui-sprite, i_next);
+			width: 1em; height: .945em;
+		}
+	}
+	.start & .prev {
+		display: none;
+	}
+}
+
+@include create-dialog("intro", 1);
+@include create-dialog("intro", 2);
+@include create-dialog("intro", 3);
+@include create-dialog("intro", 4);
+@include create-dialog("intro", 5);
+@include create-dialog("intro", 6);
+
+@include create-dialog("outro", 1);
+@include create-dialog("outro", 2);

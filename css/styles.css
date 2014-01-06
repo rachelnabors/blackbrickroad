@@ -86,7 +86,22 @@
     display: none;
   }
 
-  /* line 10, ../sass/_extends.scss */
+  /* Clear Fix */
+  /* line 12, ../sass/_extends.scss */
+  .dialog-nav:before,
+  .dialog-nav:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+  }
+
+  /* line 17, ../sass/_extends.scss */
+  .dialog-nav:after {
+    clear: both;
+  }
+
+  /* line 22, ../sass/_extends.scss */
   .floor_upstairs, .floor_downstairs {
     -webkit-background-size: 100% auto;
     -moz-background-size: 100% auto;
@@ -95,53 +110,53 @@
     z-index: -1;
   }
 
-  /* line 17, ../sass/_extends.scss */
+  /* line 27, ../sass/_extends.scss */
   .messy .rug, .messy .stool, .messy .shoe1, .messy .shoe2, .messy .pillowup1, .messy .books, .messy .telescope, .messy .toy, .messy .musicbox, .messy .broom, .messy .pot1, .messy .pot2, .messy .pot3, .messy .pot4, .messy .scoop, .messy .firewood1, .messy .axe, .messy .rifle, .messy .cloak, .messy .boot1, .messy .samovar, .messy .firewood6, .messy .sack1, .messy .pillow1, .messy .socks, .messy .tools, .messy .ovenfork, .messy .firewood3, .messy .firewood2, .messy .firewood5, .messy .firewood4, .messy .shovel, .messy .pitcher, .messy .bottle3, .messy .washboard, .messy .mug2, .messy .mug1, .messy .bottle2, .messy .bucket, .messy .chair1, .messy .pillow3, .messy .tablecloth, .messy .blanket, .messy .oilcan, .messy .bottle1, .messy .boot2 {
     position: absolute;
     cursor: move;
   }
 
-  /* line 22, ../sass/_extends.scss */
+  /* line 32, ../sass/_extends.scss */
   .places .rug, .places .stool, .places .shoe1, .places .shoe2, .places .pillowup1, .places .books, .places .telescope, .places .toy, .places .musicbox, .places .broom, .places .pot1, .places .pot2, .places .pot3, .places .pot4, .places .scoop, .places .firewood1, .places .axe, .places .rifle, .places .cloak, .places .boot1, .places .samovar, .places .firewood6, .places .sack1, .places .pillow1, .places .socks, .places .tools, .places .ovenfork, .places .firewood3, .places .firewood2, .places .firewood5, .places .firewood4, .places .shovel, .places .pitcher, .places .bottle3, .places .washboard, .places .mug2, .places .mug1, .places .bottle2, .places .bucket, .places .chair1, .places .pillow3, .places .tablecloth, .places .blanket, .places .oilcan, .places .bottle1, .places .boot2 {
     position: absolute;
   }
 
-  /* line 26, ../sass/_extends.scss */
+  /* line 36, ../sass/_extends.scss */
   .basket-prop, .bedback-prop, .bedup-prop, .armchair-prop, .cradle-prop, .pillow2-prop, .bed-prop, .spoons-prop, .pot-prop, .chair2-prop, .table-prop, .oven-prop, .laundry-prop, .nightstand-prop, .stairs-prop, .sack2-prop {
     position: absolute;
   }
 
-  /* line 31, ../sass/_extends.scss */
+  /* line 41, ../sass/_extends.scss */
   .places li, .clean.firewood1, .clean.firewood2, .clean.firewood3, .clean.firewood4, .clean.firewood5, .clean.firewood6, .messy .rifle {
     z-index: 1;
   }
 
-  /* line 32, ../sass/_extends.scss */
+  /* line 42, ../sass/_extends.scss */
   .messy li, .clean.shoe1, .stairs-prop, .boot1.clean, .messy .sack1, .nightstand-prop, .messy .socks, .messy .pitcher, .oven-prop, .messy .ovenfork, .messy .boot2, .messy .cloak {
     z-index: 2;
   }
 
-  /* line 33, ../sass/_extends.scss */
+  /* line 43, ../sass/_extends.scss */
   .basket-prop, .armchair-prop, .clean.books, .clean.scoop, .clean.telescope, .clean.pot1, .cloak.clean, .messy .axe, .messy .bucket, .messy .firewood2, .messy .firewood6, .messy .shovel, .boot2.clean, .messy .pillow1, .bucket.clean, .table-prop, .messy .bottle3, .clean.tablecloth, .clean.tools {
     z-index: 3;
   }
 
-  /* line 34, ../sass/_extends.scss */
+  /* line 44, ../sass/_extends.scss */
   .cradle-prop, .messy .musicbox, .messy .stool, .messy .pot3, .clean.pot3, .messy .samovar, .bottle2.clean, .clean.mug2, .messy .chair1, .messy .pitcher, .clean.chair1, .pot-prop, .spoons-prop, .clean.pitcher, .messy .washboard, .messy .pillow3, .bed-prop {
     z-index: 4;
   }
 
-  /* line 35, ../sass/_extends.scss */
+  /* line 45, ../sass/_extends.scss */
   .clean.pot2, .clean.mug1, .clean.mug2, .samovar.clean, .chair2-prop, .messy .blanket, .clean.blanket {
     z-index: 5;
   }
 
-  /* line 36, ../sass/_extends.scss */
+  /* line 46, ../sass/_extends.scss */
   .messy .bottle2, .messy .oilcan, .clean.pillow1, .messy .bottle1 {
     z-index: 6;
   }
 
-  /* line 37, ../sass/_extends.scss */
+  /* line 47, ../sass/_extends.scss */
   .clean.pillow3 {
     z-index: 7;
   }
@@ -171,9 +186,16 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
+  /* line 11, ../sass/_frame.scss */
+  [data-progress="cleaning-house"] #frame, [data-progress="dialog-outro"] #frame {
+    -webkit-transition: opacity, 2s;
+    -moz-transition: opacity, 2s;
+    -o-transition: opacity, 2s;
+    transition: opacity, 2s;
+  }
 
   /* House */
-  /* line 16, ../sass/_frame.scss */
+  /* line 19, ../sass/_frame.scss */
   #house {
     position: absolute;
     top: 0;
@@ -188,7 +210,7 @@
     -o-transition: -o-transform 1.75s cubic-bezier(0.77, 0, 0.175, 1);
     transition: transform 1.75s cubic-bezier(0.77, 0, 0.175, 1);
   }
-  /* line 21, ../sass/_frame.scss */
+  /* line 24, ../sass/_frame.scss */
   [data-currentFloor="downstairs"] #house {
     -webkit-transform: translate(0, -50%);
     -moz-transform: translate(0, -50%);
@@ -200,7 +222,7 @@
     -o-animation: goDown 2s cubic-bezier(0.77, 0, 0.175, 1);
     animation: goDown 2s cubic-bezier(0.77, 0, 0.175, 1);
   }
-  /* line 25, ../sass/_frame.scss */
+  /* line 28, ../sass/_frame.scss */
   [data-currentFloor="upstairs"] #house {
     -webkit-animation: goUp 2s cubic-bezier(0.77, 0, 0.175, 1);
     -moz-animation: goUp 2s cubic-bezier(0.77, 0, 0.175, 1);
@@ -209,176 +231,176 @@
   }
 
   @-moz-keyframes goUp {
-    /* line 32, ../sass/_frame.scss */
+    /* line 35, ../sass/_frame.scss */
     0% {
       opacity: 1;
     }
 
-    /* line 33, ../sass/_frame.scss */
+    /* line 36, ../sass/_frame.scss */
     25% {
       opacity: 0;
     }
 
-    /* line 34, ../sass/_frame.scss */
+    /* line 37, ../sass/_frame.scss */
     75% {
       opacity: 0;
     }
 
-    /* line 35, ../sass/_frame.scss */
+    /* line 38, ../sass/_frame.scss */
     100% {
       opacity: 1;
     }
 }
 
   @-webkit-keyframes goUp {
-    /* line 32, ../sass/_frame.scss */
+    /* line 35, ../sass/_frame.scss */
     0% {
       opacity: 1;
     }
 
-    /* line 33, ../sass/_frame.scss */
+    /* line 36, ../sass/_frame.scss */
     25% {
       opacity: 0;
     }
 
-    /* line 34, ../sass/_frame.scss */
+    /* line 37, ../sass/_frame.scss */
     75% {
       opacity: 0;
     }
 
-    /* line 35, ../sass/_frame.scss */
+    /* line 38, ../sass/_frame.scss */
     100% {
       opacity: 1;
     }
 }
 
   @-o-keyframes goUp {
-    /* line 32, ../sass/_frame.scss */
+    /* line 35, ../sass/_frame.scss */
     0% {
       opacity: 1;
     }
 
-    /* line 33, ../sass/_frame.scss */
+    /* line 36, ../sass/_frame.scss */
     25% {
       opacity: 0;
     }
 
-    /* line 34, ../sass/_frame.scss */
+    /* line 37, ../sass/_frame.scss */
     75% {
       opacity: 0;
     }
 
-    /* line 35, ../sass/_frame.scss */
+    /* line 38, ../sass/_frame.scss */
     100% {
       opacity: 1;
     }
 }
 
   @keyframes goUp {
-    /* line 32, ../sass/_frame.scss */
+    /* line 35, ../sass/_frame.scss */
     0% {
       opacity: 1;
     }
 
-    /* line 33, ../sass/_frame.scss */
+    /* line 36, ../sass/_frame.scss */
     25% {
       opacity: 0;
     }
 
-    /* line 34, ../sass/_frame.scss */
+    /* line 37, ../sass/_frame.scss */
     75% {
       opacity: 0;
     }
 
-    /* line 35, ../sass/_frame.scss */
+    /* line 38, ../sass/_frame.scss */
     100% {
       opacity: 1;
     }
 }
 
   @-moz-keyframes goDown {
-    /* line 39, ../sass/_frame.scss */
+    /* line 42, ../sass/_frame.scss */
     0% {
       opacity: 1;
     }
 
-    /* line 40, ../sass/_frame.scss */
+    /* line 43, ../sass/_frame.scss */
     25% {
       opacity: 0;
     }
 
-    /* line 41, ../sass/_frame.scss */
+    /* line 44, ../sass/_frame.scss */
     75% {
       opacity: 0;
     }
 
-    /* line 42, ../sass/_frame.scss */
+    /* line 45, ../sass/_frame.scss */
     100% {
       opacity: 1;
     }
 }
 
   @-webkit-keyframes goDown {
-    /* line 39, ../sass/_frame.scss */
+    /* line 42, ../sass/_frame.scss */
     0% {
       opacity: 1;
     }
 
-    /* line 40, ../sass/_frame.scss */
+    /* line 43, ../sass/_frame.scss */
     25% {
       opacity: 0;
     }
 
-    /* line 41, ../sass/_frame.scss */
+    /* line 44, ../sass/_frame.scss */
     75% {
       opacity: 0;
     }
 
-    /* line 42, ../sass/_frame.scss */
+    /* line 45, ../sass/_frame.scss */
     100% {
       opacity: 1;
     }
 }
 
   @-o-keyframes goDown {
-    /* line 39, ../sass/_frame.scss */
+    /* line 42, ../sass/_frame.scss */
     0% {
       opacity: 1;
     }
 
-    /* line 40, ../sass/_frame.scss */
+    /* line 43, ../sass/_frame.scss */
     25% {
       opacity: 0;
     }
 
-    /* line 41, ../sass/_frame.scss */
+    /* line 44, ../sass/_frame.scss */
     75% {
       opacity: 0;
     }
 
-    /* line 42, ../sass/_frame.scss */
+    /* line 45, ../sass/_frame.scss */
     100% {
       opacity: 1;
     }
 }
 
   @keyframes goDown {
-    /* line 39, ../sass/_frame.scss */
+    /* line 42, ../sass/_frame.scss */
     0% {
       opacity: 1;
     }
 
-    /* line 40, ../sass/_frame.scss */
+    /* line 43, ../sass/_frame.scss */
     25% {
       opacity: 0;
     }
 
-    /* line 41, ../sass/_frame.scss */
+    /* line 44, ../sass/_frame.scss */
     75% {
       opacity: 0;
     }
 
-    /* line 42, ../sass/_frame.scss */
+    /* line 45, ../sass/_frame.scss */
     100% {
       opacity: 1;
     }
@@ -386,8 +408,8 @@
 
   /* UI Sprites */
   /* line 95, ui/*.png */
-  .ui-sprite, .instructions, .dialog-intro, .to-do, .dialog-outro, .to-do li:before, .to_upstairs, .to_downstairs {
-    background-image: url('../img/ui-s8f8b13cdf6.png');
+  .ui-sprite, .instructions, .dialog-intro, .to-do, .dialog-outro, .to-do li:before, .to_upstairs, .to_downstairs, .dialog-nav .prev:before, .dialog-nav .next:after {
+    background-image: url('../img/ui-sb97c71bf52.png');
     background-repeat: no-repeat;
   }
 
@@ -397,58 +419,122 @@
     z-index: 2;
     float: left;
     width: 14.1875em;
-    height: 39.5625em;
     font-family: "mawns_handwriting_regular", cursive;
     position: relative;
   }
-  /* line 16, ../sass/_ui.scss */
+  /* line 15, ../sass/_ui.scss */
   #ui .wrapper {
     color: #fff;
     overflow: auto;
     position: absolute;
     line-height: 1.4em;
   }
-  /* line 22, ../sass/_ui.scss */
+  /* line 21, ../sass/_ui.scss */
   #ui h1 {
     color: #ebaa0e;
     text-transform: uppercase;
     font-size: 1.1em;
     padding-top: .25em;
   }
-  /* line 28, ../sass/_ui.scss */
+  /* line 27, ../sass/_ui.scss */
   #ui p, #ui h1 {
     text-align: center;
   }
 
   /* States */
-  /* line 35, ../sass/_ui.scss */
+  /* line 34, ../sass/_ui.scss */
+  [data-progress="dialog-intro"] #frame {
+    opacity: .5;
+    pointer-events: none;
+  }
+  /* line 38, ../sass/_ui.scss */
   [data-progress="dialog-intro"] .instructions {
     opacity: 0;
   }
-  /* line 36, ../sass/_ui.scss */
+  /* line 39, ../sass/_ui.scss */
   [data-progress="dialog-intro"] .to-do {
     display: none;
   }
-
   /* line 40, ../sass/_ui.scss */
-  [data-progress="cleaning-house"] .instructions {
-    opacity: 1;
+  [data-progress="dialog-intro"] #dialog-outro {
+    display: none;
   }
   /* line 41, ../sass/_ui.scss */
-  [data-progress="cleaning-house"] .to-do {
-    display: block;
-  }
-  /* line 42, ../sass/_ui.scss */
-  [data-progress="cleaning-house"] #dialog-intro {
-    display: none;
+  [data-progress="dialog-intro"] .warp {
+    opacity: 0;
   }
 
   /* line 45, ../sass/_ui.scss */
+  [data-progress="cleaning-house"] .instructions {
+    opacity: 1;
+  }
+  /* line 46, ../sass/_ui.scss */
+  [data-progress="cleaning-house"] .to-do {
+    display: block;
+  }
+  /* line 47, ../sass/_ui.scss */
+  [data-progress="cleaning-house"] #dialog-intro {
+    display: none;
+  }
+  /* line 48, ../sass/_ui.scss */
+  [data-progress="cleaning-house"] #dialog-outro {
+    display: none;
+  }
+
+  /* line 52, ../sass/_ui.scss */
+  [data-progress="dialog-outro"] #frame {
+    opacity: .5;
+    pointer-events: none;
+  }
+  /* line 56, ../sass/_ui.scss */
+  [data-progress="dialog-outro"] .instructions {
+    opacity: 0;
+  }
+  /* line 57, ../sass/_ui.scss */
+  [data-progress="dialog-outro"] .to-do {
+    display: none;
+  }
+  /* line 58, ../sass/_ui.scss */
+  [data-progress="dialog-outro"] #dialog-intro {
+    display: none;
+  }
+  /* line 59, ../sass/_ui.scss */
+  [data-progress="dialog-outro"] #dialog-outro {
+    display: block;
+  }
+  /* line 60, ../sass/_ui.scss */
+  [data-progress="dialog-outro"] .warp {
+    opacity: 0;
+  }
+
+  /* line 64, ../sass/_ui.scss */
+  [data-progress="fun-with-photos"] .instructions {
+    opacity: 0;
+  }
+  /* line 65, ../sass/_ui.scss */
+  [data-progress="fun-with-photos"] .to-do {
+    display: none;
+  }
+  /* line 66, ../sass/_ui.scss */
+  [data-progress="fun-with-photos"] #dialog-intro {
+    display: none;
+  }
+  /* line 67, ../sass/_ui.scss */
+  [data-progress="fun-with-photos"] #dialog-outro {
+    display: none;
+  }
+  /* line 68, ../sass/_ui.scss */
+  [data-progress="fun-with-photos"] .warp {
+    display: none;
+  }
+
+  /* line 70, ../sass/_ui.scss */
   .instructions {
     background-position: 0 0;
     width: 78.67133%;
     padding-top: 81.11888%;
     height: 0;
+    margin-bottom: 1em;
     position: relative;
     -webkit-background-size: 100% auto;
     -moz-background-size: 100% auto;
@@ -456,7 +542,7 @@
     background-size: 100% auto;
     left: 18.5022%;
   }
-  /* line 51, ../sass/_ui.scss */
+  /* line 77, ../sass/_ui.scss */
   .instructions .wrapper {
     left: 15.4185%;
     top: 16.4297%;
@@ -464,10 +550,10 @@
     height: 10em;
   }
 
-  /* line 58, ../sass/_ui.scss */
+  /* line 84, ../sass/_ui.scss */
   .dialog-intro, .to-do, .dialog-outro {
     position: relative;
-    background-position: 0 45.60144%;
+    background-position: 0 54.38972%;
     width: 79.37063%;
     padding-top: 221.32867%;
     height: 0;
@@ -479,153 +565,149 @@
   }
 
   @-moz-keyframes fadeInDown {
-    /* line 67, ../sass/_ui.scss */
+    /* line 93, ../sass/_ui.scss */
     0% {
       opacity: 0;
     }
 
-    /* line 68, ../sass/_ui.scss */
+    /* line 94, ../sass/_ui.scss */
     1% {
       opacity: 0;
     }
 
-    /* line 69, ../sass/_ui.scss */
+    /* line 95, ../sass/_ui.scss */
     100% {
       opacity: 1;
     }
 }
 
   @-webkit-keyframes fadeInDown {
-    /* line 67, ../sass/_ui.scss */
+    /* line 93, ../sass/_ui.scss */
     0% {
       opacity: 0;
     }
 
-    /* line 68, ../sass/_ui.scss */
+    /* line 94, ../sass/_ui.scss */
     1% {
       opacity: 0;
     }
 
-    /* line 69, ../sass/_ui.scss */
+    /* line 95, ../sass/_ui.scss */
     100% {
       opacity: 1;
     }
 }
 
   @-o-keyframes fadeInDown {
-    /* line 67, ../sass/_ui.scss */
+    /* line 93, ../sass/_ui.scss */
     0% {
       opacity: 0;
     }
 
-    /* line 68, ../sass/_ui.scss */
+    /* line 94, ../sass/_ui.scss */
     1% {
       opacity: 0;
     }
 
-    /* line 69, ../sass/_ui.scss */
+    /* line 95, ../sass/_ui.scss */
     100% {
       opacity: 1;
     }
 }
 
   @keyframes fadeInDown {
-    /* line 67, ../sass/_ui.scss */
+    /* line 93, ../sass/_ui.scss */
     0% {
       opacity: 0;
     }
 
-    /* line 68, ../sass/_ui.scss */
+    /* line 94, ../sass/_ui.scss */
     1% {
       opacity: 0;
     }
 
-    /* line 69, ../sass/_ui.scss */
+    /* line 95, ../sass/_ui.scss */
     100% {
       opacity: 1;
     }
 }
 
   @-moz-keyframes fadeInUp {
-    /* line 73, ../sass/_ui.scss */
+    /* line 99, ../sass/_ui.scss */
     0% {
       opacity: 0;
     }
 
-    /* line 74, ../sass/_ui.scss */
+    /* line 100, ../sass/_ui.scss */
     1% {
       opacity: 0;
     }
 
-    /* line 75, ../sass/_ui.scss */
+    /* line 101, ../sass/_ui.scss */
     100% {
       opacity: 1;
     }
 }
 
   @-webkit-keyframes fadeInUp {
-    /* line 73, ../sass/_ui.scss */
+    /* line 99, ../sass/_ui.scss */
     0% {
       opacity: 0;
     }
 
-    /* line 74, ../sass/_ui.scss */
+    /* line 100, ../sass/_ui.scss */
     1% {
       opacity: 0;
     }
 
-    /* line 75, ../sass/_ui.scss */
+    /* line 101, ../sass/_ui.scss */
     100% {
       opacity: 1;
     }
 }
 
   @-o-keyframes fadeInUp {
-    /* line 73, ../sass/_ui.scss */
+    /* line 99, ../sass/_ui.scss */
     0% {
       opacity: 0;
     }
 
-    /* line 74, ../sass/_ui.scss */
+    /* line 100, ../sass/_ui.scss */
     1% {
       opacity: 0;
     }
 
-    /* line 75, ../sass/_ui.scss */
+    /* line 101, ../sass/_ui.scss */
     100% {
       opacity: 1;
     }
 }
 
   @keyframes fadeInUp {
-    /* line 73, ../sass/_ui.scss */
+    /* line 99, ../sass/_ui.scss */
     0% {
       opacity: 0;
     }
 
-    /* line 74, ../sass/_ui.scss */
+    /* line 100, ../sass/_ui.scss */
     1% {
       opacity: 0;
     }
 
-    /* line 75, ../sass/_ui.scss */
+    /* line 101, ../sass/_ui.scss */
     100% {
       opacity: 1;
     }
 }
 
-  /* line 78, ../sass/_ui.scss */
-  .to-do {
-    left: 25.99119%;
-  }
-  /* line 80, ../sass/_ui.scss */
+  /* line 106, ../sass/_ui.scss */
   .to-do .wrapper {
     left: 14.97797%;
     top: 3.79147%;
     width: 67.84141%;
     height: 29em;
   }
-  /* line 86, ../sass/_ui.scss */
+  /* line 112, ../sass/_ui.scss */
   [data-currentFloor="downstairs"] .to-do ul {
     opacity: 0;
     -webkit-animation: fadeInDown 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
@@ -633,7 +715,7 @@
     -o-animation: fadeInDown 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
     animation: fadeInDown 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
   }
-  /* line 90, ../sass/_ui.scss */
+  /* line 116, ../sass/_ui.scss */
   [data-currentFloor="upstairs"] .to-do ul {
     opacity: 0;
     -webkit-animation: fadeInUp 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
@@ -641,15 +723,15 @@
     -o-animation: fadeInUp 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
     animation: fadeInUp 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
   }
-  /* line 95, ../sass/_ui.scss */
+  /* line 121, ../sass/_ui.scss */
   .to-do li {
     padding-left: 14.28571%;
     position: relative;
   }
-  /* line 98, ../sass/_ui.scss */
+  /* line 124, ../sass/_ui.scss */
   .to-do li:before {
     content: " ";
-    background-position: 0 74.7262%;
+    background-position: 0 80.85688%;
     width: 3.84615%;
     padding-top: 1.04895%;
     height: 0;
@@ -661,23 +743,23 @@
     top: .5em;
     left: 0;
   }
-  /* line 108, ../sass/_ui.scss */
+  /* line 134, ../sass/_ui.scss */
   [data-currentFloor="default"] .to-do li.downstairs, [data-currentFloor="upstairs"] .to-do li.downstairs, [data-currentFloor="downstairs"] .to-do li.upstairs {
     display: none;
   }
-  /* line 110, ../sass/_ui.scss */
+  /* line 136, ../sass/_ui.scss */
   .to-do del {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
     opacity: 0.6;
   }
 
-  /* line 115, ../sass/_ui.scss */
+  /* line 141, ../sass/_ui.scss */
   .dialog-outro {
     display: none;
   }
 
   /* Navigating between floors */
-  /* line 121, ../sass/_ui.scss */
+  /* line 147, ../sass/_ui.scss */
   .to_upstairs {
     background-position: 0 100%;
     width: 3.78913%;
@@ -691,9 +773,9 @@
     top: 55.2%;
   }
 
-  /* line 128, ../sass/_ui.scss */
+  /* line 154, ../sass/_ui.scss */
   .to_downstairs {
-    background-position: 0 79.18149%;
+    background-position: 0 86.0735%;
     width: 3.78913%;
     padding-top: 5.43657%;
     height: 0;
@@ -705,119 +787,179 @@
     top: 31.65%;
   }
 
-  /* line 135, ../sass/_ui.scss */
+  /* line 161, ../sass/_ui.scss */
   .warp {
     cursor: pointer;
     position: absolute;
     z-index: 10;
+    -webkit-transition: opacity 2s;
+    -moz-transition: opacity 2s;
+    -o-transition: opacity 2s;
+    transition: opacity 2s;
   }
 
   /* Conversation between Dolly and Scare Crow */
   /* Dialog Sprites */
   /* line 103, dialog/*.png */
-  .dialog-sprite, [data-dialog="talk1"], [data-dialog="talk2"], [data-dialog="talk3"], [data-dialog="talk4"], [data-dialog="talk5"], [data-dialog="talk6"], [data-dialog="talk7"], [data-dialog="talk8"] {
-    background-image: url('../img/dialog-s852eae5906.png');
+  .dialog-sprite, #dialog-intro[data-dialog="1"], #dialog-intro[data-dialog="2"], #dialog-intro[data-dialog="3"], #dialog-intro[data-dialog="4"], #dialog-intro[data-dialog="5"], #dialog-intro[data-dialog="6"], #dialog-outro[data-dialog="1"], #dialog-outro[data-dialog="2"] {
+    background-image: url('../img/dialog-se64fb6284a.png');
     background-repeat: no-repeat;
   }
 
-  /* line 149, ../sass/_ui.scss */
-  #dialog-intro {
+  /* line 176, ../sass/_ui.scss */
+  #dialog-intro, #dialog-outro {
     position: relative;
+    margin-bottom: 2em;
+  }
+
+  /* line 181, ../sass/_ui.scss */
+  .dialog-nav {
+    color: #fff;
+    text-align: center;
+    padding: .5em 0 2em;
+  }
+  /* line 186, ../sass/_ui.scss */
+  .dialog-nav .prev, .dialog-nav .next {
+    cursor: pointer;
+    width: 48%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  /* line 191, ../sass/_ui.scss */
+  .dialog-nav .prev {
+    float: left;
+    padding-left: 1em;
+  }
+  /* line 194, ../sass/_ui.scss */
+  .dialog-nav .prev:before {
+    content: '';
+    display: inline-block;
+    margin-right: .25em;
+    background-position: 0 93.77945%;
+    -webkit-background-size: 587.80488% auto;
+    -moz-background-size: 587.80488% auto;
+    -o-background-size: 587.80488% auto;
+    background-size: 587.80488% auto;
+    width: 1em;
+    height: .945em;
+  }
+  /* line 203, ../sass/_ui.scss */
+  .dialog-nav .next {
+    float: right;
+    padding-right: 3em;
+  }
+  /* line 206, ../sass/_ui.scss */
+  .dialog-nav .next:after {
+    content: '';
+    display: inline-block;
+    margin-left: .25em;
+    background-position: 0 90.10368%;
+    -webkit-background-size: 587.80488% auto;
+    -moz-background-size: 587.80488% auto;
+    -o-background-size: 587.80488% auto;
+    background-size: 587.80488% auto;
+    width: 1em;
+    height: .945em;
+  }
+  /* line 215, ../sass/_ui.scss */
+  .start .dialog-nav .prev {
+    display: none;
   }
 
   /* line 78, ../sass/_mixins.scss */
-  [data-dialog="talk1"] {
+  #dialog-intro[data-dialog="1"] {
     background-position: 0 0;
-    width: 79.72028%;
+    width: 110.13986%;
     padding-top: 221.32867%;
     height: 0;
-    -webkit-background-size: 138.15789% auto;
-    -moz-background-size: 138.15789% auto;
-    -o-background-size: 138.15789% auto;
-    background-size: 138.15789% auto;
-    left: 18.94273%;
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    left: 10.13216%;
   }
 
   /* line 78, ../sass/_mixins.scss */
-  [data-dialog="talk2"] {
+  #dialog-intro[data-dialog="2"] {
     background-position: 0 14.28571%;
-    width: 79.37063%;
+    width: 110.13986%;
     padding-top: 221.32867%;
     height: 0;
-    -webkit-background-size: 138.76652% auto;
-    -moz-background-size: 138.76652% auto;
-    -o-background-size: 138.76652% auto;
-    background-size: 138.76652% auto;
-    left: 18.94273%;
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    left: 10.13216%;
   }
 
   /* line 78, ../sass/_mixins.scss */
-  [data-dialog="talk3"] {
+  #dialog-intro[data-dialog="3"] {
     background-position: 0 28.57143%;
-    width: 81.11888%;
+    width: 110.13986%;
     padding-top: 221.32867%;
     height: 0;
-    -webkit-background-size: 135.77586% auto;
-    -moz-background-size: 135.77586% auto;
-    -o-background-size: 135.77586% auto;
-    background-size: 135.77586% auto;
-    left: 18.94273%;
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    left: 10.13216%;
   }
 
   /* line 78, ../sass/_mixins.scss */
-  [data-dialog="talk4"] {
+  #dialog-intro[data-dialog="4"] {
     background-position: 0 42.85714%;
-    width: 80.41958%;
+    width: 110.13986%;
     padding-top: 221.32867%;
     height: 0;
-    -webkit-background-size: 136.95652% auto;
-    -moz-background-size: 136.95652% auto;
-    -o-background-size: 136.95652% auto;
-    background-size: 136.95652% auto;
-    left: 18.94273%;
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    left: 10.13216%;
   }
 
   /* line 78, ../sass/_mixins.scss */
-  [data-dialog="talk5"] {
+  #dialog-intro[data-dialog="5"] {
     background-position: 0 57.14286%;
-    width: 81.46853%;
+    width: 110.13986%;
     padding-top: 221.32867%;
     height: 0;
-    -webkit-background-size: 135.19313% auto;
-    -moz-background-size: 135.19313% auto;
-    -o-background-size: 135.19313% auto;
-    background-size: 135.19313% auto;
-    left: 17.62115%;
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    left: 10.13216%;
   }
 
   /* line 78, ../sass/_mixins.scss */
-  [data-dialog="talk6"] {
+  #dialog-intro[data-dialog="6"] {
     background-position: 0 71.42857%;
-    width: 79.37063%;
+    width: 110.13986%;
     padding-top: 221.32867%;
     height: 0;
-    -webkit-background-size: 138.76652% auto;
-    -moz-background-size: 138.76652% auto;
-    -o-background-size: 138.76652% auto;
-    background-size: 138.76652% auto;
-    left: 18.94273%;
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    left: 10.13216%;
   }
 
   /* line 78, ../sass/_mixins.scss */
-  [data-dialog="talk7"] {
+  #dialog-outro[data-dialog="1"] {
     background-position: 0 85.71429%;
-    width: 79.37063%;
+    width: 110.13986%;
     padding-top: 221.32867%;
     height: 0;
-    -webkit-background-size: 138.76652% auto;
-    -moz-background-size: 138.76652% auto;
-    -o-background-size: 138.76652% auto;
-    background-size: 138.76652% auto;
-    left: 18.94273%;
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    left: 10.13216%;
   }
 
   /* line 78, ../sass/_mixins.scss */
-  [data-dialog="talk8"] {
+  #dialog-outro[data-dialog="2"] {
     background-position: 0 100%;
     width: 110.13986%;
     padding-top: 221.32867%;
@@ -826,7 +968,7 @@
     -moz-background-size: 100% auto;
     -o-background-size: 100% auto;
     background-size: 100% auto;
-    left: 8.81057%;
+    left: 10.13216%;
   }
 
   /* Thank you for reading :) */

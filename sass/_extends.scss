@@ -7,9 +7,19 @@
 }
 %ir br { display: none; }
 
+/* Clear Fix */
+%clearfix:before,
+%clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+%clearfix:after {
+    clear: both;
+}
+
+
 %room {
-  // @include set-dimensions($house-width, 1000px, $house-width);
-  // position: absolute;
   @include background-size(100% auto);
   z-index: -1;
 }

@@ -74,11 +74,11 @@
 	}
 }
 
-@mixin create-dialog($name, $width, $offset) {
-	[data-dialog="#{$name}"] {
-		@include dialog-sprite(#{$name}); 
-		@include set-dimensions(image-width(sprite-file($dialog-sprites, #{$name})), $instructions-height, $ui-width);
-		@include set-bg-width($dialog-sprite-width, $dialog-sprite, #{$name});
-		@include offsetLeft($offset, $instructions-width);
+@mixin create-dialog($prefix, $number) {
+	#dialog-#{$prefix}[data-dialog="#{$number}"] {
+		@include dialog-sprite(#{$prefix}talk#{$number}); 
+		@include set-dimensions(image-width(sprite-file($dialog-sprites, #{$prefix}talk#{$number})), $instructions-height, $ui-width);
+		@include set-bg-width($dialog-sprite-width, $dialog-sprite, #{$prefix}talk#{$number});
+		@include offsetLeft(23px, $instructions-width);
 	}
 }

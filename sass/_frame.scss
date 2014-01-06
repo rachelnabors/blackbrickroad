@@ -8,6 +8,9 @@
   position: fixed;
   top: 0; left: 0;
   @include box-sizing(border-box);
+  [data-progress="cleaning-house"] &, [data-progress="dialog-outro"] & {
+    @include transition(opacity, 2s);
+  }
 }
 
 /* House */

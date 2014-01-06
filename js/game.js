@@ -89,6 +89,7 @@ document.addEventListener('DOMContentLoaded', function(){
   var _items = document.querySelectorAll('#to-clean li');
   var messies = document.getElementById("messy-items");
   var places = document.getElementById("item-places");
+  var itemsLeft = 0;
 
   [].forEach.call(_items, function(node) {
     var keys = node.getAttribute('data-items').split(';');
@@ -107,6 +108,7 @@ document.addEventListener('DOMContentLoaded', function(){
       droppable: {}
     };
     items[group] = item;
+    itemsLeft++;
 
     keys.forEach(function(key) {
       // Make the draggable element
@@ -176,6 +178,10 @@ document.addEventListener('DOMContentLoaded', function(){
     if (!items[group].remaining) {
       // cross it out from the list
       crossOut(items[group].node);
+      itemsLeft--;
+      if (!itemsLeft) {
+        initiateOutro();
+      }
     }
     this.innerHTML = e.dataTransfer.getData('text/html');
     this.classList.add("clean");
@@ -215,5 +221,66 @@ document.addEventListener('DOMContentLoaded', function(){
       document.body.setAttribute('data-currentFloor', destination);
     });
   });
+
+  // The dialogs need little next buttons to let people page through
+  function createDialog(dialogParent, pageNum, callback) {
+    // create next button
+    var nextButton = document.createElement('div');
+    nextButton.classList.add('next');
+    nextButton.innerHTML = 'Next';
+    var prevButton = document.createElement('div');
+    prevButton.classList.add('prev');
+    prevButton.innerHTML = 'Previous';
+    var navigation = document.createElement('nav');
+    navigation.classList.add('dialog-nav');
+    // give it a click listener
+    nextButton.addEventListener("click", function(event) {
+      // when clicked, it should go to the next page
+      var currentNumb = dialogParent.getAttribute('data-dialog');
+      if (!(currentNumb >= pageNum)) {
+        if (dialogParent.classList.contains("start")) {
+          dialogParent.classList.remove("start");
+        }
+        currentNumb++
+        // no more pages? run callback
+        dialogParent.setAttribute('data-dialog', currentNumb);
+      } else {
+        callback();
+      }
+    });
+    // give it a click listener
+    prevButton.addEventListener("click", function(event) {
+      // when clicked, it should go to the next page
+      var currentNumb = dialogParent.getAttribute('data-dialog');
+      if (currentNumb <= 2) {
+        // no more pages? run callback
+        dialogParent.classList.add("start");
+      }
+      currentNumb--;
+      dialogParent.setAttribute('data-dialog', currentNumb);        
+    });
+    // add button to dialog
+    navigation.appendChild(nextButton);
+    navigation.appendChild(prevButton);
+    dialogParent.appendChild(navigation);
+    dialogParent.classList.add("start");
+  }
+
+  function finishedIntro() {
+    document.body.setAttribute('data-progress', 'cleaning-house');
+  }
+
+  function initiateOutro() {
+    document.body.setAttribute('data-progress', 'dialog-outro');    
+  }
+
+  function finishedOutro() {
+    document.body.setAttribute('data-progress', 'fun-with-photos');
+    document.body.setAttribute('data-currentFloor', 'upstairs');
+    console.log("Go upstairs and check out the photos!");
+  }
+
+  createDialog(document.getElementById('dialog-intro'), 6, finishedIntro);
+  createDialog(document.getElementById('dialog-outro'), 2, finishedOutro);
 
 }, false);
