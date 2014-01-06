@@ -11,12 +11,17 @@
 @include create-prop(bedup,704px,303px);
 @include create-prop(armchair,514px,426px);
 @include create-prop(cradle,780px,504px);
+@include create-prop(pillowup3,714px,346px);
 
 .clean.shoe1 {@extend %layer2;}
+.pillowup3-prop {@extend %layer1;}
+.bedback-prop {@extend %layer2;}
 .basket-prop {@extend %layer3;}
 .armchair-prop {@extend %layer3;}
 .cradle-prop {@extend %layer4;}
 .clean.books {@extend %layer3;}
+.messy .pillowup2 {@extend %layer3;}
+.clean.pillowup2 {@extend %layer0;}
 .messy .musicbox {@extend %layer4;}
 .messy .stool {@extend %layer4;}
 .messy .pot3 {@extend %layer4;}
@@ -37,7 +42,8 @@
 @include create-item(toy,670px,422px,786px,351px);
 @include create-item(musicbox,560px,498px,595px,312px);
 @include create-item(broom,270px,751px,3px,399px);
-// @include create-item(pillowup2,469px,561px,1175px,397px);
+@include create-item(pillowup2,469px,580px,889px,395px);
+@include create-item(pillowup1,984px,594px,880px,439px);
 @include create-item(pot1,728px,526px,487px,551px);
 @include create-item(pot2,745px,766px,448px,618px);
 @include create-item(pot3,612px,427px,420px,591px);

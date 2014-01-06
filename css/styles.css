@@ -111,52 +111,57 @@
   }
 
   /* line 27, ../sass/_extends.scss */
-  .messy .rug, .messy .stool, .messy .shoe1, .messy .shoe2, .messy .pillowup1, .messy .books, .messy .telescope, .messy .toy, .messy .musicbox, .messy .broom, .messy .pot1, .messy .pot2, .messy .pot3, .messy .pot4, .messy .scoop, .messy .firewood1, .messy .axe, .messy .rifle, .messy .cloak, .messy .boot1, .messy .samovar, .messy .firewood6, .messy .sack1, .messy .pillow1, .messy .socks, .messy .tools, .messy .ovenfork, .messy .firewood3, .messy .firewood2, .messy .firewood5, .messy .firewood4, .messy .shovel, .messy .pitcher, .messy .bottle3, .messy .washboard, .messy .mug2, .messy .mug1, .messy .bottle2, .messy .bucket, .messy .chair1, .messy .pillow3, .messy .tablecloth, .messy .blanket, .messy .oilcan, .messy .bottle1, .messy .boot2 {
+  .messy .rug, .messy .stool, .messy .shoe1, .messy .shoe2, .messy .pillowup1, .messy .books, .messy .telescope, .messy .toy, .messy .musicbox, .messy .broom, .messy .pillowup2, .messy .pot1, .messy .pot2, .messy .pot3, .messy .pot4, .messy .scoop, .messy .firewood1, .messy .axe, .messy .rifle, .messy .cloak, .messy .boot1, .messy .samovar, .messy .firewood6, .messy .sack1, .messy .pillow1, .messy .socks, .messy .tools, .messy .ovenfork, .messy .firewood3, .messy .firewood2, .messy .firewood5, .messy .firewood4, .messy .shovel, .messy .pitcher, .messy .bottle3, .messy .washboard, .messy .mug2, .messy .mug1, .messy .bottle2, .messy .bucket, .messy .chair1, .messy .pillow3, .messy .tablecloth, .messy .blanket, .messy .oilcan, .messy .bottle1, .messy .boot2 {
     position: absolute;
     cursor: move;
   }
 
   /* line 32, ../sass/_extends.scss */
-  .places .rug, .places .stool, .places .shoe1, .places .shoe2, .places .pillowup1, .places .books, .places .telescope, .places .toy, .places .musicbox, .places .broom, .places .pot1, .places .pot2, .places .pot3, .places .pot4, .places .scoop, .places .firewood1, .places .axe, .places .rifle, .places .cloak, .places .boot1, .places .samovar, .places .firewood6, .places .sack1, .places .pillow1, .places .socks, .places .tools, .places .ovenfork, .places .firewood3, .places .firewood2, .places .firewood5, .places .firewood4, .places .shovel, .places .pitcher, .places .bottle3, .places .washboard, .places .mug2, .places .mug1, .places .bottle2, .places .bucket, .places .chair1, .places .pillow3, .places .tablecloth, .places .blanket, .places .oilcan, .places .bottle1, .places .boot2 {
+  .places .rug, .places .stool, .places .shoe1, .places .shoe2, .places .pillowup1, .places .books, .places .telescope, .places .toy, .places .musicbox, .places .broom, .places .pillowup2, .places .pot1, .places .pot2, .places .pot3, .places .pot4, .places .scoop, .places .firewood1, .places .axe, .places .rifle, .places .cloak, .places .boot1, .places .samovar, .places .firewood6, .places .sack1, .places .pillow1, .places .socks, .places .tools, .places .ovenfork, .places .firewood3, .places .firewood2, .places .firewood5, .places .firewood4, .places .shovel, .places .pitcher, .places .bottle3, .places .washboard, .places .mug2, .places .mug1, .places .bottle2, .places .bucket, .places .chair1, .places .pillow3, .places .tablecloth, .places .blanket, .places .oilcan, .places .bottle1, .places .boot2 {
     position: absolute;
   }
 
   /* line 36, ../sass/_extends.scss */
-  .basket-prop, .bedback-prop, .bedup-prop, .armchair-prop, .cradle-prop, .pillow2-prop, .bed-prop, .spoons-prop, .pot-prop, .chair2-prop, .table-prop, .oven-prop, .laundry-prop, .nightstand-prop, .stairs-prop, .sack2-prop {
+  .basket-prop, .bedback-prop, .bedup-prop, .armchair-prop, .cradle-prop, .pillowup3-prop, .pillow2-prop, .bed-prop, .spoons-prop, .pot-prop, .chair2-prop, .table-prop, .oven-prop, .laundry-prop, .nightstand-prop, .stairs-prop, .sack2-prop {
     position: absolute;
   }
 
   /* line 41, ../sass/_extends.scss */
-  .places li, .clean.firewood1, .clean.firewood2, .clean.firewood3, .clean.firewood4, .clean.firewood5, .clean.firewood6, .sack2-prop, .messy .rifle {
-    z-index: 1;
+  .clean.pillowup2 {
+    z-index: 0;
   }
 
   /* line 42, ../sass/_extends.scss */
-  .messy li, .clean.shoe1, .stairs-prop, .boot1.clean, .messy .sack1, .nightstand-prop, .messy .socks, .messy .pitcher, .oven-prop, .messy .boot2, .messy .cloak {
-    z-index: 2;
+  .places li, .pillowup3-prop, .clean.firewood1, .clean.firewood2, .clean.firewood3, .clean.firewood4, .clean.firewood5, .clean.firewood6, .sack2-prop, .messy .rifle {
+    z-index: 1;
   }
 
   /* line 43, ../sass/_extends.scss */
-  .basket-prop, .armchair-prop, .clean.books, .clean.scoop, .clean.telescope, .clean.pot1, .cloak.clean, .messy .axe, .messy .bucket, .messy .firewood2, .messy .firewood6, .messy .shovel, .boot2.clean, .messy .pillow1, .bucket.clean, .table-prop, .messy .bottle3, .clean.tablecloth, .clean.tools {
-    z-index: 3;
+  .messy li, .clean.shoe1, .bedback-prop, .stairs-prop, .boot1.clean, .messy .sack1, .nightstand-prop, .messy .socks, .messy .pitcher, .oven-prop, .messy .boot2, .messy .cloak {
+    z-index: 2;
   }
 
   /* line 44, ../sass/_extends.scss */
+  .basket-prop, .armchair-prop, .clean.books, .messy .pillowup2, .clean.scoop, .clean.telescope, .clean.pot1, .cloak.clean, .messy .axe, .messy .bucket, .messy .firewood2, .messy .firewood6, .messy .shovel, .boot2.clean, .messy .pillow1, .bucket.clean, .table-prop, .messy .bottle3, .clean.tablecloth, .clean.tools {
+    z-index: 3;
+  }
+
+  /* line 45, ../sass/_extends.scss */
   .cradle-prop, .messy .musicbox, .messy .stool, .messy .pot3, .clean.pot3, .messy .samovar, .bottle2.clean, .clean.mug2, .messy .chair1, .messy .pitcher, .clean.chair1, .pot-prop, .spoons-prop, .clean.pitcher, .messy .washboard, .messy .pillow3, .bed-prop {
     z-index: 4;
   }
 
-  /* line 45, ../sass/_extends.scss */
+  /* line 46, ../sass/_extends.scss */
   .clean.pot2, .messy .mug1, .messy .mug2, .clean.mug1, .clean.mug2, .samovar.clean, .chair2-prop, .messy .blanket, .clean.blanket {
     z-index: 5;
   }
 
-  /* line 46, ../sass/_extends.scss */
+  /* line 47, ../sass/_extends.scss */
   .messy .bottle2, .messy .oilcan, .clean.pillow1, .messy .bottle1 {
     z-index: 6;
   }
 
-  /* line 47, ../sass/_extends.scss */
+  /* line 48, ../sass/_extends.scss */
   .messy .ovenfork, .clean.pillow3 {
     z-index: 7;
   }
@@ -1016,16 +1021,16 @@
   }
 
   /* Props */
-  /* line 183, props/*.png */
-  .props-sprite, .basket-prop, .bedback-prop, .bedup-prop, .armchair-prop, .cradle-prop, .pillow2-prop, .bed-prop, .spoons-prop, .pot-prop, .chair2-prop, .table-prop, .oven-prop, .laundry-prop, .nightstand-prop, .stairs-prop, .sack2-prop {
-    background-image: url('../img/props-s47ae69a27c.png');
+  /* line 191, props/*.png */
+  .props-sprite, .basket-prop, .bedback-prop, .bedup-prop, .armchair-prop, .cradle-prop, .pillowup3-prop, .pillow2-prop, .bed-prop, .spoons-prop, .pot-prop, .chair2-prop, .table-prop, .oven-prop, .laundry-prop, .nightstand-prop, .stairs-prop, .sack2-prop {
+    background-image: url('../img/props-s3ddb5e4807.png');
     background-repeat: no-repeat;
   }
 
   /* Items */
-  /* line 1167, places/*.png */
-  .places-sprite, .rug.droppable, .rug.hover, .rug.clean, .stool.droppable, .stool.hover, .stool.clean, .shoe1.droppable, .shoe1.hover, .shoe1.clean, .shoe2.droppable, .shoe2.hover, .shoe2.clean, .pillowup1.droppable, .pillowup1.hover, .pillowup1.clean, .books.droppable, .books.hover, .books.clean, .telescope.droppable, .telescope.hover, .telescope.clean, .toy.droppable, .toy.hover, .toy.clean, .musicbox.droppable, .musicbox.hover, .musicbox.clean, .broom.droppable, .broom.hover, .broom.clean, .pot1.droppable, .pot1.hover, .pot1.clean, .pot2.droppable, .pot2.hover, .pot2.clean, .pot3.droppable, .pot3.hover, .pot3.clean, .pot4.droppable, .pot4.hover, .pot4.clean, .scoop.droppable, .scoop.hover, .scoop.clean, .firewood1.droppable, .firewood1.hover, .firewood1.clean, .axe.droppable, .axe.hover, .axe.clean, .rifle.droppable, .rifle.hover, .rifle.clean, .cloak.droppable, .cloak.hover, .cloak.clean, .boot1.droppable, .boot1.hover, .boot1.clean, .samovar.droppable, .samovar.hover, .samovar.clean, .firewood6.droppable, .firewood6.hover, .firewood6.clean, .sack1.droppable, .sack1.hover, .sack1.clean, .pillow1.droppable, .pillow1.hover, .pillow1.clean, .places .socks, .socks.droppable, .socks.hover, .socks.clean, .tools.droppable, .tools.hover, .tools.clean, .ovenfork.droppable, .ovenfork.hover, .ovenfork.clean, .firewood3.droppable, .firewood3.hover, .firewood3.clean, .firewood2.droppable, .firewood2.hover, .firewood2.clean, .firewood5.droppable, .firewood5.hover, .firewood5.clean, .firewood4.droppable, .firewood4.hover, .firewood4.clean, .shovel.droppable, .shovel.hover, .shovel.clean, .pitcher.droppable, .pitcher.hover, .pitcher.clean, .bottle3.droppable, .bottle3.hover, .bottle3.clean, .washboard.droppable, .washboard.hover, .washboard.clean, .mug2.droppable, .mug2.hover, .mug2.clean, .mug1.droppable, .mug1.hover, .mug1.clean, .bottle2.droppable, .bottle2.hover, .bottle2.clean, .bucket.droppable, .bucket.hover, .bucket.clean, .chair1.droppable, .chair1.hover, .chair1.clean, .pillow3.droppable, .pillow3.hover, .pillow3.clean, .tablecloth.droppable, .tablecloth.hover, .tablecloth.clean, .blanket.droppable, .blanket.hover, .blanket.clean, .oilcan.droppable, .oilcan.hover, .oilcan.clean, .bottle1.droppable, .bottle1.hover, .bottle1.clean, .boot2.droppable, .boot2.hover, .boot2.clean {
-    background-image: url('../img/places-s44d1578cef.png');
+  /* line 1175, places/*.png */
+  .places-sprite, .rug.droppable, .rug.hover, .rug.clean, .stool.droppable, .stool.hover, .stool.clean, .shoe1.droppable, .shoe1.hover, .shoe1.clean, .shoe2.droppable, .shoe2.hover, .shoe2.clean, .pillowup1.droppable, .pillowup1.hover, .pillowup1.clean, .books.droppable, .books.hover, .books.clean, .telescope.droppable, .telescope.hover, .telescope.clean, .toy.droppable, .toy.hover, .toy.clean, .musicbox.droppable, .musicbox.hover, .musicbox.clean, .broom.droppable, .broom.hover, .broom.clean, .pillowup2.droppable, .pillowup2.hover, .pillowup2.clean, .pot1.droppable, .pot1.hover, .pot1.clean, .pot2.droppable, .pot2.hover, .pot2.clean, .pot3.droppable, .pot3.hover, .pot3.clean, .pot4.droppable, .pot4.hover, .pot4.clean, .scoop.droppable, .scoop.hover, .scoop.clean, .firewood1.droppable, .firewood1.hover, .firewood1.clean, .axe.droppable, .axe.hover, .axe.clean, .rifle.droppable, .rifle.hover, .rifle.clean, .cloak.droppable, .cloak.hover, .cloak.clean, .boot1.droppable, .boot1.hover, .boot1.clean, .samovar.droppable, .samovar.hover, .samovar.clean, .firewood6.droppable, .firewood6.hover, .firewood6.clean, .sack1.droppable, .sack1.hover, .sack1.clean, .pillow1.droppable, .pillow1.hover, .pillow1.clean, .places .socks, .socks.droppable, .socks.hover, .socks.clean, .tools.droppable, .tools.hover, .tools.clean, .ovenfork.droppable, .ovenfork.hover, .ovenfork.clean, .firewood3.droppable, .firewood3.hover, .firewood3.clean, .firewood2.droppable, .firewood2.hover, .firewood2.clean, .firewood5.droppable, .firewood5.hover, .firewood5.clean, .firewood4.droppable, .firewood4.hover, .firewood4.clean, .shovel.droppable, .shovel.hover, .shovel.clean, .pitcher.droppable, .pitcher.hover, .pitcher.clean, .bottle3.droppable, .bottle3.hover, .bottle3.clean, .washboard.droppable, .washboard.hover, .washboard.clean, .mug2.droppable, .mug2.hover, .mug2.clean, .mug1.droppable, .mug1.hover, .mug1.clean, .bottle2.droppable, .bottle2.hover, .bottle2.clean, .bucket.droppable, .bucket.hover, .bucket.clean, .chair1.droppable, .chair1.hover, .chair1.clean, .pillow3.droppable, .pillow3.hover, .pillow3.clean, .tablecloth.droppable, .tablecloth.hover, .tablecloth.clean, .blanket.droppable, .blanket.hover, .blanket.clean, .oilcan.droppable, .oilcan.hover, .oilcan.clean, .bottle1.droppable, .bottle1.hover, .bottle1.clean, .boot2.droppable, .boot2.hover, .boot2.clean {
+    background-image: url('../img/places-sd7f6eef822.png');
     background-repeat: no-repeat;
   }
 
@@ -1094,7 +1099,7 @@
 
   /* line 30, ../sass/_mixins.scss */
   .bedup-prop {
-    background-position: 0 54.15722%;
+    background-position: 0 54.67115%;
     width: 25.94728%;
     padding-top: 24.95881%;
     height: 0;
@@ -1108,7 +1113,7 @@
 
   /* line 30, ../sass/_mixins.scss */
   .armchair-prop {
-    background-position: 52.14286% 8.06864%;
+    background-position: 98.21429% 7.98122%;
     width: 14.25041%;
     padding-top: 17.29819%;
     height: 0;
@@ -1122,7 +1127,7 @@
 
   /* line 30, ../sass/_mixins.scss */
   .cradle-prop {
-    background-position: 0 43.26347%;
+    background-position: 73.33333% 24.20429%;
     width: 18.78089%;
     padding-top: 22.81713%;
     height: 0;
@@ -1132,6 +1137,20 @@
     -moz-background-size: 198.68421% auto;
     -o-background-size: 198.68421% auto;
     background-size: 198.68421% auto;
+  }
+
+  /* line 30, ../sass/_mixins.scss */
+  .pillowup3-prop {
+    background-position: 84.66667% 0;
+    width: 12.60297%;
+    padding-top: 9.71993%;
+    height: 0;
+    left: 58.81384%;
+    top: 17.3%;
+    -webkit-background-size: 296.07843% auto;
+    -moz-background-size: 296.07843% auto;
+    -o-background-size: 296.07843% auto;
+    background-size: 296.07843% auto;
   }
 
   /* Upstairs Items */
@@ -1159,17 +1178,17 @@
 
   /* line 68, ../sass/_mixins.scss */
   .rug.droppable {
-    background-position: 0 70.06999%;
+    background-position: 0 70.1737%;
   }
 
   /* line 72, ../sass/_mixins.scss */
   .rug.hover {
-    background-position: 0 70.51949%;
+    background-position: 0 70.63114%;
   }
 
   /* line 76, ../sass/_mixins.scss */
   .rug.clean {
-    background-position: 0 69.6205%;
+    background-position: 0 69.71626%;
   }
 
   /* line 46, ../sass/_mixins.scss */
@@ -1196,17 +1215,17 @@
 
   /* line 68, ../sass/_mixins.scss */
   .stool.droppable {
-    background-position: 0 87.6215%;
+    background-position: 0 87.68821%;
   }
 
   /* line 72, ../sass/_mixins.scss */
   .stool.hover {
-    background-position: 0 88.3167%;
+    background-position: 0 88.38218%;
   }
 
   /* line 76, ../sass/_mixins.scss */
   .stool.clean {
-    background-position: 0 86.9263%;
+    background-position: 0 86.99424%;
   }
 
   /* line 46, ../sass/_mixins.scss */
@@ -1233,17 +1252,17 @@
 
   /* line 68, ../sass/_mixins.scss */
   .shoe1.droppable {
-    background-position: 0 77.15421%;
+    background-position: 0 77.28983%;
   }
 
   /* line 72, ../sass/_mixins.scss */
   .shoe1.hover {
-    background-position: 0 77.37203%;
+    background-position: 0 77.52421%;
   }
 
   /* line 76, ../sass/_mixins.scss */
   .shoe1.clean {
-    background-position: 0 76.93638%;
+    background-position: 0 77.05545%;
   }
 
   /* line 46, ../sass/_mixins.scss */
@@ -1270,17 +1289,17 @@
 
   /* line 68, ../sass/_mixins.scss */
   .shoe2.droppable {
-    background-position: 0 77.81907%;
+    background-position: 0 78.00395%;
   }
 
   /* line 72, ../sass/_mixins.scss */
   .shoe2.hover {
-    background-position: 0 78.04331%;
+    background-position: 0 78.24451%;
   }
 
   /* line 76, ../sass/_mixins.scss */
   .shoe2.clean {
-    background-position: 0 77.59482%;
+    background-position: 0 77.76339%;
   }
 
   /* line 46, ../sass/_mixins.scss */
@@ -1307,17 +1326,17 @@
 
   /* line 68, ../sass/_mixins.scss */
   .pillowup1.droppable {
-    background-position: 0 53.8511%;
+    background-position: 0 53.71962%;
   }
 
   /* line 72, ../sass/_mixins.scss */
   .pillowup1.hover {
-    background-position: 0 54.33931%;
+    background-position: 0 54.21433%;
   }
 
   /* line 76, ../sass/_mixins.scss */
   .pillowup1.clean {
-    background-position: 0 53.36288%;
+    background-position: 0 53.22491%;
   }
 
   /* line 46, ../sass/_mixins.scss */
@@ -1344,17 +1363,17 @@
 
   /* line 68, ../sass/_mixins.scss */
   .books.droppable {
-    background-position: 0 6.64909%;
+    background-position: 0 6.57382%;
   }
 
   /* line 72, ../sass/_mixins.scss */
   .books.hover {
-    background-position: 0 7.24069%;
+    background-position: 0 7.16806%;
   }
 
   /* line 76, ../sass/_mixins.scss */
   .books.clean {
-    background-position: 0 6.05749%;
+    background-position: 0 5.97957%;
   }
 
   /* line 46, ../sass/_mixins.scss */
@@ -1381,17 +1400,17 @@
 
   /* line 68, ../sass/_mixins.scss */
   .telescope.droppable {
-    background-position: 0 92.70148%;
+    background-position: 0 92.72682%;
   }
 
   /* line 72, ../sass/_mixins.scss */
   .telescope.hover {
-    background-position: 0 93.55899%;
+    background-position: 0 93.57701%;
   }
 
   /* line 76, ../sass/_mixins.scss */
   .telescope.clean {
-    background-position: 0 91.84397%;
+    background-position: 0 91.87663%;
   }
 
   /* line 46, ../sass/_mixins.scss */
@@ -1418,17 +1437,17 @@
 
   /* line 68, ../sass/_mixins.scss */
   .toy.droppable {
-    background-position: 0 97.32183%;
+    background-position: 0 97.32292%;
   }
 
   /* line 72, ../sass/_mixins.scss */
   .toy.hover {
-    background-position: 0 98.03%;
+    background-position: 0 98.02937%;
   }
 
   /* line 76, ../sass/_mixins.scss */
   .toy.clean {
-    background-position: 0 96.61366%;
+    background-position: 0 96.61647%;
   }
 
   /* line 46, ../sass/_mixins.scss */
@@ -1455,17 +1474,17 @@
 
   /* line 68, ../sass/_mixins.scss */
   .musicbox.droppable {
-    background-position: 0 41.57318%;
+    background-position: 0 41.52935%;
   }
 
   /* line 72, ../sass/_mixins.scss */
   .musicbox.hover {
-    background-position: 0 41.85525%;
+    background-position: 0 41.82559%;
   }
 
   /* line 76, ../sass/_mixins.scss */
   .musicbox.clean {
-    background-position: 0 41.29111%;
+    background-position: 0 41.2331%;
   }
 
   /* line 46, ../sass/_mixins.scss */
@@ -1492,17 +1511,91 @@
 
   /* line 68, ../sass/_mixins.scss */
   .broom.droppable {
-    background-position: 0 19.38091%;
+    background-position: 0 19.27394%;
   }
 
   /* line 72, ../sass/_mixins.scss */
   .broom.hover {
-    background-position: 0 21.32291%;
+    background-position: 0 21.16747%;
   }
 
   /* line 76, ../sass/_mixins.scss */
   .broom.clean {
-    background-position: 0 17.43891%;
+    background-position: 0 17.3804%;
+  }
+
+  /* line 46, ../sass/_mixins.scss */
+  .messy .pillowup2 {
+    width: 8.97858%;
+    padding-top: 9.63756%;
+    height: 0;
+    left: 38.63262%;
+    top: 29.0%;
+  }
+
+  /* line 55, ../sass/_mixins.scss */
+  .places .pillowup2 {
+    width: 9.80231%;
+    padding-top: 7.57825%;
+    height: 0;
+    left: 73.229%;
+    top: 19.75%;
+    -webkit-background-size: 212.60504% auto;
+    -moz-background-size: 212.60504% auto;
+    -o-background-size: 212.60504% auto;
+    background-size: 212.60504% auto;
+  }
+
+  /* line 68, ../sass/_mixins.scss */
+  .pillowup2.droppable {
+    background-position: 0 55.35747%;
+  }
+
+  /* line 72, ../sass/_mixins.scss */
+  .pillowup2.hover {
+    background-position: 0 55.95172%;
+  }
+
+  /* line 76, ../sass/_mixins.scss */
+  .pillowup2.clean {
+    background-position: 0 54.76323%;
+  }
+
+  /* line 46, ../sass/_mixins.scss */
+  .messy .pillowup1 {
+    width: 6.67216%;
+    padding-top: 5.93081%;
+    height: 0;
+    left: 81.05437%;
+    top: 29.7%;
+  }
+
+  /* line 55, ../sass/_mixins.scss */
+  .places .pillowup1 {
+    width: 6.8369%;
+    padding-top: 6.2603%;
+    height: 0;
+    left: 72.48764%;
+    top: 21.95%;
+    -webkit-background-size: 304.81928% auto;
+    -moz-background-size: 304.81928% auto;
+    -o-background-size: 304.81928% auto;
+    background-size: 304.81928% auto;
+  }
+
+  /* line 68, ../sass/_mixins.scss */
+  .pillowup1.droppable {
+    background-position: 0 53.71962%;
+  }
+
+  /* line 72, ../sass/_mixins.scss */
+  .pillowup1.hover {
+    background-position: 0 54.21433%;
+  }
+
+  /* line 76, ../sass/_mixins.scss */
+  .pillowup1.clean {
+    background-position: 0 53.22491%;
   }
 
   /* line 46, ../sass/_mixins.scss */
@@ -1529,17 +1622,17 @@
 
   /* line 68, ../sass/_mixins.scss */
   .pot1.droppable {
-    background-position: 0 58.65799%;
+    background-position: 0 58.81733%;
   }
 
   /* line 72, ../sass/_mixins.scss */
   .pot1.hover {
-    background-position: 0 59.39211%;
+    background-position: 0 59.54875%;
   }
 
   /* line 76, ../sass/_mixins.scss */
   .pot1.clean {
-    background-position: 0 57.92659%;
+    background-position: 0 58.08851%;
   }
 
   /* line 46, ../sass/_mixins.scss */
@@ -1566,17 +1659,17 @@
 
   /* line 68, ../sass/_mixins.scss */
   .pot2.droppable {
-    background-position: 0 60.17954%;
+    background-position: 0 60.35558%;
   }
 
   /* line 72, ../sass/_mixins.scss */
   .pot2.hover {
-    background-position: 0 60.48734%;
+    background-position: 0 60.67658%;
   }
 
   /* line 76, ../sass/_mixins.scss */
   .pot2.clean {
-    background-position: 0 59.87175%;
+    background-position: 0 60.03457%;
   }
 
   /* line 46, ../sass/_mixins.scss */
@@ -1603,17 +1696,17 @@
 
   /* line 68, ../sass/_mixins.scss */
   .pot3.droppable {
-    background-position: 0 61.22698%;
+    background-position: 0 61.43819%;
   }
 
   /* line 72, ../sass/_mixins.scss */
   .pot3.hover {
-    background-position: 0 61.61201%;
+    background-position: 0 61.83357%;
   }
 
   /* line 76, ../sass/_mixins.scss */
   .pot3.clean {
-    background-position: 0 60.84194%;
+    background-position: 0 61.04281%;
   }
 
   /* line 46, ../sass/_mixins.scss */
@@ -1640,17 +1733,17 @@
 
   /* line 68, ../sass/_mixins.scss */
   .pot4.droppable {
-    background-position: 0 62.85641%;
+    background-position: 0 63.08159%;
   }
 
   /* line 72, ../sass/_mixins.scss */
   .pot4.hover {
-    background-position: 0 63.53865%;
+    background-position: 0 63.76309%;
   }
 
   /* line 76, ../sass/_mixins.scss */
   .pot4.clean {
-    background-position: 0 62.1766%;
+    background-position: 0 62.40243%;
   }
 
   /* line 46, ../sass/_mixins.scss */
@@ -1677,17 +1770,17 @@
 
   /* line 68, ../sass/_mixins.scss */
   .scoop.droppable {
-    background-position: 0 76.15958%;
+    background-position: 0 76.2585%;
   }
 
   /* line 72, ../sass/_mixins.scss */
   .scoop.hover {
-    background-position: 0 76.65425%;
+    background-position: 0 76.75943%;
   }
 
   /* line 76, ../sass/_mixins.scss */
   .scoop.clean {
-    background-position: 0 75.66491%;
+    background-position: 0 75.75758%;
   }
 
   /* line 1, ../sass/_downstairs.scss */
@@ -1754,7 +1847,7 @@
   /* Downstairs Props */
   /* line 30, ../sass/_mixins.scss */
   .pillow2-prop {
-    background-position: 0 7.67361%;
+    background-position: 0 7.5945%;
     width: 6.75453%;
     padding-top: 5.68369%;
     height: 0;
@@ -1768,7 +1861,7 @@
 
   /* line 30, ../sass/_mixins.scss */
   .bed-prop {
-    background-position: 0 32.99701%;
+    background-position: 0 43.97635%;
     width: 28.17133%;
     padding-top: 22.48764%;
     height: 0;
@@ -1782,7 +1875,7 @@
 
   /* line 30, ../sass/_mixins.scss */
   .spoons-prop {
-    background-position: 21.07969% 7.68963%;
+    background-position: 21.07969% 7.61019%;
     width: 5.27183%;
     padding-top: 6.17792%;
     height: 0;
@@ -1796,7 +1889,7 @@
 
   /* line 30, ../sass/_mixins.scss */
   .pot-prop {
-    background-position: 92.68293% 30.96073%;
+    background-position: 21.95122% 22.69257%;
     width: 6.91928%;
     padding-top: 7.99012%;
     height: 0;
@@ -1810,7 +1903,7 @@
 
   /* line 30, ../sass/_mixins.scss */
   .chair2-prop {
-    background-position: 33.02469% 15.63861%;
+    background-position: 45.06173% 7.93252%;
     width: 10.62603%;
     padding-top: 15.89786%;
     height: 0;
@@ -1824,7 +1917,7 @@
 
   /* line 30, ../sass/_mixins.scss */
   .table-prop {
-    background-position: 0 23.19703%;
+    background-position: 0 34.22794%;
     width: 27.92422%;
     padding-top: 21.33443%;
     height: 0;
@@ -1838,7 +1931,7 @@
 
   /* line 30, ../sass/_mixins.scss */
   .oven-prop {
-    background-position: 0 72.63598%;
+    background-position: 0 72.97521%;
     width: 30.31301%;
     padding-top: 46.04613%;
     height: 0;
@@ -1852,7 +1945,7 @@
 
   /* line 30, ../sass/_mixins.scss */
   .laundry-prop {
-    background-position: 76.50602% 0;
+    background-position: 32.22892% 15.17606%;
     width: 9.96705%;
     padding-top: 11.44975%;
     height: 0;
@@ -1866,7 +1959,7 @@
 
   /* line 30, ../sass/_mixins.scss */
   .nightstand-prop {
-    background-position: 80.85106% 42.40646%;
+    background-position: 80.85106% 15.63861%;
     width: 14.08567%;
     padding-top: 18.36903%;
     height: 0;
@@ -1894,7 +1987,7 @@
 
   /* line 30, ../sass/_mixins.scss */
   .sack2-prop {
-    background-position: 0 15.0752%;
+    background-position: 0 14.91866%;
     width: 8.81384%;
     padding-top: 7.41351%;
     height: 0;
@@ -1931,17 +2024,17 @@
 
   /* line 68, ../sass/_mixins.scss */
   .firewood1.droppable {
-    background-position: 0 34.29744%;
+    background-position: 0 33.93221%;
   }
 
   /* line 72, ../sass/_mixins.scss */
   .firewood1.hover {
-    background-position: 0 34.6181%;
+    background-position: 0 34.2656%;
   }
 
   /* line 76, ../sass/_mixins.scss */
   .firewood1.clean {
-    background-position: 0 33.97678%;
+    background-position: 0 33.59881%;
   }
 
   /* line 46, ../sass/_mixins.scss */
@@ -1968,12 +2061,12 @@
 
   /* line 68, ../sass/_mixins.scss */
   .axe.droppable {
-    background-position: 0 0.72762%;
+    background-position: 0 0.72518%;
   }
 
   /* line 72, ../sass/_mixins.scss */
   .axe.hover {
-    background-position: 0 1.45525%;
+    background-position: 0 1.45035%;
   }
 
   /* line 76, ../sass/_mixins.scss */
@@ -2005,17 +2098,17 @@
 
   /* line 68, ../sass/_mixins.scss */
   .rifle.droppable {
-    background-position: 0 66.8577%;
+    background-position: 0 67.00921%;
   }
 
   /* line 72, ../sass/_mixins.scss */
   .rifle.hover {
-    background-position: 0 68.73331%;
+    background-position: 0 68.8389%;
   }
 
   /* line 76, ../sass/_mixins.scss */
   .rifle.clean {
-    background-position: 0 64.98209%;
+    background-position: 0 65.17952%;
   }
 
   /* line 46, ../sass/_mixins.scss */
@@ -2042,17 +2135,17 @@
 
   /* line 68, ../sass/_mixins.scss */
   .cloak.droppable {
-    background-position: 0 30.67501%;
+    background-position: 0 30.3661%;
   }
 
   /* line 72, ../sass/_mixins.scss */
   .cloak.hover {
-    background-position: 0 32.59708%;
+    background-position: 0 32.24047%;
   }
 
   /* line 76, ../sass/_mixins.scss */
   .cloak.clean {
-    background-position: 0 28.75293%;
+    background-position: 0 28.49173%;
   }
 
   /* line 46, ../sass/_mixins.scss */
@@ -2079,17 +2172,17 @@
 
   /* line 68, ../sass/_mixins.scss */
   .boot1.droppable {
-    background-position: 0 8.36118%;
+    background-position: 0 8.29621%;
   }
 
   /* line 72, ../sass/_mixins.scss */
   .boot1.hover {
-    background-position: 0 8.8946%;
+    background-position: 0 8.83445%;
   }
 
   /* line 76, ../sass/_mixins.scss */
   .boot1.clean {
-    background-position: 0 7.82776%;
+    background-position: 0 7.75798%;
   }
 
   /* line 46, ../sass/_mixins.scss */
@@ -2116,17 +2209,17 @@
 
   /* line 68, ../sass/_mixins.scss */
   .samovar.droppable {
-    background-position: 0 73.93861%;
+    background-position: 0 74.04689%;
   }
 
   /* line 72, ../sass/_mixins.scss */
   .samovar.hover {
-    background-position: 0 75.02423%;
+    background-position: 0 75.11661%;
   }
 
   /* line 76, ../sass/_mixins.scss */
   .samovar.clean {
-    background-position: 0 72.85299%;
+    background-position: 0 72.97718%;
   }
 
   /* line 46, ../sass/_mixins.scss */
@@ -2153,17 +2246,17 @@
 
   /* line 68, ../sass/_mixins.scss */
   .firewood6.droppable {
-    background-position: 0 39.04347%;
+    background-position: 0 38.87174%;
   }
 
   /* line 72, ../sass/_mixins.scss */
   .firewood6.hover {
-    background-position: 0 39.33197%;
+    background-position: 0 39.17418%;
   }
 
   /* line 76, ../sass/_mixins.scss */
   .firewood6.clean {
-    background-position: 0 38.75497%;
+    background-position: 0 38.56931%;
   }
 
   /* line 46, ../sass/_mixins.scss */
@@ -2190,17 +2283,17 @@
 
   /* line 68, ../sass/_mixins.scss */
   .sack1.droppable {
-    background-position: 0 71.46252%;
+    background-position: 0 71.58845%;
   }
 
   /* line 72, ../sass/_mixins.scss */
   .sack1.hover {
-    background-position: 0 71.93783%;
+    background-position: 0 72.07074%;
   }
 
   /* line 76, ../sass/_mixins.scss */
   .sack1.clean {
-    background-position: 0 70.98722%;
+    background-position: 0 71.10616%;
   }
 
   /* line 46, ../sass/_mixins.scss */
@@ -2227,17 +2320,17 @@
 
   /* line 68, ../sass/_mixins.scss */
   .pillow1.droppable {
-    background-position: 0 50.49862%;
+    background-position: 0 50.34372%;
   }
 
   /* line 72, ../sass/_mixins.scss */
   .pillow1.hover {
-    background-position: 0 51.14199%;
+    background-position: 0 50.9878%;
   }
 
   /* line 76, ../sass/_mixins.scss */
   .pillow1.clean {
-    background-position: 0 49.85524%;
+    background-position: 0 49.69963%;
   }
 
   /* line 46, ../sass/_mixins.scss */
@@ -2251,7 +2344,7 @@
 
   /* line 55, ../sass/_mixins.scss */
   .places .socks {
-    background-position: 0 86.22754%;
+    background-position: 0 86.29687%;
     width: 11.69687%;
     padding-top: 9.2257%;
     height: 0;
@@ -2265,17 +2358,17 @@
 
   /* line 68, ../sass/_mixins.scss */
   .socks.droppable {
-    background-position: 0 84.78527%;
+    background-position: 0 84.859%;
   }
 
   /* line 72, ../sass/_mixins.scss */
   .socks.hover {
-    background-position: 0 85.50641%;
+    background-position: 0 85.57794%;
   }
 
   /* line 76, ../sass/_mixins.scss */
   .socks.clean {
-    background-position: 0 84.06413%;
+    background-position: 0 84.14007%;
   }
 
   /* line 46, ../sass/_mixins.scss */
@@ -2302,17 +2395,17 @@
 
   /* line 68, ../sass/_mixins.scss */
   .tools.droppable {
-    background-position: 0 95.12305%;
+    background-position: 0 95.13208%;
   }
 
   /* line 72, ../sass/_mixins.scss */
   .tools.hover {
-    background-position: 0 95.90259%;
+    background-position: 0 95.90723%;
   }
 
   /* line 76, ../sass/_mixins.scss */
   .tools.clean {
-    background-position: 0 94.34351%;
+    background-position: 0 94.35694%;
   }
 
   /* line 46, ../sass/_mixins.scss */
@@ -2339,17 +2432,17 @@
 
   /* line 68, ../sass/_mixins.scss */
   .ovenfork.droppable {
-    background-position: 0 46.3542%;
+    background-position: 0 46.27897%;
   }
 
   /* line 72, ../sass/_mixins.scss */
   .ovenfork.hover {
-    background-position: 0 48.46922%;
+    background-position: 0 48.33888%;
   }
 
   /* line 76, ../sass/_mixins.scss */
   .ovenfork.clean {
-    background-position: 0 44.23918%;
+    background-position: 0 44.21905%;
   }
 
   /* line 46, ../sass/_mixins.scss */
@@ -2376,17 +2469,17 @@
 
   /* line 68, ../sass/_mixins.scss */
   .firewood3.droppable {
-    background-position: 0 36.24936%;
+    background-position: 0 35.9595%;
   }
 
   /* line 72, ../sass/_mixins.scss */
   .firewood3.hover {
-    background-position: 0 36.57645%;
+    background-position: 0 36.29909%;
   }
 
   /* line 76, ../sass/_mixins.scss */
   .firewood3.clean {
-    background-position: 0 35.92227%;
+    background-position: 0 35.61991%;
   }
 
   /* line 46, ../sass/_mixins.scss */
@@ -2413,17 +2506,17 @@
 
   /* line 68, ../sass/_mixins.scss */
   .firewood2.droppable {
-    background-position: 0 35.26809%;
+    background-position: 0 34.94073%;
   }
 
   /* line 72, ../sass/_mixins.scss */
   .firewood2.hover {
-    background-position: 0 35.59518%;
+    background-position: 0 35.28032%;
   }
 
   /* line 76, ../sass/_mixins.scss */
   .firewood2.clean {
-    background-position: 0 34.941%;
+    background-position: 0 34.60114%;
   }
 
   /* line 46, ../sass/_mixins.scss */
@@ -2450,17 +2543,17 @@
 
   /* line 68, ../sass/_mixins.scss */
   .firewood5.droppable {
-    background-position: 0 38.12608%;
+    background-position: 0 37.91443%;
   }
 
   /* line 72, ../sass/_mixins.scss */
   .firewood5.hover {
-    background-position: 0 38.44674%;
+    background-position: 0 38.24782%;
   }
 
   /* line 76, ../sass/_mixins.scss */
   .firewood5.clean {
-    background-position: 0 37.80543%;
+    background-position: 0 37.58103%;
   }
 
   /* line 46, ../sass/_mixins.scss */
@@ -2487,17 +2580,17 @@
 
   /* line 68, ../sass/_mixins.scss */
   .firewood4.droppable {
-    background-position: 0 37.19543%;
+    background-position: 0 36.94444%;
   }
 
   /* line 72, ../sass/_mixins.scss */
   .firewood4.hover {
-    background-position: 0 37.49679%;
+    background-position: 0 37.25926%;
   }
 
   /* line 76, ../sass/_mixins.scss */
   .firewood4.clean {
-    background-position: 0 36.89408%;
+    background-position: 0 36.62963%;
   }
 
   /* line 46, ../sass/_mixins.scss */
@@ -2524,17 +2617,17 @@
 
   /* line 68, ../sass/_mixins.scss */
   .shovel.droppable {
-    background-position: 0 81.33828%;
+    background-position: 0 81.46803%;
   }
 
   /* line 72, ../sass/_mixins.scss */
   .shovel.hover {
-    background-position: 0 83.16084%;
+    background-position: 0 83.2467%;
   }
 
   /* line 76, ../sass/_mixins.scss */
   .shovel.clean {
-    background-position: 0 79.51572%;
+    background-position: 0 79.68936%;
   }
 
   /* line 46, ../sass/_mixins.scss */
@@ -2561,17 +2654,17 @@
 
   /* line 68, ../sass/_mixins.scss */
   .pitcher.droppable {
-    background-position: 0 56.82169%;
+    background-position: 0 56.97502%;
   }
 
   /* line 72, ../sass/_mixins.scss */
   .pitcher.hover {
-    background-position: 0 57.30344%;
+    background-position: 0 57.46352%;
   }
 
   /* line 76, ../sass/_mixins.scss */
   .pitcher.clean {
-    background-position: 0 56.33993%;
+    background-position: 0 56.48652%;
   }
 
   /* line 46, ../sass/_mixins.scss */
@@ -2598,17 +2691,17 @@
 
   /* line 68, ../sass/_mixins.scss */
   .bottle3.droppable {
-    background-position: 0 15.96552%;
+    background-position: 0 15.91331%;
   }
 
   /* line 72, ../sass/_mixins.scss */
   .bottle3.hover {
-    background-position: 0 16.58948%;
+    background-position: 0 16.5387%;
   }
 
   /* line 76, ../sass/_mixins.scss */
   .bottle3.clean {
-    background-position: 0 15.34157%;
+    background-position: 0 15.28793%;
   }
 
   /* line 46, ../sass/_mixins.scss */
@@ -2635,7 +2728,7 @@
 
   /* line 68, ../sass/_mixins.scss */
   .washboard.droppable {
-    background-position: 0 99.34367%;
+    background-position: 0 99.34345%;
   }
 
   /* line 72, ../sass/_mixins.scss */
@@ -2645,7 +2738,7 @@
 
   /* line 76, ../sass/_mixins.scss */
   .washboard.clean {
-    background-position: 0 98.68734%;
+    background-position: 0 98.6869%;
   }
 
   /* line 46, ../sass/_mixins.scss */
@@ -2672,17 +2765,17 @@
 
   /* line 68, ../sass/_mixins.scss */
   .mug2.droppable {
-    background-position: 0 40.70655%;
+    background-position: 0 40.62095%;
   }
 
   /* line 72, ../sass/_mixins.scss */
   .mug2.hover {
-    background-position: 0 41.00147%;
+    background-position: 0 40.92957%;
   }
 
   /* line 76, ../sass/_mixins.scss */
   .mug2.clean {
-    background-position: 0 40.41162%;
+    background-position: 0 40.31233%;
   }
 
   /* line 46, ../sass/_mixins.scss */
@@ -2709,17 +2802,17 @@
 
   /* line 68, ../sass/_mixins.scss */
   .mug1.droppable {
-    background-position: 0 39.87309%;
+    background-position: 0 39.74454%;
   }
 
   /* line 72, ../sass/_mixins.scss */
   .mug1.hover {
-    background-position: 0 40.13588%;
+    background-position: 0 40.02221%;
   }
 
   /* line 76, ../sass/_mixins.scss */
   .mug1.clean {
-    background-position: 0 39.61031%;
+    background-position: 0 39.46686%;
   }
 
   /* line 46, ../sass/_mixins.scss */
@@ -2746,17 +2839,17 @@
 
   /* line 68, ../sass/_mixins.scss */
   .bottle2.droppable {
-    background-position: 0 13.87816%;
+    background-position: 0 13.82966%;
   }
 
   /* line 72, ../sass/_mixins.scss */
   .bottle2.hover {
-    background-position: 0 14.61875%;
+    background-position: 0 14.56732%;
   }
 
   /* line 76, ../sass/_mixins.scss */
   .bottle2.clean {
-    background-position: 0 13.13756%;
+    background-position: 0 13.09199%;
   }
 
   /* line 46, ../sass/_mixins.scss */
@@ -2783,17 +2876,17 @@
 
   /* line 68, ../sass/_mixins.scss */
   .bucket.droppable {
-    background-position: 0 23.5245%;
+    background-position: 0 23.33828%;
   }
 
   /* line 72, ../sass/_mixins.scss */
   .bucket.hover {
-    background-position: 0 24.0967%;
+    background-position: 0 23.91385%;
   }
 
   /* line 76, ../sass/_mixins.scss */
   .bucket.clean {
-    background-position: 0 22.9523%;
+    background-position: 0 22.76272%;
   }
 
   /* line 46, ../sass/_mixins.scss */
@@ -2820,17 +2913,17 @@
 
   /* line 68, ../sass/_mixins.scss */
   .chair1.droppable {
-    background-position: 0 26.07598%;
+    background-position: 0 25.86733%;
   }
 
   /* line 72, ../sass/_mixins.scss */
   .chair1.hover {
-    background-position: 0 27.31862%;
+    background-position: 0 27.08813%;
   }
 
   /* line 76, ../sass/_mixins.scss */
   .chair1.clean {
-    background-position: 0 24.83334%;
+    background-position: 0 24.64653%;
   }
 
   /* line 46, ../sass/_mixins.scss */
@@ -2857,17 +2950,17 @@
 
   /* line 68, ../sass/_mixins.scss */
   .pillow3.droppable {
-    background-position: 0 52.29157%;
+    background-position: 0 52.14405%;
   }
 
   /* line 72, ../sass/_mixins.scss */
   .pillow3.hover {
-    background-position: 0 52.84438%;
+    background-position: 0 52.70095%;
   }
 
   /* line 76, ../sass/_mixins.scss */
   .pillow3.clean {
-    background-position: 0 51.73877%;
+    background-position: 0 51.58715%;
   }
 
   /* line 46, ../sass/_mixins.scss */
@@ -2894,17 +2987,17 @@
 
   /* line 68, ../sass/_mixins.scss */
   .tablecloth.droppable {
-    background-position: 0 90.08643%;
+    background-position: 0 90.13534%;
   }
 
   /* line 72, ../sass/_mixins.scss */
   .tablecloth.hover {
-    background-position: 0 90.98297%;
+    background-position: 0 91.02309%;
   }
 
   /* line 76, ../sass/_mixins.scss */
   .tablecloth.clean {
-    background-position: 0 89.18989%;
+    background-position: 0 89.24758%;
   }
 
   /* line 46, ../sass/_mixins.scss */
@@ -2931,17 +3024,17 @@
 
   /* line 68, ../sass/_mixins.scss */
   .blanket.droppable {
-    background-position: 0 3.49696%;
+    background-position: 0 3.46504%;
   }
 
   /* line 72, ../sass/_mixins.scss */
   .blanket.hover {
-    background-position: 0 4.7986%;
+    background-position: 0 4.74261%;
   }
 
   /* line 76, ../sass/_mixins.scss */
   .blanket.clean {
-    background-position: 0 2.19531%;
+    background-position: 0 2.18746%;
   }
 
   /* line 46, ../sass/_mixins.scss */
@@ -2968,17 +3061,17 @@
 
   /* line 68, ../sass/_mixins.scss */
   .oilcan.droppable {
-    background-position: 0 42.63884%;
+    background-position: 0 42.62933%;
   }
 
   /* line 72, ../sass/_mixins.scss */
   .oilcan.hover {
-    background-position: 0 43.07544%;
+    background-position: 0 43.07436%;
   }
 
   /* line 76, ../sass/_mixins.scss */
   .oilcan.clean {
-    background-position: 0 42.20225%;
+    background-position: 0 42.18431%;
   }
 
   /* line 46, ../sass/_mixins.scss */
@@ -3005,17 +3098,17 @@
 
   /* line 68, ../sass/_mixins.scss */
   .bottle1.droppable {
-    background-position: 0 11.72911%;
+    background-position: 0 11.6867%;
   }
 
   /* line 72, ../sass/_mixins.scss */
   .bottle1.hover {
-    background-position: 0 12.4308%;
+    background-position: 0 12.38691%;
   }
 
   /* line 76, ../sass/_mixins.scss */
   .bottle1.clean {
-    background-position: 0 11.02742%;
+    background-position: 0 10.98649%;
   }
 
   /* line 46, ../sass/_mixins.scss */
@@ -3042,16 +3135,16 @@
 
   /* line 68, ../sass/_mixins.scss */
   .boot2.droppable {
-    background-position: 0 9.95437%;
+    background-position: 0 9.90411%;
   }
 
   /* line 72, ../sass/_mixins.scss */
   .boot2.hover {
-    background-position: 0 10.48133%;
+    background-position: 0 10.43613%;
   }
 
   /* line 76, ../sass/_mixins.scss */
   .boot2.clean {
-    background-position: 0 9.42741%;
+    background-position: 0 9.3721%;
   }
 }
