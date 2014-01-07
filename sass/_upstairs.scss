@@ -14,14 +14,18 @@
 @include create-prop(pillowup3,714px,346px);
 
 .clean.shoe1 {@extend %layer2;}
-.pillowup3-prop {@extend %layer1;}
-.bedback-prop {@extend %layer2;}
+.pillowup3-prop {@extend %layer4;}
+.bedback-prop {@extend %layer6;}
+.bedup-prop {@extend %layer3;}
 .basket-prop {@extend %layer3;}
 .armchair-prop {@extend %layer3;}
-.cradle-prop {@extend %layer4;}
+.cradle-prop {@extend %layer6;}
 .clean.books {@extend %layer3;}
-.messy .pillowup2 {@extend %layer3;}
-.clean.pillowup2 {@extend %layer0;}
+.messy .pillowup2 {@extend %layer5;}
+.clean.pillowup1 {@extend %layer5;}
+.clean.pillowup2 {@extend %layer4;}
+.clean.toy {@extend %layer4;}
+.messy .shoe2 {@extend %layer5;}
 .messy .musicbox {@extend %layer4;}
 .messy .stool {@extend %layer4;}
 .messy .pot3 {@extend %layer4;}
@@ -30,6 +34,9 @@
 .clean.pot1 {@extend %layer3;}
 .clean.pot2 {@extend %layer5;}
 .clean.pot3 {@extend %layer4;}
+
+/* Letters */
+.oct11.letter {@extend %layer1;}
 
 /* Upstairs Items */
 @include create-item(rug,302px,672px,701px,756px);

@@ -117,51 +117,41 @@
   }
 
   /* line 32, ../sass/_extends.scss */
-  .places .rug, .places .stool, .places .shoe1, .places .shoe2, .places .pillowup1, .places .books, .places .telescope, .places .toy, .places .musicbox, .places .broom, .places .pillowup2, .places .pot1, .places .pot2, .places .pot3, .places .pot4, .places .scoop, .places .firewood1, .places .axe, .places .rifle, .places .cloak, .places .boot1, .places .samovar, .places .firewood6, .places .sack1, .places .pillow1, .places .socks, .places .tools, .places .ovenfork, .places .firewood3, .places .firewood2, .places .firewood5, .places .firewood4, .places .shovel, .places .pitcher, .places .bottle3, .places .washboard, .places .mug2, .places .mug1, .places .bottle2, .places .bucket, .places .chair1, .places .pillow3, .places .tablecloth, .places .blanket, .places .oilcan, .places .bottle1, .places .boot2 {
+  .places .rug, .places .stool, .places .shoe1, .places .shoe2, .places .pillowup1, .places .books, .places .telescope, .places .toy, .places .musicbox, .places .broom, .places .pillowup2, .places .pot1, .places .pot2, .places .pot3, .places .pot4, .places .scoop, .places .firewood1, .places .axe, .places .rifle, .places .cloak, .places .boot1, .places .samovar, .places .firewood6, .places .sack1, .places .pillow1, .places .socks, .places .tools, .places .ovenfork, .places .firewood3, .places .firewood2, .places .firewood5, .places .firewood4, .places .shovel, .places .pitcher, .places .bottle3, .places .washboard, .places .mug2, .places .mug1, .places .bottle2, .places .bucket, .places .chair1, .places .pillow3, .places .tablecloth, .places .blanket, .places .oilcan, .places .bottle1, .places .boot2, .basket-prop, .bedback-prop, .bedup-prop, .armchair-prop, .cradle-prop, .pillowup3-prop, .pillow2-prop, .bed-prop, .spoons-prop, .pot-prop, .chair2-prop, .table-prop, .oven-prop, .laundry-prop, .nightstand-prop, .stairs-prop, .sack2-prop, .letters-to-read .aug03, .letters-to-read .jun09, .letters-to-read .jun18, .letters-to-read .dec15, .letters-to-read .aug31, .letters-to-read .oct11 {
     position: absolute;
   }
 
-  /* line 36, ../sass/_extends.scss */
-  .basket-prop, .bedback-prop, .bedup-prop, .armchair-prop, .cradle-prop, .pillowup3-prop, .pillow2-prop, .bed-prop, .spoons-prop, .pot-prop, .chair2-prop, .table-prop, .oven-prop, .laundry-prop, .nightstand-prop, .stairs-prop, .sack2-prop {
-    position: absolute;
-  }
-
-  /* line 41, ../sass/_extends.scss */
-  .clean.pillowup2 {
-    z-index: 0;
-  }
-
-  /* line 42, ../sass/_extends.scss */
-  .places li, .pillowup3-prop, .clean.firewood1, .clean.firewood2, .clean.firewood3, .clean.firewood4, .clean.firewood5, .clean.firewood6, .sack2-prop, .messy .rifle {
+  /* line 38, ../sass/_extends.scss */
+  .places li, .oct11.letter, .clean.firewood1, .clean.firewood2, .clean.firewood3, .clean.firewood4, .clean.firewood5, .clean.firewood6, .sack2-prop, .messy .rifle {
     z-index: 1;
   }
 
-  /* line 43, ../sass/_extends.scss */
-  .messy li, .clean.shoe1, .bedback-prop, .stairs-prop, .boot1.clean, .messy .sack1, .nightstand-prop, .messy .socks, .messy .pitcher, .oven-prop, .messy .boot2, .messy .cloak {
+  /* line 39, ../sass/_extends.scss */
+  .messy li, .clean.shoe1, .stairs-prop, .boot1.clean, .messy .sack1, .nightstand-prop, .messy .socks, .messy .pitcher, .oven-prop, .messy .boot2, .messy .cloak, .jun09.letter {
     z-index: 2;
   }
 
-  /* line 44, ../sass/_extends.scss */
-  .basket-prop, .armchair-prop, .clean.books, .messy .pillowup2, .clean.scoop, .clean.telescope, .clean.pot1, .cloak.clean, .messy .axe, .messy .bucket, .messy .firewood2, .messy .firewood6, .messy .shovel, .boot2.clean, .messy .pillow1, .bucket.clean, .table-prop, .messy .bottle3, .clean.tablecloth, .clean.tools {
+  /* line 40, ../sass/_extends.scss */
+  .bedup-prop, .basket-prop, .armchair-prop, .clean.books, .clean.scoop, .clean.telescope, .clean.pot1, .cloak.clean, .messy .axe, .messy .bucket, .messy .firewood2, .messy .firewood6, .messy .shovel, .boot2.clean, .messy .pillow1, .bucket.clean, .table-prop, .messy .bottle3, .clean.tablecloth, .clean.tools, .aug03.letter {
     z-index: 3;
   }
 
-  /* line 45, ../sass/_extends.scss */
-  .cradle-prop, .messy .musicbox, .messy .stool, .messy .pot3, .clean.pot3, .messy .samovar, .bottle2.clean, .clean.mug2, .messy .chair1, .messy .pitcher, .clean.chair1, .pot-prop, .spoons-prop, .clean.pitcher, .messy .washboard, .messy .pillow3, .bed-prop {
+  /* line 41, ../sass/_extends.scss */
+  .pillowup3-prop, .clean.pillowup2, .clean.toy, .messy .musicbox, .messy .stool, .messy .pot3, .clean.pot3, .messy .samovar, .bottle2.clean, .clean.mug2, .messy .chair1, .messy .pitcher, .clean.chair1, .pot-prop, .spoons-prop, .clean.pitcher, .messy .washboard, .messy .pillow3, .bed-prop {
     z-index: 4;
   }
 
-  /* line 46, ../sass/_extends.scss */
-  .clean.pot2, .messy .mug1, .messy .mug2, .clean.mug1, .clean.mug2, .samovar.clean, .chair2-prop, .messy .blanket, .clean.blanket {
+  /* line 42, ../sass/_extends.scss */
+  .messy .pillowup2, .clean.pillowup1, .messy .shoe2, .clean.pot2, .messy .mug1, .messy .mug2, .clean.mug1, .clean.mug2, .samovar.clean, .chair2-prop, .messy .blanket, .clean.blanket {
     z-index: 5;
   }
 
-  /* line 47, ../sass/_extends.scss */
-  .messy .bottle2, .messy .oilcan, .clean.pillow1, .messy .bottle1 {
+  /* line 43, ../sass/_extends.scss */
+  .bedback-prop, .cradle-prop, .messy .bottle2, .messy .oilcan, .clean.pillow1, .messy .bottle1 {
     z-index: 6;
   }
 
-  /* line 48, ../sass/_extends.scss */
+  /* line 44, ../sass/_extends.scss */
   .messy .ovenfork, .clean.pillow3 {
     z-index: 7;
   }
@@ -876,7 +866,7 @@
     display: none;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 108, ../sass/_mixins.scss */
   #dialog-intro[data-dialog="1"] {
     background-position: 0 0;
     width: 110.13986%;
@@ -889,7 +879,7 @@
     left: 10.13216%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 108, ../sass/_mixins.scss */
   #dialog-intro[data-dialog="2"] {
     background-position: 0 14.28571%;
     width: 110.13986%;
@@ -902,7 +892,7 @@
     left: 10.13216%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 108, ../sass/_mixins.scss */
   #dialog-intro[data-dialog="3"] {
     background-position: 0 28.57143%;
     width: 110.13986%;
@@ -915,7 +905,7 @@
     left: 10.13216%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 108, ../sass/_mixins.scss */
   #dialog-intro[data-dialog="4"] {
     background-position: 0 42.85714%;
     width: 110.13986%;
@@ -928,7 +918,7 @@
     left: 10.13216%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 108, ../sass/_mixins.scss */
   #dialog-intro[data-dialog="5"] {
     background-position: 0 57.14286%;
     width: 110.13986%;
@@ -941,7 +931,7 @@
     left: 10.13216%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 108, ../sass/_mixins.scss */
   #dialog-intro[data-dialog="6"] {
     background-position: 0 71.42857%;
     width: 110.13986%;
@@ -954,7 +944,7 @@
     left: 10.13216%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 108, ../sass/_mixins.scss */
   #dialog-outro[data-dialog="1"] {
     background-position: 0 85.71429%;
     width: 110.13986%;
@@ -967,7 +957,7 @@
     left: 10.13216%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 108, ../sass/_mixins.scss */
   #dialog-outro[data-dialog="2"] {
     background-position: 0 100%;
     width: 110.13986%;
@@ -1034,7 +1024,7 @@
     background-repeat: no-repeat;
   }
 
-  /* line 17, ../sass/_items.scss */
+  /* line 16, ../sass/_items.scss */
   .messy, .places, .props {
     position: absolute;
     top: 0;
@@ -1043,7 +1033,7 @@
     height: 100%;
   }
 
-  /* line 24, ../sass/_items.scss */
+  /* line 23, ../sass/_items.scss */
   .messy img {
     position: absolute;
     top: 0;
@@ -1052,14 +1042,221 @@
     height: auto;
   }
 
-  /* line 33, ../sass/_items.scss */
+  /* line 32, ../sass/_items.scss */
   .places img {
     display: none;
   }
 
-  /* line 39, ../sass/_items.scss */
+  /* line 38, ../sass/_items.scss */
   .places .droppable {
     z-index: 50 !important;
+  }
+
+  /* Letters */
+  /* line 135, letters/*.png */
+  .letters-sprite, .messy .aug03, .letters-to-read .aug03, .messy .jun09, .letters-to-read .jun09, .messy .jun18, .letters-to-read .jun18, .messy .dec15, .letters-to-read .dec15, .messy .aug31, .letters-to-read .aug31, .messy .oct11, .letters-to-read .oct11 {
+    background-image: url('../img/letters-s9b751eb09c.png');
+    background-repeat: no-repeat;
+  }
+
+  /* line 10, ../sass/_letters.scss */
+  .letters-to-read {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+  /* line 13, ../sass/_letters.scss */
+  .letters-to-read li {
+    display: none;
+    opacity: 0;
+    z-index: 50 !important;
+    -webkit-transition: opacity 1.5s;
+    -webkit-transition-delay: 0.25s;
+    -moz-transition: opacity 1.5s 0.25s;
+    -o-transition: opacity 1.5s 0.25s;
+    transition: opacity 1.5s 0.25s;
+  }
+  /* line 19, ../sass/_letters.scss */
+  .letters-to-read .revealed {
+    cursor: pointer;
+    opacity: 1;
+    display: block;
+  }
+
+  /* line 26, ../sass/_letters.scss */
+  .messy .letter {
+    position: absolute;
+    cursor: pointer;
+  }
+
+  /* line 84, ../sass/_mixins.scss */
+  .messy .aug03 {
+    background-position: 0 13.80408%;
+    width: 5.68369%;
+    padding-top: 2.30643%;
+    height: 0;
+    left: 33.44316%;
+    top: 82.5%;
+    -webkit-background-size: 1591.30435% auto;
+    -moz-background-size: 1591.30435% auto;
+    -o-background-size: 1591.30435% auto;
+    background-size: 1591.30435% auto;
+  }
+
+  /* line 95, ../sass/_mixins.scss */
+  .letters-to-read .aug03 {
+    background-position: 0 77.10098%;
+    width: 90.44481%;
+    padding-top: 82.37232%;
+    height: 0;
+    left: 15.32125%;
+    top: 50%;
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+
+  /* line 84, ../sass/_mixins.scss */
+  .messy .jun09 {
+    background-position: 24.42308% 13.81961%;
+    width: 4.77759%;
+    padding-top: 2.80066%;
+    height: 0;
+    left: 22.98188%;
+    top: 74.75%;
+    -webkit-background-size: 1893.10345% auto;
+    -moz-background-size: 1893.10345% auto;
+    -o-background-size: 1893.10345% auto;
+    background-size: 1893.10345% auto;
+  }
+
+  /* line 95, ../sass/_mixins.scss */
+  .letters-to-read .jun09 {
+    background-position: 0 100%;
+    width: 79.73641%;
+    padding-top: 82.37232%;
+    height: 0;
+    left: 13.50906%;
+    top: 50%;
+    -webkit-background-size: 113.42975% auto;
+    -moz-background-size: 113.42975% auto;
+    -o-background-size: 113.42975% auto;
+    background-size: 113.42975% auto;
+  }
+
+  /* line 84, ../sass/_mixins.scss */
+  .messy .jun18 {
+    background-position: 6.70554% 13.80408%;
+    width: 5.68369%;
+    padding-top: 2.30643%;
+    height: 0;
+    left: 48.10544%;
+    top: 38.65%;
+    -webkit-background-size: 1591.30435% auto;
+    -moz-background-size: 1591.30435% auto;
+    -o-background-size: 1591.30435% auto;
+    background-size: 1591.30435% auto;
+  }
+
+  /* line 95, ../sass/_mixins.scss */
+  .letters-to-read .jun18 {
+    background-position: 0 34.83221%;
+    width: 79.32455%;
+    padding-top: 73.88797%;
+    height: 0;
+    left: 12.35585%;
+    top: 1.6%;
+    -webkit-background-size: 114.01869% auto;
+    -moz-background-size: 114.01869% auto;
+    -o-background-size: 114.01869% auto;
+    background-size: 114.01869% auto;
+  }
+
+  /* line 84, ../sass/_mixins.scss */
+  .messy .dec15 {
+    background-position: 18.84615% 13.81961%;
+    width: 4.77759%;
+    padding-top: 2.80066%;
+    height: 0;
+    left: 54.61285%;
+    top: 15.85%;
+    -webkit-background-size: 1893.10345% auto;
+    -moz-background-size: 1893.10345% auto;
+    -o-background-size: 1893.10345% auto;
+    background-size: 1893.10345% auto;
+  }
+
+  /* line 95, ../sass/_mixins.scss */
+  .letters-to-read .dec15 {
+    background-position: 0 0;
+    width: 74.21746%;
+    padding-top: 60.7084%;
+    height: 0;
+    left: 12.68534%;
+    top: 6.1%;
+    -webkit-background-size: 121.86459% auto;
+    -moz-background-size: 121.86459% auto;
+    -o-background-size: 121.86459% auto;
+    background-size: 121.86459% auto;
+  }
+
+  /* line 84, ../sass/_mixins.scss */
+  .messy .aug31 {
+    background-position: 13.26923% 13.81961%;
+    width: 4.77759%;
+    padding-top: 2.80066%;
+    height: 0;
+    left: 44.06919%;
+    top: 32.1%;
+    -webkit-background-size: 1893.10345% auto;
+    -moz-background-size: 1893.10345% auto;
+    -o-background-size: 1893.10345% auto;
+    background-size: 1893.10345% auto;
+  }
+
+  /* line 95, ../sass/_mixins.scss */
+  .letters-to-read .aug31 {
+    background-position: 0 55.09654%;
+    width: 73.14662%;
+    padding-top: 75.20593%;
+    height: 0;
+    left: 15.40362%;
+    top: 1.9%;
+    -webkit-background-size: 123.64865% auto;
+    -moz-background-size: 123.64865% auto;
+    -o-background-size: 123.64865% auto;
+    background-size: 123.64865% auto;
+  }
+
+  /* line 84, ../sass/_mixins.scss */
+  .messy .oct11 {
+    background-position: 30.02887% 13.84298%;
+    width: 4.85997%;
+    padding-top: 3.54201%;
+    height: 0;
+    left: 1.81219%;
+    top: 33.6%;
+    -webkit-background-size: 1861.01695% auto;
+    -moz-background-size: 1861.01695% auto;
+    -o-background-size: 1861.01695% auto;
+    background-size: 1861.01695% auto;
+  }
+
+  /* line 95, ../sass/_mixins.scss */
+  .letters-to-read .oct11 {
+    background-position: 0 16.99346%;
+    width: 81.05437%;
+    padding-top: 64.00329%;
+    height: 0;
+    left: 11.28501%;
+    top: 3.8%;
+    -webkit-background-size: 111.58537% auto;
+    -moz-background-size: 111.58537% auto;
+    -o-background-size: 111.58537% auto;
+    background-size: 111.58537% auto;
   }
 
   /* line 1, ../sass/_upstairs.scss */
@@ -1153,6 +1350,7 @@
     background-size: 296.07843% auto;
   }
 
+  /* Letters */
   /* Upstairs Items */
   /* line 46, ../sass/_mixins.scss */
   .messy .rug {
@@ -1844,6 +2042,7 @@
     z-index: 5 !important;
   }
 
+  /* Letters */
   /* Downstairs Props */
   /* line 30, ../sass/_mixins.scss */
   .pillow2-prop {

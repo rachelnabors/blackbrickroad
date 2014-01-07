@@ -78,6 +78,32 @@
 	}
 }
 
+// For the hidden letters
+@mixin create-letter($letter, $sX, $sY, $placeX, $placeY: 0px, $parent-width: $house-width, $parent-height: $frame-height*2) {
+
+	.messy .#{$letter} {
+		$thisLetter: "letters/#{$letter}-hidden.png";
+		$lWidth: image-width($thisLetter);
+		$lHeight: image-height($thisLetter);
+	  @include letters-sprite(#{$letter}-hidden); 
+	  @include set-dimensions($lWidth, $lHeight, $parent-width);
+	  @include set-position($sX, $sY, $parent-width, $parent-height);
+	  @include set-bg-width($letters-sprite-width, $letters-sprites, #{$letter}-hidden);
+	  @extend %hidden-letters;
+	}
+
+	.letters-to-read .#{$letter} {
+		$lWidth: image-width(sprite-file($letters-sprites, #{$letter}));
+		$lHeight: image-height(sprite-file($letters-sprites, #{$letter}));
+	  @include letters-sprite(#{$letter});
+	  @include set-dimensions($lWidth, $lHeight, $parent-width);
+	  @include set-position($placeX, $placeY, $parent-width, $parent-height);
+	  @include set-bg-width($letters-sprite-width, $letters-sprites, #{$letter});
+	  @extend %letters;
+	}
+}
+
+
 @mixin create-dialog($prefix, $number) {
 	#dialog-#{$prefix}[data-dialog="#{$number}"] {
 		@include dialog-sprite(#{$prefix}talk#{$number}); 

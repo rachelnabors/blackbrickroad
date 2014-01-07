@@ -83,6 +83,10 @@
 .messy .cloak { @extend %layer2}
 .messy .rifle { @extend %layer1}
 
+/* Letters */
+.jun09.letter { @extend %layer2}
+.aug03.letter { @extend %layer3}
+
 /* Downstairs Props */
 @include create-prop(pillow2,381px,1721px);
 @include create-prop(bed,272px,1667px);

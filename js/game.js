@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', function(){
     // this/e.target is the source node.
     var group = this.getAttribute('data-group');
     var key = this.getAttribute('data-key');
-    items[group].droppable[key].classList.remove('droppable');
+    items[group].droppable[key].classList.remove('droppable', 'hover');
   }
 
   function crossOut(crossMeOut) {
@@ -288,5 +288,31 @@ document.addEventListener('DOMContentLoaded', function(){
 
   createDialog(document.getElementById('dialog-intro'), 6, finishedIntro);
   createDialog(document.getElementById('dialog-outro'), 2, finishedOutro);
+
+  // Letters 
+  // Letters are one-offs. Like the items, each letter is a pair of locations:
+  // The hidden letter is clickable
+  // When clicked, it reveals a large, readable letter.
+  // Click anywhere and it disappears, with the hidden letter. Poof!
+  // The photos will work the same way, but they are being tallied for the game.
+
+  var letters = document.querySelectorAll('#letters li');
+  var hiddenLetters = document.createDocumentFragment();
+  // generate list of letters 
+  [].forEach.call(letters, function(letter) {
+    var hiddenLetter = letter.cloneNode();
+    hiddenLetter.classList.add('letter');
+    hiddenLetters.appendChild(hiddenLetter);
+    // give each a click handler to connect it to its full sized twin
+    letter.addEventListener("click", function(){
+      letter.classList.remove('revealed');
+    });
+    hiddenLetter.addEventListener("click", function(){
+      letter.classList.add('revealed');
+      this.remove();
+    });
+  });
+  // insert them to the messy items pile
+  messies.appendChild(hiddenLetters);
 
 }, false);
