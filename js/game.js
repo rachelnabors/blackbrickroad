@@ -117,9 +117,6 @@ document.addEventListener('DOMContentLoaded', function(){
       draggable.setAttribute('data-group', group);
       draggable.setAttribute('data-key', key);
       draggable.classList.add(key);
-      // give it its listeners
-      draggable.addEventListener('dragstart', handleDragStart, false);
-      draggable.addEventListener('dragend', handleDragEnd, false);
       // pop an image in it
       image.src = "img/items/" + key + ".png";
       draggable.appendChild(image);
@@ -128,9 +125,12 @@ document.addEventListener('DOMContentLoaded', function(){
       droppable.setAttribute('data-group', group);
       droppable.setAttribute('data-key', key);
       droppable.classList.add(key);
+
       // listeners
-      droppable.addEventListener('drop', handleDrop, false);
-      droppable.addEventListener('dragover', handleDragHover, false);
+      draggable.addEventListener('dragstart', handleDragStart(group, key), false);
+      draggable.addEventListener('dragend', handleDragEnd(group, key), false);
+      droppable.addEventListener('drop', handleDrop(group, key), false);
+      droppable.addEventListener('dragover', handleDragHover(group, key), false);
       droppable.addEventListener('dragleave', handleDragLeave, false);
 
       // attach them both to item
@@ -143,71 +143,75 @@ document.addEventListener('DOMContentLoaded', function(){
     });
   });
 
-  function handleDragStart(e) {
-    // remember what we're dragging so handleDrop can confirm
-    currentGroup = this.getAttribute('data-group');
-    currentKey = this.getAttribute('data-key');
-    
-    items[currentGroup].droppable[currentKey].classList.add('droppable');
-    e.dataTransfer.effectAllowed = 'move';
-    e.dataTransfer.setData('text/html', this.innerHTML);    
-
+  // For more info on why I'm writing functions like this, read about closures:
+  // http://stackoverflow.com/questions/10000083/javascript-event-handler-with-parameters
+  function handleDragStart(group, key) {
+    return function(e) {
+      currentGroup = this.getAttribute('data-group');
+      currentKey = this.getAttribute('data-key');
+      items[group].droppable[key].classList.add('droppable');
+      e.dataTransfer.effectAllowed = 'move';
+      e.dataTransfer.setData('text/html', this.innerHTML);
+    }
   }
 
-  function handleDragHover(e) {
-    // e.preventDefault allows dropping.
-    if (e.preventDefault) { e.preventDefault(); }
-    // We want it to move the data
-    e.dataTransfer.dropEffect = 'move';  
-    items[currentGroup].droppable[currentKey].classList.add('hover');
+  function handleDragHover(group, key) {
+    return function(e) {
+      // e.preventDefault allows dropping.
+      if (e.preventDefault) { e.preventDefault(); }
+      // We want it to move the data
+      e.dataTransfer.dropEffect = 'move';  
+      if (group === currentGroup && key === currentKey) {
+        items[currentGroup].droppable[currentKey].classList.add('hover');
+      }
+    }
   }
 
   function handleDragLeave(e) {
     items[currentGroup].droppable[currentKey].classList.remove('hover');
   }
 
-  function handleDrop(e) {
-    if(e.preventDefault) { e.preventDefault(); }
-    if(e.stopPropagation) { e.stopPropagation(); }
+  function handleDrop(group, key) {
+    return function(e) {
+      if(e.preventDefault) { e.preventDefault(); }
+      if(e.stopPropagation) { e.stopPropagation(); }
 
-    var group = this.getAttribute('data-group');
-    var key = this.getAttribute('data-key');
-
-    if (group !== currentGroup || key !== currentKey) {
-      // droppable and draggable don't match!
-      return;
-    }
-
-    // remove an item from its group, using group as a counter
-    items[group].remaining--;
-    // if there are no more items in that group...
-    if (!items[group].remaining) {
-      // cross it out from the list
-      crossOut(items[group].node);
-      itemsLeft--;
-      if (!itemsLeft) {
-        initiateOutro();
+      if (group !== currentGroup || key !== currentKey) {
+        // droppable and draggable don't match!
+        return;
       }
+
+      // remove an item from its group, using group as a counter
+      items[group].remaining--;
+      // if there are no more items in that group...
+      if (!items[group].remaining) {
+        // cross it out from the list
+        crossOut(items[group].node);
+        itemsLeft--;
+        if (!itemsLeft) {
+          initiateOutro();
+        }
+      }
+      this.innerHTML = e.dataTransfer.getData('text/html');
+      this.classList.add("clean");
+      // Remove its old parent.
+      items[group].draggable[key].remove();
+
+      // remove the droppable class
+      items[group].droppable[key].classList.remove('droppable');
+
+      // item was cleaned up, remove references
+      delete items[group].draggable[key];
+      delete items[group].droppable[key];
     }
-    this.innerHTML = e.dataTransfer.getData('text/html');
-    this.classList.add("clean");
-    // Remove its old parent.
-    items[group].draggable[key].remove();
-
-    // remove the droppable class
-    items[group].droppable[key].classList.remove('droppable');
-
-    // item was cleaned up, remove references
-    delete items[group].draggable[key];
-    delete items[group].droppable[key];
   }
 
   // when you don't drop what you're dragging
-  function handleDragEnd(e) {
-    // this/e.target is the source node.
-    var group = this.getAttribute('data-group');
-    var key = this.getAttribute('data-key');
-    items[group].droppable[key].classList.remove('droppable', 'hover');
+  function handleDragEnd(group, key) {
+    return function(e) {
+      // this/e.target is the source node.
+      items[group].droppable[key].classList.remove('droppable', 'hover');
+    }
   }
 
   function crossOut(crossMeOut) {
@@ -353,16 +357,14 @@ document.addEventListener('DOMContentLoaded', function(){
         hiddenPhotos.appendChild(scrap);
         // When clicked, give class .revealed to li#photo1 .scrap1 (it's pair)...
         // ...and remove it from the DOM
-        (function (scrap, bigScrap) {
-          // Using and IIFE because bigScrap was ALWAYS the same: 
-          // http://stackoverflow.com/questions/8909652/adding-click-event-listeners-in-loop
-          scrap.addEventListener("click", function(){
+        scrap.addEventListener("click", function(photo, bigScrap){
+          return function(e) {
             photo.classList.add('revealed');
             bigScrap.classList.add('revealed');
             this.remove();
             scrapsLeft--;
-          });
-        })(scrap, bigScrap);
+          }
+        }(photo, bigScrap), false);
         // Clicking on the big scrap hides it.
         photo.addEventListener("click", function(){
           this.classList.remove('revealed');
