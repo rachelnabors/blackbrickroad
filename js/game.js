@@ -47,27 +47,24 @@
     var success = document.getElementById("success");
     var loading = document.getElementById("loading");
 
-    var properWidth, properHeight, styleWidth, styleHeight, fullWidth, fullHeight, styleWidthFull, styleHeightFull;
+    var properWidth, properHeight, styleWidth, styleHeight, fullWidth, styleWidthFull;
 
     // get new widths and heights 
     if (frameWidth/windowHeight >= 1228/1000) {
       // if window is wide
       properWidth = (1228/1000) * windowHeight;
       properHeight = windowHeight;
-      fullWidth = (1500/1000) * windowHeight;
-      fullHeight = windowHeight;
+      fullWidth = (1500/1000) * windowHeight + "px";
     } else {
       // if it is narrow
       properWidth = frameWidth;
       properHeight = properWidth/(1228/1000);
-      fullWidth = windowWidth;
-      fullHeight = fullWidth/(1500/1000);
+      fullWidth = "100%";
     }
     styleWidth = "width: " + properWidth + "px";
     styleHeight = "height: " + properHeight + "px";
 
-    styleWidthFull = "width: " + fullWidth + "px";
-    styleHeightFull = "height: " + fullHeight + "px";
+    styleWidthFull = "width: " + fullWidth;
     
     // set the house's width
     house.setAttribute("style", styleWidth);
@@ -81,9 +78,7 @@
     frame.setAttribute("style", styleHeight);
 
     // set width and height of the loading and outro divs
-    success.setAttribute("style", styleHeightFull);
     success.setAttribute("style", styleWidthFull);
-    loading.setAttribute("style", styleHeightFull);
     loading.setAttribute("style", styleWidthFull);
 
   }
@@ -299,9 +294,12 @@ document.addEventListener('DOMContentLoaded', function(){
   }
 
   function gameOver() {
+    // if all items and photo scraps are cleaned up, cut to "success"
     if (!itemsLeft && !scrapsLeft) { 
-      document.setAttribute('data-progress', 'completed');
-    }      
+      document.body.setAttribute('data-progress', 'completed');
+    } else {
+      document.body.setAttribute('data-progress', 'find-photos');      
+    }
   }
 
   createDialog(document.getElementById('dialog-intro'), 6, finishedIntro);
@@ -377,6 +375,11 @@ document.addEventListener('DOMContentLoaded', function(){
             bigScrap.classList.add('revealed');
             this.remove();
             scrapsLeft--;
+            if (!itemsLeft && !scrapsLeft) { 
+              photo.addEventListener("click", function(){
+                document.body.setAttribute('data-progress', 'completed');
+              });
+            }
           }
         }(photo, bigScrap), false);
         // Clicking on the big scrap hides it.

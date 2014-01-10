@@ -32,17 +32,13 @@ $ui-sprite-width: sprite_width($ui-sprites);
 		opacity: .5;
 		pointer-events: none;
 	}
-	.instructions {opacity: 0}
-	.to-do { display: none}
-	#dialog-outro {display:none}
+	#dialog-intro {display:block}
 	.warp { opacity: 0;}
 }
 
 [data-progress="cleaning-house"] {
 	.instructions {opacity: 1}
 	.to-do { display: block}
-	#dialog-intro {display:none}
-	#dialog-outro {display:none}
 }
 
 [data-progress="dialog-outro"] {
@@ -50,25 +46,40 @@ $ui-sprite-width: sprite_width($ui-sprites);
 		opacity: .5;
 		pointer-events: none;
 	}
-	.instructions {opacity: 0}
-	.to-do { display: none}
-	#dialog-intro {display:none}
 	#dialog-outro {display:block}
 	.warp { opacity: 0;}
 }
 
+[data-progress="find-photos"] {
+	.instructions-photos {opacity: 1}
+}
+
 [data-progress="completed"] {
-	#loading {display:none;}
-	#ui {display:none}
-	#frame {display:none}
-	#success {display:block;}
+	#frame { opacity: .5;}
+	// This is how you do a CROSS FADE, yeaaauh!
+	#loading,
+	#ui,
+	#frame {
+		@include animation(fadeAway 2s $floor-easing forwards);
+	}
+	.warp { display: none;}
+	#success {
+		@include animation(fadeIn 2s $floor-easing forwards);
+		display:block;
+	}
+}
+
+@include keyframes(fadeAway) {
+  100% { opacity: 0; }
 }
 
 #intro, #success {
 	display:none;
-	@include set-dimensions(1500px, 1000px, $max-width);
+	background-color: #000;
+	@include set-dimensions(1500px, 1000px, $max-width, true);
 	@include background-size(100% auto);
-	background-repeat: none;
+	background-position: center 100%;
+	background-repeat: no-repeat;
 	max-width: $max-width;
 	position: absolute; left: 0;
 	z-index: 50;
@@ -82,27 +93,34 @@ $ui-sprite-width: sprite_width($ui-sprites);
 		@include set-dimensions(516px, 212px, $max-width);		
 		@include set-position(478px, 236px, $max-width, $frame-height);
 	}
+	height: 100%;
+	@include box-sizing(border-box);
+}
+
+.instructions, .instructions-photos {
+	@extend %ir;
+	@include set-dimensions(241px, 254px, $ui-width);
+	@include set-bg-width($ui-sprite-width, $ui-sprite, bg_instructions);
+	opacity: 0;
 }
 
 .instructions {
-	@extend %ir;
 	@include ui-sprite(bg_instructions);
-	@include set-dimensions(241px, 254px, $ui-width);
-	@include set-bg-width($ui-sprite-width, $ui-sprite, bg_instructions);
 	margin: .5em 0 1em;
 	position: relative;
 	@include offsetLeft(14px, $instructions-width);
 }
 
-.dialog-intro, .to-do, .dialog-outro {
-	position: relative;
-	margin-bottom:2em;
-	@include ui-sprite(bg_list); 
-	@include set-dimensions(227px, $instructions-height, $ui-width);
-	@include set-bg-width($ui-sprite-width, $ui-sprite, bg_list);
+.instructions-photos {
+	@include ui-sprite(bg_instructions-photos);
+	opacity: 0;
+	position: absolute;
+	@include offsetLeft(14px, $instructions-width);
+	top: .5em;
+	@include transition(opacity 2s);
 }
 
-@include keyframes(fadeInDown) {
+@include keyframes(fadeIn) {
   0% { opacity: 0 }
   1% { opacity: 0 }
   100% { opacity: 1 }
@@ -115,6 +133,12 @@ $ui-sprite-width: sprite_width($ui-sprites);
 }
 
 .to-do {
+	display: none;
+	position: relative;
+	margin-bottom:2em;
+	@include ui-sprite(bg_list); 
+	@include set-dimensions(227px, $instructions-height, $ui-width);
+	@include set-bg-width($ui-sprite-width, $ui-sprite, bg_list);
 	@include offsetLeft(23px, $instructions-width);
 	.wrapper {
 		@include set-position(34px, 24px, $instructions-width, $instructions-height);
@@ -124,7 +148,7 @@ $ui-sprite-width: sprite_width($ui-sprites);
 	ul {
 		[data-currentFloor="downstairs"] & {
 			opacity: 0;
-			@include animation(fadeInDown 2s $floor-easing forwards);
+			@include animation(fadeIn 2s $floor-easing forwards);
 		}
 		[data-currentFloor="upstairs"] & {
 			opacity: 0;
@@ -150,11 +174,6 @@ $ui-sprite-width: sprite_width($ui-sprites);
 		@include opacity(.6);
 	}
 }
-
-.dialog-outro {
-	display: none;
-}
-
 
 /* Navigating between floors */
 .to_upstairs {
@@ -185,6 +204,7 @@ $dialog-sprite-spacing: 2px;
 @import "dialog/*.png";
 $dialog-sprite: $dialog-sprites;
 $dialog-sprite-width: sprite_width($dialog-sprites);
+.dialog { display: none;}
 
 .dialog-nav {
 	color :#fff;

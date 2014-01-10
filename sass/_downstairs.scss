@@ -68,7 +68,8 @@
 
 .messy .pillow3 {@extend %layer4}
 .messy .boot2 {@extend %layer2}
-.clean.tools {@extend %layer3}
+.clean.tools {@extend %layer5}
+.messy .firewood1 {@extend %layer6;}
 
 .places .shovel { z-index: 7 !important}
 .places .ovenfork { z-index: 7 !important}
