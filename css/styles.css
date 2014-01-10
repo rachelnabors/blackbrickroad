@@ -132,7 +132,7 @@
   }
 
   /* line 40, ../sass/_extends.scss */
-  .bedup-prop, .basket-prop, .armchair-prop, .clean.books, .messy .pot1, .clean.scoop, .clean.telescope, .clean.pot1, .cloak.clean, .messy .axe, .messy .bucket, .messy .firewood2, .messy .firewood6, .messy .shovel, .boot2.clean, .messy .pillow1, .bucket.clean, .table-prop, .messy .bottle3, .clean.tablecloth, .clean.tools, .aug03.letter {
+  .messy .photo.photo1-scrap2, .bedup-prop, .basket-prop, .armchair-prop, .clean.books, .messy .pot1, .clean.scoop, .clean.telescope, .clean.pot1, .cloak.clean, .messy .axe, .messy .bucket, .messy .firewood2, .messy .firewood6, .messy .shovel, .boot2.clean, .messy .pillow1, .bucket.clean, .table-prop, .messy .bottle3, .clean.tablecloth, .clean.tools, .aug03.letter {
     z-index: 3;
   }
 
@@ -152,7 +152,7 @@
   }
 
   /* line 44, ../sass/_extends.scss */
-  .messy .ovenfork, .clean.pillow3 {
+  .messy .photo, .messy .ovenfork, .clean.pillow3 {
     z-index: 7;
   }
 
@@ -415,7 +415,6 @@
   /* The interface */
   /* line 9, ../sass/_ui.scss */
   #ui {
-    z-index: 2;
     float: left;
     width: 14.1875em;
     font-family: "mawns_handwriting_regular", cursive;
@@ -1034,7 +1033,7 @@
   /* Photos */
   /* line 359, photos/*.png */
   .photos-sprite, .photo7-scrap1, .photo7 .scrap1, .photo7-scrap2, .photo7 .scrap2, .photo7-scrap3, .photo7 .scrap3, .photo6-scrap1, .photo6 .scrap1, .photo6-scrap2, .photo6 .scrap2, .photo6-scrap3, .photo6 .scrap3, .photo5-scrap1, .photo5 .scrap1, .photo5-scrap2, .photo5 .scrap2, .photo5-scrap3, .photo5 .scrap3, .photo4-scrap1, .photo4 .scrap1, .photo4-scrap2, .photo4 .scrap2, .photo3-scrap1, .photo3 .scrap1, .photo3-scrap2, .photo3 .scrap2, .photo3-scrap3, .photo3 .scrap3, .photo3-scrap4, .photo3 .scrap4, .photo2-scrap1, .photo2 .scrap1, .photo2-scrap2, .photo2 .scrap2, .photo1-scrap1, .photo1 .scrap1, .photo1-scrap2, .photo1 .scrap2, .photo1-scrap3, .photo1 .scrap3 {
-    background-image: url('../img/photos-s7393343187.png');
+    background-image: url('../img/photos-s8819314740.png');
     background-repeat: no-repeat;
   }
 
@@ -1047,6 +1046,10 @@
     height: 100%;
   }
   /* line 13, ../sass/_photos.scss */
+  [data-currentfloor='downstairs'] .torn-photos {
+    top: 50%;
+  }
+  /* line 14, ../sass/_photos.scss */
   .torn-photos li {
     display: none;
     opacity: 0;
@@ -1062,11 +1065,11 @@
     width: 100%;
     height: 100%;
   }
-  /* line 20, ../sass/_photos.scss */
+  /* line 21, ../sass/_photos.scss */
   .torn-photos li.revealed {
     background: rgba(0, 0, 0, 0.5);
   }
-  /* line 24, ../sass/_photos.scss */
+  /* line 25, ../sass/_photos.scss */
   .torn-photos .scrap {
     display: none;
     opacity: 0;
@@ -1079,13 +1082,13 @@
     -o-transition: opacity 1.5s;
     transition: opacity 1.5s;
   }
-  /* line 31, ../sass/_photos.scss */
+  /* line 32, ../sass/_photos.scss */
   .torn-photos .revealed {
     opacity: 1;
     display: block;
   }
 
-  /* line 37, ../sass/_photos.scss */
+  /* line 38, ../sass/_photos.scss */
   .messy .photo {
     position: absolute;
     cursor: pointer;
@@ -1093,7 +1096,7 @@
 
   /* line 107, ../sass/_mixins.scss */
   .photo7-scrap1 {
-    background-position: 72.81324% 14.78828%;
+    background-position: 0 94.7502%;
     width: 1.4827%;
     padding-top: 1.07084%;
     height: 0;
@@ -1107,7 +1110,7 @@
 
   /* line 118, ../sass/_mixins.scss */
   .photo7 .scrap1 {
-    background-position: 0 11.7621%;
+    background-position: 0 94.44185%;
     width: 71.16969%;
     padding-top: 26.27677%;
     height: 0;
@@ -1121,7 +1124,7 @@
 
   /* line 107, ../sass/_mixins.scss */
   .photo7-scrap2 {
-    background-position: 88% 14.78986%;
+    background-position: 0 97.41567%;
     width: 1.15321%;
     padding-top: 1.15321%;
     height: 0;
@@ -1135,12 +1138,12 @@
 
   /* line 118, ../sass/_mixins.scss */
   .photo7 .scrap2 {
-    background-position: 0 8.71%;
+    background-position: 0 97.18663%;
     width: 71.16969%;
     padding-top: 22.40527%;
     height: 0;
     left: 13.34432%;
-    top: 66.35%;
+    top: 16.35%;
     -webkit-background-size: 100% auto;
     -moz-background-size: 100% auto;
     -o-background-size: 100% auto;
@@ -1149,7 +1152,7 @@
 
   /* line 107, ../sass/_mixins.scss */
   .photo7-scrap3 {
-    background-position: 97.63033% 14.79461%;
+    background-position: 0 100%;
     width: 1.64745%;
     padding-top: 1.40033%;
     height: 0;
@@ -1163,7 +1166,7 @@
 
   /* line 118, ../sass/_mixins.scss */
   .photo7 .scrap3 {
-    background-position: 0 5.84294%;
+    background-position: 0 99.80523%;
     width: 71.16969%;
     padding-top: 21.4168%;
     height: 0;
@@ -1177,7 +1180,7 @@
 
   /* line 107, ../sass/_mixins.scss */
   .photo6-scrap1 {
-    background-position: 80.16627% 14.78986%;
+    background-position: 0 81.30214%;
     width: 1.81219%;
     padding-top: 1.15321%;
     height: 0;
@@ -1191,7 +1194,7 @@
 
   /* line 118, ../sass/_mixins.scss */
   .photo6 .scrap1 {
-    background-position: 0 19.43825%;
+    background-position: 0 80.46765%;
     width: 54.20099%;
     padding-top: 32.37232%;
     height: 0;
@@ -1205,7 +1208,7 @@
 
   /* line 107, ../sass/_mixins.scss */
   .photo6-scrap2 {
-    background-position: 82.48521% 14.78986%;
+    background-position: 0 85.25571%;
     width: 1.56507%;
     padding-top: 1.15321%;
     height: 0;
@@ -1219,7 +1222,7 @@
 
   /* line 118, ../sass/_mixins.scss */
   .photo6 .scrap2 {
-    background-position: 0 23.87443%;
+    background-position: 0 84.53143%;
     width: 40.52718%;
     padding-top: 34.10214%;
     height: 0;
@@ -1233,7 +1236,7 @@
 
   /* line 107, ../sass/_mixins.scss */
   .photo6-scrap3 {
-    background-position: 74.58824% 14.78828%;
+    background-position: 0 91.66742%;
     width: 1.15321%;
     padding-top: 1.07084%;
     height: 0;
@@ -1247,7 +1250,7 @@
 
   /* line 118, ../sass/_mixins.scss */
   .photo6 .scrap3 {
-    background-position: 0 100%;
+    background-position: 0 90.96176%;
     width: 54.11862%;
     padding-top: 56.50741%;
     height: 0;
@@ -1261,7 +1264,7 @@
 
   /* line 107, ../sass/_mixins.scss */
   .photo5-scrap1 {
-    background-position: 84.53365% 14.78986%;
+    background-position: 0 67.51904%;
     width: 1.40033%;
     padding-top: 1.15321%;
     height: 0;
@@ -1275,7 +1278,7 @@
 
   /* line 118, ../sass/_mixins.scss */
   .photo5 .scrap1 {
-    background-position: 0 52.69248%;
+    background-position: 0 65.40125%;
     width: 37.89127%;
     padding-top: 52.47117%;
     height: 0;
@@ -1289,7 +1292,7 @@
 
   /* line 107, ../sass/_mixins.scss */
   .photo5-scrap2 {
-    background-position: 86.33687% 14.78986%;
+    background-position: 0 73.11389%;
     width: 1.23558%;
     padding-top: 1.15321%;
     height: 0;
@@ -1303,7 +1306,7 @@
 
   /* line 118, ../sass/_mixins.scss */
   .photo5 .scrap2 {
-    background-position: 0 45.65564%;
+    background-position: 0 71.44635%;
     width: 38.63262%;
     padding-top: 49.01153%;
     height: 0;
@@ -1317,7 +1320,7 @@
 
   /* line 107, ../sass/_mixins.scss */
   .photo5-scrap3 {
-    background-position: 91.5677% 18.69439%;
+    background-position: 0 77.49409%;
     width: 1.81219%;
     padding-top: 2.9654%;
     height: 0;
@@ -1331,7 +1334,7 @@
 
   /* line 118, ../sass/_mixins.scss */
   .photo5 .scrap3 {
-    background-position: 0 28.59545%;
+    background-position: 0 76.25024%;
     width: 54.11862%;
     padding-top: 36.57331%;
     height: 0;
@@ -1345,7 +1348,7 @@
 
   /* line 107, ../sass/_mixins.scss */
   .photo4-scrap1 {
-    background-position: 95.28302% 14.79303%;
+    background-position: 0 55.18774%;
     width: 1.31796%;
     padding-top: 1.31796%;
     height: 0;
@@ -1359,7 +1362,7 @@
 
   /* line 118, ../sass/_mixins.scss */
   .photo4 .scrap1 {
-    background-position: 0 67.68118%;
+    background-position: 0 52.22458%;
     width: 52.63591%;
     padding-top: 54.20099%;
     height: 0;
@@ -1373,12 +1376,12 @@
 
   /* line 107, ../sass/_mixins.scss */
   .photo4-scrap2 {
-    background-position: 88.91538% 18.68838%;
+    background-position: 0 61.47697%;
     width: 2.05931%;
     padding-top: 2.71829%;
     height: 0;
-    left: 60.04942%;
-    top: 80.85%;
+    left: 63.34432%;
+    top: 82.35%;
     -webkit-background-size: 3456% auto;
     -moz-background-size: 3456% auto;
     -o-background-size: 3456% auto;
@@ -1387,12 +1390,12 @@
 
   /* line 118, ../sass/_mixins.scss */
   .photo4 .scrap2 {
-    background-position: 0 84.55088%;
+    background-position: 0 58.79804%;
     width: 64.41516%;
     padding-top: 54.28336%;
     height: 0;
     left: 12.02636%;
-    top: 57.5%;
+    top: 7.5%;
     -webkit-background-size: 110.48593% auto;
     -moz-background-size: 110.48593% auto;
     -o-background-size: 110.48593% auto;
@@ -1401,7 +1404,7 @@
 
   /* line 107, ../sass/_mixins.scss */
   .photo3-scrap1 {
-    background-position: 77.41935% 14.78986%;
+    background-position: 0 33.05223%;
     width: 2.22405%;
     padding-top: 1.15321%;
     height: 0;
@@ -1415,7 +1418,7 @@
 
   /* line 118, ../sass/_mixins.scss */
   .photo3 .scrap1 {
-    background-position: 66.40379% 0;
+    background-position: 0 29.58135%;
     width: 18.94563%;
     padding-top: 43.82208%;
     height: 0;
@@ -1429,7 +1432,7 @@
 
   /* line 107, ../sass/_mixins.scss */
   .photo3-scrap2 {
-    background-position: 70.68558% 14.78354%;
+    background-position: 0 36.51197%;
     width: 1.4827%;
     padding-top: 0.82372%;
     height: 0;
@@ -1443,12 +1446,12 @@
 
   /* line 118, ../sass/_mixins.scss */
   .photo3 .scrap2 {
-    background-position: 0 15.35984%;
+    background-position: 0 34.29454%;
     width: 47.85832%;
     padding-top: 29.73641%;
     height: 0;
     left: 27.75947%;
-    top: 51.85%;
+    top: 1.85%;
     -webkit-background-size: 148.70912% auto;
     -moz-background-size: 148.70912% auto;
     -o-background-size: 148.70912% auto;
@@ -1457,7 +1460,7 @@
 
   /* line 107, ../sass/_mixins.scss */
   .photo3-scrap3 {
-    background-position: 89.43662% 14.78986%;
+    background-position: 0 41.31302%;
     width: 0.98847%;
     padding-top: 1.15321%;
     height: 0;
@@ -1471,7 +1474,7 @@
 
   /* line 118, ../sass/_mixins.scss */
   .photo3 .scrap3 {
-    background-position: 0 0;
+    background-position: 0 38.37828%;
     width: 34.67875%;
     padding-top: 42.00988%;
     height: 0;
@@ -1485,7 +1488,7 @@
 
   /* line 107, ../sass/_mixins.scss */
   .photo3-scrap4 {
-    background-position: 85.91885% 18.68438%;
+    background-position: 0 48.93289%;
     width: 2.14168%;
     padding-top: 2.55354%;
     height: 0;
@@ -1499,7 +1502,7 @@
 
   /* line 118, ../sass/_mixins.scss */
   .photo3 .scrap4 {
-    background-position: 98.00443% 76.5751%;
+    background-position: 0 44.70289%;
     width: 34.01977%;
     padding-top: 66.72158%;
     height: 0;
@@ -1513,7 +1516,7 @@
 
   /* line 107, ../sass/_mixins.scss */
   .photo2-scrap1 {
-    background-position: 93.404% 14.79144%;
+    background-position: 0 21.81917%;
     width: 1.23558%;
     padding-top: 1.23558%;
     height: 0;
@@ -1527,7 +1530,7 @@
 
   /* line 118, ../sass/_mixins.scss */
   .photo2 .scrap1 {
-    background-position: 0 60.12862%;
+    background-position: 0 16.80308%;
     width: 40.69193%;
     padding-top: 54.11862%;
     height: 0;
@@ -1541,7 +1544,7 @@
 
   /* line 107, ../sass/_mixins.scss */
   .photo2-scrap2 {
-    background-position: 99.5283% 14.79461%;
+    background-position: 0 28.00907%;
     width: 1.31796%;
     padding-top: 1.40033%;
     height: 0;
@@ -1555,7 +1558,7 @@
 
   /* line 118, ../sass/_mixins.scss */
   .photo2 .scrap2 {
-    background-position: 0 92.12038%;
+    background-position: 0 23.35548%;
     width: 35.91433%;
     padding-top: 54.28336%;
     height: 0;
@@ -1569,7 +1572,7 @@
 
   /* line 107, ../sass/_mixins.scss */
   .photo1-scrap1 {
-    background-position: 82.04489% 18.68238%;
+    background-position: 0 6.01162%;
     width: 5.10708%;
     padding-top: 2.47117%;
     height: 0;
@@ -1583,7 +1586,7 @@
 
   /* line 118, ../sass/_mixins.scss */
   .photo1 .scrap1 {
-    background-position: 0 75.23831%;
+    background-position: 0 0;
     width: 36.40857%;
     padding-top: 54.20099%;
     height: 0;
@@ -1597,11 +1600,11 @@
 
   /* line 107, ../sass/_mixins.scss */
   .photo1-scrap2 {
-    background-position: 91.59763% 14.79144%;
+    background-position: 0 11.1091%;
     width: 1.56507%;
     padding-top: 1.23558%;
     height: 0;
-    left: 70.8402%;
+    left: 67.5453%;
     top: 85.5%;
     -webkit-background-size: 4547.36842% auto;
     -moz-background-size: 4547.36842% auto;
@@ -1611,12 +1614,12 @@
 
   /* line 118, ../sass/_mixins.scss */
   .photo1 .scrap2 {
-    background-position: 0 39.3552%;
+    background-position: 0 6.61786%;
     width: 47.52883%;
     padding-top: 43.24547%;
     height: 0;
     left: 37.47941%;
-    top: 64.5%;
+    top: 14.5%;
     -webkit-background-size: 149.74003% auto;
     -moz-background-size: 149.74003% auto;
     -o-background-size: 149.74003% auto;
@@ -1625,7 +1628,7 @@
 
   /* line 107, ../sass/_mixins.scss */
   .photo1-scrap3 {
-    background-position: 68.59504% 14.78196%;
+    background-position: 0 15.69836%;
     width: 1.40033%;
     padding-top: 0.74135%;
     height: 0;
@@ -1639,7 +1642,7 @@
 
   /* line 118, ../sass/_mixins.scss */
   .photo1 .scrap3 {
-    background-position: 0 33.72368%;
+    background-position: 0 11.78253%;
     width: 60.79077%;
     padding-top: 39.8682%;
     height: 0;
@@ -1840,8 +1843,8 @@
     width: 4.85997%;
     padding-top: 3.54201%;
     height: 0;
-    left: 1.81219%;
-    top: 33.6%;
+    left: 10.04942%;
+    top: 32.1%;
     -webkit-background-size: 1861.01695% auto;
     -moz-background-size: 1861.01695% auto;
     -o-background-size: 1861.01695% auto;
@@ -2515,8 +2518,8 @@
     width: 5.93081%;
     padding-top: 8.40198%;
     height: 0;
-    left: 0.08237%;
-    top: 29.95%;
+    left: 8.23723%;
+    top: 27.95%;
   }
 
   /* line 55, ../sass/_mixins.scss */

@@ -7,7 +7,7 @@ $ui-sprite-width: sprite_width($ui-sprites);
 
 /* The interface */
 #ui {
-	z-index: 2;
+	// z-index: 2;
 	float: left;
 	width: $instructions-width-ems; 
 	font-family: $writing;

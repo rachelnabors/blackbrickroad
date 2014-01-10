@@ -3,13 +3,14 @@ $parent-height: $frame-height;
 
 /* Photos */
 $photos-use-percentages: true;
-$photos-layout: smart;
+$photos-spacing: 4px;
 @import "photos/*.png";
 $photos-sprite-width: sprite_width($photos-sprites);
 
 .torn-photos {
   position:absolute; top: 0; right: 0;
   width: 100%; height: 100%;
+  [data-currentfloor='downstairs'] & { top: 50%}
   li { 
     display: none;
     opacity: 0;
@@ -37,10 +38,13 @@ $photos-sprite-width: sprite_width($photos-sprites);
 .messy .photo { 
   position: absolute;
   cursor: pointer;
+  @extend %layer7;
 }
 
+.messy .photo.photo1-scrap2 {@extend %layer3}
+
 @include create-photoScrap(7,163px,149px,1,236px,750px);
-@include create-photoScrap(7,162px,1327px,2,203px,1547px);
+@include create-photoScrap(7,162px,327px,2,203px,1547px);
 @include create-photoScrap(7,154px,556px,3,281px,599px);
 @include create-photoScrap(6,252px,45px,1,693px,515px);
 @include create-photoScrap(6,432px,498px,2,585px,239px);
@@ -49,13 +53,13 @@ $photos-sprite-width: sprite_width($photos-sprites);
 @include create-photoScrap(5,472px,333px,2,752px,588px);
 @include create-photoScrap(5,266px,48px,3,740px,678px);
 @include create-photoScrap(4,387px,151px,1,1044px,663px);
-@include create-photoScrap(4,146px,1150px,2,729px,1617px);
+@include create-photoScrap(4,146px,150px,2,769px,1647px);
 @include create-photoScrap(3,259px,45px,1,429px,662px);
-@include create-photoScrap(3,337px,1037px,2,648px,1374px);
+@include create-photoScrap(3,337px,37px,2,648px,1374px);
 @include create-photoScrap(3,259px,401px,3,647px,484px);
 @include create-photoScrap(3,510px,103px,4,891px,443px);
 @include create-photoScrap(2,542px,151px,1,566px,880px);
 @include create-photoScrap(2,162px,151px,2,871px,638px);
 @include create-photoScrap(1,159px,151px,1,677px,791px);
-@include create-photoScrap(1,455px,1290px,2,860px,1710px);
+@include create-photoScrap(1,455px,290px,2,820px,1710px);
 @include create-photoScrap(1,290px,152px,3,299px,452px);
