@@ -23,12 +23,12 @@
 .messy .firewood2 {@extend %layer3;}
 .messy .firewood6 {@extend %layer3;}
 .messy .shovel {@extend %layer3;}
-.messy .samovar {@extend %layer4;}
-.oilcan.clean { z-index: 5}
-.bottle1.clean { z-index: 5}
-.bottle2.clean {@extend %layer4}
-.bottle3.clean { z-index: 5}
-.messy .firewood4 { z-index: 5}
+.messy .samovar {@extend %layer5;}
+.oilcan.clean { @extend %layer6}
+.bottle1.clean { @extend %layer6}
+.bottle2.clean {@extend %layer5}
+.bottle3.clean { @extend %layer6}
+.messy .firewood4 { @extend %layer6}
 .boot1.clean {@extend %layer2}
 .boot2.clean {@extend %layer3}
 .messy .sack1 {@extend %layer2}
@@ -38,7 +38,8 @@
 .sack2-prop {@extend %layer1}
 .clean.axe {z-index: 0}
 
-.nightstand-prop {@extend %layer2}
+.nightstand-prop {@extend %layer4}
+.messy .boot1 {@extend %layer4}
 .messy .socks {@extend %layer2}
 .messy .pillow1 {@extend %layer3}
 .messy .tablecloth {z-index:5}
@@ -46,7 +47,7 @@
 .messy .pitcher { @extend %layer2 }
 .bucket.clean { @extend %layer3}
 .messy .pitcher { @extend %layer4 }
-.messy .mug1 {@extend %layer5}
+.messy .mug1 {@extend %layer6}
 .messy .mug2 {@extend %layer5}
 
 .oven-prop { @extend %layer2 }
@@ -84,7 +85,7 @@
 .messy .rifle { @extend %layer1}
 
 /* Letters */
-.jun09.letter { @extend %layer2}
+.jun09.letter { @extend %layer4}
 .aug03.letter { @extend %layer3}
 
 /* Downstairs Props */

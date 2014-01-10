@@ -127,7 +127,7 @@
   }
 
   /* line 39, ../sass/_extends.scss */
-  .messy li, .clean.shoe1, .stairs-prop, .boot1.clean, .messy .sack1, .nightstand-prop, .messy .socks, .messy .pitcher, .oven-prop, .messy .boot2, .messy .cloak, .jun09.letter {
+  .messy li, .clean.shoe1, .stairs-prop, .boot1.clean, .messy .sack1, .messy .socks, .messy .pitcher, .oven-prop, .messy .boot2, .messy .cloak {
     z-index: 2;
   }
 
@@ -137,17 +137,17 @@
   }
 
   /* line 41, ../sass/_extends.scss */
-  .pillowup3-prop, .clean.pillowup2, .clean.toy, .messy .musicbox, .messy .stool, .messy .pot3, .clean.pot3, .messy .samovar, .bottle2.clean, .clean.mug2, .messy .chair1, .messy .pitcher, .clean.chair1, .pot-prop, .spoons-prop, .clean.pitcher, .messy .washboard, .messy .pillow3, .bed-prop {
+  .pillowup3-prop, .clean.pillowup2, .clean.toy, .messy .musicbox, .messy .stool, .messy .pot3, .clean.pot3, .clean.mug2, .nightstand-prop, .messy .boot1, .messy .chair1, .messy .pitcher, .clean.chair1, .pot-prop, .spoons-prop, .clean.pitcher, .messy .washboard, .messy .pillow3, .bed-prop, .jun09.letter {
     z-index: 4;
   }
 
   /* line 42, ../sass/_extends.scss */
-  .messy .pillowup2, .clean.pillowup1, .messy .shoe2, .clean.pot2, .messy .mug1, .messy .mug2, .clean.mug1, .clean.mug2, .samovar.clean, .chair2-prop, .messy .blanket, .clean.blanket {
+  .messy .pillowup2, .clean.pillowup1, .messy .shoe2, .clean.pot2, .messy .samovar, .bottle2.clean, .messy .mug2, .clean.mug1, .clean.mug2, .samovar.clean, .chair2-prop, .messy .blanket, .clean.blanket {
     z-index: 5;
   }
 
   /* line 43, ../sass/_extends.scss */
-  .bedback-prop, .cradle-prop, .messy .bottle2, .messy .oilcan, .clean.pillow1, .messy .bottle1 {
+  .bedback-prop, .cradle-prop, .oilcan.clean, .bottle1.clean, .bottle3.clean, .messy .firewood4, .messy .mug1, .messy .bottle2, .messy .oilcan, .clean.pillow1, .messy .bottle1 {
     z-index: 6;
   }
 
@@ -2600,47 +2600,27 @@
   }
 
   /* Positioning */
-  /* line 27, ../sass/_downstairs.scss */
-  .oilcan.clean {
-    z-index: 5;
-  }
-
-  /* line 28, ../sass/_downstairs.scss */
-  .bottle1.clean {
-    z-index: 5;
-  }
-
-  /* line 30, ../sass/_downstairs.scss */
-  .bottle3.clean {
-    z-index: 5;
-  }
-
-  /* line 31, ../sass/_downstairs.scss */
-  .messy .firewood4 {
-    z-index: 5;
-  }
-
   /* line 39, ../sass/_downstairs.scss */
   .clean.axe {
     z-index: 0;
   }
 
-  /* line 44, ../sass/_downstairs.scss */
+  /* line 45, ../sass/_downstairs.scss */
   .messy .tablecloth {
     z-index: 5;
   }
 
-  /* line 72, ../sass/_downstairs.scss */
+  /* line 73, ../sass/_downstairs.scss */
   .places .shovel {
     z-index: 7 !important;
   }
 
-  /* line 73, ../sass/_downstairs.scss */
+  /* line 74, ../sass/_downstairs.scss */
   .places .ovenfork {
     z-index: 7 !important;
   }
 
-  /* line 79, ../sass/_downstairs.scss */
+  /* line 80, ../sass/_downstairs.scss */
   .places .blanket.droppable {
     z-index: 5 !important;
   }
