@@ -7,7 +7,6 @@ $ui-sprite-width: sprite_width($ui-sprites);
 
 /* The interface */
 #ui {
-	// z-index: 2;
 	float: left;
 	width: $instructions-width-ems; 
 	font-family: $writing;
@@ -23,8 +22,6 @@ $ui-sprite-width: sprite_width($ui-sprites);
 		text-transform: uppercase;
 		font-size: 1.1em;
 		padding-top: .25em;
-	}
-	p, h1 {
 		text-align: center;
 	}
 }
@@ -60,7 +57,7 @@ $ui-sprite-width: sprite_width($ui-sprites);
 	.warp { opacity: 0;}
 }
 
-[data-progress="copmleted"] {
+[data-progress="completed"] {
 	// .instructions {opacity: 0}
 	// .to-do { display: none}
 	// #dialog-intro {display:none}
@@ -68,25 +65,21 @@ $ui-sprite-width: sprite_width($ui-sprites);
 	// .warp { display: none;}
 }
 .instructions {
-	@include ui-sprite(bg_instructions); 
-	@include set-dimensions(225px, 232px, $ui-width);
-	margin-bottom: 1em;
-	position: relative;
+	@extend %ir;
+	@include ui-sprite(bg_instructions);
+	@include set-dimensions(241px, 254px, $ui-width);
 	@include set-bg-width($ui-sprite-width, $ui-sprite, bg_instructions);
-	@include offsetLeft(42px, $instructions-width);
-	.wrapper {
-		@include set-position(35px, 104px, $instructions-width, $instructions-height);
-		@include set-width(170px, $instructions-width);
-		height: 10em;
-	}
+	margin: .5em 0 1em;
+	position: relative;
+	@include offsetLeft(14px, $instructions-width);
 }
 
 .dialog-intro, .to-do, .dialog-outro {
 	position: relative;
+	margin-bottom:2em;
 	@include ui-sprite(bg_list); 
 	@include set-dimensions(227px, $instructions-height, $ui-width);
 	@include set-bg-width($ui-sprite-width, $ui-sprite, bg_list);
-	float: right;
 }
 
 @include keyframes(fadeInDown) {
@@ -102,7 +95,7 @@ $ui-sprite-width: sprite_width($ui-sprites);
 }
 
 .to-do {
-	//@include offsetLeft(59px, $instructions-width);
+	@include offsetLeft(23px, $instructions-width);
 	.wrapper {
 		@include set-position(34px, 24px, $instructions-width, $instructions-height);
 		@include set-width(154px, $instructions-width);
@@ -172,11 +165,6 @@ $dialog-sprite-spacing: 2px;
 @import "dialog/*.png";
 $dialog-sprite: $dialog-sprites;
 $dialog-sprite-width: sprite_width($dialog-sprites);
-
-#dialog-intro, #dialog-outro {
-	position: relative;
-	margin-bottom:2em;
-}
 
 .dialog-nav {
 	color :#fff;
