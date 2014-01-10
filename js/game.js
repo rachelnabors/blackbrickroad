@@ -38,29 +38,36 @@
 (function() {
   function calcAspectRatio() {
     var windowHeight = window.innerHeight;
+    var windowWidth = window.innerWidth;
     var frame = document.getElementById("frame");
     var house = document.getElementById("house");
     var floors = house.querySelectorAll(".floor");
     var sidebarWidth = document.getElementById("ui").clientWidth;
     var frameWidth = frame.clientWidth - sidebarWidth;
+    var success = document.getElementById("success");
+    var loading = document.getElementById("loading");
 
-    var properWidth;
-    var properHeight;
-    var styleWidth;
-    var styleHeight;
+    var properWidth, properHeight, styleWidth, styleHeight, fullWidth, fullHeight, styleWidthFull, styleHeightFull;
 
     // get new widths and heights 
     if (frameWidth/windowHeight >= 1228/1000) {
       // if window is wide
       properWidth = (1228/1000) * windowHeight;
       properHeight = windowHeight;
+      fullWidth = (1500/1000) * windowHeight;
+      fullHeight = windowHeight;
     } else {
       // if it is narrow
       properWidth = frameWidth;
       properHeight = properWidth/(1228/1000);
+      fullWidth = windowWidth;
+      fullHeight = fullWidth/(1500/1000);
     }
     styleWidth = "width: " + properWidth + "px";
     styleHeight = "height: " + properHeight + "px";
+
+    styleWidthFull = "width: " + fullWidth + "px";
+    styleHeightFull = "height: " + fullHeight + "px";
     
     // set the house's width
     house.setAttribute("style", styleWidth);
@@ -72,6 +79,13 @@
     
     // limit the height of the frame to just show one floor
     frame.setAttribute("style", styleHeight);
+
+    // set width and height of the loading and outro divs
+    success.setAttribute("style", styleHeightFull);
+    success.setAttribute("style", styleWidthFull);
+    loading.setAttribute("style", styleHeightFull);
+    loading.setAttribute("style", styleWidthFull);
+
   }
 
   // load only fires after all the content is rendered.

@@ -58,12 +58,32 @@ $ui-sprite-width: sprite_width($ui-sprites);
 }
 
 [data-progress="completed"] {
-	// .instructions {opacity: 0}
-	// .to-do { display: none}
-	// #dialog-intro {display:none}
-	// #dialog-outro {display:none}
-	// .warp { display: none;}
+	#loading {display:none;}
+	#ui {display:none}
+	#frame {display:none}
+	#success {display:block;}
 }
+
+#intro, #success {
+	display:none;
+	@include set-dimensions(1500px, 1000px, $max-width);
+	@include background-size(100% auto);
+	background-repeat: none;
+	max-width: $max-width;
+	position: absolute; left: 0;
+	z-index: 50;
+}
+
+#success {
+	@include background-image(image-url("outro.jpg"));
+	bottom: 0;
+	a {
+		@extend %ir;
+		@include set-dimensions(516px, 212px, $max-width);		
+		@include set-position(478px, 236px, $max-width, $frame-height);
+	}
+}
+
 .instructions {
 	@extend %ir;
 	@include ui-sprite(bg_instructions);
