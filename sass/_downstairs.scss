@@ -69,7 +69,7 @@
 .messy .boot2 {@extend %layer2}
 .clean.tools {@extend %layer3}
 
-.places .shovel { z-index: 3 !important}
+.places .shovel { z-index: 7 !important}
 .places .ovenfork { z-index: 7 !important}
 
 .bed-prop {@extend %layer4 }
