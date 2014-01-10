@@ -60,12 +60,12 @@ $ui-sprite-width: sprite_width($ui-sprites);
 	.warp { opacity: 0;}
 }
 
-[data-progress="fun-with-photos"] {
-	.instructions {opacity: 0}
-	.to-do { display: none}
-	#dialog-intro {display:none}
-	#dialog-outro {display:none}
-	.warp { display: none;}
+[data-progress="copmleted"] {
+	// .instructions {opacity: 0}
+	// .to-do { display: none}
+	// #dialog-intro {display:none}
+	// #dialog-outro {display:none}
+	// .warp { display: none;}
 }
 .instructions {
 	@include ui-sprite(bg_instructions); 

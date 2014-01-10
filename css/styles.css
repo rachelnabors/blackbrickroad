@@ -117,7 +117,7 @@
   }
 
   /* line 32, ../sass/_extends.scss */
-  .places .rug, .places .stool, .places .shoe1, .places .shoe2, .places .pillowup1, .places .books, .places .telescope, .places .toy, .places .musicbox, .places .broom, .places .pillowup2, .places .pot1, .places .pot2, .places .pot3, .places .pot4, .places .scoop, .places .firewood1, .places .axe, .places .rifle, .places .cloak, .places .boot1, .places .samovar, .places .firewood6, .places .sack1, .places .pillow1, .places .socks, .places .tools, .places .ovenfork, .places .firewood3, .places .firewood2, .places .firewood5, .places .firewood4, .places .shovel, .places .pitcher, .places .bottle3, .places .washboard, .places .mug2, .places .mug1, .places .bottle2, .places .bucket, .places .chair1, .places .pillow3, .places .tablecloth, .places .blanket, .places .oilcan, .places .bottle1, .places .boot2, .basket-prop, .bedback-prop, .bedup-prop, .armchair-prop, .cradle-prop, .pillowup3-prop, .pillow2-prop, .bed-prop, .spoons-prop, .pot-prop, .chair2-prop, .table-prop, .oven-prop, .laundry-prop, .nightstand-prop, .stairs-prop, .sack2-prop, .letters-to-read .aug03, .letters-to-read .jun09, .letters-to-read .jun18, .letters-to-read .dec15, .letters-to-read .aug31, .letters-to-read .oct11 {
+  .places .rug, .places .stool, .places .shoe1, .places .shoe2, .places .pillowup1, .places .books, .places .telescope, .places .toy, .places .musicbox, .places .broom, .places .pillowup2, .places .pot1, .places .pot2, .places .pot3, .places .pot4, .places .scoop, .places .firewood1, .places .axe, .places .rifle, .places .cloak, .places .boot1, .places .samovar, .places .firewood6, .places .sack1, .places .pillow1, .places .socks, .places .tools, .places .ovenfork, .places .firewood3, .places .firewood2, .places .firewood5, .places .firewood4, .places .shovel, .places .pitcher, .places .bottle3, .places .washboard, .places .mug2, .places .mug1, .places .bottle2, .places .bucket, .places .chair1, .places .pillow3, .places .tablecloth, .places .blanket, .places .oilcan, .places .bottle1, .places .boot2, .basket-prop, .bedback-prop, .bedup-prop, .armchair-prop, .cradle-prop, .pillowup3-prop, .pillow2-prop, .bed-prop, .spoons-prop, .pot-prop, .chair2-prop, .table-prop, .oven-prop, .laundry-prop, .nightstand-prop, .stairs-prop, .sack2-prop {
     position: absolute;
   }
 
@@ -132,7 +132,7 @@
   }
 
   /* line 40, ../sass/_extends.scss */
-  .bedup-prop, .basket-prop, .armchair-prop, .clean.books, .clean.scoop, .clean.telescope, .clean.pot1, .cloak.clean, .messy .axe, .messy .bucket, .messy .firewood2, .messy .firewood6, .messy .shovel, .boot2.clean, .messy .pillow1, .bucket.clean, .table-prop, .messy .bottle3, .clean.tablecloth, .clean.tools, .aug03.letter {
+  .bedup-prop, .basket-prop, .armchair-prop, .clean.books, .messy .pot1, .clean.scoop, .clean.telescope, .clean.pot1, .cloak.clean, .messy .axe, .messy .bucket, .messy .firewood2, .messy .firewood6, .messy .shovel, .boot2.clean, .messy .pillow1, .bucket.clean, .table-prop, .messy .bottle3, .clean.tablecloth, .clean.tools, .aug03.letter {
     z-index: 3;
   }
 
@@ -506,27 +506,6 @@
     opacity: 0;
   }
 
-  /* line 64, ../sass/_ui.scss */
-  [data-progress="fun-with-photos"] .instructions {
-    opacity: 0;
-  }
-  /* line 65, ../sass/_ui.scss */
-  [data-progress="fun-with-photos"] .to-do {
-    display: none;
-  }
-  /* line 66, ../sass/_ui.scss */
-  [data-progress="fun-with-photos"] #dialog-intro {
-    display: none;
-  }
-  /* line 67, ../sass/_ui.scss */
-  [data-progress="fun-with-photos"] #dialog-outro {
-    display: none;
-  }
-  /* line 68, ../sass/_ui.scss */
-  [data-progress="fun-with-photos"] .warp {
-    display: none;
-  }
-
   /* line 70, ../sass/_ui.scss */
   .instructions {
     background-position: 0 0;
@@ -866,7 +845,7 @@
     display: none;
   }
 
-  /* line 108, ../sass/_mixins.scss */
+  /* line 131, ../sass/_mixins.scss */
   #dialog-intro[data-dialog="1"] {
     background-position: 0 0;
     width: 110.13986%;
@@ -879,7 +858,7 @@
     left: 10.13216%;
   }
 
-  /* line 108, ../sass/_mixins.scss */
+  /* line 131, ../sass/_mixins.scss */
   #dialog-intro[data-dialog="2"] {
     background-position: 0 14.28571%;
     width: 110.13986%;
@@ -892,7 +871,7 @@
     left: 10.13216%;
   }
 
-  /* line 108, ../sass/_mixins.scss */
+  /* line 131, ../sass/_mixins.scss */
   #dialog-intro[data-dialog="3"] {
     background-position: 0 28.57143%;
     width: 110.13986%;
@@ -905,7 +884,7 @@
     left: 10.13216%;
   }
 
-  /* line 108, ../sass/_mixins.scss */
+  /* line 131, ../sass/_mixins.scss */
   #dialog-intro[data-dialog="4"] {
     background-position: 0 42.85714%;
     width: 110.13986%;
@@ -918,7 +897,7 @@
     left: 10.13216%;
   }
 
-  /* line 108, ../sass/_mixins.scss */
+  /* line 131, ../sass/_mixins.scss */
   #dialog-intro[data-dialog="5"] {
     background-position: 0 57.14286%;
     width: 110.13986%;
@@ -931,7 +910,7 @@
     left: 10.13216%;
   }
 
-  /* line 108, ../sass/_mixins.scss */
+  /* line 131, ../sass/_mixins.scss */
   #dialog-intro[data-dialog="6"] {
     background-position: 0 71.42857%;
     width: 110.13986%;
@@ -944,7 +923,7 @@
     left: 10.13216%;
   }
 
-  /* line 108, ../sass/_mixins.scss */
+  /* line 131, ../sass/_mixins.scss */
   #dialog-outro[data-dialog="1"] {
     background-position: 0 85.71429%;
     width: 110.13986%;
@@ -957,7 +936,7 @@
     left: 10.13216%;
   }
 
-  /* line 108, ../sass/_mixins.scss */
+  /* line 131, ../sass/_mixins.scss */
   #dialog-outro[data-dialog="2"] {
     background-position: 0 100%;
     width: 110.13986%;
@@ -1052,6 +1031,626 @@
     z-index: 50 !important;
   }
 
+  /* Photos */
+  /* line 359, photos/*.png */
+  .photos-sprite, .photo7-scrap1, .photo7 .scrap1, .photo7-scrap2, .photo7 .scrap2, .photo7-scrap3, .photo7 .scrap3, .photo6-scrap1, .photo6 .scrap1, .photo6-scrap2, .photo6 .scrap2, .photo6-scrap3, .photo6 .scrap3, .photo5-scrap1, .photo5 .scrap1, .photo5-scrap2, .photo5 .scrap2, .photo5-scrap3, .photo5 .scrap3, .photo4-scrap1, .photo4 .scrap1, .photo4-scrap2, .photo4 .scrap2, .photo3-scrap1, .photo3 .scrap1, .photo3-scrap2, .photo3 .scrap2, .photo3-scrap3, .photo3 .scrap3, .photo3-scrap4, .photo3 .scrap4, .photo2-scrap1, .photo2 .scrap1, .photo2-scrap2, .photo2 .scrap2, .photo1-scrap1, .photo1 .scrap1, .photo1-scrap2, .photo1 .scrap2, .photo1-scrap3, .photo1 .scrap3 {
+    background-image: url('../img/photos-s7393343187.png');
+    background-repeat: no-repeat;
+  }
+
+  /* line 10, ../sass/_photos.scss */
+  .torn-photos {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+  /* line 13, ../sass/_photos.scss */
+  .torn-photos li {
+    display: none;
+    opacity: 0;
+    z-index: 50 !important;
+    -webkit-transition: opacity 1.5s;
+    -webkit-transition-delay: 0.25s;
+    -moz-transition: opacity 1.5s 0.25s;
+    -o-transition: opacity 1.5s 0.25s;
+    transition: opacity 1.5s 0.25s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  /* line 20, ../sass/_photos.scss */
+  .torn-photos li.revealed {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  /* line 24, ../sass/_photos.scss */
+  .torn-photos .scrap {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    -webkit-transition: opacity 1.5s;
+    -moz-transition: opacity 1.5s;
+    -o-transition: opacity 1.5s;
+    transition: opacity 1.5s;
+  }
+  /* line 31, ../sass/_photos.scss */
+  .torn-photos .revealed {
+    opacity: 1;
+    display: block;
+  }
+
+  /* line 37, ../sass/_photos.scss */
+  .messy .photo {
+    position: absolute;
+    cursor: pointer;
+  }
+
+  /* line 107, ../sass/_mixins.scss */
+  .photo7-scrap1 {
+    background-position: 72.81324% 14.78828%;
+    width: 1.4827%;
+    padding-top: 1.07084%;
+    height: 0;
+    left: 19.43987%;
+    top: 37.5%;
+    -webkit-background-size: 4800% auto;
+    -moz-background-size: 4800% auto;
+    -o-background-size: 4800% auto;
+    background-size: 4800% auto;
+  }
+
+  /* line 118, ../sass/_mixins.scss */
+  .photo7 .scrap1 {
+    background-position: 0 11.7621%;
+    width: 71.16969%;
+    padding-top: 26.27677%;
+    height: 0;
+    left: 13.42669%;
+    top: 7.45%;
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+
+  /* line 107, ../sass/_mixins.scss */
+  .photo7-scrap2 {
+    background-position: 88% 14.78986%;
+    width: 1.15321%;
+    padding-top: 1.15321%;
+    height: 0;
+    left: 16.72158%;
+    top: 77.35%;
+    -webkit-background-size: 6171.42857% auto;
+    -moz-background-size: 6171.42857% auto;
+    -o-background-size: 6171.42857% auto;
+    background-size: 6171.42857% auto;
+  }
+
+  /* line 118, ../sass/_mixins.scss */
+  .photo7 .scrap2 {
+    background-position: 0 8.71%;
+    width: 71.16969%;
+    padding-top: 22.40527%;
+    height: 0;
+    left: 13.34432%;
+    top: 66.35%;
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+
+  /* line 107, ../sass/_mixins.scss */
+  .photo7-scrap3 {
+    background-position: 97.63033% 14.79461%;
+    width: 1.64745%;
+    padding-top: 1.40033%;
+    height: 0;
+    left: 23.14662%;
+    top: 29.95%;
+    -webkit-background-size: 4320% auto;
+    -moz-background-size: 4320% auto;
+    -o-background-size: 4320% auto;
+    background-size: 4320% auto;
+  }
+
+  /* line 118, ../sass/_mixins.scss */
+  .photo7 .scrap3 {
+    background-position: 0 5.84294%;
+    width: 71.16969%;
+    padding-top: 21.4168%;
+    height: 0;
+    left: 12.68534%;
+    top: 27.8%;
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+
+  /* line 107, ../sass/_mixins.scss */
+  .photo6-scrap1 {
+    background-position: 80.16627% 14.78986%;
+    width: 1.81219%;
+    padding-top: 1.15321%;
+    height: 0;
+    left: 57.08402%;
+    top: 25.75%;
+    -webkit-background-size: 3927.27273% auto;
+    -moz-background-size: 3927.27273% auto;
+    -o-background-size: 3927.27273% auto;
+    background-size: 3927.27273% auto;
+  }
+
+  /* line 118, ../sass/_mixins.scss */
+  .photo6 .scrap1 {
+    background-position: 0 19.43825%;
+    width: 54.20099%;
+    padding-top: 32.37232%;
+    height: 0;
+    left: 20.75783%;
+    top: 2.25%;
+    -webkit-background-size: 131.30699% auto;
+    -moz-background-size: 131.30699% auto;
+    -o-background-size: 131.30699% auto;
+    background-size: 131.30699% auto;
+  }
+
+  /* line 107, ../sass/_mixins.scss */
+  .photo6-scrap2 {
+    background-position: 82.48521% 14.78986%;
+    width: 1.56507%;
+    padding-top: 1.15321%;
+    height: 0;
+    left: 48.18781%;
+    top: 11.95%;
+    -webkit-background-size: 4547.36842% auto;
+    -moz-background-size: 4547.36842% auto;
+    -o-background-size: 4547.36842% auto;
+    background-size: 4547.36842% auto;
+  }
+
+  /* line 118, ../sass/_mixins.scss */
+  .photo6 .scrap2 {
+    background-position: 0 23.87443%;
+    width: 40.52718%;
+    padding-top: 34.10214%;
+    height: 0;
+    left: 35.58484%;
+    top: 24.9%;
+    -webkit-background-size: 175.60976% auto;
+    -moz-background-size: 175.60976% auto;
+    -o-background-size: 175.60976% auto;
+    background-size: 175.60976% auto;
+  }
+
+  /* line 107, ../sass/_mixins.scss */
+  .photo6-scrap3 {
+    background-position: 74.58824% 14.78828%;
+    width: 1.15321%;
+    padding-top: 1.07084%;
+    height: 0;
+    left: 81.87809%;
+    top: 76.2%;
+    -webkit-background-size: 6171.42857% auto;
+    -moz-background-size: 6171.42857% auto;
+    -o-background-size: 6171.42857% auto;
+    background-size: 6171.42857% auto;
+  }
+
+  /* line 118, ../sass/_mixins.scss */
+  .photo6 .scrap3 {
+    background-position: 0 100%;
+    width: 54.11862%;
+    padding-top: 56.50741%;
+    height: 0;
+    left: 20.8402%;
+    top: 11%;
+    -webkit-background-size: 131.50685% auto;
+    -moz-background-size: 131.50685% auto;
+    -o-background-size: 131.50685% auto;
+    background-size: 131.50685% auto;
+  }
+
+  /* line 107, ../sass/_mixins.scss */
+  .photo5-scrap1 {
+    background-position: 84.53365% 14.78986%;
+    width: 1.40033%;
+    padding-top: 1.15321%;
+    height: 0;
+    left: 68.36903%;
+    top: 22.45%;
+    -webkit-background-size: 5082.35294% auto;
+    -moz-background-size: 5082.35294% auto;
+    -o-background-size: 5082.35294% auto;
+    background-size: 5082.35294% auto;
+  }
+
+  /* line 118, ../sass/_mixins.scss */
+  .photo5 .scrap1 {
+    background-position: 0 52.69248%;
+    width: 37.89127%;
+    padding-top: 52.47117%;
+    height: 0;
+    left: 21.91104%;
+    top: 13.75%;
+    -webkit-background-size: 187.82609% auto;
+    -moz-background-size: 187.82609% auto;
+    -o-background-size: 187.82609% auto;
+    background-size: 187.82609% auto;
+  }
+
+  /* line 107, ../sass/_mixins.scss */
+  .photo5-scrap2 {
+    background-position: 86.33687% 14.78986%;
+    width: 1.23558%;
+    padding-top: 1.15321%;
+    height: 0;
+    left: 61.94399%;
+    top: 29.4%;
+    -webkit-background-size: 5760% auto;
+    -moz-background-size: 5760% auto;
+    -o-background-size: 5760% auto;
+    background-size: 5760% auto;
+  }
+
+  /* line 118, ../sass/_mixins.scss */
+  .photo5 .scrap2 {
+    background-position: 0 45.65564%;
+    width: 38.63262%;
+    padding-top: 49.01153%;
+    height: 0;
+    left: 38.87974%;
+    top: 16.65%;
+    -webkit-background-size: 184.22175% auto;
+    -moz-background-size: 184.22175% auto;
+    -o-background-size: 184.22175% auto;
+    background-size: 184.22175% auto;
+  }
+
+  /* line 107, ../sass/_mixins.scss */
+  .photo5-scrap3 {
+    background-position: 91.5677% 18.69439%;
+    width: 1.81219%;
+    padding-top: 2.9654%;
+    height: 0;
+    left: 60.95552%;
+    top: 33.9%;
+    -webkit-background-size: 3927.27273% auto;
+    -moz-background-size: 3927.27273% auto;
+    -o-background-size: 3927.27273% auto;
+    background-size: 3927.27273% auto;
+  }
+
+  /* line 118, ../sass/_mixins.scss */
+  .photo5 .scrap3 {
+    background-position: 0 28.59545%;
+    width: 54.11862%;
+    padding-top: 36.57331%;
+    height: 0;
+    left: 21.91104%;
+    top: 2.4%;
+    -webkit-background-size: 131.50685% auto;
+    -moz-background-size: 131.50685% auto;
+    -o-background-size: 131.50685% auto;
+    background-size: 131.50685% auto;
+  }
+
+  /* line 107, ../sass/_mixins.scss */
+  .photo4-scrap1 {
+    background-position: 95.28302% 14.79303%;
+    width: 1.31796%;
+    padding-top: 1.31796%;
+    height: 0;
+    left: 85.99671%;
+    top: 33.15%;
+    -webkit-background-size: 5400% auto;
+    -moz-background-size: 5400% auto;
+    -o-background-size: 5400% auto;
+    background-size: 5400% auto;
+  }
+
+  /* line 118, ../sass/_mixins.scss */
+  .photo4 .scrap1 {
+    background-position: 0 67.68118%;
+    width: 52.63591%;
+    padding-top: 54.20099%;
+    height: 0;
+    left: 31.87809%;
+    top: 7.55%;
+    -webkit-background-size: 135.21127% auto;
+    -moz-background-size: 135.21127% auto;
+    -o-background-size: 135.21127% auto;
+    background-size: 135.21127% auto;
+  }
+
+  /* line 107, ../sass/_mixins.scss */
+  .photo4-scrap2 {
+    background-position: 88.91538% 18.68838%;
+    width: 2.05931%;
+    padding-top: 2.71829%;
+    height: 0;
+    left: 60.04942%;
+    top: 80.85%;
+    -webkit-background-size: 3456% auto;
+    -moz-background-size: 3456% auto;
+    -o-background-size: 3456% auto;
+    background-size: 3456% auto;
+  }
+
+  /* line 118, ../sass/_mixins.scss */
+  .photo4 .scrap2 {
+    background-position: 0 84.55088%;
+    width: 64.41516%;
+    padding-top: 54.28336%;
+    height: 0;
+    left: 12.02636%;
+    top: 57.5%;
+    -webkit-background-size: 110.48593% auto;
+    -moz-background-size: 110.48593% auto;
+    -o-background-size: 110.48593% auto;
+    background-size: 110.48593% auto;
+  }
+
+  /* line 107, ../sass/_mixins.scss */
+  .photo3-scrap1 {
+    background-position: 77.41935% 14.78986%;
+    width: 2.22405%;
+    padding-top: 1.15321%;
+    height: 0;
+    left: 35.33773%;
+    top: 33.1%;
+    -webkit-background-size: 3200% auto;
+    -moz-background-size: 3200% auto;
+    -o-background-size: 3200% auto;
+    background-size: 3200% auto;
+  }
+
+  /* line 118, ../sass/_mixins.scss */
+  .photo3 .scrap1 {
+    background-position: 66.40379% 0;
+    width: 18.94563%;
+    padding-top: 43.82208%;
+    height: 0;
+    left: 21.33443%;
+    top: 2.25%;
+    -webkit-background-size: 375.65217% auto;
+    -moz-background-size: 375.65217% auto;
+    -o-background-size: 375.65217% auto;
+    background-size: 375.65217% auto;
+  }
+
+  /* line 107, ../sass/_mixins.scss */
+  .photo3-scrap2 {
+    background-position: 70.68558% 14.78354%;
+    width: 1.4827%;
+    padding-top: 0.82372%;
+    height: 0;
+    left: 53.37727%;
+    top: 68.7%;
+    -webkit-background-size: 4800% auto;
+    -moz-background-size: 4800% auto;
+    -o-background-size: 4800% auto;
+    background-size: 4800% auto;
+  }
+
+  /* line 118, ../sass/_mixins.scss */
+  .photo3 .scrap2 {
+    background-position: 0 15.35984%;
+    width: 47.85832%;
+    padding-top: 29.73641%;
+    height: 0;
+    left: 27.75947%;
+    top: 51.85%;
+    -webkit-background-size: 148.70912% auto;
+    -moz-background-size: 148.70912% auto;
+    -o-background-size: 148.70912% auto;
+    background-size: 148.70912% auto;
+  }
+
+  /* line 107, ../sass/_mixins.scss */
+  .photo3-scrap3 {
+    background-position: 89.43662% 14.78986%;
+    width: 0.98847%;
+    padding-top: 1.15321%;
+    height: 0;
+    left: 53.29489%;
+    top: 24.2%;
+    -webkit-background-size: 7200% auto;
+    -moz-background-size: 7200% auto;
+    -o-background-size: 7200% auto;
+    background-size: 7200% auto;
+  }
+
+  /* line 118, ../sass/_mixins.scss */
+  .photo3 .scrap3 {
+    background-position: 0 0;
+    width: 34.67875%;
+    padding-top: 42.00988%;
+    height: 0;
+    left: 21.33443%;
+    top: 20.05%;
+    -webkit-background-size: 205.22565% auto;
+    -moz-background-size: 205.22565% auto;
+    -o-background-size: 205.22565% auto;
+    background-size: 205.22565% auto;
+  }
+
+  /* line 107, ../sass/_mixins.scss */
+  .photo3-scrap4 {
+    background-position: 85.91885% 18.68438%;
+    width: 2.14168%;
+    padding-top: 2.55354%;
+    height: 0;
+    left: 73.39374%;
+    top: 22.15%;
+    -webkit-background-size: 3323.07692% auto;
+    -moz-background-size: 3323.07692% auto;
+    -o-background-size: 3323.07692% auto;
+    background-size: 3323.07692% auto;
+  }
+
+  /* line 118, ../sass/_mixins.scss */
+  .photo3 .scrap4 {
+    background-position: 98.00443% 76.5751%;
+    width: 34.01977%;
+    padding-top: 66.72158%;
+    height: 0;
+    left: 42.00988%;
+    top: 5.15%;
+    -webkit-background-size: 209.20097% auto;
+    -moz-background-size: 209.20097% auto;
+    -o-background-size: 209.20097% auto;
+    background-size: 209.20097% auto;
+  }
+
+  /* line 107, ../sass/_mixins.scss */
+  .photo2-scrap1 {
+    background-position: 93.404% 14.79144%;
+    width: 1.23558%;
+    padding-top: 1.23558%;
+    height: 0;
+    left: 46.62273%;
+    top: 44%;
+    -webkit-background-size: 5760% auto;
+    -moz-background-size: 5760% auto;
+    -o-background-size: 5760% auto;
+    background-size: 5760% auto;
+  }
+
+  /* line 118, ../sass/_mixins.scss */
+  .photo2 .scrap1 {
+    background-position: 0 60.12862%;
+    width: 40.69193%;
+    padding-top: 54.11862%;
+    height: 0;
+    left: 44.6458%;
+    top: 7.55%;
+    -webkit-background-size: 174.89879% auto;
+    -moz-background-size: 174.89879% auto;
+    -o-background-size: 174.89879% auto;
+    background-size: 174.89879% auto;
+  }
+
+  /* line 107, ../sass/_mixins.scss */
+  .photo2-scrap2 {
+    background-position: 99.5283% 14.79461%;
+    width: 1.31796%;
+    padding-top: 1.40033%;
+    height: 0;
+    left: 71.74629%;
+    top: 31.9%;
+    -webkit-background-size: 5400% auto;
+    -moz-background-size: 5400% auto;
+    -o-background-size: 5400% auto;
+    background-size: 5400% auto;
+  }
+
+  /* line 118, ../sass/_mixins.scss */
+  .photo2 .scrap2 {
+    background-position: 0 92.12038%;
+    width: 35.91433%;
+    padding-top: 54.28336%;
+    height: 0;
+    left: 13.34432%;
+    top: 7.55%;
+    -webkit-background-size: 198.16514% auto;
+    -moz-background-size: 198.16514% auto;
+    -o-background-size: 198.16514% auto;
+    background-size: 198.16514% auto;
+  }
+
+  /* line 107, ../sass/_mixins.scss */
+  .photo1-scrap1 {
+    background-position: 82.04489% 18.68238%;
+    width: 5.10708%;
+    padding-top: 2.47117%;
+    height: 0;
+    left: 55.76606%;
+    top: 39.55%;
+    -webkit-background-size: 1393.54839% auto;
+    -moz-background-size: 1393.54839% auto;
+    -o-background-size: 1393.54839% auto;
+    background-size: 1393.54839% auto;
+  }
+
+  /* line 118, ../sass/_mixins.scss */
+  .photo1 .scrap1 {
+    background-position: 0 75.23831%;
+    width: 36.40857%;
+    padding-top: 54.20099%;
+    height: 0;
+    left: 13.0972%;
+    top: 7.55%;
+    -webkit-background-size: 195.47511% auto;
+    -moz-background-size: 195.47511% auto;
+    -o-background-size: 195.47511% auto;
+    background-size: 195.47511% auto;
+  }
+
+  /* line 107, ../sass/_mixins.scss */
+  .photo1-scrap2 {
+    background-position: 91.59763% 14.79144%;
+    width: 1.56507%;
+    padding-top: 1.23558%;
+    height: 0;
+    left: 70.8402%;
+    top: 85.5%;
+    -webkit-background-size: 4547.36842% auto;
+    -moz-background-size: 4547.36842% auto;
+    -o-background-size: 4547.36842% auto;
+    background-size: 4547.36842% auto;
+  }
+
+  /* line 118, ../sass/_mixins.scss */
+  .photo1 .scrap2 {
+    background-position: 0 39.3552%;
+    width: 47.52883%;
+    padding-top: 43.24547%;
+    height: 0;
+    left: 37.47941%;
+    top: 64.5%;
+    -webkit-background-size: 149.74003% auto;
+    -moz-background-size: 149.74003% auto;
+    -o-background-size: 149.74003% auto;
+    background-size: 149.74003% auto;
+  }
+
+  /* line 107, ../sass/_mixins.scss */
+  .photo1-scrap3 {
+    background-position: 68.59504% 14.78196%;
+    width: 1.40033%;
+    padding-top: 0.74135%;
+    height: 0;
+    left: 24.62932%;
+    top: 22.6%;
+    -webkit-background-size: 5082.35294% auto;
+    -moz-background-size: 5082.35294% auto;
+    -o-background-size: 5082.35294% auto;
+    background-size: 5082.35294% auto;
+  }
+
+  /* line 118, ../sass/_mixins.scss */
+  .photo1 .scrap3 {
+    background-position: 0 33.72368%;
+    width: 60.79077%;
+    padding-top: 39.8682%;
+    height: 0;
+    left: 23.88797%;
+    top: 7.6%;
+    -webkit-background-size: 117.07317% auto;
+    -moz-background-size: 117.07317% auto;
+    -o-background-size: 117.07317% auto;
+    background-size: 117.07317% auto;
+  }
+
   /* Letters */
   /* line 135, letters/*.png */
   .letters-sprite, .messy .aug03, .letters-to-read .aug03, .messy .jun09, .letters-to-read .jun09, .messy .jun18, .letters-to-read .jun18, .messy .dec15, .letters-to-read .dec15, .messy .aug31, .letters-to-read .aug31, .messy .oct11, .letters-to-read .oct11 {
@@ -1077,15 +1676,19 @@
     -moz-transition: opacity 1.5s 0.25s;
     -o-transition: opacity 1.5s 0.25s;
     transition: opacity 1.5s 0.25s;
+    position: absolute;
+    position: absolute;
+    top: 0;
+    right: 0;
   }
-  /* line 19, ../sass/_letters.scss */
+  /* line 21, ../sass/_letters.scss */
   .letters-to-read .revealed {
     cursor: pointer;
     opacity: 1;
     display: block;
   }
 
-  /* line 26, ../sass/_letters.scss */
+  /* line 28, ../sass/_letters.scss */
   .messy .letter {
     position: absolute;
     cursor: pointer;
@@ -1105,7 +1708,7 @@
     background-size: 1591.30435% auto;
   }
 
-  /* line 95, ../sass/_mixins.scss */
+  /* line 94, ../sass/_mixins.scss */
   .letters-to-read .aug03 {
     background-position: 0 77.10098%;
     width: 90.44481%;
@@ -1133,7 +1736,7 @@
     background-size: 1893.10345% auto;
   }
 
-  /* line 95, ../sass/_mixins.scss */
+  /* line 94, ../sass/_mixins.scss */
   .letters-to-read .jun09 {
     background-position: 0 100%;
     width: 79.73641%;
@@ -1161,7 +1764,7 @@
     background-size: 1591.30435% auto;
   }
 
-  /* line 95, ../sass/_mixins.scss */
+  /* line 94, ../sass/_mixins.scss */
   .letters-to-read .jun18 {
     background-position: 0 34.83221%;
     width: 79.32455%;
@@ -1189,7 +1792,7 @@
     background-size: 1893.10345% auto;
   }
 
-  /* line 95, ../sass/_mixins.scss */
+  /* line 94, ../sass/_mixins.scss */
   .letters-to-read .dec15 {
     background-position: 0 0;
     width: 74.21746%;
@@ -1217,7 +1820,7 @@
     background-size: 1893.10345% auto;
   }
 
-  /* line 95, ../sass/_mixins.scss */
+  /* line 94, ../sass/_mixins.scss */
   .letters-to-read .aug31 {
     background-position: 0 55.09654%;
     width: 73.14662%;
@@ -1245,7 +1848,7 @@
     background-size: 1861.01695% auto;
   }
 
-  /* line 95, ../sass/_mixins.scss */
+  /* line 94, ../sass/_mixins.scss */
   .letters-to-read .oct11 {
     background-position: 0 16.99346%;
     width: 81.05437%;

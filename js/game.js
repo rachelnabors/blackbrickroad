@@ -280,14 +280,14 @@ document.addEventListener('DOMContentLoaded', function(){
     document.body.setAttribute('data-progress', 'dialog-outro');    
   }
 
-  function finishedOutro() {
-    document.body.setAttribute('data-progress', 'fun-with-photos');
-    document.body.setAttribute('data-currentFloor', 'upstairs');
-    console.log("Go upstairs and check out the photos!");
+  function gameOver() {
+    if (!itemsLeft && !scrapsLeft) { 
+      document.setAttribute('data-progress', 'completed');
+    }      
   }
 
   createDialog(document.getElementById('dialog-intro'), 6, finishedIntro);
-  createDialog(document.getElementById('dialog-outro'), 2, finishedOutro);
+  createDialog(document.getElementById('dialog-outro'), 2, gameOver);
 
   // Letters 
   // Letters are one-offs. Like the items, each letter is a pair of locations:
@@ -304,15 +304,75 @@ document.addEventListener('DOMContentLoaded', function(){
     hiddenLetter.classList.add('letter');
     hiddenLetters.appendChild(hiddenLetter);
     // give each a click handler to connect it to its full sized twin
-    letter.addEventListener("click", function(){
+    letter.addEventListener('click', function(){
       letter.classList.remove('revealed');
     });
-    hiddenLetter.addEventListener("click", function(){
+    hiddenLetter.addEventListener('click', function(){
       letter.classList.add('revealed');
       this.remove();
     });
   });
   // insert them to the messy items pile
   messies.appendChild(hiddenLetters);
+
+  // Photos
+  // Photos are a cross between items and letters.
+  // Each photo consists of a number of tiny scraps in the room 
+  // and some big scraps that assemble to show a picture.
+  // Clicking a little scrap shows its bigger counterpart + removes the little scrap
+  // When you've cleaned up all the items and found all the scraps,
+  // you get to see all the big scraps assembled, one pic at a time.
+
+  // Go through #photos + fill each li w/ <div class="scrap1"></div> based on data-scraps's #
+  var photos = document.querySelectorAll('#photos li');
+  var hiddenPhotos = document.createDocumentFragment();
+  var scrapsLeft = 0;
+  // so far just like Letters
+
+  [].forEach.call(photos, function(photo) {
+    var numberOfScraps = photo.getAttribute('data-scraps');
+    var photoScrapCompenents = document.createDocumentFragment();
+    var scrap, bigScrap, scrapParentNum, scrapNumber;
+    // isNan returns false if a variable _could be_ a number, ie 12 or '12'
+    // http://stackoverflow.com/questions/175739/is-there-a-built-in-way-in-javascript-to-check-if-a-string-is-a-valid-number
+    if (!isNaN(numberOfScraps)) {
+      for (numberOfScraps; numberOfScraps >= 1; numberOfScraps--){
+        scrapParentNum = photo.classList[0]; // photo1
+        scrapNumber = numberOfScraps; // 1
+        scrapsLeft++;
+
+        bigScrap = document.createElement('div');
+        bigScrap.classList.add('scrap','scrap' + scrapNumber);
+        photoScrapCompenents.appendChild(bigScrap);
+
+        // Make an <li class="photo1-scrap1"></li>
+        scrap = document.createElement('li');
+        scrapParentNum = photo.classList[0]; // photo1
+        scrapNumber = numberOfScraps; // 1
+        scrap.classList.add('photo',scrapParentNum + '-scrap' + scrapNumber);
+        hiddenPhotos.appendChild(scrap);
+        // When clicked, give class .revealed to li#photo1 .scrap1 (it's pair)...
+        // ...and remove it from the DOM
+        (function (scrap, bigScrap) {
+          // Using and IIFE because bigScrap was ALWAYS the same: 
+          // http://stackoverflow.com/questions/8909652/adding-click-event-listeners-in-loop
+          scrap.addEventListener("click", function(){
+            photo.classList.add('revealed');
+            bigScrap.classList.add('revealed');
+            this.remove();
+            scrapsLeft--;
+          });
+        })(scrap, bigScrap);
+        // Clicking on the big scrap hides it.
+        photo.addEventListener("click", function(){
+          this.classList.remove('revealed');
+        });
+      }
+    }
+    // Insert big scraps into parent photo
+    photo.appendChild(photoScrapCompenents);
+  });
+  // Insert mini scraps into messies.
+  messies.appendChild(hiddenPhotos);
 
 }, false);

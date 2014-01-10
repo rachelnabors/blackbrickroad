@@ -89,7 +89,6 @@
 	  @include set-dimensions($lWidth, $lHeight, $parent-width);
 	  @include set-position($sX, $sY, $parent-width, $parent-height);
 	  @include set-bg-width($letters-sprite-width, $letters-sprites, #{$letter}-hidden);
-	  @extend %hidden-letters;
 	}
 
 	.letters-to-read .#{$letter} {
@@ -99,10 +98,34 @@
 	  @include set-dimensions($lWidth, $lHeight, $parent-width);
 	  @include set-position($placeX, $placeY, $parent-width, $parent-height);
 	  @include set-bg-width($letters-sprite-width, $letters-sprites, #{$letter});
-	  @extend %letters;
 	}
 }
 
+// The photo scraps
+@mixin create-photoScrap($photoNumber, $bX, $bY, $scrapNumber, $sX, $sY, $parent-width: $house-width, $parent-height: $frame-height*2) {
+	// In the messy list
+	.photo#{$photoNumber}-scrap#{$scrapNumber} {
+		$thisSmallScrap: "photos/photo#{$photoNumber}-scrap#{$scrapNumber}-small.png";
+		$thisSmallScrapName: "photo#{$photoNumber}-scrap#{$scrapNumber}-small";
+		$sWidth: image-width($thisSmallScrap);
+		$sHeight: image-height($thisSmallScrap);
+	  @include photos-sprite($thisSmallScrapName); 
+	  @include set-dimensions($sWidth, $sHeight, $parent-width);
+	  @include set-position($sX, $sY, $parent-width, $parent-height);
+	  @include set-bg-width($photos-sprite-width, $photos-sprites, $thisSmallScrapName);
+	}
+	// inside the .torn-photos
+	.photo#{$photoNumber} .scrap#{$scrapNumber} {
+		$thisBigScrap: "photos/photo#{$photoNumber}-scrap#{$scrapNumber}-big.png";
+		$thisBigScrapName: "photo#{$photoNumber}-scrap#{$scrapNumber}-big";
+		$bWidth: image-width($thisBigScrap);
+		$bHeight: image-height($thisBigScrap);
+	  @include photos-sprite($thisBigScrapName); 
+	  @include set-dimensions($bWidth, $bHeight, $parent-width);
+	  @include set-position($bX, $bY, $parent-width, $parent-height);
+	  @include set-bg-width($photos-sprite-width, $photos-sprites, $thisBigScrapName);
+	}
+}
 
 @mixin create-dialog($prefix, $number) {
 	#dialog-#{$prefix}[data-dialog="#{$number}"] {
