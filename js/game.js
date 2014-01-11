@@ -36,6 +36,12 @@
 })(window);
 
 (function() {
+
+  // State changing function because I use it so much.
+  function changeProgress(newState) {
+    document.body.setAttribute('data-progress', newState);
+  }
+
   function calcAspectRatio() {
     var windowHeight = window.innerHeight;
     var windowWidth = window.innerWidth;
@@ -89,10 +95,71 @@
   window.addEventListener('load', calcAspectRatio, false);
 
   window.addEventListener('resize:end', calcAspectRatio, false);
-})();
+
+/* Audio */
+window.addEventListener('load', function(){
+  var audio = document.createElement("audio");
+  var musicOn = false;
+  var musicLoaded = false;
+  var canPlayMP3 = (typeof audio.canPlayType === "function" &&
+                audio.canPlayType("audio/mpeg") !== "");
+
+  // Building the audio source object
+  if (canPlayMP3===true) {
+    audio.src = "audio/loop.mp3";
+  } else {
+    audio.src = "audio/loop.ogg";
+  }
+  audio.loop = true;
+  audio.addEventListener('canplaythrough', function () {
+    //set timer on loadscreen
+    setTimeout(function() {
+      changeProgress('dialog-intro');
+      musicLoaded = true;
+      if (musicOn) {
+        turnMusicOn();
+      }
+    }, 5000);
+  }, false);
+
+  // Building the visual audio switch
+  var audioControl = document.createElement("div");
+  audioControl.classList.add("off");
+  audioControl.setAttribute("id", "music-controls");
+  // clicking on the controls toggles the music on and off
+  function turnMusicOff() {
+    musicOn = false;
+    audioControl.classList.remove('on');
+    audioControl.classList.add('off');    
+    if (musicLoaded) {
+      audio.pause();
+    }
+  }
+
+  function turnMusicOn() {
+    musicOn = true;
+    audioControl.classList.remove('off');
+    audioControl.classList.add('on'); 
+    if (musicLoaded) {
+      audio.play();
+    }
+  }
+
+  audioControl.addEventListener("click", function(){
+    // The musicOn variable lets people toggle the music before it's loaded
+    if (musicOn) {
+      turnMusicOff();
+    } else {
+      turnMusicOn();
+    }
+  }, false);
+  document.body.appendChild(audioControl);
+
+}, false);
 
 document.addEventListener('DOMContentLoaded', function(){
 
+  /* Items */
   var currentGroup, currentKey;
   var items = {};
   var _items = document.querySelectorAll('#to-clean li');
@@ -286,19 +353,19 @@ document.addEventListener('DOMContentLoaded', function(){
   }
 
   function finishedIntro() {
-    document.body.setAttribute('data-progress', 'cleaning-house');
+    changeProgress('cleaning-house');
   }
 
   function initiateOutro() {
-    document.body.setAttribute('data-progress', 'dialog-outro');    
+    changeProgress('dialog-outro');    
   }
 
   function gameOver() {
     // if all items and photo scraps are cleaned up, cut to "success"
     if (!itemsLeft && !scrapsLeft) { 
-      document.body.setAttribute('data-progress', 'completed');
+      changeProgress('completed');
     } else {
-      document.body.setAttribute('data-progress', 'find-photos');      
+      changeProgress('find-photos');      
     }
   }
 
@@ -377,7 +444,7 @@ document.addEventListener('DOMContentLoaded', function(){
             scrapsLeft--;
             if (!itemsLeft && !scrapsLeft) { 
               photo.addEventListener("click", function(){
-                document.body.setAttribute('data-progress', 'completed');
+                changeProgress('completed');
               });
             }
           }
@@ -395,3 +462,5 @@ document.addEventListener('DOMContentLoaded', function(){
   messies.appendChild(hiddenPhotos);
 
 }, false);
+
+})();
