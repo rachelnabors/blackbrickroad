@@ -35,7 +35,6 @@
 }
 
 @mixin create-prop($prop, $sX, $sY, $parent-width: $house-width, $parent-height: $frame-height*2) {
-	// Check for existence of ITEM-place sprite. Make .ITEM-place bg rules in that event.
 	.#{$prop}-prop {
 		$iWidth: image-width(sprite-file($props-sprites, #{$prop}));
 		$iHeight: image-height(sprite-file($props-sprites, #{$prop}));
@@ -59,29 +58,29 @@
 	  @include set-position($sX, $sY, $parent-width, $parent-height);
 	}
 
-	.places .#{$item} {
-		// If there's a background image for this already...
-		@if index(sprite-names($places-sprites), #{$item}-place) {
-			@include places-sprite(#{$item}-place);
-		}
-		$iWidth: image-width(sprite-file($places-sprites, #{$item}-hover));
-		$iHeight: image-height(sprite-file($places-sprites, #{$item}-hover));
-	  @include set-dimensions($iWidth, $iHeight, $parent-width);
-	  @include set-position($placeX, $placeY, $parent-width, $parent-height);
-	  @include set-bg-width($places-sprite-width, $places-sprites, #{$item}-hover);
-	}
+    .places .#{$item} {
+        // If there's a background image for this already...
+        @if index(sprite-names($places-sprites), #{$item}-place) {
+                @include places-sprite(#{$item}-place);
+        }
+        $iWidth: image-width(sprite-file($places-sprites, #{$item}-hover));
+        $iHeight: image-height(sprite-file($places-sprites, #{$item}-hover));
+      @include set-dimensions($iWidth, $iHeight, $parent-width);
+      @include set-position($placeX, $placeY, $parent-width, $parent-height);
+      @include set-bg-width($places-sprite-width, $places-sprites, #{$item}-hover);
+    }
 
-	.#{$item}.droppable {
-	  @include places-sprite(#{$item}-droppable);
-	}
+    .#{$item}.droppable {
+      @include places-sprite(#{$item}-droppable);
+    }
 
-	.#{$item}.hover	 {
-	  @include places-sprite(#{$item}-hover);
-	}
+    .#{$item}.hover         {
+      @include places-sprite(#{$item}-hover);
+    }
 
-	.#{$item}.clean {
-	  @include places-sprite(#{$item}-clean);
-	}
+    .#{$item}.clean {
+      @include places-sprite(#{$item}-clean);
+    }
 }
 
 // For the hidden letters

@@ -44,8 +44,8 @@ $ui-sprite-height: sprite_height($ui-sprites);
 	}
 	#frame { 
 		opacity: .5;
-		pointer-events: none;
 		@include animation(fadeIn 2s $floor-easing forwards);
+		pointer-events: none;
 	}
 	#ui {
 		@include animation(fadeIn 2s $floor-easing forwards);
@@ -134,6 +134,7 @@ $ui-sprite-height: sprite_height($ui-sprites);
 	@include set-dimensions(99px, 75px, $max-width);
 	@include set-bg-width($ui-sprite-width, $ui-sprite, music-off);
 	@include set-position(1350px, 50px, $max-width, $frame-height);	
+	position: fixed;
 	z-index: 50;
 	&.off {
 		@include ui-sprite(music-off);
@@ -179,10 +180,15 @@ $ui-sprite-height: sprite_height($ui-sprites);
 @include keyframes(fadeIn) {
   0% { opacity: 0 }
   1% { opacity: 0 }
-  100% { opacity: 1 }
 }
 
 @include keyframes(fadeInUp) {
+  0% { opacity: 0 }
+  1% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
+@include keyframes(fadeInDown) {
   0% { opacity: 0 }
   1% { opacity: 0 }
   100% { opacity: 1 }
@@ -204,7 +210,7 @@ $ui-sprite-height: sprite_height($ui-sprites);
 	ul {
 		[data-currentFloor="downstairs"] & {
 			opacity: 0;
-			@include animation(fadeIn 2s $floor-easing forwards);
+			@include animation(fadeInDown 2s $floor-easing forwards);
 		}
 		[data-currentFloor="upstairs"] & {
 			opacity: 0;

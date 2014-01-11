@@ -192,7 +192,8 @@ document.addEventListener('DOMContentLoaded', function(){
       var image = document.createElement( 'img' );
       draggable.setAttribute('data-group', group);
       draggable.setAttribute('data-key', key);
-      draggable.classList.add(key, 'item');
+      draggable.classList.add(key);
+      draggable.classList.add('item');
       // pop an image in it
       image.src = "img/items/" + key + ".png";
       draggable.appendChild(image);
@@ -415,7 +416,7 @@ document.addEventListener('DOMContentLoaded', function(){
   [].forEach.call(photos, function(photo) {
     var numberOfScraps = photo.getAttribute('data-scraps');
     var photoScrapCompenents = document.createDocumentFragment();
-    var scrap, bigScrap, scrapParentNum, scrapNumber;
+    var scrap, bigScrap, scrapParentNum, scrapNumber, scrapClass;
     // isNan returns false if a variable _could be_ a number, ie 12 or '12'
     // http://stackoverflow.com/questions/175739/is-there-a-built-in-way-in-javascript-to-check-if-a-string-is-a-valid-number
     if (!isNaN(numberOfScraps)) {
@@ -425,14 +426,17 @@ document.addEventListener('DOMContentLoaded', function(){
         scrapsLeft++;
 
         bigScrap = document.createElement('div');
-        bigScrap.classList.add('scrap','scrap' + scrapNumber);
+        bigScrap.classList.add('scrap');
+        bigScrap.classList.add('scrap' + scrapNumber);
         photoScrapCompenents.appendChild(bigScrap);
 
         // Make an <li class="photo1-scrap1"></li>
         scrap = document.createElement('li');
         scrapParentNum = photo.classList[0]; // photo1
         scrapNumber = numberOfScraps; // 1
-        scrap.classList.add('photo',scrapParentNum + '-scrap' + scrapNumber);
+        scrapClass = scrapParentNum + '-scrap' + scrapNumber;
+        scrap.classList.add('photo');
+        scrap.classList.add(scrapClass);
         hiddenPhotos.appendChild(scrap);
         // When clicked, give class .revealed to li#photo1 .scrap1 (it's pair)...
         // ...and remove it from the DOM

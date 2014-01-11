@@ -401,11 +401,11 @@
   /* line 45, ../sass/_ui.scss */
   [data-progress="dialog-intro"] #frame {
     opacity: .5;
-    pointer-events: none;
     -webkit-animation: fadeIn 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
     -moz-animation: fadeIn 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
     -o-animation: fadeIn 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
     animation: fadeIn 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+    pointer-events: none;
   }
   /* line 50, ../sass/_ui.scss */
   [data-progress="dialog-intro"] #ui {
@@ -638,26 +638,27 @@
     background-size: 243.43434% auto;
     left: 90%;
     top: 5%;
+    position: fixed;
     z-index: 50;
   }
-  /* line 138, ../sass/_ui.scss */
+  /* line 139, ../sass/_ui.scss */
   #music-controls.off {
     background-position: 0 94.80609%;
   }
-  /* line 141, ../sass/_ui.scss */
+  /* line 142, ../sass/_ui.scss */
   #music-controls.on {
     background-position: 0 100%;
   }
 
-  /* line 146, ../sass/_ui.scss */
+  /* line 147, ../sass/_ui.scss */
   #success {
     z-index: 50;
   }
-  /* line 148, ../sass/_ui.scss */
+  /* line 149, ../sass/_ui.scss */
   #success .card {
     background-image: url('../img/outro.jpg?1389388389');
   }
-  /* line 149, ../sass/_ui.scss */
+  /* line 150, ../sass/_ui.scss */
   #success a {
     width: 34.4%;
     padding-top: 14.13333%;
@@ -666,7 +667,7 @@
     top: 23.6%;
   }
 
-  /* line 156, ../sass/_ui.scss */
+  /* line 157, ../sass/_ui.scss */
   .instructions, .instructions-photos {
     width: 84.26573%;
     padding-top: 88.81119%;
@@ -678,7 +679,7 @@
     opacity: 0;
   }
 
-  /* line 163, ../sass/_ui.scss */
+  /* line 164, ../sass/_ui.scss */
   .instructions {
     background-position: 0 20.07905%;
     margin: .5em 0 1em;
@@ -686,7 +687,7 @@
     left: 6.1674%;
   }
 
-  /* line 170, ../sass/_ui.scss */
+  /* line 171, ../sass/_ui.scss */
   .instructions-photos {
     background-position: 0 0;
     opacity: 0;
@@ -700,70 +701,50 @@
   }
 
   @-moz-keyframes fadeIn {
-    /* line 180, ../sass/_ui.scss */
+    /* line 181, ../sass/_ui.scss */
     0% {
       opacity: 0;
     }
 
-    /* line 181, ../sass/_ui.scss */
+    /* line 182, ../sass/_ui.scss */
     1% {
       opacity: 0;
-    }
-
-    /* line 182, ../sass/_ui.scss */
-    100% {
-      opacity: 1;
     }
 }
 
   @-webkit-keyframes fadeIn {
-    /* line 180, ../sass/_ui.scss */
+    /* line 181, ../sass/_ui.scss */
     0% {
       opacity: 0;
     }
 
-    /* line 181, ../sass/_ui.scss */
+    /* line 182, ../sass/_ui.scss */
     1% {
       opacity: 0;
-    }
-
-    /* line 182, ../sass/_ui.scss */
-    100% {
-      opacity: 1;
     }
 }
 
   @-o-keyframes fadeIn {
-    /* line 180, ../sass/_ui.scss */
+    /* line 181, ../sass/_ui.scss */
     0% {
       opacity: 0;
     }
 
-    /* line 181, ../sass/_ui.scss */
+    /* line 182, ../sass/_ui.scss */
     1% {
       opacity: 0;
-    }
-
-    /* line 182, ../sass/_ui.scss */
-    100% {
-      opacity: 1;
     }
 }
 
   @keyframes fadeIn {
-    /* line 180, ../sass/_ui.scss */
+    /* line 181, ../sass/_ui.scss */
     0% {
       opacity: 0;
     }
 
-    /* line 181, ../sass/_ui.scss */
+    /* line 182, ../sass/_ui.scss */
     1% {
       opacity: 0;
-    }
-
-    /* line 182, ../sass/_ui.scss */
-    100% {
-      opacity: 1;
     }
 }
 
@@ -835,7 +816,75 @@
     }
 }
 
-  /* line 191, ../sass/_ui.scss */
+  @-moz-keyframes fadeInDown {
+    /* line 192, ../sass/_ui.scss */
+    0% {
+      opacity: 0;
+    }
+
+    /* line 193, ../sass/_ui.scss */
+    1% {
+      opacity: 0;
+    }
+
+    /* line 194, ../sass/_ui.scss */
+    100% {
+      opacity: 1;
+    }
+}
+
+  @-webkit-keyframes fadeInDown {
+    /* line 192, ../sass/_ui.scss */
+    0% {
+      opacity: 0;
+    }
+
+    /* line 193, ../sass/_ui.scss */
+    1% {
+      opacity: 0;
+    }
+
+    /* line 194, ../sass/_ui.scss */
+    100% {
+      opacity: 1;
+    }
+}
+
+  @-o-keyframes fadeInDown {
+    /* line 192, ../sass/_ui.scss */
+    0% {
+      opacity: 0;
+    }
+
+    /* line 193, ../sass/_ui.scss */
+    1% {
+      opacity: 0;
+    }
+
+    /* line 194, ../sass/_ui.scss */
+    100% {
+      opacity: 1;
+    }
+}
+
+  @keyframes fadeInDown {
+    /* line 192, ../sass/_ui.scss */
+    0% {
+      opacity: 0;
+    }
+
+    /* line 193, ../sass/_ui.scss */
+    1% {
+      opacity: 0;
+    }
+
+    /* line 194, ../sass/_ui.scss */
+    100% {
+      opacity: 1;
+    }
+}
+
+  /* line 197, ../sass/_ui.scss */
   .to-do {
     display: none;
     position: relative;
@@ -850,22 +899,22 @@
     background-size: 106.1674% auto;
     left: 10.13216%;
   }
-  /* line 199, ../sass/_ui.scss */
+  /* line 205, ../sass/_ui.scss */
   .to-do .wrapper {
     left: 14.97797%;
     top: 3.79147%;
     width: 67.84141%;
     height: 29em;
   }
-  /* line 205, ../sass/_ui.scss */
+  /* line 211, ../sass/_ui.scss */
   [data-currentFloor="downstairs"] .to-do ul {
     opacity: 0;
-    -webkit-animation: fadeIn 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
-    -moz-animation: fadeIn 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
-    -o-animation: fadeIn 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
-    animation: fadeIn 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+    -webkit-animation: fadeInDown 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+    -moz-animation: fadeInDown 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+    -o-animation: fadeInDown 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+    animation: fadeInDown 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
   }
-  /* line 209, ../sass/_ui.scss */
+  /* line 215, ../sass/_ui.scss */
   [data-currentFloor="upstairs"] .to-do ul {
     opacity: 0;
     -webkit-animation: fadeInUp 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
@@ -873,12 +922,12 @@
     -o-animation: fadeInUp 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
     animation: fadeInUp 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
   }
-  /* line 214, ../sass/_ui.scss */
+  /* line 220, ../sass/_ui.scss */
   .to-do li {
     padding-left: 14.28571%;
     position: relative;
   }
-  /* line 217, ../sass/_ui.scss */
+  /* line 223, ../sass/_ui.scss */
   .to-do li:before {
     content: " ";
     background-position: 0 75.26385%;
@@ -893,18 +942,18 @@
     top: .5em;
     left: 0;
   }
-  /* line 227, ../sass/_ui.scss */
+  /* line 233, ../sass/_ui.scss */
   [data-currentFloor="default"] .to-do li.downstairs, [data-currentFloor="upstairs"] .to-do li.downstairs, [data-currentFloor="downstairs"] .to-do li.upstairs {
     display: none;
   }
-  /* line 229, ../sass/_ui.scss */
+  /* line 235, ../sass/_ui.scss */
   .to-do del {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
     opacity: 0.6;
   }
 
   /* Navigating between floors */
-  /* line 235, ../sass/_ui.scss */
+  /* line 241, ../sass/_ui.scss */
   .to_upstairs {
     background-position: 0 88.64418%;
     width: 3.78913%;
@@ -918,7 +967,7 @@
     top: 55.2%;
   }
 
-  /* line 242, ../sass/_ui.scss */
+  /* line 248, ../sass/_ui.scss */
   .to_downstairs {
     background-position: 0 78.73365%;
     width: 3.78913%;
@@ -932,7 +981,7 @@
     top: 31.65%;
   }
 
-  /* line 249, ../sass/_ui.scss */
+  /* line 255, ../sass/_ui.scss */
   .warp {
     cursor: pointer;
     position: absolute;
@@ -951,18 +1000,18 @@
     background-repeat: no-repeat;
   }
 
-  /* line 263, ../sass/_ui.scss */
+  /* line 269, ../sass/_ui.scss */
   .dialog {
     display: none;
   }
 
-  /* line 265, ../sass/_ui.scss */
+  /* line 271, ../sass/_ui.scss */
   .dialog-nav {
     color: #fff;
     text-align: center;
     padding: .5em 0 2em;
   }
-  /* line 270, ../sass/_ui.scss */
+  /* line 276, ../sass/_ui.scss */
   .dialog-nav .prev, .dialog-nav .next {
     cursor: pointer;
     width: 48%;
@@ -970,12 +1019,12 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
-  /* line 275, ../sass/_ui.scss */
+  /* line 281, ../sass/_ui.scss */
   .dialog-nav .prev {
     float: left;
     padding-left: 1em;
   }
-  /* line 278, ../sass/_ui.scss */
+  /* line 284, ../sass/_ui.scss */
   .dialog-nav .prev:before {
     content: '';
     display: inline-block;
@@ -988,12 +1037,12 @@
     width: 1em;
     height: .945em;
   }
-  /* line 287, ../sass/_ui.scss */
+  /* line 293, ../sass/_ui.scss */
   .dialog-nav .next {
     float: right;
     padding-right: 3em;
   }
-  /* line 290, ../sass/_ui.scss */
+  /* line 296, ../sass/_ui.scss */
   .dialog-nav .next:after {
     content: '';
     display: inline-block;
@@ -1006,12 +1055,12 @@
     width: 1em;
     height: .945em;
   }
-  /* line 299, ../sass/_ui.scss */
+  /* line 305, ../sass/_ui.scss */
   .start .dialog-nav .prev {
     display: none;
   }
 
-  /* line 137, ../sass/_mixins.scss */
+  /* line 136, ../sass/_mixins.scss */
   #dialog-intro[data-dialog="1"] {
     background-position: 0 0;
     width: 110.13986%;
@@ -1024,7 +1073,7 @@
     left: 10.13216%;
   }
 
-  /* line 137, ../sass/_mixins.scss */
+  /* line 136, ../sass/_mixins.scss */
   #dialog-intro[data-dialog="2"] {
     background-position: 0 14.28571%;
     width: 110.13986%;
@@ -1037,7 +1086,7 @@
     left: 10.13216%;
   }
 
-  /* line 137, ../sass/_mixins.scss */
+  /* line 136, ../sass/_mixins.scss */
   #dialog-intro[data-dialog="3"] {
     background-position: 0 28.57143%;
     width: 110.13986%;
@@ -1050,7 +1099,7 @@
     left: 10.13216%;
   }
 
-  /* line 137, ../sass/_mixins.scss */
+  /* line 136, ../sass/_mixins.scss */
   #dialog-intro[data-dialog="4"] {
     background-position: 0 42.85714%;
     width: 110.13986%;
@@ -1063,7 +1112,7 @@
     left: 10.13216%;
   }
 
-  /* line 137, ../sass/_mixins.scss */
+  /* line 136, ../sass/_mixins.scss */
   #dialog-intro[data-dialog="5"] {
     background-position: 0 57.14286%;
     width: 110.13986%;
@@ -1076,7 +1125,7 @@
     left: 10.13216%;
   }
 
-  /* line 137, ../sass/_mixins.scss */
+  /* line 136, ../sass/_mixins.scss */
   #dialog-intro[data-dialog="6"] {
     background-position: 0 71.42857%;
     width: 110.13986%;
@@ -1089,7 +1138,7 @@
     left: 10.13216%;
   }
 
-  /* line 137, ../sass/_mixins.scss */
+  /* line 136, ../sass/_mixins.scss */
   #dialog-outro[data-dialog="1"] {
     background-position: 0 85.71429%;
     width: 110.13986%;
@@ -1102,7 +1151,7 @@
     left: 10.13216%;
   }
 
-  /* line 137, ../sass/_mixins.scss */
+  /* line 136, ../sass/_mixins.scss */
   #dialog-outro[data-dialog="2"] {
     background-position: 0 100%;
     width: 110.13986%;
@@ -1179,19 +1228,26 @@
   }
 
   /* line 21, ../sass/_items.scss */
+  .places li {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  /* line 26, ../sass/_items.scss */
   .props div {
     position: absolute;
   }
 
-  /* line 26, ../sass/_items.scss */
+  /* line 31, ../sass/_items.scss */
   .messy .item {
     cursor: move;
   }
-  /* line 27, ../sass/_items.scss */
+  /* line 32, ../sass/_items.scss */
   .messy li {
     position: absolute;
   }
-  /* line 31, ../sass/_items.scss */
+  /* line 36, ../sass/_items.scss */
   .messy img {
     position: absolute;
     top: 0;
@@ -1200,12 +1256,12 @@
     height: auto;
   }
 
-  /* line 40, ../sass/_items.scss */
+  /* line 45, ../sass/_items.scss */
   .places img {
     display: none;
   }
 
-  /* line 46, ../sass/_items.scss */
+  /* line 51, ../sass/_items.scss */
   .places .droppable {
     z-index: 50 !important;
   }
@@ -1270,11 +1326,10 @@
 
   /* line 38, ../sass/_photos.scss */
   .messy .photo {
-    position: absolute;
     cursor: pointer;
   }
 
-  /* line 113, ../sass/_mixins.scss */
+  /* line 112, ../sass/_mixins.scss */
   .photo7-scrap1 {
     background-position: 0 94.7502%;
     width: 1.4827%;
@@ -1288,7 +1343,7 @@
     background-size: 4800% auto;
   }
 
-  /* line 124, ../sass/_mixins.scss */
+  /* line 123, ../sass/_mixins.scss */
   .photo7 .scrap1 {
     background-position: 0 94.44185%;
     width: 71.16969%;
@@ -1302,7 +1357,7 @@
     background-size: 100% auto;
   }
 
-  /* line 113, ../sass/_mixins.scss */
+  /* line 112, ../sass/_mixins.scss */
   .photo7-scrap2 {
     background-position: 0 97.41567%;
     width: 1.15321%;
@@ -1316,7 +1371,7 @@
     background-size: 6171.42857% auto;
   }
 
-  /* line 124, ../sass/_mixins.scss */
+  /* line 123, ../sass/_mixins.scss */
   .photo7 .scrap2 {
     background-position: 0 97.18663%;
     width: 71.16969%;
@@ -1330,7 +1385,7 @@
     background-size: 100% auto;
   }
 
-  /* line 113, ../sass/_mixins.scss */
+  /* line 112, ../sass/_mixins.scss */
   .photo7-scrap3 {
     background-position: 0 100%;
     width: 1.64745%;
@@ -1344,7 +1399,7 @@
     background-size: 4320% auto;
   }
 
-  /* line 124, ../sass/_mixins.scss */
+  /* line 123, ../sass/_mixins.scss */
   .photo7 .scrap3 {
     background-position: 0 99.80523%;
     width: 71.16969%;
@@ -1358,7 +1413,7 @@
     background-size: 100% auto;
   }
 
-  /* line 113, ../sass/_mixins.scss */
+  /* line 112, ../sass/_mixins.scss */
   .photo6-scrap1 {
     background-position: 0 81.30214%;
     width: 1.81219%;
@@ -1372,7 +1427,7 @@
     background-size: 3927.27273% auto;
   }
 
-  /* line 124, ../sass/_mixins.scss */
+  /* line 123, ../sass/_mixins.scss */
   .photo6 .scrap1 {
     background-position: 0 80.46765%;
     width: 54.20099%;
@@ -1386,7 +1441,7 @@
     background-size: 131.30699% auto;
   }
 
-  /* line 113, ../sass/_mixins.scss */
+  /* line 112, ../sass/_mixins.scss */
   .photo6-scrap2 {
     background-position: 0 85.25571%;
     width: 1.56507%;
@@ -1400,7 +1455,7 @@
     background-size: 4547.36842% auto;
   }
 
-  /* line 124, ../sass/_mixins.scss */
+  /* line 123, ../sass/_mixins.scss */
   .photo6 .scrap2 {
     background-position: 0 84.53143%;
     width: 40.52718%;
@@ -1414,7 +1469,7 @@
     background-size: 175.60976% auto;
   }
 
-  /* line 113, ../sass/_mixins.scss */
+  /* line 112, ../sass/_mixins.scss */
   .photo6-scrap3 {
     background-position: 0 91.66742%;
     width: 1.15321%;
@@ -1428,7 +1483,7 @@
     background-size: 6171.42857% auto;
   }
 
-  /* line 124, ../sass/_mixins.scss */
+  /* line 123, ../sass/_mixins.scss */
   .photo6 .scrap3 {
     background-position: 0 90.96176%;
     width: 54.11862%;
@@ -1442,7 +1497,7 @@
     background-size: 131.50685% auto;
   }
 
-  /* line 113, ../sass/_mixins.scss */
+  /* line 112, ../sass/_mixins.scss */
   .photo5-scrap1 {
     background-position: 0 67.51904%;
     width: 1.40033%;
@@ -1456,7 +1511,7 @@
     background-size: 5082.35294% auto;
   }
 
-  /* line 124, ../sass/_mixins.scss */
+  /* line 123, ../sass/_mixins.scss */
   .photo5 .scrap1 {
     background-position: 0 65.40125%;
     width: 37.89127%;
@@ -1470,7 +1525,7 @@
     background-size: 187.82609% auto;
   }
 
-  /* line 113, ../sass/_mixins.scss */
+  /* line 112, ../sass/_mixins.scss */
   .photo5-scrap2 {
     background-position: 0 73.11389%;
     width: 1.23558%;
@@ -1484,7 +1539,7 @@
     background-size: 5760% auto;
   }
 
-  /* line 124, ../sass/_mixins.scss */
+  /* line 123, ../sass/_mixins.scss */
   .photo5 .scrap2 {
     background-position: 0 71.44635%;
     width: 38.63262%;
@@ -1498,7 +1553,7 @@
     background-size: 184.22175% auto;
   }
 
-  /* line 113, ../sass/_mixins.scss */
+  /* line 112, ../sass/_mixins.scss */
   .photo5-scrap3 {
     background-position: 0 77.49409%;
     width: 1.81219%;
@@ -1512,7 +1567,7 @@
     background-size: 3927.27273% auto;
   }
 
-  /* line 124, ../sass/_mixins.scss */
+  /* line 123, ../sass/_mixins.scss */
   .photo5 .scrap3 {
     background-position: 0 76.25024%;
     width: 54.11862%;
@@ -1526,7 +1581,7 @@
     background-size: 131.50685% auto;
   }
 
-  /* line 113, ../sass/_mixins.scss */
+  /* line 112, ../sass/_mixins.scss */
   .photo4-scrap1 {
     background-position: 0 55.18774%;
     width: 1.31796%;
@@ -1540,7 +1595,7 @@
     background-size: 5400% auto;
   }
 
-  /* line 124, ../sass/_mixins.scss */
+  /* line 123, ../sass/_mixins.scss */
   .photo4 .scrap1 {
     background-position: 0 52.22458%;
     width: 52.63591%;
@@ -1554,7 +1609,7 @@
     background-size: 135.21127% auto;
   }
 
-  /* line 113, ../sass/_mixins.scss */
+  /* line 112, ../sass/_mixins.scss */
   .photo4-scrap2 {
     background-position: 0 61.47697%;
     width: 2.05931%;
@@ -1568,7 +1623,7 @@
     background-size: 3456% auto;
   }
 
-  /* line 124, ../sass/_mixins.scss */
+  /* line 123, ../sass/_mixins.scss */
   .photo4 .scrap2 {
     background-position: 0 58.79804%;
     width: 64.41516%;
@@ -1582,7 +1637,7 @@
     background-size: 110.48593% auto;
   }
 
-  /* line 113, ../sass/_mixins.scss */
+  /* line 112, ../sass/_mixins.scss */
   .photo3-scrap1 {
     background-position: 0 33.05223%;
     width: 2.22405%;
@@ -1596,7 +1651,7 @@
     background-size: 3200% auto;
   }
 
-  /* line 124, ../sass/_mixins.scss */
+  /* line 123, ../sass/_mixins.scss */
   .photo3 .scrap1 {
     background-position: 0 29.58135%;
     width: 18.94563%;
@@ -1610,7 +1665,7 @@
     background-size: 375.65217% auto;
   }
 
-  /* line 113, ../sass/_mixins.scss */
+  /* line 112, ../sass/_mixins.scss */
   .photo3-scrap2 {
     background-position: 0 36.51197%;
     width: 1.4827%;
@@ -1624,7 +1679,7 @@
     background-size: 4800% auto;
   }
 
-  /* line 124, ../sass/_mixins.scss */
+  /* line 123, ../sass/_mixins.scss */
   .photo3 .scrap2 {
     background-position: 0 34.29454%;
     width: 47.85832%;
@@ -1638,7 +1693,7 @@
     background-size: 148.70912% auto;
   }
 
-  /* line 113, ../sass/_mixins.scss */
+  /* line 112, ../sass/_mixins.scss */
   .photo3-scrap3 {
     background-position: 0 41.31302%;
     width: 0.98847%;
@@ -1652,7 +1707,7 @@
     background-size: 7200% auto;
   }
 
-  /* line 124, ../sass/_mixins.scss */
+  /* line 123, ../sass/_mixins.scss */
   .photo3 .scrap3 {
     background-position: 0 38.37828%;
     width: 34.67875%;
@@ -1666,7 +1721,7 @@
     background-size: 205.22565% auto;
   }
 
-  /* line 113, ../sass/_mixins.scss */
+  /* line 112, ../sass/_mixins.scss */
   .photo3-scrap4 {
     background-position: 0 48.93289%;
     width: 2.14168%;
@@ -1680,7 +1735,7 @@
     background-size: 3323.07692% auto;
   }
 
-  /* line 124, ../sass/_mixins.scss */
+  /* line 123, ../sass/_mixins.scss */
   .photo3 .scrap4 {
     background-position: 0 44.70289%;
     width: 34.01977%;
@@ -1694,7 +1749,7 @@
     background-size: 209.20097% auto;
   }
 
-  /* line 113, ../sass/_mixins.scss */
+  /* line 112, ../sass/_mixins.scss */
   .photo2-scrap1 {
     background-position: 0 21.81917%;
     width: 1.23558%;
@@ -1708,7 +1763,7 @@
     background-size: 5760% auto;
   }
 
-  /* line 124, ../sass/_mixins.scss */
+  /* line 123, ../sass/_mixins.scss */
   .photo2 .scrap1 {
     background-position: 0 16.80308%;
     width: 40.69193%;
@@ -1722,7 +1777,7 @@
     background-size: 174.89879% auto;
   }
 
-  /* line 113, ../sass/_mixins.scss */
+  /* line 112, ../sass/_mixins.scss */
   .photo2-scrap2 {
     background-position: 0 28.00907%;
     width: 1.31796%;
@@ -1736,7 +1791,7 @@
     background-size: 5400% auto;
   }
 
-  /* line 124, ../sass/_mixins.scss */
+  /* line 123, ../sass/_mixins.scss */
   .photo2 .scrap2 {
     background-position: 0 23.35548%;
     width: 35.91433%;
@@ -1750,7 +1805,7 @@
     background-size: 198.16514% auto;
   }
 
-  /* line 113, ../sass/_mixins.scss */
+  /* line 112, ../sass/_mixins.scss */
   .photo1-scrap1 {
     background-position: 0 6.01162%;
     width: 5.10708%;
@@ -1764,7 +1819,7 @@
     background-size: 1393.54839% auto;
   }
 
-  /* line 124, ../sass/_mixins.scss */
+  /* line 123, ../sass/_mixins.scss */
   .photo1 .scrap1 {
     background-position: 0 0;
     width: 36.40857%;
@@ -1778,7 +1833,7 @@
     background-size: 195.47511% auto;
   }
 
-  /* line 113, ../sass/_mixins.scss */
+  /* line 112, ../sass/_mixins.scss */
   .photo1-scrap2 {
     background-position: 0 11.1091%;
     width: 1.56507%;
@@ -1792,7 +1847,7 @@
     background-size: 4547.36842% auto;
   }
 
-  /* line 124, ../sass/_mixins.scss */
+  /* line 123, ../sass/_mixins.scss */
   .photo1 .scrap2 {
     background-position: 0 6.61786%;
     width: 47.52883%;
@@ -1806,7 +1861,7 @@
     background-size: 149.74003% auto;
   }
 
-  /* line 113, ../sass/_mixins.scss */
+  /* line 112, ../sass/_mixins.scss */
   .photo1-scrap3 {
     background-position: 0 15.69836%;
     width: 1.40033%;
@@ -1820,7 +1875,7 @@
     background-size: 5082.35294% auto;
   }
 
-  /* line 124, ../sass/_mixins.scss */
+  /* line 123, ../sass/_mixins.scss */
   .photo1 .scrap3 {
     background-position: 0 11.78253%;
     width: 60.79077%;
@@ -1877,7 +1932,7 @@
     cursor: pointer;
   }
 
-  /* line 90, ../sass/_mixins.scss */
+  /* line 89, ../sass/_mixins.scss */
   .messy .aug03 {
     background-position: 0 13.80408%;
     width: 5.68369%;
@@ -1891,7 +1946,7 @@
     background-size: 1591.30435% auto;
   }
 
-  /* line 100, ../sass/_mixins.scss */
+  /* line 99, ../sass/_mixins.scss */
   .letters-to-read .aug03 {
     background-position: 0 77.10098%;
     width: 90.44481%;
@@ -1905,7 +1960,7 @@
     background-size: 100% auto;
   }
 
-  /* line 90, ../sass/_mixins.scss */
+  /* line 89, ../sass/_mixins.scss */
   .messy .jun09 {
     background-position: 24.42308% 13.81961%;
     width: 4.77759%;
@@ -1919,7 +1974,7 @@
     background-size: 1893.10345% auto;
   }
 
-  /* line 100, ../sass/_mixins.scss */
+  /* line 99, ../sass/_mixins.scss */
   .letters-to-read .jun09 {
     background-position: 0 100%;
     width: 79.73641%;
@@ -1933,7 +1988,7 @@
     background-size: 113.42975% auto;
   }
 
-  /* line 90, ../sass/_mixins.scss */
+  /* line 89, ../sass/_mixins.scss */
   .messy .jun18 {
     background-position: 6.70554% 13.80408%;
     width: 5.68369%;
@@ -1947,7 +2002,7 @@
     background-size: 1591.30435% auto;
   }
 
-  /* line 100, ../sass/_mixins.scss */
+  /* line 99, ../sass/_mixins.scss */
   .letters-to-read .jun18 {
     background-position: 0 34.83221%;
     width: 79.32455%;
@@ -1961,7 +2016,7 @@
     background-size: 114.01869% auto;
   }
 
-  /* line 90, ../sass/_mixins.scss */
+  /* line 89, ../sass/_mixins.scss */
   .messy .dec15 {
     background-position: 18.84615% 13.81961%;
     width: 4.77759%;
@@ -1975,7 +2030,7 @@
     background-size: 1893.10345% auto;
   }
 
-  /* line 100, ../sass/_mixins.scss */
+  /* line 99, ../sass/_mixins.scss */
   .letters-to-read .dec15 {
     background-position: 0 0;
     width: 74.21746%;
@@ -1989,7 +2044,7 @@
     background-size: 121.86459% auto;
   }
 
-  /* line 90, ../sass/_mixins.scss */
+  /* line 89, ../sass/_mixins.scss */
   .messy .aug31 {
     background-position: 13.26923% 13.81961%;
     width: 4.77759%;
@@ -2003,7 +2058,7 @@
     background-size: 1893.10345% auto;
   }
 
-  /* line 100, ../sass/_mixins.scss */
+  /* line 99, ../sass/_mixins.scss */
   .letters-to-read .aug31 {
     background-position: 0 55.09654%;
     width: 73.14662%;
@@ -2017,7 +2072,7 @@
     background-size: 123.64865% auto;
   }
 
-  /* line 90, ../sass/_mixins.scss */
+  /* line 89, ../sass/_mixins.scss */
   .messy .oct11 {
     background-position: 30.02887% 13.84298%;
     width: 4.85997%;
@@ -2031,7 +2086,7 @@
     background-size: 1861.01695% auto;
   }
 
-  /* line 100, ../sass/_mixins.scss */
+  /* line 99, ../sass/_mixins.scss */
   .letters-to-read .oct11 {
     background-position: 0 16.99346%;
     width: 81.05437%;
@@ -2052,7 +2107,7 @@
   }
 
   /* Upstairs Props */
-  /* line 39, ../sass/_mixins.scss */
+  /* line 38, ../sass/_mixins.scss */
   .basket-prop {
     background-position: 19.67213% 0;
     width: 7.16639%;
@@ -2066,7 +2121,7 @@
     background-size: 520.68966% auto;
   }
 
-  /* line 39, ../sass/_mixins.scss */
+  /* line 38, ../sass/_mixins.scss */
   .bedback-prop {
     background-position: 44.41341% 0;
     width: 7.82537%;
@@ -2080,7 +2135,7 @@
     background-size: 476.84211% auto;
   }
 
-  /* line 39, ../sass/_mixins.scss */
+  /* line 38, ../sass/_mixins.scss */
   .bedup-prop {
     background-position: 0 54.67115%;
     width: 25.94728%;
@@ -2094,7 +2149,7 @@
     background-size: 143.80952% auto;
   }
 
-  /* line 39, ../sass/_mixins.scss */
+  /* line 38, ../sass/_mixins.scss */
   .armchair-prop {
     background-position: 98.21429% 7.98122%;
     width: 14.25041%;
@@ -2108,7 +2163,7 @@
     background-size: 261.84971% auto;
   }
 
-  /* line 39, ../sass/_mixins.scss */
+  /* line 38, ../sass/_mixins.scss */
   .cradle-prop {
     background-position: 73.33333% 24.20429%;
     width: 18.78089%;
@@ -2122,7 +2177,7 @@
     background-size: 198.68421% auto;
   }
 
-  /* line 39, ../sass/_mixins.scss */
+  /* line 38, ../sass/_mixins.scss */
   .pillowup3-prop {
     background-position: 84.66667% 0;
     width: 12.60297%;
@@ -2138,7 +2193,7 @@
 
   /* Letters */
   /* Upstairs Items */
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .rug {
     width: 10.21417%;
     padding-top: 7.24876%;
@@ -2147,7 +2202,7 @@
     top: 33.6%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .rug {
     width: 12.10873%;
     padding-top: 5.76606%;
@@ -2160,22 +2215,22 @@
     background-size: 172.10884% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .rug.droppable {
     background-position: 0 70.1737%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .rug.hover {
     background-position: 0 70.63114%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .rug.clean {
     background-position: 0 69.71626%;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .stool {
     width: 10.46129%;
     padding-top: 8.56672%;
@@ -2184,7 +2239,7 @@
     top: 29.2%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .stool {
     width: 9.30807%;
     padding-top: 8.89621%;
@@ -2197,22 +2252,22 @@
     background-size: 223.89381% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .stool.droppable {
     background-position: 0 87.68821%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .stool.hover {
     background-position: 0 88.38218%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .stool.clean {
     background-position: 0 86.99424%;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .shoe1 {
     width: 4.94234%;
     padding-top: 2.80066%;
@@ -2221,7 +2276,7 @@
     top: 41.5%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .shoe1 {
     width: 4.69522%;
     padding-top: 2.80066%;
@@ -2234,22 +2289,22 @@
     background-size: 443.85965% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .shoe1.droppable {
     background-position: 0 77.28983%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .shoe1.hover {
     background-position: 0 77.52421%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .shoe1.clean {
     background-position: 0 77.05545%;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .shoe2 {
     width: 4.94234%;
     padding-top: 2.88303%;
@@ -2258,7 +2313,7 @@
     top: 20.8%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .shoe2 {
     width: 4.77759%;
     padding-top: 2.88303%;
@@ -2271,22 +2326,22 @@
     background-size: 436.2069% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .shoe2.droppable {
     background-position: 0 78.00395%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .shoe2.hover {
     background-position: 0 78.24451%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .shoe2.clean {
     background-position: 0 77.76339%;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .pillowup1 {
     width: 6.67216%;
     padding-top: 5.93081%;
@@ -2295,7 +2350,7 @@
     top: 29.6%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .pillowup1 {
     width: 6.8369%;
     padding-top: 6.2603%;
@@ -2308,22 +2363,22 @@
     background-size: 304.81928% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .pillowup1.droppable {
     background-position: 0 53.71962%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .pillowup1.hover {
     background-position: 0 54.21433%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .pillowup1.clean {
     background-position: 0 53.22491%;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .books {
     width: 13.75618%;
     padding-top: 8.89621%;
@@ -2332,7 +2387,7 @@
     top: 35.05%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .books {
     width: 7.08402%;
     padding-top: 7.57825%;
@@ -2345,22 +2400,22 @@
     background-size: 294.18605% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .books.droppable {
     background-position: 0 6.57382%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .books.hover {
     background-position: 0 7.16806%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .books.clean {
     background-position: 0 5.97957%;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .telescope {
     width: 8.23723%;
     padding-top: 7.90774%;
@@ -2369,7 +2424,7 @@
     top: 39%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .telescope {
     width: 8.07249%;
     padding-top: 10.95552%;
@@ -2382,22 +2437,22 @@
     background-size: 258.16327% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .telescope.droppable {
     background-position: 0 92.72682%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .telescope.hover {
     background-position: 0 93.57701%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .telescope.clean {
     background-position: 0 91.87663%;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .toy {
     width: 3.45964%;
     padding-top: 7.16639%;
@@ -2406,7 +2461,7 @@
     top: 21.1%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .toy {
     width: 4.61285%;
     padding-top: 9.06096%;
@@ -2419,22 +2474,22 @@
     background-size: 451.78571% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .toy.droppable {
     background-position: 0 97.32292%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .toy.hover {
     background-position: 0 98.02937%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .toy.clean {
     background-position: 0 96.61647%;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .musicbox {
     width: 5.60132%;
     padding-top: 4.36573%;
@@ -2443,7 +2498,7 @@
     top: 24.9%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .musicbox {
     width: 4.85997%;
     padding-top: 3.62438%;
@@ -2456,22 +2511,22 @@
     background-size: 428.81356% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .musicbox.droppable {
     background-position: 0 41.52935%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .musicbox.hover {
     background-position: 0 41.82559%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .musicbox.clean {
     background-position: 0 41.2331%;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .broom {
     width: 24.13509%;
     padding-top: 6.50741%;
@@ -2480,7 +2535,7 @@
     top: 37.55%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .broom {
     width: 7.57825%;
     padding-top: 24.54695%;
@@ -2493,22 +2548,22 @@
     background-size: 275% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .broom.droppable {
     background-position: 0 19.27394%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .broom.hover {
     background-position: 0 21.16747%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .broom.clean {
     background-position: 0 17.3804%;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .pillowup2 {
     width: 8.97858%;
     padding-top: 9.63756%;
@@ -2517,7 +2572,7 @@
     top: 29.0%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .pillowup2 {
     width: 9.80231%;
     padding-top: 7.57825%;
@@ -2530,22 +2585,22 @@
     background-size: 212.60504% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .pillowup2.droppable {
     background-position: 0 55.35747%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .pillowup2.hover {
     background-position: 0 55.95172%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .pillowup2.clean {
     background-position: 0 54.76323%;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .pillowup1 {
     width: 6.67216%;
     padding-top: 5.93081%;
@@ -2554,7 +2609,7 @@
     top: 29.7%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .pillowup1 {
     width: 6.8369%;
     padding-top: 6.2603%;
@@ -2567,22 +2622,22 @@
     background-size: 304.81928% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .pillowup1.droppable {
     background-position: 0 53.71962%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .pillowup1.hover {
     background-position: 0 54.21433%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .pillowup1.clean {
     background-position: 0 53.22491%;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .pot1 {
     width: 9.30807%;
     padding-top: 4.11862%;
@@ -2591,7 +2646,7 @@
     top: 26.3%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .pot1 {
     width: 6.91928%;
     padding-top: 9.39044%;
@@ -2604,22 +2659,22 @@
     background-size: 301.19048% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .pot1.droppable {
     background-position: 0 58.81733%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .pot1.hover {
     background-position: 0 59.54875%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .pot1.clean {
     background-position: 0 58.08851%;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .pot2 {
     width: 4.36573%;
     padding-top: 4.03624%;
@@ -2628,7 +2683,7 @@
     top: 38.3%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .pot2 {
     width: 5.18946%;
     padding-top: 3.95387%;
@@ -2641,22 +2696,22 @@
     background-size: 401.5873% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .pot2.droppable {
     background-position: 0 60.35558%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .pot2.hover {
     background-position: 0 60.67658%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .pot2.clean {
     background-position: 0 60.03457%;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .pot3 {
     width: 5.51895%;
     padding-top: 5.27183%;
@@ -2665,7 +2720,7 @@
     top: 21.35%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .pot3 {
     width: 4.85997%;
     padding-top: 4.94234%;
@@ -2678,22 +2733,22 @@
     background-size: 428.81356% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .pot3.droppable {
     background-position: 0 61.43819%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .pot3.hover {
     background-position: 0 61.83357%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .pot3.clean {
     background-position: 0 61.04281%;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .pot4 {
     width: 5.93081%;
     padding-top: 8.40198%;
@@ -2702,7 +2757,7 @@
     top: 27.95%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .pot4 {
     width: 7.00165%;
     padding-top: 8.73147%;
@@ -2715,22 +2770,22 @@
     background-size: 297.64706% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .pot4.droppable {
     background-position: 0 63.08159%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .pot4.hover {
     background-position: 0 63.76309%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .pot4.clean {
     background-position: 0 62.40243%;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .scoop {
     width: 7.00165%;
     padding-top: 3.45964%;
@@ -2739,7 +2794,7 @@
     top: 31.65%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .scoop {
     width: 4.53048%;
     padding-top: 6.34267%;
@@ -2752,17 +2807,17 @@
     background-size: 460.0% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .scoop.droppable {
     background-position: 0 76.2585%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .scoop.hover {
     background-position: 0 76.75943%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .scoop.clean {
     background-position: 0 75.75758%;
   }
@@ -2810,7 +2865,7 @@
 
   /* Letters */
   /* Downstairs Props */
-  /* line 39, ../sass/_mixins.scss */
+  /* line 38, ../sass/_mixins.scss */
   .pillow2-prop {
     background-position: 0 7.5945%;
     width: 6.75453%;
@@ -2824,7 +2879,7 @@
     background-size: 552.43902% auto;
   }
 
-  /* line 39, ../sass/_mixins.scss */
+  /* line 38, ../sass/_mixins.scss */
   .bed-prop {
     background-position: 0 43.97635%;
     width: 28.17133%;
@@ -2838,7 +2893,7 @@
     background-size: 132.45614% auto;
   }
 
-  /* line 39, ../sass/_mixins.scss */
+  /* line 38, ../sass/_mixins.scss */
   .spoons-prop {
     background-position: 21.07969% 7.61019%;
     width: 5.27183%;
@@ -2852,7 +2907,7 @@
     background-size: 707.8125% auto;
   }
 
-  /* line 39, ../sass/_mixins.scss */
+  /* line 38, ../sass/_mixins.scss */
   .pot-prop {
     background-position: 21.95122% 22.69257%;
     width: 6.91928%;
@@ -2866,7 +2921,7 @@
     background-size: 539.28571% auto;
   }
 
-  /* line 39, ../sass/_mixins.scss */
+  /* line 38, ../sass/_mixins.scss */
   .chair2-prop {
     background-position: 45.06173% 7.93252%;
     width: 10.62603%;
@@ -2880,7 +2935,7 @@
     background-size: 351.16279% auto;
   }
 
-  /* line 39, ../sass/_mixins.scss */
+  /* line 38, ../sass/_mixins.scss */
   .table-prop {
     background-position: 0 34.22794%;
     width: 27.92422%;
@@ -2894,7 +2949,7 @@
     background-size: 133.62832% auto;
   }
 
-  /* line 39, ../sass/_mixins.scss */
+  /* line 38, ../sass/_mixins.scss */
   .oven-prop {
     background-position: 0 72.97521%;
     width: 30.31301%;
@@ -2908,7 +2963,7 @@
     background-size: 123.09783% auto;
   }
 
-  /* line 39, ../sass/_mixins.scss */
+  /* line 38, ../sass/_mixins.scss */
   .laundry-prop {
     background-position: 32.22892% 15.17606%;
     width: 9.96705%;
@@ -2922,7 +2977,7 @@
     background-size: 374.38017% auto;
   }
 
-  /* line 39, ../sass/_mixins.scss */
+  /* line 38, ../sass/_mixins.scss */
   .nightstand-prop {
     background-position: 80.85106% 15.63861%;
     width: 14.08567%;
@@ -2936,7 +2991,7 @@
     background-size: 264.91228% auto;
   }
 
-  /* line 39, ../sass/_mixins.scss */
+  /* line 38, ../sass/_mixins.scss */
   .stairs-prop {
     background-position: 0 100%;
     width: 37.31466%;
@@ -2950,7 +3005,7 @@
     background-size: 100% auto;
   }
 
-  /* line 39, ../sass/_mixins.scss */
+  /* line 38, ../sass/_mixins.scss */
   .sack2-prop {
     background-position: 0 14.91866%;
     width: 8.81384%;
@@ -2965,7 +3020,7 @@
   }
 
   /* Downstairs Items */
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .firewood1 {
     width: 7.08402%;
     padding-top: 4.85997%;
@@ -2974,7 +3029,7 @@
     top: 85.2%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .firewood1 {
     width: 6.91928%;
     padding-top: 4.11862%;
@@ -2987,22 +3042,22 @@
     background-size: 301.19048% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .firewood1.droppable {
     background-position: 0 33.93221%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .firewood1.hover {
     background-position: 0 34.2656%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .firewood1.clean {
     background-position: 0 33.59881%;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .axe {
     width: 8.23723%;
     padding-top: 7.99012%;
@@ -3011,7 +3066,7 @@
     top: 75%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .axe {
     width: 7.24876%;
     padding-top: 9.30807%;
@@ -3024,22 +3079,22 @@
     background-size: 287.5% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .axe.droppable {
     background-position: 0 0.72518%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .axe.hover {
     background-position: 0 1.45035%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .axe.clean {
     background-position: 0 0;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .rifle {
     width: 5.84843%;
     padding-top: 22.3229%;
@@ -3048,7 +3103,7 @@
     top: 71.1%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .rifle {
     width: 3.62438%;
     padding-top: 23.72323%;
@@ -3061,22 +3116,22 @@
     background-size: 575% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .rifle.droppable {
     background-position: 0 67.00921%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .rifle.hover {
     background-position: 0 68.8389%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .rifle.clean {
     background-position: 0 65.17952%;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .cloak {
     width: 16.55684%;
     padding-top: 12.27348%;
@@ -3085,7 +3140,7 @@
     top: 81.65%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .cloak {
     width: 9.39044%;
     padding-top: 24.29984%;
@@ -3098,22 +3153,22 @@
     background-size: 221.92982% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .cloak.droppable {
     background-position: 0 30.3661%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .cloak.hover {
     background-position: 0 32.24047%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .cloak.clean {
     background-position: 0 28.49173%;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .boot1 {
     width: 6.42504%;
     padding-top: 4.44811%;
@@ -3122,7 +3177,7 @@
     top: 82.1%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .boot1 {
     width: 5.60132%;
     padding-top: 6.8369%;
@@ -3135,22 +3190,22 @@
     background-size: 372.05882% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .boot1.droppable {
     background-position: 0 8.29621%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .boot1.hover {
     background-position: 0 8.83445%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .boot1.clean {
     background-position: 0 7.75798%;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .samovar {
     width: 10.79077%;
     padding-top: 7.41351%;
@@ -3159,7 +3214,7 @@
     top: 72.45%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .samovar {
     width: 12.35585%;
     padding-top: 13.83855%;
@@ -3172,22 +3227,22 @@
     background-size: 168.66667% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .samovar.droppable {
     background-position: 0 74.04689%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .samovar.hover {
     background-position: 0 75.11661%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .samovar.clean {
     background-position: 0 72.97718%;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .firewood6 {
     width: 6.17792%;
     padding-top: 3.45964%;
@@ -3196,7 +3251,7 @@
     top: 84.15%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .firewood6 {
     width: 6.17792%;
     padding-top: 3.70675%;
@@ -3209,22 +3264,22 @@
     background-size: 337.33333% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .firewood6.droppable {
     background-position: 0 38.87174%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .firewood6.hover {
     background-position: 0 39.17418%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .firewood6.clean {
     background-position: 0 38.56931%;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .sack1 {
     width: 9.63756%;
     padding-top: 7.24876%;
@@ -3233,7 +3288,7 @@
     top: 76%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .sack1 {
     width: 7.16639%;
     padding-top: 6.09555%;
@@ -3246,22 +3301,22 @@
     background-size: 290.8046% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .sack1.droppable {
     background-position: 0 71.58845%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .sack1.hover {
     background-position: 0 72.07074%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .sack1.clean {
     background-position: 0 71.10616%;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .pillow1 {
     width: 10.04942%;
     padding-top: 9.06096%;
@@ -3270,7 +3325,7 @@
     top: 69.9%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .pillow1 {
     width: 10.7084%;
     padding-top: 8.23723%;
@@ -3283,22 +3338,22 @@
     background-size: 194.61538% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .pillow1.droppable {
     background-position: 0 50.34372%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .pillow1.hover {
     background-position: 0 50.9878%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .pillow1.clean {
     background-position: 0 49.69963%;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .socks {
     width: 4.11862%;
     padding-top: 4.94234%;
@@ -3307,7 +3362,7 @@
     top: 59.3%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .socks {
     background-position: 0 86.29687%;
     width: 11.69687%;
@@ -3321,22 +3376,22 @@
     background-size: 178.16901% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .socks.droppable {
     background-position: 0 84.859%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .socks.hover {
     background-position: 0 85.57794%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .socks.clean {
     background-position: 0 84.14007%;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .tools {
     width: 7.24876%;
     padding-top: 6.67216%;
@@ -3345,7 +3400,7 @@
     top: 64.2%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .tools {
     width: 9.30807%;
     padding-top: 9.96705%;
@@ -3358,22 +3413,22 @@
     background-size: 223.89381% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .tools.droppable {
     background-position: 0 95.13208%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .tools.hover {
     background-position: 0 95.90723%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .tools.clean {
     background-position: 0 94.35694%;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .ovenfork {
     width: 14.25041%;
     padding-top: 4.77759%;
@@ -3382,7 +3437,7 @@
     top: 80.9%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .ovenfork {
     width: 6.58979%;
     padding-top: 26.68863%;
@@ -3395,22 +3450,22 @@
     background-size: 316.25% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .ovenfork.droppable {
     background-position: 0 46.27897%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .ovenfork.hover {
     background-position: 0 48.33888%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .ovenfork.clean {
     background-position: 0 44.21905%;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .firewood3 {
     width: 4.53048%;
     padding-top: 5.84843%;
@@ -3419,7 +3474,7 @@
     top: 78.75%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .firewood3 {
     width: 6.91928%;
     padding-top: 4.20099%;
@@ -3432,22 +3487,22 @@
     background-size: 301.19048% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .firewood3.droppable {
     background-position: 0 35.9595%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .firewood3.hover {
     background-position: 0 36.29909%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .firewood3.clean {
     background-position: 0 35.61991%;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .firewood2 {
     width: 6.2603%;
     padding-top: 4.94234%;
@@ -3456,7 +3511,7 @@
     top: 79.9%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .firewood2 {
     width: 6.2603%;
     padding-top: 4.20099%;
@@ -3469,22 +3524,22 @@
     background-size: 332.89474% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .firewood2.droppable {
     background-position: 0 34.94073%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .firewood2.hover {
     background-position: 0 35.28032%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .firewood2.clean {
     background-position: 0 34.60114%;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .firewood5 {
     width: 5.27183%;
     padding-top: 4.85997%;
@@ -3493,7 +3548,7 @@
     top: 74.35%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .firewood5 {
     width: 6.67216%;
     padding-top: 4.11862%;
@@ -3506,22 +3561,22 @@
     background-size: 312.34568% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .firewood5.droppable {
     background-position: 0 37.91443%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .firewood5.hover {
     background-position: 0 38.24782%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .firewood5.clean {
     background-position: 0 37.58103%;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .firewood4 {
     width: 6.58979%;
     padding-top: 5.68369%;
@@ -3530,7 +3585,7 @@
     top: 76.15%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .firewood4 {
     width: 6.67216%;
     padding-top: 3.8715%;
@@ -3543,22 +3598,22 @@
     background-size: 312.34568% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .firewood4.droppable {
     background-position: 0 36.94444%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .firewood4.hover {
     background-position: 0 37.25926%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .firewood4.clean {
     background-position: 0 36.62963%;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .shovel {
     width: 15.07414%;
     padding-top: 18.69852%;
@@ -3567,7 +3622,7 @@
     top: 65.25%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .shovel {
     width: 4.36573%;
     padding-top: 23.06425%;
@@ -3580,22 +3635,22 @@
     background-size: 477.35849% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .shovel.droppable {
     background-position: 0 81.46803%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .shovel.hover {
     background-position: 0 83.2467%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .shovel.clean {
     background-position: 0 79.68936%;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .pitcher {
     width: 5.10708%;
     padding-top: 4.11862%;
@@ -3604,7 +3659,7 @@
     top: 84.9%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .pitcher {
     width: 4.77759%;
     padding-top: 6.17792%;
@@ -3617,22 +3672,22 @@
     background-size: 436.2069% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .pitcher.droppable {
     background-position: 0 56.97502%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .pitcher.hover {
     background-position: 0 57.46352%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .pitcher.clean {
     background-position: 0 56.48652%;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .bottle3 {
     width: 4.03624%;
     padding-top: 6.01318%;
@@ -3641,7 +3696,7 @@
     top: 81.7%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .bottle3 {
     width: 2.80066%;
     padding-top: 7.99012%;
@@ -3654,22 +3709,22 @@
     background-size: 744.11765% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .bottle3.droppable {
     background-position: 0 15.91331%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .bottle3.hover {
     background-position: 0 16.5387%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .bottle3.clean {
     background-position: 0 15.28793%;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .washboard {
     width: 9.47282%;
     padding-top: 3.95387%;
@@ -3678,7 +3733,7 @@
     top: 78.45%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .washboard {
     width: 5.27183%;
     padding-top: 8.40198%;
@@ -3691,22 +3746,22 @@
     background-size: 395.3125% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .washboard.droppable {
     background-position: 0 99.34345%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .washboard.hover {
     background-position: 0 100%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .washboard.clean {
     background-position: 0 98.6869%;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .mug2 {
     width: 3.21252%;
     padding-top: 2.88303%;
@@ -3715,7 +3770,7 @@
     top: 75.9%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .mug2 {
     width: 3.45964%;
     padding-top: 3.78913%;
@@ -3728,22 +3783,22 @@
     background-size: 602.38095% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .mug2.droppable {
     background-position: 0 40.62095%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .mug2.hover {
     background-position: 0 40.92957%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .mug2.clean {
     background-position: 0 40.31233%;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .mug1 {
     width: 3.13015%;
     padding-top: 3.8715%;
@@ -3752,7 +3807,7 @@
     top: 75.65%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .mug1 {
     width: 3.37727%;
     padding-top: 3.37727%;
@@ -3765,22 +3820,22 @@
     background-size: 617.07317% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .mug1.droppable {
     background-position: 0 39.74454%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .mug1.hover {
     background-position: 0 40.02221%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .mug1.clean {
     background-position: 0 39.46686%;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .bottle2 {
     width: 6.09555%;
     padding-top: 2.88303%;
@@ -3789,7 +3844,7 @@
     top: 90.15%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .bottle2 {
     width: 2.47117%;
     padding-top: 9.47282%;
@@ -3802,22 +3857,22 @@
     background-size: 843.33333% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .bottle2.droppable {
     background-position: 0 13.82966%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .bottle2.hover {
     background-position: 0 14.56732%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .bottle2.clean {
     background-position: 0 13.09199%;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .bucket {
     width: 8.23723%;
     padding-top: 6.50741%;
@@ -3826,7 +3881,7 @@
     top: 78.85%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .bucket {
     width: 5.93081%;
     padding-top: 7.33114%;
@@ -3839,22 +3894,22 @@
     background-size: 351.38889% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .bucket.droppable {
     background-position: 0 23.33828%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .bucket.hover {
     background-position: 0 23.91385%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .bucket.clean {
     background-position: 0 22.76272%;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .chair1 {
     width: 10.54366%;
     padding-top: 15.81549%;
@@ -3863,7 +3918,7 @@
     top: 77.15%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .chair1 {
     width: 10.62603%;
     padding-top: 15.81549%;
@@ -3876,22 +3931,22 @@
     background-size: 196.12403% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .chair1.droppable {
     background-position: 0 25.86733%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .chair1.hover {
     background-position: 0 27.08813%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .chair1.clean {
     background-position: 0 24.64653%;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .pillow3 {
     width: 9.80231%;
     padding-top: 7.99012%;
@@ -3900,7 +3955,7 @@
     top: 80%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .pillow3 {
     width: 10.1318%;
     padding-top: 7.08402%;
@@ -3913,22 +3968,22 @@
     background-size: 205.69106% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .pillow3.droppable {
     background-position: 0 52.14405%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .pillow3.hover {
     background-position: 0 52.70095%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .pillow3.clean {
     background-position: 0 51.58715%;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .tablecloth {
     width: 7.49588%;
     padding-top: 10.04942%;
@@ -3937,7 +3992,7 @@
     top: 80.9%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .tablecloth {
     width: 14.66227%;
     padding-top: 11.44975%;
@@ -3950,22 +4005,22 @@
     background-size: 142.13483% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .tablecloth.droppable {
     background-position: 0 90.13534%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .tablecloth.hover {
     background-position: 0 91.02309%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .tablecloth.clean {
     background-position: 0 89.24758%;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .blanket {
     width: 22.48764%;
     padding-top: 19.11038%;
@@ -3974,7 +4029,7 @@
     top: 82.95%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .blanket {
     width: 20.8402%;
     padding-top: 16.55684%;
@@ -3987,22 +4042,22 @@
     background-size: 100% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .blanket.droppable {
     background-position: 0 3.46504%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .blanket.hover {
     background-position: 0 4.74261%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .blanket.clean {
     background-position: 0 2.18746%;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .oilcan {
     width: 6.34267%;
     padding-top: 4.28336%;
@@ -4011,7 +4066,7 @@
     top: 89.1%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .oilcan {
     width: 5.3542%;
     padding-top: 5.60132%;
@@ -4024,22 +4079,22 @@
     background-size: 389.23077% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .oilcan.droppable {
     background-position: 0 42.62933%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .oilcan.hover {
     background-position: 0 43.07436%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .oilcan.clean {
     background-position: 0 42.18431%;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .bottle1 {
     width: 5.51895%;
     padding-top: 4.20099%;
@@ -4048,7 +4103,7 @@
     top: 83.9%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .bottle1 {
     width: 2.55354%;
     padding-top: 8.97858%;
@@ -4061,22 +4116,22 @@
     background-size: 816.12903% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .bottle1.droppable {
     background-position: 0 11.6867%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .bottle1.hover {
     background-position: 0 12.38691%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .bottle1.clean {
     background-position: 0 10.98649%;
   }
 
-  /* line 54, ../sass/_mixins.scss */
+  /* line 53, ../sass/_mixins.scss */
   .messy .boot2 {
     width: 6.34267%;
     padding-top: 4.94234%;
@@ -4085,7 +4140,7 @@
     top: 81.15%;
   }
 
-  /* line 62, ../sass/_mixins.scss */
+  /* line 61, ../sass/_mixins.scss */
   .places .boot2 {
     width: 6.01318%;
     padding-top: 6.75453%;
@@ -4098,17 +4153,17 @@
     background-size: 346.57534% auto;
   }
 
-  /* line 74, ../sass/_mixins.scss */
+  /* line 73, ../sass/_mixins.scss */
   .boot2.droppable {
     background-position: 0 9.90411%;
   }
 
-  /* line 78, ../sass/_mixins.scss */
+  /* line 77, ../sass/_mixins.scss */
   .boot2.hover {
     background-position: 0 10.43613%;
   }
 
-  /* line 82, ../sass/_mixins.scss */
+  /* line 81, ../sass/_mixins.scss */
   .boot2.clean {
     background-position: 0 9.3721%;
   }

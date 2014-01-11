@@ -18,6 +18,11 @@ $places-sprite-width: sprite_width($places-sprites);
   width: 100%; height: 100%;
 }
 
+.places li {
+  position: absolute;
+  left: 0; top: 0;
+}
+
 .props div {
   position: absolute;
 }

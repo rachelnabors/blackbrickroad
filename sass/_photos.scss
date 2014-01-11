@@ -36,7 +36,6 @@ $photos-sprite-width: sprite_width($photos-sprites);
 }
 
 .messy .photo { 
-  position: absolute;
   cursor: pointer;
   @extend %layer7;
 }
