@@ -4,6 +4,7 @@ $ui-sprite-layout: smart;
 @import "ui/*.png";
 $ui-sprite: $ui-sprites;
 $ui-sprite-width: sprite_width($ui-sprites);
+$ui-sprite-height: sprite_height($ui-sprites);
 
 /* The interface */
 #ui {
@@ -79,23 +80,43 @@ $ui-sprite-width: sprite_width($ui-sprites);
 #loading, #success {
 	display:none;
 	background-color: #000;
-	@include set-dimensions(1500px, 1000px, $max-width, true);
-	@include background-size(100% auto);
-	@include box-sizing(border-box);
-	background-position: center 100%;
-	background-repeat: no-repeat;
-	height: 100%;
-	max-width: $max-width;
-	position: absolute; left: 0; bottom: 0;
+	width: 100%; height: 100%;
+	position: absolute; left: 0; top: 0;
 	z-index: 50;
+	.card {
+		@include set-dimensions(1500px, 1000px, $max-width);
+		@include background-size(100% auto);
+		background-position: center 100%;
+		background-repeat: no-repeat;
+		max-width: $max-width;
+		position: absolute; left: 0; bottom: 0;
+	}
 }
 
 #loading {
-	@include background-image(image-url("loading.jpg"));
+	.card {@include background-image(image-url("loading.jpg"));}
+	.loader {
+		@include ui-sprite(loader);
+		@include set-dimensions(108px, 15px, $max-width);
+		@include set-bg-width($ui-sprite-width, $ui-sprite, loader);
+		@include set-position(692px, 916px, $max-width, $frame-height);
+		position: absolute;
+		@include animation(loading-dots 3s steps(3) forwards infinite);
+		@include set-bg-height($ui-sprite-height, $ui-sprite, loader);
+	}
+}
+
+@include keyframes(loading-dots) {
+	0% { 
+		@include set-dimensions(36px, 15px, $max-width);
+	}
+	100% {
+		@include set-dimensions(144px, 15px, $max-width);		
+	}
 }
 
 #success {
-	@include background-image(image-url("outro.jpg"));
+	.card { @include background-image(image-url("outro.jpg")); }
 	a {
 		@extend %ir;
 		@include set-dimensions(516px, 212px, $max-width);		

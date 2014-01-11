@@ -29,6 +29,11 @@
 	@include background-size($spriteX auto);
 }
 
+@mixin set-bg-height($sprites-height, $sprite, $sprite-image) {
+	$spriteY: percentage($sprites-height / image-height(sprite-file($sprite, $sprite-image)));
+	@include background-size(auto $spriteY);
+}
+
 @mixin create-prop($prop, $sX, $sY, $parent-width: $house-width, $parent-height: $frame-height*2) {
 	// Check for existence of ITEM-place sprite. Make .ITEM-place bg rules in that event.
 	.#{$prop}-prop {
