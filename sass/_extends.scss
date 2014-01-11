@@ -18,21 +18,6 @@
     clear: both;
 }
 
-
-%room {
-  @include background-size(100% auto);
-  z-index: -1;
-}
-
-%items {
-	position: absolute;
-	cursor: move;
-}
-
-%places, %props {
-	position: absolute;
-}
-
 // positioning
 %layer0 {z-index:0}
 %layer1 {z-index:1}

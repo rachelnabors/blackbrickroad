@@ -33,6 +33,11 @@ $floor-easing: cubic-bezier(0.77, 0, 0.175, 1);
   @include transition(transform 1.75s $floor-easing);
 }
 
+.floor {
+  @include background-size(100% auto);
+  z-index: -1;
+}
+
 @include keyframes(goUp) {
   0% { opacity: 1 }
   25% { opacity: 0 }

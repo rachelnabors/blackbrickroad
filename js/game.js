@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function(){
       var image = document.createElement( 'img' );
       draggable.setAttribute('data-group', group);
       draggable.setAttribute('data-key', key);
-      draggable.classList.add(key);
+      draggable.classList.add(key, 'item');
       // pop an image in it
       image.src = "img/items/" + key + ".png";
       draggable.appendChild(image);

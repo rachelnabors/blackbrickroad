@@ -1,6 +1,4 @@
 .floor_upstairs {
-	@extend %room;
-	// top: 0; left: 0;
 	@include background-image(image-url("bg_upstairs.jpg"));
 	background-repeat: no-repeat;
 }

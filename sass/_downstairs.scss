@@ -1,7 +1,5 @@
 .floor_downstairs {
-	@extend %room;
 	@include background-image(image-url("bg_downstairs.jpg"));
-	// top: 50%; left: 0;
 }
 
 /* Items */

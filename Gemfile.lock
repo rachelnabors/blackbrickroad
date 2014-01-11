@@ -10,6 +10,8 @@ GEM
       listen (<= 0.9.9)
       sass (~> 3.2.5)
     listen (0.7.3)
+    oily_png (1.1.0)
+      chunky_png (~> 1.2.7)
     rb-fsevent (0.9.3)
     sass (3.2.12)
 
@@ -19,5 +21,6 @@ PLATFORMS
 DEPENDENCIES
   breakpoint
   compass (= 0.13.alpha.4)
+  oily_png
   rb-fsevent
   sass

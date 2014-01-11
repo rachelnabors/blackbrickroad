@@ -6,8 +6,8 @@
 // @import "breakpoint";
 
 @media screen {
-	// Import reset to blow away all styles ever. Don't need them.
-	@import "compass/reset";
+	// Remove unwanted browser default stylin's on body, etc.
+	@import "destyle";
 
 	// Universally resusable stuff goes here.
 	@import "variables";

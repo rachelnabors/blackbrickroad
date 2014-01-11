@@ -38,7 +38,6 @@
 	  @include set-dimensions($iWidth, $iHeight, $parent-width);
 	  @include set-position($sX, $sY, $parent-width, $parent-height);
 	  @include set-bg-width($props-sprite-width, $props-sprites, #{$prop});
-	  @extend %props;
 	}
 }
 
@@ -53,7 +52,6 @@
 		$iHeight: image-height($thisItem);
 	  @include set-dimensions($iWidth, $iHeight, $parent-width);
 	  @include set-position($sX, $sY, $parent-width, $parent-height);
-	  @extend %items;
 	}
 
 	.places .#{$item} {
@@ -66,7 +64,6 @@
 	  @include set-dimensions($iWidth, $iHeight, $parent-width);
 	  @include set-position($placeX, $placeY, $parent-width, $parent-height);
 	  @include set-bg-width($places-sprite-width, $places-sprites, #{$item}-hover);
-	  @extend %places;
 	}
 
 	.#{$item}.droppable {
