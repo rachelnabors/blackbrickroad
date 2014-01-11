@@ -29,13 +29,26 @@ $ui-sprite-height: sprite_height($ui-sprites);
 
 /* States */
 [data-progress="loading"] {
-	#loading { display: block}
+	#loading { 
+		display: block;
+	}
+	#frame { 
+		opacity: 0;
+		pointer-events: none;
+	}
 }
-
 [data-progress="dialog-intro"] {
+	#loading {
+		display: block;
+		@include animation(fadeAway 2s $floor-easing forwards);
+	}
 	#frame { 
 		opacity: .5;
 		pointer-events: none;
+		@include animation(fadeIn 2s $floor-easing forwards);
+	}
+	#ui {
+		@include animation(fadeIn 2s $floor-easing forwards);
 	}
 	#dialog-intro {display:block}
 	.warp { opacity: 0;}
@@ -82,7 +95,6 @@ $ui-sprite-height: sprite_height($ui-sprites);
 	background-color: #000;
 	width: 100%; height: 100%;
 	position: absolute; left: 0; top: 0;
-	z-index: 50;
 	.card {
 		@include set-dimensions(1500px, 1000px, $max-width);
 		@include background-size(100% auto);
@@ -94,6 +106,7 @@ $ui-sprite-height: sprite_height($ui-sprites);
 }
 
 #loading {
+	z-index: -1;
 	.card {@include background-image(image-url("loading.jpg"));}
 	.loader {
 		@include ui-sprite(loader);
@@ -131,6 +144,7 @@ $ui-sprite-height: sprite_height($ui-sprites);
 }
 
 #success {
+	z-index: 50;
 	.card { @include background-image(image-url("outro.jpg")); }
 	a {
 		@extend %ir;
