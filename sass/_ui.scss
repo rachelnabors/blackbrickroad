@@ -27,6 +27,10 @@ $ui-sprite-width: sprite_width($ui-sprites);
 }
 
 /* States */
+[data-progress="loading"] {
+	#loading { display: block}
+}
+
 [data-progress="dialog-intro"] {
 	#frame { 
 		opacity: .5;
@@ -57,7 +61,6 @@ $ui-sprite-width: sprite_width($ui-sprites);
 [data-progress="completed"] {
 	#frame { opacity: .5;}
 	// This is how you do a CROSS FADE, yeaaauh!
-	#loading,
 	#ui,
 	#frame {
 		@include animation(fadeAway 2s $floor-easing forwards);
@@ -73,28 +76,31 @@ $ui-sprite-width: sprite_width($ui-sprites);
   100% { opacity: 0; }
 }
 
-#intro, #success {
+#loading, #success {
 	display:none;
 	background-color: #000;
 	@include set-dimensions(1500px, 1000px, $max-width, true);
 	@include background-size(100% auto);
+	@include box-sizing(border-box);
 	background-position: center 100%;
 	background-repeat: no-repeat;
+	height: 100%;
 	max-width: $max-width;
-	position: absolute; left: 0;
+	position: absolute; left: 0; bottom: 0;
 	z-index: 50;
+}
+
+#loading {
+	@include background-image(image-url("loading.jpg"));
 }
 
 #success {
 	@include background-image(image-url("outro.jpg"));
-	bottom: 0;
 	a {
 		@extend %ir;
 		@include set-dimensions(516px, 212px, $max-width);		
 		@include set-position(478px, 236px, $max-width, $frame-height);
 	}
-	height: 100%;
-	@include box-sizing(border-box);
 }
 
 .instructions, .instructions-photos {
