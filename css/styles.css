@@ -542,7 +542,7 @@
   }
   /* line 47, ../sass/_ui.scss */
   #loading .card {
-    background-image: url('../img/loading.jpg?1389398595');
+    background-image: url('../img/loading.jpg?1389508291');
   }
   /* line 48, ../sass/_ui.scss */
   #loading .loader {
@@ -657,7 +657,7 @@
   }
   /* line 85, ../sass/_ui.scss */
   #success .card {
-    background-image: url('../img/outro.jpg?1389388389');
+    background-image: url('../img/outro.jpg?1389508291');
   }
   /* line 86, ../sass/_ui.scss */
   #success a {
@@ -1180,6 +1180,7 @@
     background: #4b0e0f;
     color: #c1a38b;
     max-width: 50em;
+    margin-bottom: 4em;
     padding: 1em 2em 2em 1em;
     position: fixed;
     top: 0;
@@ -1196,7 +1197,7 @@
     width: 80%;
     z-index: 51;
   }
-  /* line 20, ../sass/_credits.scss */
+  /* line 21, ../sass/_credits.scss */
   .show-credits #credits {
     position: absolute;
     -webkit-transform: translate(-50%, 0);
@@ -1209,53 +1210,53 @@
     -o-transition: -o-transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
-  /* line 25, ../sass/_credits.scss */
+  /* line 26, ../sass/_credits.scss */
   #credits p {
     font-family: "Georgia", sans-serif;
   }
 
-  /* line 30, ../sass/_credits.scss */
+  /* line 31, ../sass/_credits.scss */
   .spiel {
     margin-top: 2em;
     line-height: 1.5em;
   }
-  /* line 33, ../sass/_credits.scss */
+  /* line 34, ../sass/_credits.scss */
   .spiel p:first-child a:first-child {
     font-family: "mawns_handwriting_regular", cursive;
     line-height: 1.5em;
     font-size: 1.8em;
   }
-  /* line 38, ../sass/_credits.scss */
+  /* line 39, ../sass/_credits.scss */
   .spiel em {
     color: #af6f65;
   }
-  /* line 42, ../sass/_credits.scss */
+  /* line 43, ../sass/_credits.scss */
   .spiel a:link, .spiel a:visited {
     color: #da7436;
   }
-  /* line 45, ../sass/_credits.scss */
+  /* line 46, ../sass/_credits.scss */
   .spiel a:hover, .spiel a:active, .spiel a:focus {
     color: #af6f65;
   }
 
-  /* line 52, ../sass/_credits.scss */
+  /* line 53, ../sass/_credits.scss */
   .plz-donate h2 {
     color: #a12104;
     margin: 1.5em 0 0;
     padding: 0;
   }
-  /* line 56, ../sass/_credits.scss */
+  /* line 57, ../sass/_credits.scss */
   .plz-donate h2 + p {
     margin-top: 0;
     padding-top: 0;
   }
-  /* line 61, ../sass/_credits.scss */
+  /* line 62, ../sass/_credits.scss */
   .plz-donate form {
     margin-top: 1em;
     text-align: center;
   }
 
-  /* line 67, ../sass/_credits.scss */
+  /* line 68, ../sass/_credits.scss */
   .logo {
     background-position: 0 0;
     width: 130px;
@@ -1263,65 +1264,65 @@
     margin: 0 auto 1.5em;
   }
 
-  /* line 74, ../sass/_credits.scss */
+  /* line 75, ../sass/_credits.scss */
   .sidebar {
     float: left;
     margin-right: 2em;
     width: 28%;
     min-width: 130px;
   }
-  /* line 80, ../sass/_credits.scss */
+  /* line 81, ../sass/_credits.scss */
   .sidebar a:link, .sidebar a:visited {
     color: #da7436;
   }
-  /* line 83, ../sass/_credits.scss */
+  /* line 84, ../sass/_credits.scss */
   .sidebar a:hover, .sidebar a:active, .sidebar a:focus {
     color: #af6f65;
   }
 
-  /* line 89, ../sass/_credits.scss */
+  /* line 90, ../sass/_credits.scss */
   .creator {
     text-align: center;
     line-height: 1.2em;
     margin-bottom: 1.5em;
   }
-  /* line 93, ../sass/_credits.scss */
+  /* line 94, ../sass/_credits.scss */
   .creator:last-child {
     margin: 0;
   }
-  /* line 94, ../sass/_credits.scss */
+  /* line 95, ../sass/_credits.scss */
   .creator a {
     display: block;
   }
-  /* line 95, ../sass/_credits.scss */
+  /* line 96, ../sass/_credits.scss */
   .creator a:link, .creator a:visited, .creator a:hover, .creator a:active, .creator a:focus {
     text-decoration: none;
   }
-  /* line 99, ../sass/_credits.scss */
+  /* line 100, ../sass/_credits.scss */
   .creator .job {
     display: block;
     font-size: .8em;
     font-family: "Georgia", sans-serif;
     font-style: italic;
   }
-  /* line 105, ../sass/_credits.scss */
+  /* line 106, ../sass/_credits.scss */
   .creator .pic {
     margin: 0 auto .5em;
     width: 76px;
     height: 76px;
   }
 
-  /* line 112, ../sass/_credits.scss */
+  /* line 113, ../sass/_credits.scss */
   .xamag .pic {
     background-position: 0 100%;
   }
 
-  /* line 116, ../sass/_credits.scss */
+  /* line 117, ../sass/_credits.scss */
   .rachel .pic {
     background-position: 0 70.14925%;
   }
 
-  /* line 120, ../sass/_credits.scss */
+  /* line 121, ../sass/_credits.scss */
   #to-credits {
     background: #4b0e0f;
     cursor: pointer;
@@ -1341,39 +1342,39 @@
     text-align: center;
     width: 8em;
   }
-  /* line 131, ../sass/_credits.scss */
+  /* line 132, ../sass/_credits.scss */
   #to-credits a:link, #to-credits a:visited, #to-credits a:hover, #to-credits a:active, #to-credits a:focus {
     color: #af6f65;
     text-decoration: none;
   }
 
-  /* line 138, ../sass/_credits.scss */
+  /* line 139, ../sass/_credits.scss */
   .sauce {
     line-height: 2em;
     font-size: 1em;
     font-family: "Georgia", sans-serif;
     text-align: center;
   }
-  /* line 143, ../sass/_credits.scss */
+  /* line 144, ../sass/_credits.scss */
   .sauce a {
     border-top: 1px dotted #af6f65;
     display: inline-block;
     margin: 1em auto 0;
   }
-  /* line 147, ../sass/_credits.scss */
+  /* line 148, ../sass/_credits.scss */
   .sauce a:link, .sauce a:visited {
     color: #af6f65;
     text-decoration: none;
   }
-  /* line 151, ../sass/_credits.scss */
+  /* line 152, ../sass/_credits.scss */
   .sauce a:hover, .sauce a:active, .sauce a:focus {
     color: #da7436;
   }
-  /* line 153, ../sass/_credits.scss */
+  /* line 154, ../sass/_credits.scss */
   .sauce a:hover svg, .sauce a:active svg, .sauce a:focus svg {
     fill: #da7436;
   }
-  /* line 156, ../sass/_credits.scss */
+  /* line 157, ../sass/_credits.scss */
   .sauce svg {
     -webkit-transform: translate(0, 50%);
     -moz-transform: translate(0, 50%);
@@ -1387,26 +1388,26 @@
     height: 2em;
   }
 
-  /* line 165, ../sass/_credits.scss */
+  /* line 166, ../sass/_credits.scss */
   .credit-control {
     padding: .25em .5em;
   }
 
-  /* line 169, ../sass/_credits.scss */
+  /* line 170, ../sass/_credits.scss */
   #close-credits {
     display: none;
   }
 
-  /* line 170, ../sass/_credits.scss */
+  /* line 171, ../sass/_credits.scss */
   #open-credits {
     display: block;
   }
 
-  /* line 173, ../sass/_credits.scss */
+  /* line 174, ../sass/_credits.scss */
   .show-credits #close-credits {
     display: block;
   }
-  /* line 174, ../sass/_credits.scss */
+  /* line 175, ../sass/_credits.scss */
   .show-credits #open-credits {
     display: none;
   }
@@ -2315,7 +2316,7 @@
 
   /* line 1, ../sass/_upstairs.scss */
   .floor_upstairs {
-    background-image: url('../img/bg_upstairs.jpg?1388547635');
+    background-image: url('../img/bg_upstairs.jpg?1389508290');
     background-repeat: no-repeat;
   }
 
@@ -3037,7 +3038,7 @@
 
   /* line 1, ../sass/_downstairs.scss */
   .floor_downstairs {
-    background-image: url('../img/bg_downstairs.jpg?1389039208');
+    background-image: url('../img/bg_downstairs.jpg?1389508290');
   }
 
   /* Items */
