@@ -43,6 +43,7 @@ $ui-sprite-height: sprite_height($ui-sprites);
 }
 
 #loading {
+	@include transition(opacity 2s $floor-easing);
 	z-index: -1;
 	.card {@include background-image(image-url("loading.jpg"));}
 	.loader {

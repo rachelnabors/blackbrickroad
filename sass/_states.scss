@@ -15,7 +15,7 @@
 [data-progress="dialog-intro"] {
 	#loading {
 		display: block;
-		@include animation(fadeAway 2s $floor-easing forwards);
+		opacity: 0;
 	}
 	#frame { 
 		opacity: .5;
