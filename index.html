@@ -3,20 +3,105 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
+        <title>The Black Brick Road of O.Z. HTML5 Story Game</title>
+        <meta name="description" content="The Black Brick Road of Oz: a Wizard of OZ story game in HTML5, a collaboration between cartoonists and web developer.">
         <meta name="viewport" content="width=device-width">
         
         <link rel="stylesheet" href="css/styles.css">
 
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+        <script type="text/javascript">
+            // analytics
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-3631048-6']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+        </script>
+
+        <meta property="og:title" content="The Black Brick Road of Oz: a Wizard of OZ story game in HTML5" />
+        <meta property="og:image" content="http://rachelnabors.com/blackbrickroad/i_bbr.png" />
+        <meta property="og:url" content="http://share.rachelnabors.com/bbr" />
+        <meta property="og:description" content="The Black Brick Road of O.Z. is an ongoing interactive story/comic based on the Wizard of Oz. This installment is an HTML5 collaboration between the artist Xamag and web developer Rachel Nabors." />
+
+        <link rel="author" href="https://plus.google.com/+RachelNabors/posts"/>
+        <!-- Schema.org markup for Google+ -->
+        <meta itemprop="name" content="The Black Brick Road of Oz: a Wizard of OZ story game in HTML5" />
+        <meta itemprop="description" content="The Black Brick Road of O.Z. is an ongoing interactive story/comic based on the Wizard of Oz. This installment is an HTML5 collaboration between the artist Xamag and web developer Rachel Nabors." />
+        <meta itemprop="image" content="http://rachelnabors.com/blackbrickroad/i_bbr.png" />
+
+        <!-- Twitter Card data -->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@rachelnabors" />
+        <meta name="twitter:title" content="The Black Brick Road of O.Z. HTML5 story/game" />
+        <meta name="twitter:description" content="An interactive take on the Wizard of Oz in HTML5 with @RachelNabors" />
+        <meta name="twitter:image:src" content="http://rachelnabors.com/blackbrickroad/i_bbr.png" />
+
     </head>
     <body data-currentFloor="default" data-progress="loading">
-        <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
+        <div id="credits">
+            <div class="sidebar">
+                <h1 class="logo"><a href="http://thebbrofoz.webcomic.ws/" target="blank">
+                The Black Brick Road of O.Z. #47</a></h1>
 
-        <!--Black Brick Road, Page 47-->
+                <div class="creator xamag">
+                    <a href="http://xamag.deviantart.com/" target="blank">
+                        <div class="pic"></div>
+                        Xamag <span class="job">story &amp; art</span>
+                    </a>
+                </div>
+                <div class="creator rachel">
+                    <a href="http://rachelnabors.com/" target="blank">
+                        <div class="pic"></div>
+                        Rachel <del>the Great</del> <span class="job">code</span>
+                    </a>
+                </div>
+            </div>
+            <div class="spiel">
+                <p><a href="http://thebbrofoz.webcomic.ws/" target="blank">The Black Brick Road of O.Z.</a> is an ongoing interactive story/comic based on the Wizard of Oz. Art, story, and concept by the young Russian creator <a href="http://xamag.deviantart.com/" target="blank">Xamag</a>, brought to life with HTML5, CSS3 animations, and JavaScript by American cartoonist-turned-coder <a href="http://rachelnabors.com/" target="blank">Rachel Nabors</a>.</p>
+                <p><em>Psst&mdash;go <a href="http://thebbrofoz.webcomic.ws/comics/1" target="blank">read the whole series</a> and check out <a href="http://codepen.io/rachelnabors/full/lqswg">this other page we did together</a>.</em></p>
+                <div class="sauce">
+                    <a href="https://github.com/rachelnabors/blackbrickroad">
+                        source code
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         width="34px" height="34px" viewBox="0 0 34 34" enable-background="new 0 0 34 34" xml:space="preserve">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.61,0.33c-9.11,0-16.5,7.34-16.5,16.41
+                        c0,7.25,4.73,13.4,11.28,15.57c0.83,0.15,1.13-0.36,1.13-0.79c0-0.39-0.01-1.42-0.02-2.79c-4.59,0.99-5.56-2.2-5.56-2.2
+                        c-0.75-1.9-1.83-2.4-1.83-2.4c-1.5-1.02,0.11-1,0.11-1c1.66,0.12,2.53,1.69,2.53,1.69c1.47,2.51,3.86,1.78,4.8,1.36
+                        c0.15-1.06,0.58-1.78,1.05-2.19c-3.66-0.41-7.52-1.82-7.52-8.11c0-1.79,0.64-3.26,1.7-4.4c-0.17-0.42-0.74-2.08,0.16-4.34
+                        c0,0,1.39-0.44,4.54,1.68c1.32-0.36,2.73-0.55,4.13-0.55c1.4,0.01,2.81,0.19,4.13,0.55c3.15-2.12,4.53-1.68,4.53-1.68
+                        c0.9,2.26,0.33,3.93,0.16,4.34c1.06,1.15,1.7,2.61,1.7,4.4c0,6.3-3.86,7.69-7.53,8.1c0.59,0.51,1.12,1.51,1.12,3.04
+                        c0,2.19-0.02,3.96-0.02,4.5c0,0.44,0.3,0.95,1.13,0.79c6.55-2.17,11.27-8.32,11.27-15.56C33.11,7.67,25.72,0.33,16.61,0.33z"/>
+                    </svg>
+                    is on github</a>
+                </div>                
+
+                <div class="plz-donate">
+                    <h2>Wanna help?</h2>
+                    <p>We're collecting tips to help bring the series to Kindle Fire. Tips are split between us both and help pay for expenses!</p>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="hosted_button_id" value="GT59EZ92HG7B6">
+                        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                    </form>
+                </div>
+                
+            </div>            
+            <div id="to-credits">
+                <a class="credit-control" href="#credits" id="open-credits">What's this?</a>
+                <div class="credit-control" id="close-credits">kthxbai!</div>
+            </div>
+        </div>
+
+
         <div id="ui">
             <div class="instructions">
                 <h1>Instructions:</h1>
@@ -115,20 +200,6 @@
                 <div class="floor floor_downstairs"></div>
             </div>
         </div>
-            <!-- 
-            <div class="credits">
-                <a href="http://xamag.deviantart.com/" class="xamag" target="blank">
-                    art, idea &amp; story by Xamag
-                </a>
-
-                <a class="logo" href="http://xamag.deviantart.com/gallery/41762760" target="blank">
-                    The Black Brick Road of O.Z. #11 (read the rest)
-                </a>
-
-                <a href="http://rachelnabors.com/" class="rtg" target="blank">
-                    CSS, HTML &amp; JavaScript by Rachel <del>the Great</del> Nabors
-                </a>
-            </div> -->
         <div id="loading">
             <div class="card">
                 <div class="loader"></div>

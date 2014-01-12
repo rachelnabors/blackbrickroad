@@ -17,15 +17,15 @@
 	// General styles for background + shared styles for universal elements. 
 	@import "foundation";
 
-	// Common Interaction Classes that get reused
-	@import "interactions";
+	// States of the game
+	@import "states";
 
 	// Game's Interface
 	@import "frame";
 	@import "ui";
 	@import "credits";
 
-	// the rooms
+	// the rooms and their items
 	@import "items";
 	@import "photos";
 	@import "letters";

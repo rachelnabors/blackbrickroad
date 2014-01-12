@@ -1,0 +1,62 @@
+@include keyframes(fadeAway) {
+  100% { opacity: 0; }
+}
+
+/* States */
+[data-progress="loading"] {
+	#loading { 
+		display: block;
+	}
+	#frame { 
+		opacity: 0;
+		pointer-events: none;
+	}
+}
+[data-progress="dialog-intro"] {
+	#loading {
+		display: block;
+		@include animation(fadeAway 2s $floor-easing forwards);
+	}
+	#frame { 
+		opacity: .5;
+		@include animation(fadeIn 2s $floor-easing forwards);
+		pointer-events: none;
+	}
+	#ui {
+		@include animation(fadeIn 2s $floor-easing forwards);
+	}
+	#dialog-intro {display:block}
+	.warp { opacity: 0;}
+}
+
+[data-progress="cleaning-house"] {
+	.instructions {opacity: 1}
+	.to-do { display: block}
+}
+
+[data-progress="dialog-outro"] {
+	#frame { 
+		opacity: .5;
+		pointer-events: none;
+	}
+	#dialog-outro {display:block}
+	.warp { opacity: 0;}
+}
+
+[data-progress="find-photos"] {
+	.instructions-photos {opacity: 1}
+}
+
+[data-progress="completed"] {
+	#frame { opacity: .5;}
+	// This is how you do a CROSS FADE, yeaaauh!
+	#ui,
+	#frame {
+		@include animation(fadeAway 2s $floor-easing forwards);
+	}
+	.warp { display: none;}
+	#success {
+		@include animation(fadeIn 2s $floor-easing forwards);
+		display:block;
+	}
+}

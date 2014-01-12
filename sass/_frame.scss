@@ -6,6 +6,7 @@ body {
 #frame {
   width: 100%;
   max-width: $house-width;
+  min-width: 700px;
   overflow: hidden;
   padding-left: $instructions-width-ems + 4em;
   position: fixed;
@@ -17,8 +18,6 @@ body {
 }
 
 /* House */
-$floor-easing: cubic-bezier(0.77, 0, 0.175, 1);
-
 #house {
   position: absolute;
   top: 0; left: $instructions-width-ems;

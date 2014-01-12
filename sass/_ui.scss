@@ -10,7 +10,6 @@ $ui-sprite-height: sprite_height($ui-sprites);
 #ui {
 	float: left;
 	width: $instructions-width-ems; 
-	font-family: $writing;
 	position: relative;
 	.wrapper {
 		color: #fff;
@@ -27,74 +26,12 @@ $ui-sprite-height: sprite_height($ui-sprites);
 	}
 }
 
-/* States */
-[data-progress="loading"] {
-	#loading { 
-		display: block;
-	}
-	#frame { 
-		opacity: 0;
-		pointer-events: none;
-	}
-}
-[data-progress="dialog-intro"] {
-	#loading {
-		display: block;
-		@include animation(fadeAway 2s $floor-easing forwards);
-	}
-	#frame { 
-		opacity: .5;
-		@include animation(fadeIn 2s $floor-easing forwards);
-		pointer-events: none;
-	}
-	#ui {
-		@include animation(fadeIn 2s $floor-easing forwards);
-	}
-	#dialog-intro {display:block}
-	.warp { opacity: 0;}
-}
-
-[data-progress="cleaning-house"] {
-	.instructions {opacity: 1}
-	.to-do { display: block}
-}
-
-[data-progress="dialog-outro"] {
-	#frame { 
-		opacity: .5;
-		pointer-events: none;
-	}
-	#dialog-outro {display:block}
-	.warp { opacity: 0;}
-}
-
-[data-progress="find-photos"] {
-	.instructions-photos {opacity: 1}
-}
-
-[data-progress="completed"] {
-	#frame { opacity: .5;}
-	// This is how you do a CROSS FADE, yeaaauh!
-	#ui,
-	#frame {
-		@include animation(fadeAway 2s $floor-easing forwards);
-	}
-	.warp { display: none;}
-	#success {
-		@include animation(fadeIn 2s $floor-easing forwards);
-		display:block;
-	}
-}
-
-@include keyframes(fadeAway) {
-  100% { opacity: 0; }
-}
-
 #loading, #success {
 	display:none;
 	background-color: #000;
 	width: 100%; height: 100%;
-	position: absolute; left: 0; top: 0;
+	position: absolute; left: 50%; top: 0;
+	@include translate(-50%, 0);
 	.card {
 		@include set-dimensions(1500px, 1000px, $max-width);
 		@include background-size(100% auto);
@@ -111,7 +48,6 @@ $ui-sprite-height: sprite_height($ui-sprites);
 	.loader {
 		@include ui-sprite(loader);
 		@include set-dimensions(108px, 15px, $max-width);
-		@include set-bg-width($ui-sprite-width, $ui-sprite, loader);
 		@include set-position(692px, 916px, $max-width, $frame-height);
 		position: absolute;
 		@include animation(loading-dots 3s steps(3) forwards infinite);
@@ -151,6 +87,7 @@ $ui-sprite-height: sprite_height($ui-sprites);
 		@extend %ir;
 		@include set-dimensions(516px, 212px, $max-width);		
 		@include set-position(478px, 236px, $max-width, $frame-height);
+		position: absolute;
 	}
 }
 

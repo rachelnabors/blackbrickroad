@@ -1,3 +1,4 @@
+//Measurements
 $max-width: 1500px;
 $house-width: 1214px;
 $frame-height: 1000px;
@@ -8,8 +9,23 @@ $instructions-height: 633px;
 $instructions-width-ems: ($instructions-width/16px)*1em;
 $instructions-height-ems: ($instructions-height/16px)*1em;
 
-$writing: 'mawns_handwriting_regular', cursive;
+//Easing
+$floor-easing: cubic-bezier(0.77, 0, 0.175, 1);
 
+//Colors
+$red: #4b0e0f;
+$beige: #c1a38b;
+$pink: #af6f65;
+$gold: #da7436;
+$bright-red: #a12104;
+
+$credits-bg: $red;
+$credits-color: $beige;
+$credits-highlight: $gold;
+$credits-demph: $pink;
+$credits-subtle: $bright-red;
+
+//Fonts
 @font-face {
     font-family: 'mawns_handwriting_regular';
     src: url('../fonts/mawns_handwriting-webfont.eot');
@@ -20,3 +36,6 @@ $writing: 'mawns_handwriting_regular', cursive;
     font-weight: normal;
     font-style: normal;
 }
+
+$writing: 'mawns_handwriting_regular', cursive;
+$font-regular: 'Georgia', sans-serif;

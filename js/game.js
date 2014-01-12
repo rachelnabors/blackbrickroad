@@ -37,9 +37,11 @@
 
 (function() {
 
+  var body = document.body;
+
   // State changing function because I use it so much.
   function changeProgress(newState) {
-    document.body.setAttribute('data-progress', newState);
+    body.setAttribute('data-progress', newState);
   }
 
   function calcAspectRatio() {
@@ -153,7 +155,7 @@ window.addEventListener('load', function(){
       turnMusicOn();
     }
   }, false);
-  document.body.appendChild(audioControl);
+  body.appendChild(audioControl);
 
 }, false);
 
@@ -305,7 +307,7 @@ document.addEventListener('DOMContentLoaded', function(){
   [].forEach.call(warps, function(warp) {
     warp.addEventListener("click", function(){
       var destination = warp.getAttribute('data-setFloor');
-      document.body.setAttribute('data-currentFloor', destination);
+      body.setAttribute('data-currentFloor', destination);
     });
   });
 
@@ -464,6 +466,20 @@ document.addEventListener('DOMContentLoaded', function(){
   });
   // Insert mini scraps into messies.
   messies.appendChild(hiddenPhotos);
+
+  // About this
+  // There has to be some form of credit for the creators!
+  // Needs to toggle and get out of the way but also
+  // link to our sites, the archives, github and provide a tip jar
+
+  var toCredits = document.getElementById("open-credits");
+  var closeCredits = document.getElementById("close-credits");
+  toCredits.addEventListener('click', function() {
+    body.classList.add('show-credits');
+  });
+  closeCredits.addEventListener('click', function() {
+    body.classList.remove('show-credits');
+  });
 
 }, false);
 

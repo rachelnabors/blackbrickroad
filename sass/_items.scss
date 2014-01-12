@@ -48,6 +48,9 @@ $places-sprite-width: sprite_width($places-sprites);
   }
 }
 
+/* Drag and Drop mechanic specific */
+.draggable { cursor: move; }
+
 .places .droppable { // the destination needs to sit on top of all over divs 
   z-index: 50 !important;
 }

@@ -1,29 +1,175 @@
-/* Thank you for reading :) */
-.credits {
-  @extend %ir;
-  background: url("http://stash.rachelnabors.com/oz/sprite_frame.png");
-  margin: 0 auto;
-  position: relative;
-  width: 650px; height: 214px;
+$credits-use-percentages: true;
+$credits-spacing: 4px;
+@import "credits/*.png";
+$credits-sprite-width: sprite_width($credits-sprites);
+
+#credits {
+  @include box-sizing(border-box);
+  @extend %clearfix;
+  background: $credits-bg;
+  color: $credits-color;
+  max-width: 50em;
+  padding: 1em 2em 2em 1em;
+  position: fixed; 
+  top: 0; left: 50%;
+  @include translate(-50%,-100%);
+  // using http://easings.net/#easeInBack because there should be a pre-action
+  @include transition(transform 1.2s cubic-bezier(0.6, -0.28, 0.735, 0.045));
+  width: 80%;
+  z-index: 51;
+  .show-credits & { 
+    position: absolute;
+    @include translate(-50%,0);
+    @include transition(transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275));
+  }
+  p {
+    font-family: $font-regular;
+  }
 }
 
-.xamag {
-  @extend %ir;
-  background: url("http://stash.rachelnabors.com/oz/sprite_frame.png?2");
-  position: absolute; left: 0; top: 0;
-  width: 217px; height: 155px;
+.spiel {
+  margin-top: 2em;
+  line-height: 1.5em;
+  p:first-child a:first-child {
+    font-family: $writing;
+    line-height: 1.5em;
+    font-size: 1.8em;
+  }
+  em {
+    color: $credits-demph;
+  }
+  a{
+    &:link, &:visited {
+      color: $credits-highlight;
+    }
+    &:hover, &:active, &:focus {
+      color: $credits-demph;
+    }
+  }
+}
+
+.plz-donate {
+  h2 {
+    color: $credits-subtle;
+    margin: 1.5em 0 0;  
+    padding: 0;
+    &+p{
+      margin-top:0;
+      padding-top: 0;
+    }
+  }
+  form {
+    margin-top: 1em;
+    text-align: center;
+  }
 }
 
 .logo {
   @extend %ir;
-  background: url("http://stash.rachelnabors.com/oz/sprite_frame.png?2") -244px 0;
-  position: absolute; left: 244px; top: 0;
-  width: 168px; height: 214px;
+  @include credits-sprite(bbr-logo); 
+  width: 130px; height: 184px;
+  margin: 0 auto 1.5em;
 }
 
-.rtg {
-  @extend %ir;
-  background: url("http://stash.rachelnabors.com/oz/sprite_frame.png?2") -412px 0;
-  position: absolute; left: 412px; top: 0;
-  width: 238px; height: 179px;
+.sidebar {
+  float: left;
+  margin-right: 2em;
+  width: 28%;
+  min-width: 130px;
+ a{
+    &:link, &:visited {
+      color: $credits-highlight;
+    }
+    &:hover, &:active, &:focus {
+      color: $credits-demph;
+    }
+  }
+}
+
+.creator {
+  text-align: center;
+  line-height: 1.2em;
+  margin-bottom: 1.5em;
+  &:last-child { margin: 0;}
+  a { display: block;
+    &:link, &:visited, &:hover, &:active, &:focus {
+      text-decoration: none;
+    }
+  }
+  .job {
+    display: block;
+    font-size: .8em;
+    font-family: $font-regular;
+    font-style: italic;
+  }
+  .pic {
+    margin: 0 auto .5em;
+    width: 76px; height: 76px;
+    @extend %ir;
+  }
+}
+
+.xamag .pic {
+  @include credits-sprite(i_xamag); 
+}
+
+.rachel .pic {
+  @include credits-sprite(i_rachel); 
+}
+
+#to-credits {
+  background: $credits-bg;
+  cursor: pointer;
+  @include border-radius(0 0 .25em .25em);
+  font-size: .8em;
+  margin: 0 auto;
+  position: absolute; bottom: 0; left: 50%;
+  @include translate(-50%, 100%);
+  text-align: center;
+  width: 8em;
+  a {
+    &:link, &:visited, &:hover, &:active, &:focus {
+      color: $credits-demph;
+      text-decoration: none;
+    }
+  }
+}
+
+.sauce {
+  line-height: 2em;
+  font-size: 1em;
+  font-family: $font-regular;
+  text-align: center;
+  a{
+    border-top: 1px dotted $credits-demph;
+    display: inline-block;
+    margin: 1em auto 0;
+    &:link, &:visited { 
+      color: $credits-demph;
+      text-decoration: none;
+    }
+    &:hover, &:active, &:focus {
+      color: $credits-highlight;
+      svg {fill: $credits-highlight}
+    }
+  } 
+  svg { 
+    @include translate(0, 50%);
+    fill: $credits-demph;
+    display: inline-block;
+    margin: 0 .5em;
+    width: 2em; height: 2em;
+  }
+}
+
+.credit-control{
+  padding: .25em .5em;
+}
+
+#close-credits { display: none;}
+#open-credits { display: block;}
+
+.show-credits {
+  #close-credits { display: block;}
+  #open-credits { display: none;}
 }
