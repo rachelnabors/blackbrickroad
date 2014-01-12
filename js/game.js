@@ -40,8 +40,9 @@
   var body = document.body;
 
   // State changing function because I use it so much.
-  function changeProgress(newState) {
+  function changeProgress(newState, tangential) {
     body.setAttribute('data-progress', newState);
+    _gaq.push(['_trackEvent', 'Progress', newState]);      
   }
 
   function calcAspectRatio() {
@@ -476,9 +477,11 @@ document.addEventListener('DOMContentLoaded', function(){
   var closeCredits = document.getElementById("close-credits");
   toCredits.addEventListener('click', function() {
     body.classList.add('show-credits');
+    _gaq.push(['_trackEvent', 'Progress', 'showCredits']);
   });
   closeCredits.addEventListener('click', function() {
     body.classList.remove('show-credits');
+    _gaq.push(['_trackEvent', 'Progress', 'closeCredits']);
   });
 
 }, false);
