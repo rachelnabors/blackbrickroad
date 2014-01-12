@@ -99,65 +99,65 @@
   window.addEventListener('resize:end', calcAspectRatio, false);
 
 /* Audio */
-window.addEventListener('load', function(){
-  var audio = document.createElement("audio");
-  var musicOn = false;
-  var musicLoaded = false;
-  var canPlayMP3 = (typeof audio.canPlayType === "function" &&
-                audio.canPlayType("audio/mpeg") !== "");
+// window.addEventListener('load', function(){
+//   var audio = document.createElement("audio");
+//   var musicOn = false;
+//   var musicLoaded = false;
+//   var canPlayMP3 = (typeof audio.canPlayType === "function" &&
+//                 audio.canPlayType("audio/mpeg") !== "");
 
-  // Building the audio source object
-  if (canPlayMP3===true) {
-    audio.src = "audio/loop.mp3";
-  } else {
-    audio.src = "audio/loop.ogg";
-  }
-  audio.loop = true;
-  audio.addEventListener('canplaythrough', function () {
-    //set timer on loadscreen
-    setTimeout(function() {
-      changeProgress('dialog-intro');
-      musicLoaded = true;
-      if (musicOn) {
-        turnMusicOn();
-      }
-    }, 5000);
-  }, false);
+//   // Building the audio source object
+//   if (canPlayMP3===true) {
+//     audio.src = "audio/loop.mp3";
+//   } else {
+//     audio.src = "audio/loop.ogg";
+//   }
+//   audio.loop = true;
+//   audio.addEventListener('canplaythrough', function () {
+//     //set timer on loadscreen
+//     setTimeout(function() {
+//       changeProgress('dialog-intro');
+//       musicLoaded = true;
+//       if (musicOn) {
+//         turnMusicOn();
+//       }
+//     }, 5000);
+//   }, false);
 
-  // Building the visual audio switch
-  var audioControl = document.createElement("div");
-  audioControl.classList.add("off");
-  audioControl.setAttribute("id", "music-controls");
-  // clicking on the controls toggles the music on and off
-  function turnMusicOff() {
-    musicOn = false;
-    audioControl.classList.remove('on');
-    audioControl.classList.add('off');    
-    if (musicLoaded) {
-      audio.pause();
-    }
-  }
+//   // Building the visual audio switch
+//   var audioControl = document.createElement("div");
+//   audioControl.classList.add("off");
+//   audioControl.setAttribute("id", "music-controls");
+//   // clicking on the controls toggles the music on and off
+//   function turnMusicOff() {
+//     musicOn = false;
+//     audioControl.classList.remove('on');
+//     audioControl.classList.add('off');    
+//     if (musicLoaded) {
+//       audio.pause();
+//     }
+//   }
 
-  function turnMusicOn() {
-    musicOn = true;
-    audioControl.classList.remove('off');
-    audioControl.classList.add('on'); 
-    if (musicLoaded) {
-      audio.play();
-    }
-  }
+//   function turnMusicOn() {
+//     musicOn = true;
+//     audioControl.classList.remove('off');
+//     audioControl.classList.add('on'); 
+//     if (musicLoaded) {
+//       audio.play();
+//     }
+//   }
 
-  audioControl.addEventListener("click", function(){
-    // The musicOn variable lets people toggle the music before it's loaded
-    if (musicOn) {
-      turnMusicOff();
-    } else {
-      turnMusicOn();
-    }
-  }, false);
-  body.appendChild(audioControl);
+//   audioControl.addEventListener("click", function(){
+//     // The musicOn variable lets people toggle the music before it's loaded
+//     if (musicOn) {
+//       turnMusicOff();
+//     } else {
+//       turnMusicOn();
+//     }
+//   }, false);
+//   body.appendChild(audioControl);
 
-}, false);
+// }, false);
 
 document.addEventListener('DOMContentLoaded', function(){
 
