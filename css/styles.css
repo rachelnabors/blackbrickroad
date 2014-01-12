@@ -1329,7 +1329,6 @@
     -webkit-border-radius: 0;
     -moz-border-radius: 0 0 0.25em 0.25em;
     border-radius: 0 0 0.25em 0.25em;
-    font-size: .8em;
     margin: 0 auto;
     position: absolute;
     bottom: 0;
@@ -1342,39 +1341,39 @@
     text-align: center;
     width: 8em;
   }
-  /* line 132, ../sass/_credits.scss */
+  /* line 131, ../sass/_credits.scss */
   #to-credits a:link, #to-credits a:visited, #to-credits a:hover, #to-credits a:active, #to-credits a:focus {
     color: #af6f65;
     text-decoration: none;
   }
 
-  /* line 139, ../sass/_credits.scss */
+  /* line 138, ../sass/_credits.scss */
   .sauce {
     line-height: 2em;
     font-size: 1em;
     font-family: "Georgia", sans-serif;
     text-align: center;
   }
-  /* line 144, ../sass/_credits.scss */
+  /* line 143, ../sass/_credits.scss */
   .sauce a {
     border-top: 1px dotted #af6f65;
     display: inline-block;
     margin: 1em auto 0;
   }
-  /* line 148, ../sass/_credits.scss */
+  /* line 147, ../sass/_credits.scss */
   .sauce a:link, .sauce a:visited {
     color: #af6f65;
     text-decoration: none;
   }
-  /* line 152, ../sass/_credits.scss */
+  /* line 151, ../sass/_credits.scss */
   .sauce a:hover, .sauce a:active, .sauce a:focus {
     color: #da7436;
   }
-  /* line 154, ../sass/_credits.scss */
+  /* line 153, ../sass/_credits.scss */
   .sauce a:hover svg, .sauce a:active svg, .sauce a:focus svg {
     fill: #da7436;
   }
-  /* line 157, ../sass/_credits.scss */
+  /* line 156, ../sass/_credits.scss */
   .sauce svg {
     -webkit-transform: translate(0, 50%);
     -moz-transform: translate(0, 50%);
@@ -1388,26 +1387,26 @@
     height: 2em;
   }
 
-  /* line 166, ../sass/_credits.scss */
+  /* line 165, ../sass/_credits.scss */
   .credit-control {
     padding: .25em .5em;
   }
 
-  /* line 170, ../sass/_credits.scss */
+  /* line 169, ../sass/_credits.scss */
   #close-credits {
     display: none;
   }
 
-  /* line 171, ../sass/_credits.scss */
+  /* line 170, ../sass/_credits.scss */
   #open-credits {
     display: block;
   }
 
-  /* line 174, ../sass/_credits.scss */
+  /* line 173, ../sass/_credits.scss */
   .show-credits #close-credits {
     display: block;
   }
-  /* line 175, ../sass/_credits.scss */
+  /* line 174, ../sass/_credits.scss */
   .show-credits #open-credits {
     display: none;
   }
