@@ -1339,7 +1339,7 @@
     -o-transform: translate(-50%, 100%);
     transform: translate(-50%, 100%);
     text-align: center;
-    width: 8em;
+    width: 14em;
   }
   /* line 131, ../sass/_credits.scss */
   #to-credits a:link, #to-credits a:visited, #to-credits a:hover, #to-credits a:active, #to-credits a:focus {

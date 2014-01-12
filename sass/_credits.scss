@@ -126,7 +126,7 @@ $credits-sprite-width: sprite_width($credits-sprites);
   position: absolute; bottom: 0; left: 50%;
   @include translate(-50%, 100%);
   text-align: center;
-  width: 8em;
+  width: 14em;
   a {
     &:link, &:visited, &:hover, &:active, &:focus {
       color: $credits-demph;
