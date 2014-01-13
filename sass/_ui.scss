@@ -204,12 +204,17 @@ $dialog-sprite-spacing: 2px;
 @import "dialog/*.png";
 $dialog-sprite: $dialog-sprites;
 $dialog-sprite-width: sprite_width($dialog-sprites);
-.dialog { display: none;}
+.dialog { 
+	display: none;
+	position: relative;
+}
 
 .dialog-nav {
 	color :#fff;
 	text-align: center;
-	padding: .5em 0 2em;
+	position: absolute;
+	top: -1em; left: 0;
+	width: 100%;
 	@extend %clearfix;
 	.prev, .next { 
 		cursor: pointer; 
