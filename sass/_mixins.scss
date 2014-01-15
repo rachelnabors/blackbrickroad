@@ -137,6 +137,5 @@
 		@include dialog-sprite(#{$prefix}talk#{$number}); 
 		@include set-dimensions(image-width(sprite-file($dialog-sprites, #{$prefix}talk#{$number})), $instructions-height, $ui-width);
 		@include set-bg-width($dialog-sprite-width, $dialog-sprite, #{$prefix}talk#{$number});
-		@include offsetLeft(23px, $instructions-width);
 	}
 }

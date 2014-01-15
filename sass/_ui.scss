@@ -11,19 +11,7 @@ $ui-sprite-height: sprite_height($ui-sprites);
 	float: left;
 	width: $instructions-width-ems; 
 	position: relative;
-	.wrapper {
-		color: #fff;
-		overflow: auto;		
-		position: absolute;
-		line-height: 1.4em;
-	}
-	h1 {
-		color: #ebaa0e;
-		text-transform: uppercase;
-		font-size: 1.1em;
-		padding-top: .25em;
-		text-align: center;
-	}
+	z-index: 1;
 }
 
 #loading, #success {
@@ -140,14 +128,24 @@ $ui-sprite-height: sprite_height($ui-sprites);
 	@include set-dimensions(227px, $instructions-height, $ui-width);
 	@include set-bg-width($ui-sprite-width, $ui-sprite, bg_list);
 	@include offsetLeft(23px, $instructions-width);
-	// Ensure the scrollbar of the .to-do list is accessible to Windows users. - Kevin Lozandier 
-	z-index: 49;
 	.wrapper {
+		color: #fff;
+		position: absolute;
+		line-height: 1.4em;
 		@include set-position(34px, 24px, $instructions-width, $instructions-height);
-		@include set-width(154px, $instructions-width);
+		@include set-width(170px, $instructions-width);
 		height: 29em;
 	}
+	h1 {
+		color: #ebaa0e;
+		text-transform: uppercase;
+		font-size: 1.1em;
+		padding-top: .25em;
+		text-align: center;
+	}
 	ul {
+		height: 26em;
+		overflow: auto;
 		[data-currentFloor="downstairs"] & {
 			opacity: 0;
 			@include animation(fadeInDown 2s $floor-easing forwards);

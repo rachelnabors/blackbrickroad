@@ -484,24 +484,10 @@
     float: left;
     width: 14.1875em;
     position: relative;
-  }
-  /* line 14, ../sass/_ui.scss */
-  #ui .wrapper {
-    color: #fff;
-    overflow: auto;
-    position: absolute;
-    line-height: 1.4em;
-  }
-  /* line 20, ../sass/_ui.scss */
-  #ui h1 {
-    color: #ebaa0e;
-    text-transform: uppercase;
-    font-size: 1.1em;
-    padding-top: .25em;
-    text-align: center;
+    z-index: 1;
   }
 
-  /* line 29, ../sass/_ui.scss */
+  /* line 17, ../sass/_ui.scss */
   #loading, #success {
     display: none;
     background-color: #000;
@@ -516,7 +502,7 @@
     -o-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
   }
-  /* line 35, ../sass/_ui.scss */
+  /* line 23, ../sass/_ui.scss */
   #loading .card, #success .card {
     width: 100%;
     padding-top: 66.66667%;
@@ -533,7 +519,7 @@
     bottom: 0;
   }
 
-  /* line 45, ../sass/_ui.scss */
+  /* line 33, ../sass/_ui.scss */
   #loading {
     -webkit-transition: opacity 2s cubic-bezier(0.77, 0, 0.175, 1);
     -moz-transition: opacity 2s cubic-bezier(0.77, 0, 0.175, 1);
@@ -541,11 +527,11 @@
     transition: opacity 2s cubic-bezier(0.77, 0, 0.175, 1);
     z-index: -1;
   }
-  /* line 48, ../sass/_ui.scss */
+  /* line 36, ../sass/_ui.scss */
   #loading .card {
     background-image: url('../img/loading.jpg?1389508291');
   }
-  /* line 49, ../sass/_ui.scss */
+  /* line 37, ../sass/_ui.scss */
   #loading .loader {
     background-position: 0 90.0266%;
     width: 7.2%;
@@ -565,14 +551,14 @@
   }
 
   @-moz-keyframes loading-dots {
-    /* line 60, ../sass/_ui.scss */
+    /* line 48, ../sass/_ui.scss */
     0% {
       width: 2.4%;
       padding-top: 1%;
       height: 0;
     }
 
-    /* line 63, ../sass/_ui.scss */
+    /* line 51, ../sass/_ui.scss */
     100% {
       width: 9.6%;
       padding-top: 1%;
@@ -581,14 +567,14 @@
 }
 
   @-webkit-keyframes loading-dots {
-    /* line 60, ../sass/_ui.scss */
+    /* line 48, ../sass/_ui.scss */
     0% {
       width: 2.4%;
       padding-top: 1%;
       height: 0;
     }
 
-    /* line 63, ../sass/_ui.scss */
+    /* line 51, ../sass/_ui.scss */
     100% {
       width: 9.6%;
       padding-top: 1%;
@@ -597,14 +583,14 @@
 }
 
   @-o-keyframes loading-dots {
-    /* line 60, ../sass/_ui.scss */
+    /* line 48, ../sass/_ui.scss */
     0% {
       width: 2.4%;
       padding-top: 1%;
       height: 0;
     }
 
-    /* line 63, ../sass/_ui.scss */
+    /* line 51, ../sass/_ui.scss */
     100% {
       width: 9.6%;
       padding-top: 1%;
@@ -613,14 +599,14 @@
 }
 
   @keyframes loading-dots {
-    /* line 60, ../sass/_ui.scss */
+    /* line 48, ../sass/_ui.scss */
     0% {
       width: 2.4%;
       padding-top: 1%;
       height: 0;
     }
 
-    /* line 63, ../sass/_ui.scss */
+    /* line 51, ../sass/_ui.scss */
     100% {
       width: 9.6%;
       padding-top: 1%;
@@ -628,7 +614,7 @@
     }
 }
 
-  /* line 68, ../sass/_ui.scss */
+  /* line 56, ../sass/_ui.scss */
   #music-controls {
     cursor: pointer;
     width: 6.6%;
@@ -643,24 +629,24 @@
     position: fixed;
     z-index: 50;
   }
-  /* line 76, ../sass/_ui.scss */
+  /* line 64, ../sass/_ui.scss */
   #music-controls.off {
     background-position: 0 94.80609%;
   }
-  /* line 79, ../sass/_ui.scss */
+  /* line 67, ../sass/_ui.scss */
   #music-controls.on {
     background-position: 0 100%;
   }
 
-  /* line 84, ../sass/_ui.scss */
+  /* line 72, ../sass/_ui.scss */
   #success {
     z-index: 50;
   }
-  /* line 86, ../sass/_ui.scss */
+  /* line 74, ../sass/_ui.scss */
   #success .card {
     background-image: url('../img/outro.jpg?1389508291');
   }
-  /* line 87, ../sass/_ui.scss */
+  /* line 75, ../sass/_ui.scss */
   #success a {
     width: 34.4%;
     padding-top: 14.13333%;
@@ -670,7 +656,7 @@
     position: absolute;
   }
 
-  /* line 95, ../sass/_ui.scss */
+  /* line 83, ../sass/_ui.scss */
   .instructions, .instructions-photos {
     width: 84.26573%;
     padding-top: 88.81119%;
@@ -682,7 +668,7 @@
     opacity: 0;
   }
 
-  /* line 102, ../sass/_ui.scss */
+  /* line 90, ../sass/_ui.scss */
   .instructions {
     background-position: 0 20.07905%;
     margin: .5em 0 1em;
@@ -690,7 +676,7 @@
     left: 6.1674%;
   }
 
-  /* line 109, ../sass/_ui.scss */
+  /* line 97, ../sass/_ui.scss */
   .instructions-photos {
     background-position: 0 0;
     opacity: 0;
@@ -704,190 +690,190 @@
   }
 
   @-moz-keyframes fadeIn {
-    /* line 119, ../sass/_ui.scss */
+    /* line 107, ../sass/_ui.scss */
     0% {
       opacity: 0;
     }
 
-    /* line 120, ../sass/_ui.scss */
+    /* line 108, ../sass/_ui.scss */
     1% {
       opacity: 0;
     }
 }
 
   @-webkit-keyframes fadeIn {
-    /* line 119, ../sass/_ui.scss */
+    /* line 107, ../sass/_ui.scss */
     0% {
       opacity: 0;
     }
 
-    /* line 120, ../sass/_ui.scss */
+    /* line 108, ../sass/_ui.scss */
     1% {
       opacity: 0;
     }
 }
 
   @-o-keyframes fadeIn {
-    /* line 119, ../sass/_ui.scss */
+    /* line 107, ../sass/_ui.scss */
     0% {
       opacity: 0;
     }
 
-    /* line 120, ../sass/_ui.scss */
+    /* line 108, ../sass/_ui.scss */
     1% {
       opacity: 0;
     }
 }
 
   @keyframes fadeIn {
-    /* line 119, ../sass/_ui.scss */
+    /* line 107, ../sass/_ui.scss */
     0% {
       opacity: 0;
     }
 
-    /* line 120, ../sass/_ui.scss */
+    /* line 108, ../sass/_ui.scss */
     1% {
       opacity: 0;
     }
 }
 
   @-moz-keyframes fadeInUp {
-    /* line 124, ../sass/_ui.scss */
+    /* line 112, ../sass/_ui.scss */
     0% {
       opacity: 0;
     }
 
-    /* line 125, ../sass/_ui.scss */
+    /* line 113, ../sass/_ui.scss */
     1% {
       opacity: 0;
     }
 
-    /* line 126, ../sass/_ui.scss */
+    /* line 114, ../sass/_ui.scss */
     100% {
       opacity: 1;
     }
 }
 
   @-webkit-keyframes fadeInUp {
-    /* line 124, ../sass/_ui.scss */
+    /* line 112, ../sass/_ui.scss */
     0% {
       opacity: 0;
     }
 
-    /* line 125, ../sass/_ui.scss */
+    /* line 113, ../sass/_ui.scss */
     1% {
       opacity: 0;
     }
 
-    /* line 126, ../sass/_ui.scss */
+    /* line 114, ../sass/_ui.scss */
     100% {
       opacity: 1;
     }
 }
 
   @-o-keyframes fadeInUp {
-    /* line 124, ../sass/_ui.scss */
+    /* line 112, ../sass/_ui.scss */
     0% {
       opacity: 0;
     }
 
-    /* line 125, ../sass/_ui.scss */
+    /* line 113, ../sass/_ui.scss */
     1% {
       opacity: 0;
     }
 
-    /* line 126, ../sass/_ui.scss */
+    /* line 114, ../sass/_ui.scss */
     100% {
       opacity: 1;
     }
 }
 
   @keyframes fadeInUp {
-    /* line 124, ../sass/_ui.scss */
+    /* line 112, ../sass/_ui.scss */
     0% {
       opacity: 0;
     }
 
-    /* line 125, ../sass/_ui.scss */
+    /* line 113, ../sass/_ui.scss */
     1% {
       opacity: 0;
     }
 
-    /* line 126, ../sass/_ui.scss */
+    /* line 114, ../sass/_ui.scss */
     100% {
       opacity: 1;
     }
 }
 
   @-moz-keyframes fadeInDown {
-    /* line 130, ../sass/_ui.scss */
+    /* line 118, ../sass/_ui.scss */
     0% {
       opacity: 0;
     }
 
-    /* line 131, ../sass/_ui.scss */
+    /* line 119, ../sass/_ui.scss */
     1% {
       opacity: 0;
     }
 
-    /* line 132, ../sass/_ui.scss */
+    /* line 120, ../sass/_ui.scss */
     100% {
       opacity: 1;
     }
 }
 
   @-webkit-keyframes fadeInDown {
-    /* line 130, ../sass/_ui.scss */
+    /* line 118, ../sass/_ui.scss */
     0% {
       opacity: 0;
     }
 
-    /* line 131, ../sass/_ui.scss */
+    /* line 119, ../sass/_ui.scss */
     1% {
       opacity: 0;
     }
 
-    /* line 132, ../sass/_ui.scss */
+    /* line 120, ../sass/_ui.scss */
     100% {
       opacity: 1;
     }
 }
 
   @-o-keyframes fadeInDown {
-    /* line 130, ../sass/_ui.scss */
+    /* line 118, ../sass/_ui.scss */
     0% {
       opacity: 0;
     }
 
-    /* line 131, ../sass/_ui.scss */
+    /* line 119, ../sass/_ui.scss */
     1% {
       opacity: 0;
     }
 
-    /* line 132, ../sass/_ui.scss */
+    /* line 120, ../sass/_ui.scss */
     100% {
       opacity: 1;
     }
 }
 
   @keyframes fadeInDown {
-    /* line 130, ../sass/_ui.scss */
+    /* line 118, ../sass/_ui.scss */
     0% {
       opacity: 0;
     }
 
-    /* line 131, ../sass/_ui.scss */
+    /* line 119, ../sass/_ui.scss */
     1% {
       opacity: 0;
     }
 
-    /* line 132, ../sass/_ui.scss */
+    /* line 120, ../sass/_ui.scss */
     100% {
       opacity: 1;
     }
 }
 
-  /* line 135, ../sass/_ui.scss */
+  /* line 123, ../sass/_ui.scss */
   .to-do {
     display: none;
     position: relative;
@@ -902,12 +888,28 @@
     background-size: 106.1674% auto;
     left: 10.13216%;
   }
-  /* line 143, ../sass/_ui.scss */
+  /* line 131, ../sass/_ui.scss */
   .to-do .wrapper {
+    color: #fff;
+    position: absolute;
+    line-height: 1.4em;
     left: 14.97797%;
     top: 3.79147%;
-    width: 67.84141%;
+    width: 74.88987%;
     height: 29em;
+  }
+  /* line 139, ../sass/_ui.scss */
+  .to-do h1 {
+    color: #ebaa0e;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    padding-top: .25em;
+    text-align: center;
+  }
+  /* line 146, ../sass/_ui.scss */
+  .to-do ul {
+    height: 26em;
+    overflow: auto;
   }
   /* line 149, ../sass/_ui.scss */
   [data-currentFloor="downstairs"] .to-do ul {
@@ -1077,7 +1079,6 @@
     -moz-background-size: 100% auto;
     -o-background-size: 100% auto;
     background-size: 100% auto;
-    left: 10.13216%;
   }
 
   /* line 136, ../sass/_mixins.scss */
@@ -1090,7 +1091,6 @@
     -moz-background-size: 100% auto;
     -o-background-size: 100% auto;
     background-size: 100% auto;
-    left: 10.13216%;
   }
 
   /* line 136, ../sass/_mixins.scss */
@@ -1103,7 +1103,6 @@
     -moz-background-size: 100% auto;
     -o-background-size: 100% auto;
     background-size: 100% auto;
-    left: 10.13216%;
   }
 
   /* line 136, ../sass/_mixins.scss */
@@ -1116,7 +1115,6 @@
     -moz-background-size: 100% auto;
     -o-background-size: 100% auto;
     background-size: 100% auto;
-    left: 10.13216%;
   }
 
   /* line 136, ../sass/_mixins.scss */
@@ -1129,7 +1127,6 @@
     -moz-background-size: 100% auto;
     -o-background-size: 100% auto;
     background-size: 100% auto;
-    left: 10.13216%;
   }
 
   /* line 136, ../sass/_mixins.scss */
@@ -1142,7 +1139,6 @@
     -moz-background-size: 100% auto;
     -o-background-size: 100% auto;
     background-size: 100% auto;
-    left: 10.13216%;
   }
 
   /* line 136, ../sass/_mixins.scss */
@@ -1155,7 +1151,6 @@
     -moz-background-size: 100% auto;
     -o-background-size: 100% auto;
     background-size: 100% auto;
-    left: 10.13216%;
   }
 
   /* line 136, ../sass/_mixins.scss */
@@ -1168,7 +1163,6 @@
     -moz-background-size: 100% auto;
     -o-background-size: 100% auto;
     background-size: 100% auto;
-    left: 10.13216%;
   }
 
   /* line 63, credits/*.png */
