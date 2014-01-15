@@ -140,6 +140,8 @@ $ui-sprite-height: sprite_height($ui-sprites);
 	@include set-dimensions(227px, $instructions-height, $ui-width);
 	@include set-bg-width($ui-sprite-width, $ui-sprite, bg_list);
 	@include offsetLeft(23px, $instructions-width);
+	// Ensure the scrollbar of the .to-do list is accessible to Windows users. - Kevin Lozandier 
+	z-index: 49;
 	.wrapper {
 		@include set-position(34px, 24px, $instructions-width, $instructions-height);
 		@include set-width(154px, $instructions-width);
