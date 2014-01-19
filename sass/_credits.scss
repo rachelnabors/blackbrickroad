@@ -118,6 +118,10 @@ $credits-sprite-width: sprite_width($credits-sprites);
   @include credits-sprite(i_rachel); 
 }
 
+.incognizant .pic {
+  @include credits-sprite(i_incognizant); 
+}
+
 #to-credits {
   background: $credits-bg;
   cursor: pointer;

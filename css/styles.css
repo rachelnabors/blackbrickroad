@@ -1165,9 +1165,9 @@
     background-size: 100% auto;
   }
 
-  /* line 63, credits/*.png */
-  .credits-sprite, .logo, .xamag .pic, .rachel .pic {
-    background-image: url('../img/credits-s7afb9471bd.png');
+  /* line 71, credits/*.png */
+  .credits-sprite, .logo, .xamag .pic, .rachel .pic, .incognizant .pic {
+    background-image: url('../img/credits-s061d2daf09.png');
     background-repeat: no-repeat;
   }
 
@@ -1318,10 +1318,15 @@
 
   /* line 117, ../sass/_credits.scss */
   .rachel .pic {
-    background-position: 0 70.14925%;
+    background-position: 0 77.01149%;
   }
 
   /* line 121, ../sass/_credits.scss */
+  .incognizant .pic {
+    background-position: 0 54.02299%;
+  }
+
+  /* line 125, ../sass/_credits.scss */
   #to-credits {
     background: #4b0e0f;
     cursor: pointer;
@@ -1340,39 +1345,39 @@
     text-align: center;
     width: 14em;
   }
-  /* line 131, ../sass/_credits.scss */
+  /* line 135, ../sass/_credits.scss */
   #to-credits a:link, #to-credits a:visited, #to-credits a:hover, #to-credits a:active, #to-credits a:focus {
     color: #af6f65;
     text-decoration: none;
   }
 
-  /* line 138, ../sass/_credits.scss */
+  /* line 142, ../sass/_credits.scss */
   .sauce {
     line-height: 2em;
     font-size: 1em;
     font-family: "Georgia", sans-serif;
     text-align: center;
   }
-  /* line 143, ../sass/_credits.scss */
+  /* line 147, ../sass/_credits.scss */
   .sauce a {
     border-top: 1px dotted #af6f65;
     display: inline-block;
     margin: 1em auto 0;
   }
-  /* line 147, ../sass/_credits.scss */
+  /* line 151, ../sass/_credits.scss */
   .sauce a:link, .sauce a:visited {
     color: #af6f65;
     text-decoration: none;
   }
-  /* line 151, ../sass/_credits.scss */
+  /* line 155, ../sass/_credits.scss */
   .sauce a:hover, .sauce a:active, .sauce a:focus {
     color: #da7436;
   }
-  /* line 153, ../sass/_credits.scss */
+  /* line 157, ../sass/_credits.scss */
   .sauce a:hover svg, .sauce a:active svg, .sauce a:focus svg {
     fill: #da7436;
   }
-  /* line 156, ../sass/_credits.scss */
+  /* line 160, ../sass/_credits.scss */
   .sauce svg {
     -webkit-transform: translate(0, 50%);
     -moz-transform: translate(0, 50%);
@@ -1386,26 +1391,26 @@
     height: 2em;
   }
 
-  /* line 165, ../sass/_credits.scss */
+  /* line 169, ../sass/_credits.scss */
   .credit-control {
     padding: .25em .5em;
   }
 
-  /* line 169, ../sass/_credits.scss */
+  /* line 173, ../sass/_credits.scss */
   #close-credits {
     display: none;
   }
 
-  /* line 170, ../sass/_credits.scss */
+  /* line 174, ../sass/_credits.scss */
   #open-credits {
     display: block;
   }
 
-  /* line 173, ../sass/_credits.scss */
+  /* line 177, ../sass/_credits.scss */
   .show-credits #close-credits {
     display: block;
   }
-  /* line 174, ../sass/_credits.scss */
+  /* line 178, ../sass/_credits.scss */
   .show-credits #open-credits {
     display: none;
   }
