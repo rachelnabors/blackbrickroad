@@ -158,6 +158,24 @@ window.addEventListener('load', function(){
   }, false);
   body.appendChild(audioControl);
 
+  // Using ifvisible.js,
+  ifvisible.on("blur", function(){
+    // pause the music if people leave it running and leave the page
+    if (musicOn) {
+      turnMusicOff();
+      // set musicOn back to true; only place we need to do that... so far...
+      musicOn = true;
+    }
+  });
+
+  ifvisible.on("focus", function(){
+    if (musicOn) {
+      // then turn it back on when they get back
+      turnMusicOn();
+    }
+  });
+
+
 }, false);
 
 document.addEventListener('DOMContentLoaded', function(){
