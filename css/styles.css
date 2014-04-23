@@ -29,8 +29,7 @@
     src: url("../fonts/mawns_handwriting-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/mawns_handwriting-webfont.woff") format("woff"), url("../fonts/mawns_handwriting-webfont.ttf") format("truetype"), url("../fonts/mawns_handwriting-webfont.svg#mawns_handwriting_regular") format("svg");
     font-weight: normal;
     font-style: normal;
-}
-
+  }
   /* Image replacement */
   /* line 2, ../sass/_extends.scss */
   #music-controls, #success a, .instructions, .instructions-photos, .logo, .creator .pic {
@@ -45,7 +44,7 @@
   }
 
   /* Clear Fix */
-  /* line 11, ../sass/_extends.scss */
+  /* line 10, ../sass/_extends.scss */
   .dialog-nav:before, #credits:before,
   .dialog-nav:after,
   #credits:after {
@@ -106,29 +105,19 @@
     100% {
       opacity: 0;
     }
-}
-
+  }
   @-webkit-keyframes fadeAway {
     /* line 2, ../sass/_states.scss */
     100% {
       opacity: 0;
     }
-}
-
-  @-o-keyframes fadeAway {
-    /* line 2, ../sass/_states.scss */
-    100% {
-      opacity: 0;
-    }
-}
-
+  }
   @keyframes fadeAway {
     /* line 2, ../sass/_states.scss */
     100% {
       opacity: 0;
     }
-}
-
+  }
   /* States */
   /* line 7, ../sass/_states.scss */
   [data-progress="loading"] #loading {
@@ -148,17 +137,15 @@
   /* line 20, ../sass/_states.scss */
   [data-progress="dialog-intro"] #frame {
     opacity: .5;
-    -webkit-animation: fadeIn 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
     -moz-animation: fadeIn 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
-    -o-animation: fadeIn 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+    -webkit-animation: fadeIn 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
     animation: fadeIn 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
     pointer-events: none;
   }
   /* line 25, ../sass/_states.scss */
   [data-progress="dialog-intro"] #ui {
-    -webkit-animation: fadeIn 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
     -moz-animation: fadeIn 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
-    -o-animation: fadeIn 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+    -webkit-animation: fadeIn 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
     animation: fadeIn 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
   }
   /* line 28, ../sass/_states.scss */
@@ -202,12 +189,11 @@
   [data-progress="completed"] #frame {
     opacity: .5;
   }
-  /* line 54, ../sass/_states.scss */
+  /* line 53, ../sass/_states.scss */
   [data-progress="completed"] #ui,
   [data-progress="completed"] #frame {
-    -webkit-animation: fadeAway 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
     -moz-animation: fadeAway 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
-    -o-animation: fadeAway 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+    -webkit-animation: fadeAway 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
     animation: fadeAway 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
   }
   /* line 57, ../sass/_states.scss */
@@ -216,9 +202,8 @@
   }
   /* line 58, ../sass/_states.scss */
   [data-progress="completed"] #success {
-    -webkit-animation: fadeIn 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
     -moz-animation: fadeIn 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
-    -o-animation: fadeIn 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+    -webkit-animation: fadeIn 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
     animation: fadeIn 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
     display: block;
   }
@@ -227,8 +212,8 @@
   /* line 2, ../sass/_frame.scss */
   body {
     -moz-user-select: -moz-none;
-    -webkit-user-select: none;
     -ms-user-select: none;
+    -webkit-user-select: none;
     user-select: none;
   }
 
@@ -242,15 +227,15 @@
     position: fixed;
     top: 0;
     left: 0;
-    -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
   }
   /* line 15, ../sass/_frame.scss */
   [data-progress="cleaning-house"] #frame, [data-progress="dialog-outro"] #frame {
-    -webkit-transition: opacity, 2s;
     -moz-transition: opacity, 2s;
     -o-transition: opacity, 2s;
+    -webkit-transition: opacity, 2s;
     transition: opacity, 2s;
   }
 
@@ -261,36 +246,34 @@
     top: 0;
     left: 14.1875em;
     z-index: 1;
-    -webkit-transition: -webkit-transform 1.75s cubic-bezier(0.77, 0, 0.175, 1);
     -moz-transition: -moz-transform 1.75s cubic-bezier(0.77, 0, 0.175, 1);
     -o-transition: -o-transform 1.75s cubic-bezier(0.77, 0, 0.175, 1);
+    -webkit-transition: -webkit-transform 1.75s cubic-bezier(0.77, 0, 0.175, 1);
     transition: transform 1.75s cubic-bezier(0.77, 0, 0.175, 1);
   }
   /* line 25, ../sass/_frame.scss */
   [data-currentFloor="downstairs"] #house {
-    -webkit-transform: translate(0, -50%);
     -moz-transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);
     -o-transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
     transform: translate(0, -50%);
-    -webkit-animation: goDown 2s cubic-bezier(0.77, 0, 0.175, 1);
     -moz-animation: goDown 2s cubic-bezier(0.77, 0, 0.175, 1);
-    -o-animation: goDown 2s cubic-bezier(0.77, 0, 0.175, 1);
+    -webkit-animation: goDown 2s cubic-bezier(0.77, 0, 0.175, 1);
     animation: goDown 2s cubic-bezier(0.77, 0, 0.175, 1);
   }
   /* line 29, ../sass/_frame.scss */
   [data-currentFloor="upstairs"] #house {
-    -webkit-animation: goUp 2s cubic-bezier(0.77, 0, 0.175, 1);
     -moz-animation: goUp 2s cubic-bezier(0.77, 0, 0.175, 1);
-    -o-animation: goUp 2s cubic-bezier(0.77, 0, 0.175, 1);
+    -webkit-animation: goUp 2s cubic-bezier(0.77, 0, 0.175, 1);
     animation: goUp 2s cubic-bezier(0.77, 0, 0.175, 1);
   }
 
   /* line 35, ../sass/_frame.scss */
   .floor {
-    -webkit-background-size: 100% auto;
     -moz-background-size: 100% auto;
     -o-background-size: 100% auto;
+    -webkit-background-size: 100% auto;
     background-size: 100% auto;
     z-index: -1;
   }
@@ -315,8 +298,7 @@
     100% {
       opacity: 1;
     }
-}
-
+  }
   @-webkit-keyframes goUp {
     /* line 41, ../sass/_frame.scss */
     0% {
@@ -337,30 +319,7 @@
     100% {
       opacity: 1;
     }
-}
-
-  @-o-keyframes goUp {
-    /* line 41, ../sass/_frame.scss */
-    0% {
-      opacity: 1;
-    }
-
-    /* line 42, ../sass/_frame.scss */
-    25% {
-      opacity: 0;
-    }
-
-    /* line 43, ../sass/_frame.scss */
-    75% {
-      opacity: 0;
-    }
-
-    /* line 44, ../sass/_frame.scss */
-    100% {
-      opacity: 1;
-    }
-}
-
+  }
   @keyframes goUp {
     /* line 41, ../sass/_frame.scss */
     0% {
@@ -381,8 +340,7 @@
     100% {
       opacity: 1;
     }
-}
-
+  }
   @-moz-keyframes goDown {
     /* line 48, ../sass/_frame.scss */
     0% {
@@ -403,8 +361,7 @@
     100% {
       opacity: 1;
     }
-}
-
+  }
   @-webkit-keyframes goDown {
     /* line 48, ../sass/_frame.scss */
     0% {
@@ -425,30 +382,7 @@
     100% {
       opacity: 1;
     }
-}
-
-  @-o-keyframes goDown {
-    /* line 48, ../sass/_frame.scss */
-    0% {
-      opacity: 1;
-    }
-
-    /* line 49, ../sass/_frame.scss */
-    25% {
-      opacity: 0;
-    }
-
-    /* line 50, ../sass/_frame.scss */
-    75% {
-      opacity: 0;
-    }
-
-    /* line 51, ../sass/_frame.scss */
-    100% {
-      opacity: 1;
-    }
-}
-
+  }
   @keyframes goDown {
     /* line 48, ../sass/_frame.scss */
     0% {
@@ -469,10 +403,9 @@
     100% {
       opacity: 1;
     }
-}
-
+  }
   /* UI Sprites */
-  /* line 127, ui/*.png */
+  /* line 128, ui/*.png */
   .ui-sprite, #loading .loader, #music-controls.off, #music-controls.on, .instructions, .instructions-photos, .to-do, .to-do li:before, .to_upstairs, .to_downstairs, .dialog-nav .prev:before, .dialog-nav .next:after {
     background-image: url('../img/ui-s8e078300a1.png');
     background-repeat: no-repeat;
@@ -496,10 +429,10 @@
     position: absolute;
     left: 50%;
     top: 0;
-    -webkit-transform: translate(-50%, 0);
     -moz-transform: translate(-50%, 0);
     -ms-transform: translate(-50%, 0);
     -o-transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
   }
   /* line 23, ../sass/_ui.scss */
@@ -507,9 +440,9 @@
     width: 100%;
     padding-top: 66.66667%;
     height: 0;
-    -webkit-background-size: 100% auto;
     -moz-background-size: 100% auto;
     -o-background-size: 100% auto;
+    -webkit-background-size: 100% auto;
     background-size: 100% auto;
     background-position: center 100%;
     background-repeat: no-repeat;
@@ -521,9 +454,9 @@
 
   /* line 33, ../sass/_ui.scss */
   #loading {
-    -webkit-transition: opacity 2s cubic-bezier(0.77, 0, 0.175, 1);
     -moz-transition: opacity 2s cubic-bezier(0.77, 0, 0.175, 1);
     -o-transition: opacity 2s cubic-bezier(0.77, 0, 0.175, 1);
+    -webkit-transition: opacity 2s cubic-bezier(0.77, 0, 0.175, 1);
     transition: opacity 2s cubic-bezier(0.77, 0, 0.175, 1);
     z-index: -1;
   }
@@ -540,13 +473,12 @@
     left: 46.13333%;
     top: 91.6%;
     position: absolute;
-    -webkit-animation: loading-dots 3s steps(3) forwards infinite;
     -moz-animation: loading-dots 3s steps(3) forwards infinite;
-    -o-animation: loading-dots 3s steps(3) forwards infinite;
+    -webkit-animation: loading-dots 3s steps(3) forwards infinite;
     animation: loading-dots 3s steps(3) forwards infinite;
-    -webkit-background-size: auto 10126.66667%;
     -moz-background-size: auto 10126.66667%;
     -o-background-size: auto 10126.66667%;
+    -webkit-background-size: auto 10126.66667%;
     background-size: auto 10126.66667%;
   }
 
@@ -564,8 +496,7 @@
       padding-top: 1%;
       height: 0;
     }
-}
-
+  }
   @-webkit-keyframes loading-dots {
     /* line 48, ../sass/_ui.scss */
     0% {
@@ -580,24 +511,7 @@
       padding-top: 1%;
       height: 0;
     }
-}
-
-  @-o-keyframes loading-dots {
-    /* line 48, ../sass/_ui.scss */
-    0% {
-      width: 2.4%;
-      padding-top: 1%;
-      height: 0;
-    }
-
-    /* line 51, ../sass/_ui.scss */
-    100% {
-      width: 9.6%;
-      padding-top: 1%;
-      height: 0;
-    }
-}
-
+  }
   @keyframes loading-dots {
     /* line 48, ../sass/_ui.scss */
     0% {
@@ -612,17 +526,16 @@
       padding-top: 1%;
       height: 0;
     }
-}
-
+  }
   /* line 56, ../sass/_ui.scss */
   #music-controls {
     cursor: pointer;
     width: 6.6%;
     padding-top: 5%;
     height: 0;
-    -webkit-background-size: 243.43434% auto;
     -moz-background-size: 243.43434% auto;
     -o-background-size: 243.43434% auto;
+    -webkit-background-size: 243.43434% auto;
     background-size: 243.43434% auto;
     left: 90%;
     top: 5%;
@@ -644,15 +557,15 @@
   }
   /* line 74, ../sass/_ui.scss */
   #success .card {
-    background-image: url('../img/outro.jpg?1389508291');
+    background-image: url('../img/success.jpg?1398294253');
   }
   /* line 75, ../sass/_ui.scss */
   #success a {
-    width: 34.4%;
-    padding-top: 14.13333%;
+    width: 70.33333%;
+    padding-top: 50.8%;
     height: 0;
-    left: 31.86667%;
-    top: 23.6%;
+    left: 14.4%;
+    top: 13.1%;
     position: absolute;
   }
 
@@ -661,9 +574,9 @@
     width: 84.26573%;
     padding-top: 88.81119%;
     height: 0;
-    -webkit-background-size: 100% auto;
     -moz-background-size: 100% auto;
     -o-background-size: 100% auto;
+    -webkit-background-size: 100% auto;
     background-size: 100% auto;
     opacity: 0;
   }
@@ -683,9 +596,9 @@
     position: absolute;
     left: 6.1674%;
     top: .5em;
-    -webkit-transition: opacity 2s;
     -moz-transition: opacity 2s;
     -o-transition: opacity 2s;
+    -webkit-transition: opacity 2s;
     transition: opacity 2s;
   }
 
@@ -699,8 +612,7 @@
     1% {
       opacity: 0;
     }
-}
-
+  }
   @-webkit-keyframes fadeIn {
     /* line 107, ../sass/_ui.scss */
     0% {
@@ -711,20 +623,7 @@
     1% {
       opacity: 0;
     }
-}
-
-  @-o-keyframes fadeIn {
-    /* line 107, ../sass/_ui.scss */
-    0% {
-      opacity: 0;
-    }
-
-    /* line 108, ../sass/_ui.scss */
-    1% {
-      opacity: 0;
-    }
-}
-
+  }
   @keyframes fadeIn {
     /* line 107, ../sass/_ui.scss */
     0% {
@@ -735,8 +634,7 @@
     1% {
       opacity: 0;
     }
-}
-
+  }
   @-moz-keyframes fadeInUp {
     /* line 112, ../sass/_ui.scss */
     0% {
@@ -752,8 +650,7 @@
     100% {
       opacity: 1;
     }
-}
-
+  }
   @-webkit-keyframes fadeInUp {
     /* line 112, ../sass/_ui.scss */
     0% {
@@ -769,25 +666,7 @@
     100% {
       opacity: 1;
     }
-}
-
-  @-o-keyframes fadeInUp {
-    /* line 112, ../sass/_ui.scss */
-    0% {
-      opacity: 0;
-    }
-
-    /* line 113, ../sass/_ui.scss */
-    1% {
-      opacity: 0;
-    }
-
-    /* line 114, ../sass/_ui.scss */
-    100% {
-      opacity: 1;
-    }
-}
-
+  }
   @keyframes fadeInUp {
     /* line 112, ../sass/_ui.scss */
     0% {
@@ -803,8 +682,7 @@
     100% {
       opacity: 1;
     }
-}
-
+  }
   @-moz-keyframes fadeInDown {
     /* line 118, ../sass/_ui.scss */
     0% {
@@ -820,8 +698,7 @@
     100% {
       opacity: 1;
     }
-}
-
+  }
   @-webkit-keyframes fadeInDown {
     /* line 118, ../sass/_ui.scss */
     0% {
@@ -837,25 +714,7 @@
     100% {
       opacity: 1;
     }
-}
-
-  @-o-keyframes fadeInDown {
-    /* line 118, ../sass/_ui.scss */
-    0% {
-      opacity: 0;
-    }
-
-    /* line 119, ../sass/_ui.scss */
-    1% {
-      opacity: 0;
-    }
-
-    /* line 120, ../sass/_ui.scss */
-    100% {
-      opacity: 1;
-    }
-}
-
+  }
   @keyframes fadeInDown {
     /* line 118, ../sass/_ui.scss */
     0% {
@@ -871,8 +730,7 @@
     100% {
       opacity: 1;
     }
-}
-
+  }
   /* line 123, ../sass/_ui.scss */
   .to-do {
     display: none;
@@ -882,9 +740,9 @@
     width: 79.37063%;
     padding-top: 221.32867%;
     height: 0;
-    -webkit-background-size: 106.1674% auto;
     -moz-background-size: 106.1674% auto;
     -o-background-size: 106.1674% auto;
+    -webkit-background-size: 106.1674% auto;
     background-size: 106.1674% auto;
     left: 10.13216%;
   }
@@ -914,17 +772,15 @@
   /* line 149, ../sass/_ui.scss */
   [data-currentFloor="downstairs"] .to-do ul {
     opacity: 0;
-    -webkit-animation: fadeInDown 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
     -moz-animation: fadeInDown 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
-    -o-animation: fadeInDown 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+    -webkit-animation: fadeInDown 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
     animation: fadeInDown 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
   }
   /* line 153, ../sass/_ui.scss */
   [data-currentFloor="upstairs"] .to-do ul {
     opacity: 0;
-    -webkit-animation: fadeInUp 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
     -moz-animation: fadeInUp 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
-    -o-animation: fadeInUp 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+    -webkit-animation: fadeInUp 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
     animation: fadeInUp 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
   }
   /* line 158, ../sass/_ui.scss */
@@ -939,15 +795,15 @@
     width: 3.84615%;
     padding-top: 1.04895%;
     height: 0;
-    -webkit-background-size: 2190.90909% auto;
     -moz-background-size: 2190.90909% auto;
     -o-background-size: 2190.90909% auto;
+    -webkit-background-size: 2190.90909% auto;
     background-size: 2190.90909% auto;
     position: absolute;
     top: .5em;
     left: 0;
   }
-  /* line 171, ../sass/_ui.scss */
+  /* line 169, ../sass/_ui.scss */
   [data-currentFloor="default"] .to-do li.downstairs, [data-currentFloor="upstairs"] .to-do li.downstairs, [data-currentFloor="downstairs"] .to-do li.upstairs {
     display: none;
   }
@@ -964,9 +820,9 @@
     width: 3.78913%;
     padding-top: 5.43657%;
     height: 0;
-    -webkit-background-size: 523.91304% auto;
     -moz-background-size: 523.91304% auto;
     -o-background-size: 523.91304% auto;
+    -webkit-background-size: 523.91304% auto;
     background-size: 523.91304% auto;
     left: 51.40033%;
     top: 55.2%;
@@ -978,9 +834,9 @@
     width: 3.78913%;
     padding-top: 5.43657%;
     height: 0;
-    -webkit-background-size: 523.91304% auto;
     -moz-background-size: 523.91304% auto;
     -o-background-size: 523.91304% auto;
+    -webkit-background-size: 523.91304% auto;
     background-size: 523.91304% auto;
     left: 17.62768%;
     top: 31.65%;
@@ -991,15 +847,15 @@
     cursor: pointer;
     position: absolute;
     z-index: 10;
-    -webkit-transition: opacity 2s;
     -moz-transition: opacity 2s;
     -o-transition: opacity 2s;
+    -webkit-transition: opacity 2s;
     transition: opacity 2s;
   }
 
   /* Conversation between Dolly and Scare Crow */
   /* Dialog Sprites */
-  /* line 103, dialog/*.png */
+  /* line 104, dialog/*.png */
   .dialog-sprite, #dialog-intro[data-dialog="1"], #dialog-intro[data-dialog="2"], #dialog-intro[data-dialog="3"], #dialog-intro[data-dialog="4"], #dialog-intro[data-dialog="5"], #dialog-intro[data-dialog="6"], #dialog-outro[data-dialog="1"], #dialog-outro[data-dialog="2"] {
     background-image: url('../img/dialog-se64fb6284a.png');
     background-repeat: no-repeat;
@@ -1024,8 +880,8 @@
   .dialog-nav .prev, .dialog-nav .next {
     cursor: pointer;
     width: 48%;
-    -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
   }
   /* line 224, ../sass/_ui.scss */
@@ -1039,9 +895,9 @@
     display: inline-block;
     margin-right: .25em;
     background-position: 0 84.39189%;
-    -webkit-background-size: 587.80488% auto;
     -moz-background-size: 587.80488% auto;
     -o-background-size: 587.80488% auto;
+    -webkit-background-size: 587.80488% auto;
     background-size: 587.80488% auto;
     width: 1em;
     height: .945em;
@@ -1057,9 +913,9 @@
     display: inline-block;
     margin-left: .25em;
     background-position: 0 81.75676%;
-    -webkit-background-size: 587.80488% auto;
     -moz-background-size: 587.80488% auto;
     -o-background-size: 587.80488% auto;
+    -webkit-background-size: 587.80488% auto;
     background-size: 587.80488% auto;
     width: 1em;
     height: .945em;
@@ -1075,9 +931,9 @@
     width: 110.13986%;
     padding-top: 221.32867%;
     height: 0;
-    -webkit-background-size: 100% auto;
     -moz-background-size: 100% auto;
     -o-background-size: 100% auto;
+    -webkit-background-size: 100% auto;
     background-size: 100% auto;
   }
 
@@ -1087,9 +943,9 @@
     width: 110.13986%;
     padding-top: 221.32867%;
     height: 0;
-    -webkit-background-size: 100% auto;
     -moz-background-size: 100% auto;
     -o-background-size: 100% auto;
+    -webkit-background-size: 100% auto;
     background-size: 100% auto;
   }
 
@@ -1099,9 +955,9 @@
     width: 110.13986%;
     padding-top: 221.32867%;
     height: 0;
-    -webkit-background-size: 100% auto;
     -moz-background-size: 100% auto;
     -o-background-size: 100% auto;
+    -webkit-background-size: 100% auto;
     background-size: 100% auto;
   }
 
@@ -1111,9 +967,9 @@
     width: 110.13986%;
     padding-top: 221.32867%;
     height: 0;
-    -webkit-background-size: 100% auto;
     -moz-background-size: 100% auto;
     -o-background-size: 100% auto;
+    -webkit-background-size: 100% auto;
     background-size: 100% auto;
   }
 
@@ -1123,9 +979,9 @@
     width: 110.13986%;
     padding-top: 221.32867%;
     height: 0;
-    -webkit-background-size: 100% auto;
     -moz-background-size: 100% auto;
     -o-background-size: 100% auto;
+    -webkit-background-size: 100% auto;
     background-size: 100% auto;
   }
 
@@ -1135,9 +991,9 @@
     width: 110.13986%;
     padding-top: 221.32867%;
     height: 0;
-    -webkit-background-size: 100% auto;
     -moz-background-size: 100% auto;
     -o-background-size: 100% auto;
+    -webkit-background-size: 100% auto;
     background-size: 100% auto;
   }
 
@@ -1147,9 +1003,9 @@
     width: 110.13986%;
     padding-top: 221.32867%;
     height: 0;
-    -webkit-background-size: 100% auto;
     -moz-background-size: 100% auto;
     -o-background-size: 100% auto;
+    -webkit-background-size: 100% auto;
     background-size: 100% auto;
   }
 
@@ -1159,13 +1015,13 @@
     width: 110.13986%;
     padding-top: 221.32867%;
     height: 0;
-    -webkit-background-size: 100% auto;
     -moz-background-size: 100% auto;
     -o-background-size: 100% auto;
+    -webkit-background-size: 100% auto;
     background-size: 100% auto;
   }
 
-  /* line 71, credits/*.png */
+  /* line 72, credits/*.png */
   .credits-sprite, .logo, .xamag .pic, .rachel .pic, .incognizant .pic {
     background-image: url('../img/credits-s061d2daf09.png');
     background-repeat: no-repeat;
@@ -1173,8 +1029,8 @@
 
   /* line 6, ../sass/_credits.scss */
   #credits {
-    -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     background: #4b0e0f;
     color: #c1a38b;
@@ -1184,14 +1040,14 @@
     position: fixed;
     top: 0;
     left: 50%;
-    -webkit-transform: translate(-50%, -100%);
     -moz-transform: translate(-50%, -100%);
     -ms-transform: translate(-50%, -100%);
     -o-transform: translate(-50%, -100%);
+    -webkit-transform: translate(-50%, -100%);
     transform: translate(-50%, -100%);
-    -webkit-transition: -webkit-transform 1.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
     -moz-transition: -moz-transform 1.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
     -o-transition: -o-transform 1.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    -webkit-transition: -webkit-transform 1.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
     transition: transform 1.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
     width: 80%;
     z-index: 51;
@@ -1199,14 +1055,14 @@
   /* line 21, ../sass/_credits.scss */
   .show-credits #credits {
     position: absolute;
-    -webkit-transform: translate(-50%, 0);
     -moz-transform: translate(-50%, 0);
     -ms-transform: translate(-50%, 0);
     -o-transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
-    -webkit-transition: -webkit-transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     -moz-transition: -moz-transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     -o-transition: -o-transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -webkit-transition: -webkit-transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
   /* line 26, ../sass/_credits.scss */
@@ -1330,17 +1186,17 @@
   #to-credits {
     background: #4b0e0f;
     cursor: pointer;
-    -webkit-border-radius: 0;
     -moz-border-radius: 0 0 0.25em 0.25em;
+    -webkit-border-radius: 0;
     border-radius: 0 0 0.25em 0.25em;
     margin: 0 auto;
     position: absolute;
     bottom: 0;
     left: 50%;
-    -webkit-transform: translate(-50%, 100%);
     -moz-transform: translate(-50%, 100%);
     -ms-transform: translate(-50%, 100%);
     -o-transform: translate(-50%, 100%);
+    -webkit-transform: translate(-50%, 100%);
     transform: translate(-50%, 100%);
     text-align: center;
     width: 14em;
@@ -1379,10 +1235,10 @@
   }
   /* line 160, ../sass/_credits.scss */
   .sauce svg {
-    -webkit-transform: translate(0, 50%);
     -moz-transform: translate(0, 50%);
     -ms-transform: translate(0, 50%);
     -o-transform: translate(0, 50%);
+    -webkit-transform: translate(0, 50%);
     transform: translate(0, 50%);
     fill: #af6f65;
     display: inline-block;
@@ -1416,14 +1272,14 @@
   }
 
   /* Props */
-  /* line 191, props/*.png */
+  /* line 192, props/*.png */
   .props-sprite, .basket-prop, .bedback-prop, .bedup-prop, .armchair-prop, .cradle-prop, .pillowup3-prop, .pillow2-prop, .bed-prop, .spoons-prop, .pot-prop, .chair2-prop, .table-prop, .oven-prop, .laundry-prop, .nightstand-prop, .stairs-prop, .sack2-prop {
     background-image: url('../img/props-s3ddb5e4807.png');
     background-repeat: no-repeat;
   }
 
   /* Items */
-  /* line 1175, places/*.png */
+  /* line 1176, places/*.png */
   .places-sprite, .rug.droppable, .rug.hover, .rug.clean, .stool.droppable, .stool.hover, .stool.clean, .shoe1.droppable, .shoe1.hover, .shoe1.clean, .shoe2.droppable, .shoe2.hover, .shoe2.clean, .pillowup1.droppable, .pillowup1.hover, .pillowup1.clean, .books.droppable, .books.hover, .books.clean, .telescope.droppable, .telescope.hover, .telescope.clean, .toy.droppable, .toy.hover, .toy.clean, .musicbox.droppable, .musicbox.hover, .musicbox.clean, .broom.droppable, .broom.hover, .broom.clean, .pillowup2.droppable, .pillowup2.hover, .pillowup2.clean, .pot1.droppable, .pot1.hover, .pot1.clean, .pot2.droppable, .pot2.hover, .pot2.clean, .pot3.droppable, .pot3.hover, .pot3.clean, .pot4.droppable, .pot4.hover, .pot4.clean, .scoop.droppable, .scoop.hover, .scoop.clean, .firewood1.droppable, .firewood1.hover, .firewood1.clean, .axe.droppable, .axe.hover, .axe.clean, .rifle.droppable, .rifle.hover, .rifle.clean, .cloak.droppable, .cloak.hover, .cloak.clean, .boot1.droppable, .boot1.hover, .boot1.clean, .samovar.droppable, .samovar.hover, .samovar.clean, .firewood6.droppable, .firewood6.hover, .firewood6.clean, .sack1.droppable, .sack1.hover, .sack1.clean, .pillow1.droppable, .pillow1.hover, .pillow1.clean, .places .socks, .socks.droppable, .socks.hover, .socks.clean, .tools.droppable, .tools.hover, .tools.clean, .ovenfork.droppable, .ovenfork.hover, .ovenfork.clean, .firewood3.droppable, .firewood3.hover, .firewood3.clean, .firewood2.droppable, .firewood2.hover, .firewood2.clean, .firewood5.droppable, .firewood5.hover, .firewood5.clean, .firewood4.droppable, .firewood4.hover, .firewood4.clean, .shovel.droppable, .shovel.hover, .shovel.clean, .pitcher.droppable, .pitcher.hover, .pitcher.clean, .bottle3.droppable, .bottle3.hover, .bottle3.clean, .washboard.droppable, .washboard.hover, .washboard.clean, .mug2.droppable, .mug2.hover, .mug2.clean, .mug1.droppable, .mug1.hover, .mug1.clean, .bottle2.droppable, .bottle2.hover, .bottle2.clean, .bucket.droppable, .bucket.hover, .bucket.clean, .chair1.droppable, .chair1.hover, .chair1.clean, .pillow3.droppable, .pillow3.hover, .pillow3.clean, .tablecloth.droppable, .tablecloth.hover, .tablecloth.clean, .blanket.droppable, .blanket.hover, .blanket.clean, .oilcan.droppable, .oilcan.hover, .oilcan.clean, .bottle1.droppable, .bottle1.hover, .bottle1.clean, .boot2.droppable, .boot2.hover, .boot2.clean {
     background-image: url('../img/places-sd7f6eef822.png');
     background-repeat: no-repeat;
@@ -1484,7 +1340,7 @@
   }
 
   /* Photos */
-  /* line 359, photos/*.png */
+  /* line 360, photos/*.png */
   .photos-sprite, .photo7-scrap1, .photo7 .scrap1, .photo7-scrap2, .photo7 .scrap2, .photo7-scrap3, .photo7 .scrap3, .photo6-scrap1, .photo6 .scrap1, .photo6-scrap2, .photo6 .scrap2, .photo6-scrap3, .photo6 .scrap3, .photo5-scrap1, .photo5 .scrap1, .photo5-scrap2, .photo5 .scrap2, .photo5-scrap3, .photo5 .scrap3, .photo4-scrap1, .photo4 .scrap1, .photo4-scrap2, .photo4 .scrap2, .photo3-scrap1, .photo3 .scrap1, .photo3-scrap2, .photo3 .scrap2, .photo3-scrap3, .photo3 .scrap3, .photo3-scrap4, .photo3 .scrap4, .photo2-scrap1, .photo2 .scrap1, .photo2-scrap2, .photo2 .scrap2, .photo1-scrap1, .photo1 .scrap1, .photo1-scrap2, .photo1 .scrap2, .photo1-scrap3, .photo1 .scrap3 {
     background-image: url('../img/photos-s0a60fb72a7.png');
     background-repeat: no-repeat;
@@ -1507,10 +1363,10 @@
     display: none;
     opacity: 0;
     z-index: 50 !important;
-    -webkit-transition: opacity 1.5s;
-    -webkit-transition-delay: 0.25s;
     -moz-transition: opacity 1.5s 0.25s;
     -o-transition: opacity 1.5s 0.25s;
+    -webkit-transition: opacity 1.5s;
+    -webkit-transition-delay: 0.25s;
     transition: opacity 1.5s 0.25s;
     position: absolute;
     top: 0;
@@ -1530,9 +1386,9 @@
     top: 0;
     left: 0;
     cursor: pointer;
-    -webkit-transition: opacity 1.5s;
     -moz-transition: opacity 1.5s;
     -o-transition: opacity 1.5s;
+    -webkit-transition: opacity 1.5s;
     transition: opacity 1.5s;
   }
   /* line 32, ../sass/_photos.scss */
@@ -1554,9 +1410,9 @@
     height: 0;
     left: 19.43987%;
     top: 37.5%;
-    -webkit-background-size: 4800% auto;
     -moz-background-size: 4800% auto;
     -o-background-size: 4800% auto;
+    -webkit-background-size: 4800% auto;
     background-size: 4800% auto;
   }
 
@@ -1568,9 +1424,9 @@
     height: 0;
     left: 13.42669%;
     top: 7.45%;
-    -webkit-background-size: 100% auto;
     -moz-background-size: 100% auto;
     -o-background-size: 100% auto;
+    -webkit-background-size: 100% auto;
     background-size: 100% auto;
   }
 
@@ -1582,9 +1438,9 @@
     height: 0;
     left: 16.72158%;
     top: 77.35%;
-    -webkit-background-size: 6171.42857% auto;
     -moz-background-size: 6171.42857% auto;
     -o-background-size: 6171.42857% auto;
+    -webkit-background-size: 6171.42857% auto;
     background-size: 6171.42857% auto;
   }
 
@@ -1596,9 +1452,9 @@
     height: 0;
     left: 13.34432%;
     top: 16.35%;
-    -webkit-background-size: 100% auto;
     -moz-background-size: 100% auto;
     -o-background-size: 100% auto;
+    -webkit-background-size: 100% auto;
     background-size: 100% auto;
   }
 
@@ -1610,9 +1466,9 @@
     height: 0;
     left: 23.14662%;
     top: 29.95%;
-    -webkit-background-size: 4320% auto;
     -moz-background-size: 4320% auto;
     -o-background-size: 4320% auto;
+    -webkit-background-size: 4320% auto;
     background-size: 4320% auto;
   }
 
@@ -1624,9 +1480,9 @@
     height: 0;
     left: 12.68534%;
     top: 27.8%;
-    -webkit-background-size: 100% auto;
     -moz-background-size: 100% auto;
     -o-background-size: 100% auto;
+    -webkit-background-size: 100% auto;
     background-size: 100% auto;
   }
 
@@ -1638,9 +1494,9 @@
     height: 0;
     left: 57.08402%;
     top: 25.75%;
-    -webkit-background-size: 3927.27273% auto;
     -moz-background-size: 3927.27273% auto;
     -o-background-size: 3927.27273% auto;
+    -webkit-background-size: 3927.27273% auto;
     background-size: 3927.27273% auto;
   }
 
@@ -1652,9 +1508,9 @@
     height: 0;
     left: 20.75783%;
     top: 2.25%;
-    -webkit-background-size: 131.30699% auto;
     -moz-background-size: 131.30699% auto;
     -o-background-size: 131.30699% auto;
+    -webkit-background-size: 131.30699% auto;
     background-size: 131.30699% auto;
   }
 
@@ -1666,9 +1522,9 @@
     height: 0;
     left: 48.18781%;
     top: 11.95%;
-    -webkit-background-size: 4547.36842% auto;
     -moz-background-size: 4547.36842% auto;
     -o-background-size: 4547.36842% auto;
+    -webkit-background-size: 4547.36842% auto;
     background-size: 4547.36842% auto;
   }
 
@@ -1680,9 +1536,9 @@
     height: 0;
     left: 35.58484%;
     top: 24.9%;
-    -webkit-background-size: 175.60976% auto;
     -moz-background-size: 175.60976% auto;
     -o-background-size: 175.60976% auto;
+    -webkit-background-size: 175.60976% auto;
     background-size: 175.60976% auto;
   }
 
@@ -1694,9 +1550,9 @@
     height: 0;
     left: 81.87809%;
     top: 76.2%;
-    -webkit-background-size: 6171.42857% auto;
     -moz-background-size: 6171.42857% auto;
     -o-background-size: 6171.42857% auto;
+    -webkit-background-size: 6171.42857% auto;
     background-size: 6171.42857% auto;
   }
 
@@ -1708,9 +1564,9 @@
     height: 0;
     left: 20.8402%;
     top: 11%;
-    -webkit-background-size: 131.50685% auto;
     -moz-background-size: 131.50685% auto;
     -o-background-size: 131.50685% auto;
+    -webkit-background-size: 131.50685% auto;
     background-size: 131.50685% auto;
   }
 
@@ -1722,9 +1578,9 @@
     height: 0;
     left: 68.36903%;
     top: 22.45%;
-    -webkit-background-size: 5082.35294% auto;
     -moz-background-size: 5082.35294% auto;
     -o-background-size: 5082.35294% auto;
+    -webkit-background-size: 5082.35294% auto;
     background-size: 5082.35294% auto;
   }
 
@@ -1736,9 +1592,9 @@
     height: 0;
     left: 21.91104%;
     top: 13.75%;
-    -webkit-background-size: 187.82609% auto;
     -moz-background-size: 187.82609% auto;
     -o-background-size: 187.82609% auto;
+    -webkit-background-size: 187.82609% auto;
     background-size: 187.82609% auto;
   }
 
@@ -1750,9 +1606,9 @@
     height: 0;
     left: 61.94399%;
     top: 29.4%;
-    -webkit-background-size: 5760% auto;
     -moz-background-size: 5760% auto;
     -o-background-size: 5760% auto;
+    -webkit-background-size: 5760% auto;
     background-size: 5760% auto;
   }
 
@@ -1764,9 +1620,9 @@
     height: 0;
     left: 38.87974%;
     top: 16.65%;
-    -webkit-background-size: 184.22175% auto;
     -moz-background-size: 184.22175% auto;
     -o-background-size: 184.22175% auto;
+    -webkit-background-size: 184.22175% auto;
     background-size: 184.22175% auto;
   }
 
@@ -1778,9 +1634,9 @@
     height: 0;
     left: 60.95552%;
     top: 33.9%;
-    -webkit-background-size: 3927.27273% auto;
     -moz-background-size: 3927.27273% auto;
     -o-background-size: 3927.27273% auto;
+    -webkit-background-size: 3927.27273% auto;
     background-size: 3927.27273% auto;
   }
 
@@ -1792,9 +1648,9 @@
     height: 0;
     left: 21.91104%;
     top: 2.4%;
-    -webkit-background-size: 131.50685% auto;
     -moz-background-size: 131.50685% auto;
     -o-background-size: 131.50685% auto;
+    -webkit-background-size: 131.50685% auto;
     background-size: 131.50685% auto;
   }
 
@@ -1806,9 +1662,9 @@
     height: 0;
     left: 85.99671%;
     top: 33.15%;
-    -webkit-background-size: 5400% auto;
     -moz-background-size: 5400% auto;
     -o-background-size: 5400% auto;
+    -webkit-background-size: 5400% auto;
     background-size: 5400% auto;
   }
 
@@ -1820,9 +1676,9 @@
     height: 0;
     left: 31.87809%;
     top: 7.55%;
-    -webkit-background-size: 135.21127% auto;
     -moz-background-size: 135.21127% auto;
     -o-background-size: 135.21127% auto;
+    -webkit-background-size: 135.21127% auto;
     background-size: 135.21127% auto;
   }
 
@@ -1834,9 +1690,9 @@
     height: 0;
     left: 63.34432%;
     top: 82.35%;
-    -webkit-background-size: 3456% auto;
     -moz-background-size: 3456% auto;
     -o-background-size: 3456% auto;
+    -webkit-background-size: 3456% auto;
     background-size: 3456% auto;
   }
 
@@ -1848,9 +1704,9 @@
     height: 0;
     left: 12.02636%;
     top: 7.5%;
-    -webkit-background-size: 110.48593% auto;
     -moz-background-size: 110.48593% auto;
     -o-background-size: 110.48593% auto;
+    -webkit-background-size: 110.48593% auto;
     background-size: 110.48593% auto;
   }
 
@@ -1862,9 +1718,9 @@
     height: 0;
     left: 35.33773%;
     top: 33.1%;
-    -webkit-background-size: 3200% auto;
     -moz-background-size: 3200% auto;
     -o-background-size: 3200% auto;
+    -webkit-background-size: 3200% auto;
     background-size: 3200% auto;
   }
 
@@ -1876,9 +1732,9 @@
     height: 0;
     left: 21.33443%;
     top: 2.25%;
-    -webkit-background-size: 375.65217% auto;
     -moz-background-size: 375.65217% auto;
     -o-background-size: 375.65217% auto;
+    -webkit-background-size: 375.65217% auto;
     background-size: 375.65217% auto;
   }
 
@@ -1890,9 +1746,9 @@
     height: 0;
     left: 53.37727%;
     top: 68.7%;
-    -webkit-background-size: 4800% auto;
     -moz-background-size: 4800% auto;
     -o-background-size: 4800% auto;
+    -webkit-background-size: 4800% auto;
     background-size: 4800% auto;
   }
 
@@ -1904,9 +1760,9 @@
     height: 0;
     left: 27.75947%;
     top: 1.85%;
-    -webkit-background-size: 148.70912% auto;
     -moz-background-size: 148.70912% auto;
     -o-background-size: 148.70912% auto;
+    -webkit-background-size: 148.70912% auto;
     background-size: 148.70912% auto;
   }
 
@@ -1918,9 +1774,9 @@
     height: 0;
     left: 53.29489%;
     top: 24.2%;
-    -webkit-background-size: 7200% auto;
     -moz-background-size: 7200% auto;
     -o-background-size: 7200% auto;
+    -webkit-background-size: 7200% auto;
     background-size: 7200% auto;
   }
 
@@ -1932,9 +1788,9 @@
     height: 0;
     left: 21.33443%;
     top: 20.05%;
-    -webkit-background-size: 205.22565% auto;
     -moz-background-size: 205.22565% auto;
     -o-background-size: 205.22565% auto;
+    -webkit-background-size: 205.22565% auto;
     background-size: 205.22565% auto;
   }
 
@@ -1946,9 +1802,9 @@
     height: 0;
     left: 73.39374%;
     top: 22.15%;
-    -webkit-background-size: 3323.07692% auto;
     -moz-background-size: 3323.07692% auto;
     -o-background-size: 3323.07692% auto;
+    -webkit-background-size: 3323.07692% auto;
     background-size: 3323.07692% auto;
   }
 
@@ -1960,9 +1816,9 @@
     height: 0;
     left: 42.00988%;
     top: 5.15%;
-    -webkit-background-size: 209.20097% auto;
     -moz-background-size: 209.20097% auto;
     -o-background-size: 209.20097% auto;
+    -webkit-background-size: 209.20097% auto;
     background-size: 209.20097% auto;
   }
 
@@ -1974,9 +1830,9 @@
     height: 0;
     left: 46.62273%;
     top: 44%;
-    -webkit-background-size: 5760% auto;
     -moz-background-size: 5760% auto;
     -o-background-size: 5760% auto;
+    -webkit-background-size: 5760% auto;
     background-size: 5760% auto;
   }
 
@@ -1988,9 +1844,9 @@
     height: 0;
     left: 44.6458%;
     top: 7.55%;
-    -webkit-background-size: 174.89879% auto;
     -moz-background-size: 174.89879% auto;
     -o-background-size: 174.89879% auto;
+    -webkit-background-size: 174.89879% auto;
     background-size: 174.89879% auto;
   }
 
@@ -2002,9 +1858,9 @@
     height: 0;
     left: 71.74629%;
     top: 31.9%;
-    -webkit-background-size: 5400% auto;
     -moz-background-size: 5400% auto;
     -o-background-size: 5400% auto;
+    -webkit-background-size: 5400% auto;
     background-size: 5400% auto;
   }
 
@@ -2016,9 +1872,9 @@
     height: 0;
     left: 13.34432%;
     top: 7.55%;
-    -webkit-background-size: 198.16514% auto;
     -moz-background-size: 198.16514% auto;
     -o-background-size: 198.16514% auto;
+    -webkit-background-size: 198.16514% auto;
     background-size: 198.16514% auto;
   }
 
@@ -2030,9 +1886,9 @@
     height: 0;
     left: 55.76606%;
     top: 39.55%;
-    -webkit-background-size: 1393.54839% auto;
     -moz-background-size: 1393.54839% auto;
     -o-background-size: 1393.54839% auto;
+    -webkit-background-size: 1393.54839% auto;
     background-size: 1393.54839% auto;
   }
 
@@ -2044,9 +1900,9 @@
     height: 0;
     left: 13.0972%;
     top: 7.55%;
-    -webkit-background-size: 195.47511% auto;
     -moz-background-size: 195.47511% auto;
     -o-background-size: 195.47511% auto;
+    -webkit-background-size: 195.47511% auto;
     background-size: 195.47511% auto;
   }
 
@@ -2058,9 +1914,9 @@
     height: 0;
     left: 67.5453%;
     top: 85.5%;
-    -webkit-background-size: 4547.36842% auto;
     -moz-background-size: 4547.36842% auto;
     -o-background-size: 4547.36842% auto;
+    -webkit-background-size: 4547.36842% auto;
     background-size: 4547.36842% auto;
   }
 
@@ -2072,9 +1928,9 @@
     height: 0;
     left: 37.47941%;
     top: 14.5%;
-    -webkit-background-size: 149.74003% auto;
     -moz-background-size: 149.74003% auto;
     -o-background-size: 149.74003% auto;
+    -webkit-background-size: 149.74003% auto;
     background-size: 149.74003% auto;
   }
 
@@ -2086,9 +1942,9 @@
     height: 0;
     left: 24.62932%;
     top: 22.6%;
-    -webkit-background-size: 5082.35294% auto;
     -moz-background-size: 5082.35294% auto;
     -o-background-size: 5082.35294% auto;
+    -webkit-background-size: 5082.35294% auto;
     background-size: 5082.35294% auto;
   }
 
@@ -2100,14 +1956,14 @@
     height: 0;
     left: 23.88797%;
     top: 7.6%;
-    -webkit-background-size: 117.07317% auto;
     -moz-background-size: 117.07317% auto;
     -o-background-size: 117.07317% auto;
+    -webkit-background-size: 117.07317% auto;
     background-size: 117.07317% auto;
   }
 
   /* Letters */
-  /* line 135, letters/*.png */
+  /* line 136, letters/*.png */
   .letters-sprite, .messy .aug03, .letters-to-read .aug03, .messy .jun09, .letters-to-read .jun09, .messy .jun18, .letters-to-read .jun18, .messy .dec15, .letters-to-read .dec15, .messy .aug31, .letters-to-read .aug31, .messy .oct11, .letters-to-read .oct11 {
     background-image: url('../img/letters-s9b751eb09c.png');
     background-repeat: no-repeat;
@@ -2126,10 +1982,10 @@
     display: none;
     opacity: 0;
     z-index: 50 !important;
-    -webkit-transition: opacity 1.5s;
-    -webkit-transition-delay: 0.25s;
     -moz-transition: opacity 1.5s 0.25s;
     -o-transition: opacity 1.5s 0.25s;
+    -webkit-transition: opacity 1.5s;
+    -webkit-transition-delay: 0.25s;
     transition: opacity 1.5s 0.25s;
     position: absolute;
     position: absolute;
@@ -2157,9 +2013,9 @@
     height: 0;
     left: 33.44316%;
     top: 82.5%;
-    -webkit-background-size: 1591.30435% auto;
     -moz-background-size: 1591.30435% auto;
     -o-background-size: 1591.30435% auto;
+    -webkit-background-size: 1591.30435% auto;
     background-size: 1591.30435% auto;
   }
 
@@ -2171,9 +2027,9 @@
     height: 0;
     left: 15.32125%;
     top: 50%;
-    -webkit-background-size: 100% auto;
     -moz-background-size: 100% auto;
     -o-background-size: 100% auto;
+    -webkit-background-size: 100% auto;
     background-size: 100% auto;
   }
 
@@ -2185,9 +2041,9 @@
     height: 0;
     left: 22.98188%;
     top: 74.75%;
-    -webkit-background-size: 1893.10345% auto;
     -moz-background-size: 1893.10345% auto;
     -o-background-size: 1893.10345% auto;
+    -webkit-background-size: 1893.10345% auto;
     background-size: 1893.10345% auto;
   }
 
@@ -2199,9 +2055,9 @@
     height: 0;
     left: 13.50906%;
     top: 50%;
-    -webkit-background-size: 113.42975% auto;
     -moz-background-size: 113.42975% auto;
     -o-background-size: 113.42975% auto;
+    -webkit-background-size: 113.42975% auto;
     background-size: 113.42975% auto;
   }
 
@@ -2213,9 +2069,9 @@
     height: 0;
     left: 48.10544%;
     top: 38.65%;
-    -webkit-background-size: 1591.30435% auto;
     -moz-background-size: 1591.30435% auto;
     -o-background-size: 1591.30435% auto;
+    -webkit-background-size: 1591.30435% auto;
     background-size: 1591.30435% auto;
   }
 
@@ -2227,9 +2083,9 @@
     height: 0;
     left: 12.35585%;
     top: 1.6%;
-    -webkit-background-size: 114.01869% auto;
     -moz-background-size: 114.01869% auto;
     -o-background-size: 114.01869% auto;
+    -webkit-background-size: 114.01869% auto;
     background-size: 114.01869% auto;
   }
 
@@ -2241,9 +2097,9 @@
     height: 0;
     left: 54.61285%;
     top: 15.85%;
-    -webkit-background-size: 1893.10345% auto;
     -moz-background-size: 1893.10345% auto;
     -o-background-size: 1893.10345% auto;
+    -webkit-background-size: 1893.10345% auto;
     background-size: 1893.10345% auto;
   }
 
@@ -2255,9 +2111,9 @@
     height: 0;
     left: 12.68534%;
     top: 6.1%;
-    -webkit-background-size: 121.86459% auto;
     -moz-background-size: 121.86459% auto;
     -o-background-size: 121.86459% auto;
+    -webkit-background-size: 121.86459% auto;
     background-size: 121.86459% auto;
   }
 
@@ -2269,9 +2125,9 @@
     height: 0;
     left: 44.06919%;
     top: 32.1%;
-    -webkit-background-size: 1893.10345% auto;
     -moz-background-size: 1893.10345% auto;
     -o-background-size: 1893.10345% auto;
+    -webkit-background-size: 1893.10345% auto;
     background-size: 1893.10345% auto;
   }
 
@@ -2283,9 +2139,9 @@
     height: 0;
     left: 15.40362%;
     top: 1.9%;
-    -webkit-background-size: 123.64865% auto;
     -moz-background-size: 123.64865% auto;
     -o-background-size: 123.64865% auto;
+    -webkit-background-size: 123.64865% auto;
     background-size: 123.64865% auto;
   }
 
@@ -2297,9 +2153,9 @@
     height: 0;
     left: 10.04942%;
     top: 32.1%;
-    -webkit-background-size: 1861.01695% auto;
     -moz-background-size: 1861.01695% auto;
     -o-background-size: 1861.01695% auto;
+    -webkit-background-size: 1861.01695% auto;
     background-size: 1861.01695% auto;
   }
 
@@ -2311,9 +2167,9 @@
     height: 0;
     left: 11.28501%;
     top: 3.8%;
-    -webkit-background-size: 111.58537% auto;
     -moz-background-size: 111.58537% auto;
     -o-background-size: 111.58537% auto;
+    -webkit-background-size: 111.58537% auto;
     background-size: 111.58537% auto;
   }
 
@@ -2332,9 +2188,9 @@
     height: 0;
     left: 4.03624%;
     top: 32.15%;
-    -webkit-background-size: 520.68966% auto;
     -moz-background-size: 520.68966% auto;
     -o-background-size: 520.68966% auto;
+    -webkit-background-size: 520.68966% auto;
     background-size: 520.68966% auto;
   }
 
@@ -2346,9 +2202,9 @@
     height: 0;
     left: 76.11203%;
     top: 19.8%;
-    -webkit-background-size: 476.84211% auto;
     -moz-background-size: 476.84211% auto;
     -o-background-size: 476.84211% auto;
+    -webkit-background-size: 476.84211% auto;
     background-size: 476.84211% auto;
   }
 
@@ -2360,9 +2216,9 @@
     height: 0;
     left: 57.99012%;
     top: 15.15%;
-    -webkit-background-size: 143.80952% auto;
     -moz-background-size: 143.80952% auto;
     -o-background-size: 143.80952% auto;
+    -webkit-background-size: 143.80952% auto;
     background-size: 143.80952% auto;
   }
 
@@ -2374,9 +2230,9 @@
     height: 0;
     left: 42.33937%;
     top: 21.3%;
-    -webkit-background-size: 261.84971% auto;
     -moz-background-size: 261.84971% auto;
     -o-background-size: 261.84971% auto;
+    -webkit-background-size: 261.84971% auto;
     background-size: 261.84971% auto;
   }
 
@@ -2388,9 +2244,9 @@
     height: 0;
     left: 64.25041%;
     top: 25.2%;
-    -webkit-background-size: 198.68421% auto;
     -moz-background-size: 198.68421% auto;
     -o-background-size: 198.68421% auto;
+    -webkit-background-size: 198.68421% auto;
     background-size: 198.68421% auto;
   }
 
@@ -2402,9 +2258,9 @@
     height: 0;
     left: 58.81384%;
     top: 17.3%;
-    -webkit-background-size: 296.07843% auto;
     -moz-background-size: 296.07843% auto;
     -o-background-size: 296.07843% auto;
+    -webkit-background-size: 296.07843% auto;
     background-size: 296.07843% auto;
   }
 
@@ -2426,9 +2282,9 @@
     height: 0;
     left: 57.743%;
     top: 37.8%;
-    -webkit-background-size: 172.10884% auto;
     -moz-background-size: 172.10884% auto;
     -o-background-size: 172.10884% auto;
+    -webkit-background-size: 172.10884% auto;
     background-size: 172.10884% auto;
   }
 
@@ -2463,9 +2319,9 @@
     height: 0;
     left: 37.23229%;
     top: 41.95%;
-    -webkit-background-size: 223.89381% auto;
     -moz-background-size: 223.89381% auto;
     -o-background-size: 223.89381% auto;
+    -webkit-background-size: 223.89381% auto;
     background-size: 223.89381% auto;
   }
 
@@ -2500,9 +2356,9 @@
     height: 0;
     left: 54.61285%;
     top: 41.2%;
-    -webkit-background-size: 443.85965% auto;
     -moz-background-size: 443.85965% auto;
     -o-background-size: 443.85965% auto;
+    -webkit-background-size: 443.85965% auto;
     background-size: 443.85965% auto;
   }
 
@@ -2537,9 +2393,9 @@
     height: 0;
     left: 53.78913%;
     top: 40.7%;
-    -webkit-background-size: 436.2069% auto;
     -moz-background-size: 436.2069% auto;
     -o-background-size: 436.2069% auto;
+    -webkit-background-size: 436.2069% auto;
     background-size: 436.2069% auto;
   }
 
@@ -2574,9 +2430,9 @@
     height: 0;
     left: 95.63427%;
     top: 21.75%;
-    -webkit-background-size: 304.81928% auto;
     -moz-background-size: 304.81928% auto;
     -o-background-size: 304.81928% auto;
+    -webkit-background-size: 304.81928% auto;
     background-size: 304.81928% auto;
   }
 
@@ -2611,9 +2467,9 @@
     height: 0;
     left: 79.32455%;
     top: 30.4%;
-    -webkit-background-size: 294.18605% auto;
     -moz-background-size: 294.18605% auto;
     -o-background-size: 294.18605% auto;
+    -webkit-background-size: 294.18605% auto;
     background-size: 294.18605% auto;
   }
 
@@ -2648,9 +2504,9 @@
     height: 0;
     left: 45.38715%;
     top: 39.2%;
-    -webkit-background-size: 258.16327% auto;
     -moz-background-size: 258.16327% auto;
     -o-background-size: 258.16327% auto;
+    -webkit-background-size: 258.16327% auto;
     background-size: 258.16327% auto;
   }
 
@@ -2685,9 +2541,9 @@
     height: 0;
     left: 64.74465%;
     top: 17.55%;
-    -webkit-background-size: 451.78571% auto;
     -moz-background-size: 451.78571% auto;
     -o-background-size: 451.78571% auto;
+    -webkit-background-size: 451.78571% auto;
     background-size: 451.78571% auto;
   }
 
@@ -2722,9 +2578,9 @@
     height: 0;
     left: 49.01153%;
     top: 15.6%;
-    -webkit-background-size: 428.81356% auto;
     -moz-background-size: 428.81356% auto;
     -o-background-size: 428.81356% auto;
+    -webkit-background-size: 428.81356% auto;
     background-size: 428.81356% auto;
   }
 
@@ -2759,9 +2615,9 @@
     height: 0;
     left: 0.24712%;
     top: 19.95%;
-    -webkit-background-size: 275% auto;
     -moz-background-size: 275% auto;
     -o-background-size: 275% auto;
+    -webkit-background-size: 275% auto;
     background-size: 275% auto;
   }
 
@@ -2796,9 +2652,9 @@
     height: 0;
     left: 73.229%;
     top: 19.75%;
-    -webkit-background-size: 212.60504% auto;
     -moz-background-size: 212.60504% auto;
     -o-background-size: 212.60504% auto;
+    -webkit-background-size: 212.60504% auto;
     background-size: 212.60504% auto;
   }
 
@@ -2833,9 +2689,9 @@
     height: 0;
     left: 72.48764%;
     top: 21.95%;
-    -webkit-background-size: 304.81928% auto;
     -moz-background-size: 304.81928% auto;
     -o-background-size: 304.81928% auto;
+    -webkit-background-size: 304.81928% auto;
     background-size: 304.81928% auto;
   }
 
@@ -2870,9 +2726,9 @@
     height: 0;
     left: 40.11532%;
     top: 27.55%;
-    -webkit-background-size: 301.19048% auto;
     -moz-background-size: 301.19048% auto;
     -o-background-size: 301.19048% auto;
+    -webkit-background-size: 301.19048% auto;
     background-size: 301.19048% auto;
   }
 
@@ -2907,9 +2763,9 @@
     height: 0;
     left: 36.9028%;
     top: 30.9%;
-    -webkit-background-size: 401.5873% auto;
     -moz-background-size: 401.5873% auto;
     -o-background-size: 401.5873% auto;
+    -webkit-background-size: 401.5873% auto;
     background-size: 401.5873% auto;
   }
 
@@ -2944,9 +2800,9 @@
     height: 0;
     left: 34.59638%;
     top: 29.55%;
-    -webkit-background-size: 428.81356% auto;
     -moz-background-size: 428.81356% auto;
     -o-background-size: 428.81356% auto;
+    -webkit-background-size: 428.81356% auto;
     background-size: 428.81356% auto;
   }
 
@@ -2981,9 +2837,9 @@
     height: 0;
     left: 37.23229%;
     top: 26.85%;
-    -webkit-background-size: 297.64706% auto;
     -moz-background-size: 297.64706% auto;
     -o-background-size: 297.64706% auto;
+    -webkit-background-size: 297.64706% auto;
     background-size: 297.64706% auto;
   }
 
@@ -3018,9 +2874,9 @@
     height: 0;
     left: 0.82372%;
     top: 31.65%;
-    -webkit-background-size: 460.0% auto;
     -moz-background-size: 460.0% auto;
     -o-background-size: 460.0% auto;
+    -webkit-background-size: 460.0% auto;
     background-size: 460.0% auto;
   }
 
@@ -3090,9 +2946,9 @@
     height: 0;
     left: 31.38386%;
     top: 86.05%;
-    -webkit-background-size: 552.43902% auto;
     -moz-background-size: 552.43902% auto;
     -o-background-size: 552.43902% auto;
+    -webkit-background-size: 552.43902% auto;
     background-size: 552.43902% auto;
   }
 
@@ -3104,9 +2960,9 @@
     height: 0;
     left: 22.40527%;
     top: 83.35%;
-    -webkit-background-size: 132.45614% auto;
     -moz-background-size: 132.45614% auto;
     -o-background-size: 132.45614% auto;
+    -webkit-background-size: 132.45614% auto;
     background-size: 132.45614% auto;
   }
 
@@ -3118,9 +2974,9 @@
     height: 0;
     left: 52.88303%;
     top: 80.35%;
-    -webkit-background-size: 707.8125% auto;
     -moz-background-size: 707.8125% auto;
     -o-background-size: 707.8125% auto;
+    -webkit-background-size: 707.8125% auto;
     background-size: 707.8125% auto;
   }
 
@@ -3132,9 +2988,9 @@
     height: 0;
     left: 53.21252%;
     top: 77.75%;
-    -webkit-background-size: 539.28571% auto;
     -moz-background-size: 539.28571% auto;
     -o-background-size: 539.28571% auto;
+    -webkit-background-size: 539.28571% auto;
     background-size: 539.28571% auto;
   }
 
@@ -3146,9 +3002,9 @@
     height: 0;
     left: 48.84679%;
     top: 82.05%;
-    -webkit-background-size: 351.16279% auto;
     -moz-background-size: 351.16279% auto;
     -o-background-size: 351.16279% auto;
+    -webkit-background-size: 351.16279% auto;
     background-size: 351.16279% auto;
   }
 
@@ -3160,9 +3016,9 @@
     height: 0;
     left: 43.98682%;
     top: 78%;
-    -webkit-background-size: 133.62832% auto;
     -moz-background-size: 133.62832% auto;
     -o-background-size: 133.62832% auto;
+    -webkit-background-size: 133.62832% auto;
     background-size: 133.62832% auto;
   }
 
@@ -3174,9 +3030,9 @@
     height: 0;
     left: 59.55519%;
     top: 57.15%;
-    -webkit-background-size: 123.09783% auto;
     -moz-background-size: 123.09783% auto;
     -o-background-size: 123.09783% auto;
+    -webkit-background-size: 123.09783% auto;
     background-size: 123.09783% auto;
   }
 
@@ -3188,9 +3044,9 @@
     height: 0;
     left: 7.49588%;
     top: 79.45%;
-    -webkit-background-size: 374.38017% auto;
     -moz-background-size: 374.38017% auto;
     -o-background-size: 374.38017% auto;
+    -webkit-background-size: 374.38017% auto;
     background-size: 374.38017% auto;
   }
 
@@ -3202,9 +3058,9 @@
     height: 0;
     left: 14.25041%;
     top: 74.1%;
-    -webkit-background-size: 264.91228% auto;
     -moz-background-size: 264.91228% auto;
     -o-background-size: 264.91228% auto;
+    -webkit-background-size: 264.91228% auto;
     background-size: 264.91228% auto;
   }
 
@@ -3216,9 +3072,9 @@
     height: 0;
     left: 28.50082%;
     top: 49.6%;
-    -webkit-background-size: 100% auto;
     -moz-background-size: 100% auto;
     -o-background-size: 100% auto;
+    -webkit-background-size: 100% auto;
     background-size: 100% auto;
   }
 
@@ -3230,9 +3086,9 @@
     height: 0;
     left: 54.28336%;
     top: 72.3%;
-    -webkit-background-size: 423.36449% auto;
     -moz-background-size: 423.36449% auto;
     -o-background-size: 423.36449% auto;
+    -webkit-background-size: 423.36449% auto;
     background-size: 423.36449% auto;
   }
 
@@ -3253,9 +3109,9 @@
     height: 0;
     left: 40.36244%;
     top: 75.7%;
-    -webkit-background-size: 301.19048% auto;
     -moz-background-size: 301.19048% auto;
     -o-background-size: 301.19048% auto;
+    -webkit-background-size: 301.19048% auto;
     background-size: 301.19048% auto;
   }
 
@@ -3290,9 +3146,9 @@
     height: 0;
     left: 54.36573%;
     top: 68.5%;
-    -webkit-background-size: 287.5% auto;
     -moz-background-size: 287.5% auto;
     -o-background-size: 287.5% auto;
+    -webkit-background-size: 287.5% auto;
     background-size: 287.5% auto;
   }
 
@@ -3327,9 +3183,9 @@
     height: 0;
     left: 8.56672%;
     top: 64.4%;
-    -webkit-background-size: 575% auto;
     -moz-background-size: 575% auto;
     -o-background-size: 575% auto;
+    -webkit-background-size: 575% auto;
     background-size: 575% auto;
   }
 
@@ -3364,9 +3220,9 @@
     height: 0;
     left: 25.37068%;
     top: 65.35%;
-    -webkit-background-size: 221.92982% auto;
     -moz-background-size: 221.92982% auto;
     -o-background-size: 221.92982% auto;
+    -webkit-background-size: 221.92982% auto;
     background-size: 221.92982% auto;
   }
 
@@ -3401,9 +3257,9 @@
     height: 0;
     left: 36.40857%;
     top: 77.95%;
-    -webkit-background-size: 372.05882% auto;
     -moz-background-size: 372.05882% auto;
     -o-background-size: 372.05882% auto;
+    -webkit-background-size: 372.05882% auto;
     background-size: 372.05882% auto;
   }
 
@@ -3438,9 +3294,9 @@
     height: 0;
     left: 47.19934%;
     top: 74.7%;
-    -webkit-background-size: 168.66667% auto;
     -moz-background-size: 168.66667% auto;
     -o-background-size: 168.66667% auto;
+    -webkit-background-size: 168.66667% auto;
     background-size: 168.66667% auto;
   }
 
@@ -3475,9 +3331,9 @@
     height: 0;
     left: 42.50412%;
     top: 74.35%;
-    -webkit-background-size: 337.33333% auto;
     -moz-background-size: 337.33333% auto;
     -o-background-size: 337.33333% auto;
+    -webkit-background-size: 337.33333% auto;
     background-size: 337.33333% auto;
   }
 
@@ -3512,9 +3368,9 @@
     height: 0;
     left: 57.08402%;
     top: 74.4%;
-    -webkit-background-size: 290.8046% auto;
     -moz-background-size: 290.8046% auto;
     -o-background-size: 290.8046% auto;
+    -webkit-background-size: 290.8046% auto;
     background-size: 290.8046% auto;
   }
 
@@ -3549,9 +3405,9 @@
     height: 0;
     left: 24.79407%;
     top: 83.5%;
-    -webkit-background-size: 194.61538% auto;
     -moz-background-size: 194.61538% auto;
     -o-background-size: 194.61538% auto;
+    -webkit-background-size: 194.61538% auto;
     background-size: 194.61538% auto;
   }
 
@@ -3587,9 +3443,9 @@
     height: 0;
     left: 56.50741%;
     top: 57.05%;
-    -webkit-background-size: 178.16901% auto;
     -moz-background-size: 178.16901% auto;
     -o-background-size: 178.16901% auto;
+    -webkit-background-size: 178.16901% auto;
     background-size: 178.16901% auto;
   }
 
@@ -3624,9 +3480,9 @@
     height: 0;
     left: 14.00329%;
     top: 83%;
-    -webkit-background-size: 223.89381% auto;
     -moz-background-size: 223.89381% auto;
     -o-background-size: 223.89381% auto;
+    -webkit-background-size: 223.89381% auto;
     background-size: 223.89381% auto;
   }
 
@@ -3661,9 +3517,9 @@
     height: 0;
     left: 79.73641%;
     top: 66.6%;
-    -webkit-background-size: 316.25% auto;
     -moz-background-size: 316.25% auto;
     -o-background-size: 316.25% auto;
+    -webkit-background-size: 316.25% auto;
     background-size: 316.25% auto;
   }
 
@@ -3698,9 +3554,9 @@
     height: 0;
     left: 42.99835%;
     top: 75.15%;
-    -webkit-background-size: 301.19048% auto;
     -moz-background-size: 301.19048% auto;
     -o-background-size: 301.19048% auto;
+    -webkit-background-size: 301.19048% auto;
     background-size: 301.19048% auto;
   }
 
@@ -3735,9 +3591,9 @@
     height: 0;
     left: 42.33937%;
     top: 75.4%;
-    -webkit-background-size: 332.89474% auto;
     -moz-background-size: 332.89474% auto;
     -o-background-size: 332.89474% auto;
+    -webkit-background-size: 332.89474% auto;
     background-size: 332.89474% auto;
   }
 
@@ -3772,9 +3628,9 @@
     height: 0;
     left: 42.75124%;
     top: 74.65%;
-    -webkit-background-size: 312.34568% auto;
     -moz-background-size: 312.34568% auto;
     -o-background-size: 312.34568% auto;
+    -webkit-background-size: 312.34568% auto;
     background-size: 312.34568% auto;
   }
 
@@ -3809,9 +3665,9 @@
     height: 0;
     left: 41.26853%;
     top: 75%;
-    -webkit-background-size: 312.34568% auto;
     -moz-background-size: 312.34568% auto;
     -o-background-size: 312.34568% auto;
+    -webkit-background-size: 312.34568% auto;
     background-size: 312.34568% auto;
   }
 
@@ -3846,9 +3702,9 @@
     height: 0;
     left: 80.23064%;
     top: 70.1%;
-    -webkit-background-size: 477.35849% auto;
     -moz-background-size: 477.35849% auto;
     -o-background-size: 477.35849% auto;
+    -webkit-background-size: 477.35849% auto;
     background-size: 477.35849% auto;
   }
 
@@ -3883,9 +3739,9 @@
     height: 0;
     left: 57.24876%;
     top: 80.9%;
-    -webkit-background-size: 436.2069% auto;
     -moz-background-size: 436.2069% auto;
     -o-background-size: 436.2069% auto;
+    -webkit-background-size: 436.2069% auto;
     background-size: 436.2069% auto;
   }
 
@@ -3920,9 +3776,9 @@
     height: 0;
     left: 23.55848%;
     top: 73.1%;
-    -webkit-background-size: 744.11765% auto;
     -moz-background-size: 744.11765% auto;
     -o-background-size: 744.11765% auto;
+    -webkit-background-size: 744.11765% auto;
     background-size: 744.11765% auto;
   }
 
@@ -3957,9 +3813,9 @@
     height: 0;
     left: 7.743%;
     top: 78.95%;
-    -webkit-background-size: 395.3125% auto;
     -moz-background-size: 395.3125% auto;
     -o-background-size: 395.3125% auto;
+    -webkit-background-size: 395.3125% auto;
     background-size: 395.3125% auto;
   }
 
@@ -3994,9 +3850,9 @@
     height: 0;
     left: 58.48435%;
     top: 83.5%;
-    -webkit-background-size: 602.38095% auto;
     -moz-background-size: 602.38095% auto;
     -o-background-size: 602.38095% auto;
+    -webkit-background-size: 602.38095% auto;
     background-size: 602.38095% auto;
   }
 
@@ -4031,9 +3887,9 @@
     height: 0;
     left: 57.24876%;
     top: 82.5%;
-    -webkit-background-size: 617.07317% auto;
     -moz-background-size: 617.07317% auto;
     -o-background-size: 617.07317% auto;
+    -webkit-background-size: 617.07317% auto;
     background-size: 617.07317% auto;
   }
 
@@ -4068,9 +3924,9 @@
     height: 0;
     left: 21.25206%;
     top: 72.3%;
-    -webkit-background-size: 843.33333% auto;
     -moz-background-size: 843.33333% auto;
     -o-background-size: 843.33333% auto;
+    -webkit-background-size: 843.33333% auto;
     background-size: 843.33333% auto;
   }
 
@@ -4105,9 +3961,9 @@
     height: 0;
     left: 68.94563%;
     top: 82.6%;
-    -webkit-background-size: 351.38889% auto;
     -moz-background-size: 351.38889% auto;
     -o-background-size: 351.38889% auto;
+    -webkit-background-size: 351.38889% auto;
     background-size: 351.38889% auto;
   }
 
@@ -4142,9 +3998,9 @@
     height: 0;
     left: 42.99835%;
     top: 80.35%;
-    -webkit-background-size: 196.12403% auto;
     -moz-background-size: 196.12403% auto;
     -o-background-size: 196.12403% auto;
+    -webkit-background-size: 196.12403% auto;
     background-size: 196.12403% auto;
   }
 
@@ -4179,9 +4035,9 @@
     height: 0;
     left: 28.83031%;
     top: 85%;
-    -webkit-background-size: 205.69106% auto;
     -moz-background-size: 205.69106% auto;
     -o-background-size: 205.69106% auto;
+    -webkit-background-size: 205.69106% auto;
     background-size: 205.69106% auto;
   }
 
@@ -4216,9 +4072,9 @@
     height: 0;
     left: 48.68204%;
     top: 79.05%;
-    -webkit-background-size: 142.13483% auto;
     -moz-background-size: 142.13483% auto;
     -o-background-size: 142.13483% auto;
+    -webkit-background-size: 142.13483% auto;
     background-size: 142.13483% auto;
   }
 
@@ -4253,9 +4109,9 @@
     height: 0;
     left: 27.42998%;
     top: 85.4%;
-    -webkit-background-size: 100% auto;
     -moz-background-size: 100% auto;
     -o-background-size: 100% auto;
+    -webkit-background-size: 100% auto;
     background-size: 100% auto;
   }
 
@@ -4290,9 +4146,9 @@
     height: 0;
     left: 14.33278%;
     top: 74.4%;
-    -webkit-background-size: 389.23077% auto;
     -moz-background-size: 389.23077% auto;
     -o-background-size: 389.23077% auto;
+    -webkit-background-size: 389.23077% auto;
     background-size: 389.23077% auto;
   }
 
@@ -4327,9 +4183,9 @@
     height: 0;
     left: 19.76936%;
     top: 73.3%;
-    -webkit-background-size: 816.12903% auto;
     -moz-background-size: 816.12903% auto;
     -o-background-size: 816.12903% auto;
+    -webkit-background-size: 816.12903% auto;
     background-size: 816.12903% auto;
   }
 
@@ -4364,9 +4220,9 @@
     height: 0;
     left: 37.89127%;
     top: 78.25%;
-    -webkit-background-size: 346.57534% auto;
     -moz-background-size: 346.57534% auto;
     -o-background-size: 346.57534% auto;
+    -webkit-background-size: 346.57534% auto;
     background-size: 346.57534% auto;
   }
 

@@ -9,7 +9,7 @@ $ui-sprite-height: sprite_height($ui-sprites);
 /* The interface */
 #ui {
 	float: left;
-	width: $instructions-width-ems; 
+	width: $instructions-width-ems;
 	position: relative;
 	z-index: 1;
 }
@@ -45,11 +45,11 @@ $ui-sprite-height: sprite_height($ui-sprites);
 }
 
 @include keyframes(loading-dots) {
-	0% { 
+	0% {
 		@include set-dimensions(36px, 15px, $max-width);
 	}
 	100% {
-		@include set-dimensions(144px, 15px, $max-width);		
+		@include set-dimensions(144px, 15px, $max-width);
 	}
 }
 
@@ -58,7 +58,7 @@ $ui-sprite-height: sprite_height($ui-sprites);
 	@extend %ir;
 	@include set-dimensions(99px, 75px, $max-width);
 	@include set-bg-width($ui-sprite-width, $ui-sprite, music-off);
-	@include set-position(1350px, 50px, $max-width, $frame-height);	
+	@include set-position(1350px, 50px, $max-width, $frame-height);
 	position: fixed;
 	z-index: 50;
 	&.off {
@@ -71,11 +71,11 @@ $ui-sprite-height: sprite_height($ui-sprites);
 
 #success {
 	z-index: 50;
-	.card { @include background-image(image-url("outro.jpg")); }
+	.card { @include background-image(image-url("success.jpg")); }
 	a {
 		@extend %ir;
-		@include set-dimensions(516px, 212px, $max-width);		
-		@include set-position(478px, 236px, $max-width, $frame-height);
+		@include set-dimensions(1055px, 762px, $max-width);
+		@include set-position(216px, 131px, $max-width, $frame-height);
 		position: absolute;
 	}
 }
@@ -124,7 +124,7 @@ $ui-sprite-height: sprite_height($ui-sprites);
 	display: none;
 	position: relative;
 	margin-bottom:2em;
-	@include ui-sprite(bg_list); 
+	@include ui-sprite(bg_list);
 	@include set-dimensions(227px, $instructions-height, $ui-width);
 	@include set-bg-width($ui-sprite-width, $ui-sprite, bg_list);
 	@include offsetLeft(23px, $instructions-width);
@@ -160,7 +160,7 @@ $ui-sprite-height: sprite_height($ui-sprites);
 		position: relative;
 		&:before {
 			content: " ";
-			@include ui-sprite(i_dash); 
+			@include ui-sprite(i_dash);
 			@include set-dimensions(11px, 3px, $ui-width);
 			@include set-bg-width($ui-sprite-width, $ui-sprite, i_dash);
 			position: absolute;
@@ -190,7 +190,7 @@ $ui-sprite-height: sprite_height($ui-sprites);
 	@include set-position(214px, 633px, $house-width, $frame-height*2);
 }
 
-.warp { 
+.warp {
 	cursor: pointer;
 	position: absolute;
 	z-index:10;
@@ -204,7 +204,7 @@ $dialog-sprite-spacing: 2px;
 @import "dialog/*.png";
 $dialog-sprite: $dialog-sprites;
 $dialog-sprite-width: sprite_width($dialog-sprites);
-.dialog { 
+.dialog {
 	display: none;
 	position: relative;
 }
@@ -216,8 +216,8 @@ $dialog-sprite-width: sprite_width($dialog-sprites);
 	top: -1em; left: 0;
 	width: 100%;
 	@extend %clearfix;
-	.prev, .next { 
-		cursor: pointer; 
+	.prev, .next {
+		cursor: pointer;
 		width: 48%;
 		@include box-sizing(border-box);
 	}
