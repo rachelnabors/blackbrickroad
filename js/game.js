@@ -42,7 +42,7 @@
   // State changing function because I use it so much.
   function changeProgress(newState, tangential) {
     body.setAttribute('data-progress', newState);
-    _gaq.push(['_trackEvent', 'Progress', newState]);      
+    ga('send', 'event', 'Progress', newState);
   }
 
   function calcAspectRatio() {
@@ -58,7 +58,7 @@
 
     var properWidth, properHeight, styleWidth, styleHeight, fullWidth, styleWidthFull;
 
-    // get new widths and heights 
+    // get new widths and heights
     if (frameWidth/windowHeight >= 1228/1000) {
       // if window is wide
       properWidth = (1228/1000) * windowHeight;
@@ -74,15 +74,15 @@
     styleHeight = "height: " + properHeight + "px";
 
     styleWidthFull = "width: " + fullWidth;
-    
+
     // set the house's width
     house.setAttribute("style", styleWidth);
-    
+
     // set the height of its floors
     [].forEach.call(floors, function(floor) {
       floor.setAttribute("style", styleHeight);
     });
-    
+
     // limit the height of the frame to just show one floor
     frame.setAttribute("style", styleHeight);
 
@@ -93,7 +93,7 @@
   }
 
   // load only fires after all the content is rendered.
-  // using window because document is unreliable: 
+  // using window because document is unreliable:
   // http://stackoverflow.com/questions/16404380/why-doesnt-document-addeventlistenerload-function-work-in-a-greasemonkey-s
   window.addEventListener('load', calcAspectRatio, false);
 
@@ -133,7 +133,7 @@ window.addEventListener('load', function(){
   function turnMusicOff() {
     musicOn = false;
     audioControl.classList.remove('on');
-    audioControl.classList.add('off');    
+    audioControl.classList.add('off');
     if (musicLoaded) {
       audio.pause();
     }
@@ -142,7 +142,7 @@ window.addEventListener('load', function(){
   function turnMusicOn() {
     musicOn = true;
     audioControl.classList.remove('off');
-    audioControl.classList.add('on'); 
+    audioControl.classList.add('on');
     if (musicLoaded) {
       audio.play();
     }
@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
   [].forEach.call(_items, function(node) {
     var keys = node.getAttribute('data-items').split(';');
-    var group = node.getAttribute('data-group'); 
+    var group = node.getAttribute('data-group');
     // if there was no grouping, it's a single item
     if (!group) {
       group = node.getAttribute('data-items');
@@ -234,7 +234,7 @@ document.addEventListener('DOMContentLoaded', function(){
       // attach them both to item
       item.draggable[key] = draggable;
       item.droppable[key] = droppable;
-      
+
       // attach both to their respective DOM elements
       messies.appendChild(draggable);
       places.appendChild(droppable);
@@ -258,7 +258,7 @@ document.addEventListener('DOMContentLoaded', function(){
       // e.preventDefault allows dropping.
       if (e.preventDefault) { e.preventDefault(); }
       // We want it to move the data
-      e.dataTransfer.dropEffect = 'move';  
+      e.dataTransfer.dropEffect = 'move';
       if (group === currentGroup && key === currentKey) {
         items[currentGroup].droppable[currentKey].classList.add('hover');
       }
@@ -313,8 +313,8 @@ document.addEventListener('DOMContentLoaded', function(){
   }
 
   function crossOut(crossMeOut) {
-    var del = document.createElement('del'); 
-    while (crossMeOut.childNodes.length) { 
+    var del = document.createElement('del');
+    while (crossMeOut.childNodes.length) {
       del.appendChild(crossMeOut.childNodes[0]);
     }
     crossMeOut.appendChild(del);
@@ -365,7 +365,7 @@ document.addEventListener('DOMContentLoaded', function(){
         dialogParent.classList.add("start");
       }
       currentNumb--;
-      dialogParent.setAttribute('data-dialog', currentNumb);        
+      dialogParent.setAttribute('data-dialog', currentNumb);
     });
     // add button to dialog
     navigation.appendChild(nextButton);
@@ -379,22 +379,22 @@ document.addEventListener('DOMContentLoaded', function(){
   }
 
   function initiateOutro() {
-    changeProgress('dialog-outro');    
+    changeProgress('dialog-outro');
   }
 
   function gameOver() {
     // if all items and photo scraps are cleaned up, cut to "success"
-    if (!itemsLeft && !scrapsLeft) { 
+    if (!itemsLeft && !scrapsLeft) {
       changeProgress('completed');
     } else {
-      changeProgress('find-photos');      
+      changeProgress('find-photos');
     }
   }
 
   createDialog(document.getElementById('dialog-intro'), 6, finishedIntro);
   createDialog(document.getElementById('dialog-outro'), 2, gameOver);
 
-  // Letters 
+  // Letters
   // Letters are one-offs. Like the items, each letter is a pair of locations:
   // The hidden letter is clickable
   // When clicked, it reveals a large, readable letter.
@@ -403,7 +403,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
   var letters = document.querySelectorAll('#letters li');
   var hiddenLetters = document.createDocumentFragment();
-  // generate list of letters 
+  // generate list of letters
   [].forEach.call(letters, function(letter) {
     var hiddenLetter = letter.cloneNode();
     hiddenLetter.classList.add('letter');
@@ -422,7 +422,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
   // Photos
   // Photos are a cross between items and letters.
-  // Each photo consists of a number of tiny scraps in the room 
+  // Each photo consists of a number of tiny scraps in the room
   // and some big scraps that assemble to show a picture.
   // Clicking a little scrap shows its bigger counterpart + removes the little scrap
   // When you've cleaned up all the items and found all the scraps,
@@ -467,7 +467,7 @@ document.addEventListener('DOMContentLoaded', function(){
             bigScrap.classList.add('revealed');
             this.remove();
             scrapsLeft--;
-            if (!itemsLeft && !scrapsLeft) { 
+            if (!itemsLeft && !scrapsLeft) {
               photo.addEventListener("click", function(){
                 changeProgress('completed');
               });
@@ -495,11 +495,11 @@ document.addEventListener('DOMContentLoaded', function(){
   var closeCredits = document.getElementById("close-credits");
   toCredits.addEventListener('click', function() {
     body.classList.add('show-credits');
-    _gaq.push(['_trackEvent', 'Progress', 'showCredits']);
+    ga('send', 'event', 'Progress', 'showCredits');
   });
   closeCredits.addEventListener('click', function() {
     body.classList.remove('show-credits');
-    _gaq.push(['_trackEvent', 'Progress', 'closeCredits']);
+    ga('send', 'event', 'Progress', 'closeCredits');
   });
 
 }, false);
